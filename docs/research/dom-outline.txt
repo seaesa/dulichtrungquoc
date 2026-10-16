@@ -1,0 +1,2413 @@
+<header#header.header.has-sticky.sticky-jump>
+  <div.header-wrapper>
+    <div#top-bar.header-top.hide-for-sticky.nav-dark>
+      <div.flex-row.container>
+        <div.flex-col.hide-for-medium.flex-left>
+          <ul.nav.nav-left.medium-nav-center.nav-small.nav->
+            <li.header-contact-wrapper>
+              <ul#header-contact.nav.nav-divided.nav-uppercase.header-contact>
+                <li>
+                  <a.tooltip [href=mailto:info.giuseart.com@gmail.com]>
+                    <i.icon-envelop [style=font-size:16px;]>
+                    <span>
+                      "info.giuseart.com@gmail.com"
+                <li>
+                  <a.tooltip [href=tel:+47 900 99 000]>
+                    <i.icon-phone [style=font-size:16px;]>
+                    <span>
+                      "+47 900 99 000"
+        <div.flex-col.hide-for-medium.flex-center>
+          <ul.nav.nav-center.nav-small.nav->
+        <div.flex-col.hide-for-medium.flex-right>
+          <ul.nav.top-bar-nav.nav-right.nav-small.nav->
+            <li#menu-item-52.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-52.menu-item-design-default.has-icon-left>
+              <a.nav-top-link [href=#]>
+                <img.ux-menu-icon [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/user-id-svgrepo-com.svg]>
+                "Tuyển dụng"
+            <li#menu-item-54.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-54.menu-item-design-default.has-icon-left>
+              <a.nav-top-link [href=https://dulich2.themedep.top/huong-dan-thanh-toan/]>
+                <img.ux-menu-icon [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/pay-svgrepo-com.svg]>
+                "Hướng dẫn thanh toán"
+            <li#menu-item-56.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-56.menu-item-design-default.has-icon-left>
+              <a.nav-top-link [href=https://dulich2.themedep.top/lien-he/]>
+                <img.ux-menu-icon [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/contact-us-svgrepo-com.svg]>
+                "Liên hệ"
+            <li.cart-item.has-icon.has-dropdown>
+              <a.header-cart-link.is-small [href=https://dulich2.themedep.top/gio-hang/]>
+                <span.header-cart-title>
+                  "Giỏ hàng"
+                <i.icon-shopping-cart>
+              <ul.nav-dropdown.nav-dropdown-bold>
+                <li.html.widget_shopping_cart>
+                  <div.widget_shopping_cart_content>
+                    <p.woocommerce-mini-cart__empty-message>
+                      "Chưa có sản phẩm trong giỏ hàng."
+        <div.flex-col.show-for-medium.flex-grow>
+          <ul.nav.nav-center.nav-small.mobile-nav.nav->
+            <li.header-contact-wrapper>
+              <ul#header-contact.nav.nav-divided.nav-uppercase.header-contact>
+                <li>
+                  <a.tooltip [href=mailto:info.giuseart.com@gmail.com]>
+                    <i.icon-envelop [style=font-size:16px;]>
+                    <span>
+                      "info.giuseart.com@gmail.com"
+                <li>
+                  <a.tooltip [href=tel:+47 900 99 000]>
+                    <i.icon-phone [style=font-size:16px;]>
+                    <span>
+                      "+47 900 99 000"
+    <div#masthead.header-main>
+      <div.header-inner.flex-row.container.logo-left.medium-logo-center>
+        <div#logo.flex-col.logo>
+          <a [href=https://dulich2.themedep.top/]>
+            <img.header_logo.header-logo [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/logo-1024x818.jpg] [alt=Mẫu website du lịch]>
+            <img.header-logo-dark [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/logo-1024x818.jpg] [alt=Mẫu website du lịch]>
+        <div.flex-col.show-for-medium.flex-left>
+          <ul.mobile-nav.nav.nav-left>
+            <li.nav-icon.has-icon>
+              <a.is-small [href=#] [data-bg=main-menu-overlay]>
+                <i.icon-menu>
+        <div.flex-col.hide-for-medium.flex-left.flex-grow>
+          <ul.header-nav.header-nav-main.nav.nav-left.nav-size-medium.nav-spacing-large>
+        <div.flex-col.hide-for-medium.flex-right>
+          <ul.header-nav.header-nav-main.nav.nav-right.nav-size-medium.nav-spacing-large>
+            <li#menu-item-43.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-43.menu-item-design-default>
+              <a.nav-top-link [href=http://dulich2.khothemewp.vn/]>
+                "Trang chủ"
+            <li#menu-item-49.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-49.menu-item-design-default>
+              <a.nav-top-link [href=https://dulich2.themedep.top/gioi-thieu/]>
+                "Giới thiệu"
+            <li#menu-item-44.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-44.menu-item-design-default.has-dropdown>
+              <a.nav-top-link [href=https://dulich2.themedep.top/tour/]>
+                "Tour du lịch"
+                <i.icon-angle-down>
+              <ul.sub-menu.nav-dropdown.nav-dropdown-bold>
+                <li#menu-item-45.menu-item.menu-item-type-taxonomy.menu-item-object-product_cat.menu-item-45>
+                  <a [href=https://dulich2.themedep.top/tour-nuoc-ngoai/]>
+                    "Tour nước ngoài"
+                <li#menu-item-46.menu-item.menu-item-type-taxonomy.menu-item-object-product_cat.menu-item-46>
+                  <a [href=https://dulich2.themedep.top/tour-trong-nuoc/]>
+                    "Tour trong nước"
+            <li#menu-item-47.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-47.menu-item-design-default>
+              <a.nav-top-link [href=https://dulich2.themedep.top/cam-nang-du-lich/]>
+                "Cẩm nang du lịch"
+            <li#menu-item-51.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-51.menu-item-design-default>
+              <a.nav-top-link [href=#]>
+                "Visa du lịch"
+            <li#menu-item-48.menu-item.menu-item-type-taxonomy.menu-item-object-category.menu-item-48.menu-item-design-default>
+              <a.nav-top-link [href=https://dulich2.themedep.top/tin-tuc/]>
+                "Tin tức"
+            <li#menu-item-50.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-50.menu-item-design-default>
+              <a.nav-top-link [href=https://dulich2.themedep.top/lien-he/]>
+                "Liên hệ"
+            <li.header-search.header-search-dropdown.has-icon.has-dropdown.menu-item-has-children>
+              <a.is-small [href=#]>
+                <i.icon-search>
+              <ul.nav-dropdown.nav-dropdown-bold>
+                <li.header-search-form.search-form.html.relative.has-icon>
+                  <div.header-search-form-wrapper>
+                    <div.searchform-wrapper.ux-search-box.relative.is-normal>
+                      <form.searchform>
+                        <div.flex-row.relative>
+                          <div.flex-col.flex-grow>
+                            <label.screen-reader-text>
+                              "Tìm kiếm:"
+                            <input#woocommerce-product-search-field-0.search-field.mb-0 [placeholder=Nhập từ khóa cần tìm] [type=search]>
+                            <input [type=hidden] [value=product]>
+                          <div.flex-col>
+                            <button.ux-search-submit.submit-button.secondary.button.icon.mb-0 [type=submit] [value=Tìm kiếm]>
+                              <i.icon-search>
+                        <div.live-search-results.text-left.z-top>
+        <div.flex-col.show-for-medium.flex-right>
+          <ul.mobile-nav.nav.nav-right>
+            <li.cart-item.has-icon>
+              <a.header-cart-link.off-canvas-toggle.nav-top-link.is-small [href=https://dulich2.themedep.top/gio-hang/]>
+                <i.icon-shopping-cart>
+              <div#cart-popup.mfp-hide.widget_shopping_cart>
+                <div.cart-popup-inner.inner-padding>
+                  <div.cart-popup-title.text-center>
+                    <h4.uppercase>
+                      "Giỏ hàng"
+                    <div.is-divider>
+                  <div.widget_shopping_cart_content>
+                    <p.woocommerce-mini-cart__empty-message>
+                      "Chưa có sản phẩm trong giỏ hàng."
+                  <div.cart-sidebar-content.relative>
+    <div.header-bg-container.fill>
+      <div.header-bg-image.fill>
+      <div.header-bg-color.fill>
+
+=====MAIN
+<main#main>
+  <div#content.content-area>
+    <div.slider-wrapper.relative.slider-section>
+      <div.slider.slider-nav-dots-simple.slider-nav-simple.slider-nav-normal.slider-nav-dark.slider-style-normal.slider-lazy-load-active.is-draggable.flickity-enabled>
+        <div.flickity-viewport [style=height: 415.32px; touch-action: pan-y;]>
+          <div.flickity-slider [style=left: 0px; transform: translateX(0%);]>
+            <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y.is-selected [style=position: absolute; left: 0%;]>
+              <div.img-inner.dark>
+                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/1699857984_banner-web-vietpower1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/1699857984_banner-web-vietpower1.jpg]>
+            <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y [style=position: absolute; left: -100%;]>
+              <div.img-inner.dark>
+                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/1699857984_banner-web-vietpower1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/1699857984_banner-web-vietpower1.jpg]>
+        <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+          <svg viewBox=0 0 100 100> (len 144)
+        <button.flickity-button.flickity-prev-next-button.next [type=button]>
+          <svg viewBox=0 0 100 100> (len 189)
+      <div.loading-spin.dark.large.centered [style=display: none;]>
+    <section.section.section1>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small [style=max-width:900px]>
+          <div.col.medium-5.small-12.large-5>
+            <div.col-inner>
+              <div.berocket_single_filter_widget.berocket_single_filter_widget_257.bapf_wid_.bapf_mt_none>
+          <div.col.medium-3.small-12.large-3>
+            <div.col-inner>
+              <div.berocket_single_filter_widget.berocket_single_filter_widget_259.bapf_wid_.bapf_mt_none>
+          <div.col.medium-2.small-12.large-2>
+            <div.col-inner>
+              <div.berocket_single_filter_widget.berocket_single_filter_widget_260.bapf_wid_.bapf_mt_none>
+          <div.col.medium-2.small-12.large-2>
+            <div.col-inner>
+              <div.berocket_single_filter_widget.berocket_single_filter_widget_261.bapf_wid_.bapf_mt_none>
+    <section.section.section2>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "BẠN MUỐN"
+                <strong>
+                  "ĐI ĐÂU"
+              <div.slider-wrapper.relative.slider-danh-muc>
+                <div.slider.slider-nav-simple.slider-nav-normal.slider-nav-dark.slider-nav-outside.slider-style-normal.slider-lazy-load-active.is-draggable.flickity-enabled>
+                  <div.flickity-viewport [style=height: 267.852px; touch-action: pan-y;]>
+                    <div.flickity-slider [style=left: 0px; transform: translateX(37.5%);]>
+                      <div.row.row-small.is-selected [style=position: absolute; left: 0%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/dai-loan/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dai-loan-1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dai-loan-1.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Đài Loan"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: 25%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/nhat-ban/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-nhat-ban-tu-tuc-1-1024x684-1-1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-nhat-ban-tu-tuc-1-1024x684-1-1.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Nhật Bản"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: 50%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/han-quoc/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/datnuochanquoc.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/datnuochanquoc.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Hàn Quốc"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: -50%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/thai-lan/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-du-lich-thai-lan-1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-du-lich-thai-lan-1.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Thái Lan"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: -25%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/trung-quoc]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-phuong-hoang-co-tran-mua-nao-dep-nhat.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-phuong-hoang-co-tran-mua-nao-dep-nhat.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Trung Quốc"
+                                  <p>
+                                    "Đã có lượt khách"
+                  <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                    <svg viewBox=0 0 100 100> (len 144)
+                  <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                    <svg viewBox=0 0 100 100> (len 189)
+                <div.loading-spin.dark.large.centered [style=display: none;]>
+              <div.gap-element.clearfix.hide-for-small [style=display:block; height:auto;]>
+              <div.slider-wrapper.relative.slider-danh-muc>
+                <div.slider.slider-nav-simple.slider-nav-normal.slider-nav-dark.slider-nav-outside.slider-style-normal.is-draggable.slider-lazy-load-active.flickity-enabled>
+                  <div.flickity-viewport [style=height: 267.852px; touch-action: pan-y;]>
+                    <div.flickity-slider [style=left: 0px; transform: translateX(-37.5%);]>
+                      <div.row.row-small [style=position: absolute; left: 125%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/mien-tay-song-nuoc/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/rung-tram-tra-su-ivivu.png] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/rung-tram-tra-su-ivivu.png]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Miền Tây Sông Nước"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: 25%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/mien-bac-hung-vi/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-tay-bac-cam-nang-kinh-nghiem-cho-nguoi-lan-dau-moi-di-202202182351323122.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-tay-bac-cam-nang-kinh-nghiem-cho-nguoi-lan-dau-moi-di-202202182351323122.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Miền Bắc hùng vỹ"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: 50%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/da-lat-tay-nguyen/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dalat3_1596178817.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dalat3_1596178817.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Đà Lạt – Tây Nguyên"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small.is-selected [style=position: absolute; left: 75%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/phu-quoc-mong-mo/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/phuquoc.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/phuquoc.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Phú Quốc mộng mơ"
+                                  <p>
+                                    "Đã có lượt khách"
+                      <div.row.row-small [style=position: absolute; left: 100%;]>
+                        <div.col.small-12.large-12>
+                          <div.col-inner>
+                            <div.box.has-hover.has-hover.box-text-bottom>
+                              <div.box-image>
+                                <a [href=/bien-troi-mien-trung/]>
+                                  <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/danang.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/danang.jpg]>
+                                    <div.overlay [style=background-color:rgba(255, 255, 255, 0.343)]>
+                              <div.box-text.text-left>
+                                <div.box-text-inner>
+                                  <h3>
+                                    "Biển trời Miền Trung"
+                                  <p>
+                                    "Đã có lượt khách"
+                  <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                    <svg viewBox=0 0 100 100> (len 144)
+                  <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                    <svg viewBox=0 0 100 100> (len 189)
+                <div.loading-spin.dark.large.centered [style=display: none;]>
+    <section.section.section3>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "TOUR"
+                <strong>
+                  "NỔI BẬT"
+              <div.row.equalize-box.large-columns-3.medium-columns-.small-columns-2.row-small.slider.row-slider.slider-nav-simple.slider-nav-outside.slider-nav-push.is-draggable.slider-lazy-load-active.flickity-enabled>
+                <div.flickity-viewport [style=height: 468.93px; touch-action: pan-y;]>
+                  <div.flickity-slider [style=left: 0px; transform: translateX(-100%);]>
+                    <div.col [style=position: absolute; left: 0%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/images1495076-image001_1700068315.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/images1495076-image001_1700068315.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                  "Tour Du Lịch Hà Giang – Sông Nho Quế – Cao Nguyên Đá Đồng Văn 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "128235-0029"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.365.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=252]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_252.screen-reader-text>
+                    <div.col [style=position: absolute; left: 33.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                  "Du Lịch Mộc Châu – Mai Châu – Cầu Kính Bạch Long 2N1Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "3432"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.145.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=254]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_254.screen-reader-text>
+                    <div.col [style=position: absolute; left: 66.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                  "Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "HG893"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội, Tp Hồ Chí Minh"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "25.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "200"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=215]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_215.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 100%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20666%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/qiongru-193012093049-vinh-tam-a_1704270683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                  "Du lịch Trung Quốc: Đảo Hải Nam – Tam Á – Hải Hoa Đảo 4N3Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-VX833"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "15.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=205]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_205.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 133.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20666%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                  "Du Lịch Đài Loan: Đài Bắc – Đài Trung – Cao Hùng 5N4Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "124300-0004"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "26.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=218]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_218.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 166.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/chi-phi-du-lich-cuu-trai-cau_1704267988.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                  "Du lịch Trung Quốc: Hà Nội – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-SX832"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "14.990.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=74]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_74.screen-reader-text>
+                    <div.col [style=position: absolute; left: 200%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20571%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/mu-cang-chai-kiet-tac-ruong-bac-thang_1700122683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                  "Du Lịch Tây Bắc: Mù Cang Chải – Đèo Khau Phạ – Tú Lệ – Trạm Tấu 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "KG107"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.165.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=249]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_249.screen-reader-text>
+                <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                  <svg viewBox=0 0 100 100> (len 144)
+                <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                  <svg viewBox=0 0 100 100> (len 189)
+    <section.section.section4>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner [style=background-color:rgb(242, 242, 242);]>
+              <h2 [style=text-align: center;]>
+                <strong>
+                  "VÌ SAO CHỌN"
+                "CHÚNG TÔI"
+              <div.row.row-small>
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 0 1024 1024> (len 860)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "TOP 1"
+                        <p [style=text-align: center;]>
+                          "Dịch vụ Tour nội địa và quốc tế"
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 0 1024 1024> (len 880)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "TOP 5"
+                        <p [style=text-align: center;]>
+                          "Công ty lữ hành tại Việt Nam"
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 0 1024 1024> (len 1335)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "TOP 7"
+                        <p [style=text-align: center;]>
+                          "các đơn vị làm VISA nước ngoài"
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 -2 1028 1028> (len 5235)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "ĐẶT TOUR"
+                        <p [style=text-align: center;]>
+                          "Dễ dàng nhanh chóng chỉ 3 bước"
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 0 1024 1024> (len 2319)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "THANH TOÁN"
+                        <p [style=text-align: center;]>
+                          "Đơn giản, an toàn và linh hoạt"
+                <div.col.medium-2.small-12.large-2>
+                  <div.col-inner>
+                    <div.icon-box.featured-box.icon-box-center.text-center>
+                      <div.icon-box-img [style=width: 50px]>
+                        <div.icon>
+                          <div.icon-inner>
+                            <svg viewBox=0 0 1024 1024> (len 1188)
+                      <div.icon-box-text.last-reset>
+                        <h3 [style=text-align: center;]>
+                          "HOTLINE"
+                        <p [style=text-align: center;]>
+                          "0936 336 xxx Trực tuyến 24/7"
+    <section.section.section5>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "CÁC DỊCH VỤ"
+                <strong>
+                  "CỦA CHÚNG TÔI"
+          <div.col.cot1.medium-3.small-12.large-3>
+            <div.col-inner.dark [style=background-color:rgb(253, 102, 102);]>
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 50px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <svg#Capa_1 viewBox=0 0 471.461 471.461> (len 3059)
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "Hội chợ quốc tế"
+                  <p>
+                    "Chuyên tour hội chợ quốc tế các nước trên thế giới"
+          <div.col.cot2.medium-3.small-12.large-3>
+            <div.col-inner.dark [style=background-color:rgb(0, 53, 148);]>
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 50px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <svg#_x32_ viewBox=0 0 512 512> (len 3885)
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "Sim quốc tế"
+                  <p>
+                    "Bán sim nghe gọi & data các nước trên thế giới"
+          <div.col.cot3.medium-3.small-12.large-3>
+            <div.col-inner.dark [style=background-color:rgb(253, 128, 8);]>
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 50px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <svg viewBox=0 -6 36 36> (len 1770)
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "VISA"
+                  <p>
+                    "Dịch vụ Visa nhanh, rẻ. Visa trọn gói, thủ tục đơn giản"
+          <div.col.cot4.medium-3.small-12.large-3>
+            <div.col-inner.dark [style=background-color:rgb(137, 196, 64);]>
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 50px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <svg viewBox=-1 -1 24 24> (len 439)
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "Vé máy bay"
+                  <p>
+                    "Vé máy bay giá rẻ nhất, nhiều khuyến mãi hấp dẫn"
+    <section.section.section3>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "TOUR"
+                <strong>
+                  "NƯỚC NGOÀI"
+              <div.row.equalize-box.large-columns-3.medium-columns-.small-columns-2.row-small.slider.row-slider.slider-nav-simple.slider-nav-outside.slider-nav-push.is-draggable.slider-lazy-load-active.flickity-enabled>
+                <div.flickity-viewport [style=height: 468.93px; touch-action: pan-y;]>
+                  <div.flickity-slider [style=left: 0px; transform: translate3d(-99.98%, 0px, 0px);]>
+                    <div.col [style=position: absolute; left: 0%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                  "Du Lịch Đài Loan: Đài Bắc – Đài Trung – Cao Hùng 5N4Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "124300-0004"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "26.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=218]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_218.screen-reader-text>
+                    <div.col [style=position: absolute; left: 33.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/qiongru-193012093049-vinh-tam-a_1704270683.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/qiongru-193012093049-vinh-tam-a_1704270683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                  "Du lịch Trung Quốc: Đảo Hải Nam – Tam Á – Hải Hoa Đảo 4N3Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-VX833"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "15.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=205]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_205.screen-reader-text>
+                    <div.col [style=position: absolute; left: 66.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                  "Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "HG893"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội, Tp Hồ Chí Minh"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "25.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "200"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=215]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_215.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 100%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/images1495076-image001_1700068315.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                  "Tour Du Lịch Hà Giang – Sông Nho Quế – Cao Nguyên Đá Đồng Văn 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "128235-0029"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.365.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=252]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_252.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 133.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20571%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/mu-cang-chai-kiet-tac-ruong-bac-thang_1700122683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                  "Du Lịch Tây Bắc: Mù Cang Chải – Đèo Khau Phạ – Tú Lệ – Trạm Tấu 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "KG107"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.165.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=249]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_249.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 166.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/chi-phi-du-lich-cuu-trai-cau_1704267988.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                  "Du lịch Trung Quốc: Hà Nội – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-SX832"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "14.990.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=74]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_74.screen-reader-text>
+                    <div.col [style=position: absolute; left: 200%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20760%20442%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                  "Du Lịch Mộc Châu – Mai Châu – Cầu Kính Bạch Long 2N1Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "3432"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.145.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=254]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_254.screen-reader-text>
+                <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                  <svg viewBox=0 0 100 100> (len 144)
+                <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                  <svg viewBox=0 0 100 100> (len 189)
+    <section.section.section3>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "TOUR"
+                <strong>
+                  "TRONG NƯỚC"
+              <div.row.equalize-box.large-columns-3.medium-columns-.small-columns-2.row-small.slider.row-slider.slider-nav-simple.slider-nav-outside.slider-nav-push.slider-lazy-load-active.is-draggable.flickity-enabled>
+                <div.flickity-viewport [style=height: 468.93px; touch-action: pan-y;]>
+                  <div.flickity-slider [style=left: 0px; transform: translate3d(-99.91%, 0px, 0px);]>
+                    <div.col [style=position: absolute; left: 0%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                  "Du Lịch Mộc Châu – Mai Châu – Cầu Kính Bạch Long 2N1Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "3432"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.145.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=254]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_254.screen-reader-text>
+                    <div.col [style=position: absolute; left: 33.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                  "Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "HG893"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội, Tp Hồ Chí Minh"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "25.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "200"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=215]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_215.screen-reader-text>
+                    <div.col [style=position: absolute; left: 66.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/chi-phi-du-lich-cuu-trai-cau_1704267988.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/chi-phi-du-lich-cuu-trai-cau_1704267988.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                  "Du lịch Trung Quốc: Hà Nội – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-SX832"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "14.990.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=74]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_74.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 100%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20666%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                  "Du Lịch Đài Loan: Đài Bắc – Đài Trung – Cao Hùng 5N4Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "124300-0004"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "26.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=218]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_218.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 133.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/images1495076-image001_1700068315.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                  "Tour Du Lịch Hà Giang – Sông Nho Quế – Cao Nguyên Đá Đồng Văn 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "128235-0029"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.365.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=252]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_252.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 166.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20571%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/mu-cang-chai-kiet-tac-ruong-bac-thang_1700122683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                  "Du Lịch Tây Bắc: Mù Cang Chải – Đèo Khau Phạ – Tú Lệ – Trạm Tấu 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "KG107"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.165.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=249]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_249.screen-reader-text>
+                    <div.col [style=position: absolute; left: 200%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20666%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/qiongru-193012093049-vinh-tam-a_1704270683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                  "Du lịch Trung Quốc: Đảo Hải Nam – Tam Á – Hải Hoa Đảo 4N3Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-VX833"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "15.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=205]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_205.screen-reader-text>
+                <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                  <svg viewBox=0 0 100 100> (len 144)
+                <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                  <svg viewBox=0 0 100 100> (len 189)
+    <section.section.section3>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "TOUR"
+                <strong>
+                  "COMBO GIÁ RẺ"
+              <div.row.equalize-box.large-columns-3.medium-columns-.small-columns-2.row-small.slider.row-slider.slider-nav-simple.slider-nav-outside.slider-nav-push.is-draggable.slider-lazy-load-active.flickity-enabled>
+                <div.flickity-viewport [style=height: 468.93px; touch-action: pan-y;]>
+                  <div.flickity-slider [style=left: 0px; transform: translate3d(-96.79%, 0px, 0px);]>
+                    <div.col [style=position: absolute; left: 0%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/mu-cang-chai-kiet-tac-ruong-bac-thang_1700122683.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/mu-cang-chai-kiet-tac-ruong-bac-thang_1700122683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-tay-bac-mu-cang-chai-deo-khau-pha-tu-le-tram-tau-3n2d/]>
+                                  "Du Lịch Tây Bắc: Mù Cang Chải – Đèo Khau Phạ – Tú Lệ – Trạm Tấu 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "KG107"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.165.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=249]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_249.screen-reader-text>
+                    <div.col [style=position: absolute; left: 33.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/lang-mieu-tich-thuy-du-lich-ha-khau-binh-bien-kynghidongduong-050_1699848845.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-gia-re-ha-khau-binh-bien-kien-thuy-mong-tu-3n2d/]>
+                                  "Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "HG893"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội, Tp Hồ Chí Minh"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "25.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "200"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=215]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_215.screen-reader-text>
+                    <div.col [style=position: absolute; left: 66.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-dai-bac-2_1693474429.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-dai-loan-dai-bac-dai-trung-cao-hung-5n4d/]>
+                                  "Du Lịch Đài Loan: Đài Bắc – Đài Trung – Cao Hùng 5N4Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "124300-0004"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "26.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=218]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_218.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 100%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20760%20442%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-moc-chau-tu-tuc-kinh-nghiem-cho-nguoi-moi-di-lan-dau-202202211147246504_1700126751.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-moc-chau-mai-chau-cau-kinh-bach-long-2n1d/]>
+                                  "Du Lịch Mộc Châu – Mai Châu – Cầu Kính Bạch Long 2N1Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "3432"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.145.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=254]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_254.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 133.33%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20666%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/qiongru-193012093049-vinh-tam-a_1704270683.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-dao-hai-nam-tam-a-hai-hoa-dao-4n3d/]>
+                                  "Du lịch Trung Quốc: Đảo Hải Nam – Tam Á – Hải Hoa Đảo 4N3Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-VX833"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Đà Nẵng, Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "15.000.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=205]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_205.screen-reader-text>
+                    <div.col.is-selected [style=position: absolute; left: 166.67%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/images1495076-image001_1700068315.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/tour-du-lich-ha-giang-song-nho-que-cao-nguyen-da-dong-van-3n2d/]>
+                                  "Tour Du Lịch Hà Giang – Sông Nho Quế – Cao Nguyên Đá Đồng Văn 3N2Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "128235-0029"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "2.365.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "145"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=252]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_252.screen-reader-text>
+                    <div.col [style=position: absolute; left: 200%;]>
+                      <div.col-inner>
+                        <div.badge-container.absolute.left.top.z-1>
+                        <div.product-small.box.has-hover.box-normal.box-text-bottom>
+                          <div.box-image>
+                            <div.image-overlay-add.image-cover [style=padding-top:60%;]>
+                              <a [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                <img.lazy-load.attachment-original.size-original [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/chi-phi-du-lich-cuu-trai-cau_1704267988.jpg]>
+                              <div.overlay.fill [style=background-color: rgba(255, 255, 255, 0.343)]>
+                            <div.image-tools.top.right.show-on-hover>
+                            <div.image-tools.grid-tools.text-center.hide-for-small.bottom.hover-slide-in.show-on-hover>
+                            <span.box-ngay-khoi-hanh>
+                              <i.fa.fa-calendar>
+                              "Khởi hành hàng tuần"
+                          <div.box-text.text-center [style=height: 204.594px;]>
+                            <div.title-wrapper>
+                              <p.name.product-title.woocommerce-loop-product__title [style=height: 38px;]>
+                                <a.woocommerce-LoopProduct-link.woocommerce-loop-product__link [href=https://dulich2.themedep.top/du-lich-trung-quoc-ha-noi-thanh-do-do-giang-yen-cuu-trai-cau-mau-huyen-gia-co-son-6n5d/]>
+                                  "Du lịch Trung Quốc: Hà Nội – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ"
+                            <div.thong-tin-sp>
+                              <div.ma-tour>
+                                <span.label>
+                                  <i.fa-solid.fa-qrcode>
+                                  "Mã tour:"
+                                <span.value>
+                                  "VPT-SX832"
+                              <div.khoi-hanh>
+                                <span.label>
+                                  <i.fa.fa-map-marker>
+                                  "Khởi hành:"
+                                <span.value>
+                                  "Hà Nội"
+                            <div.price-wrapper [style=height: 18px;]>
+                              <span.price>
+                                <span.woocommerce-Price-amount.amount>
+                                  <bdi>
+                                    "14.990.000"
+                                    <span.woocommerce-Price-currencySymbol>
+                                      "₫"
+                                <span.devvn_woocommerce_price_suffix>
+                                  "/khách"
+                            <div.box-nguoi-lien-he>
+                              <i.fa.fa-user>
+                              <span.value>
+                                "150+"
+                              <span.label>
+                                "đã liên hệ"
+                            <div.add-to-cart-button [style=height: 57.5156px;]>
+                              <a.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-outline [href=?add-to-cart=74]>
+                                "Đặt Tour"
+                            <span#woocommerce_loop_add_to_cart_link_describedby_74.screen-reader-text>
+                <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                  <svg viewBox=0 0 100 100> (len 144)
+                <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                  <svg viewBox=0 0 100 100> (len 189)
+    <section.section.section9>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "KHOẢNH KHẮC"
+                <strong>
+                  "ĐẸP NHẤT"
+          <div.col.medium-7.small-12.large-7>
+            <div.col-inner>
+              <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                <div.img-inner.image-zoom.image-cover.dark [style=padding-top:53.7%;]>
+                  <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dai-loan.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dai-loan.jpg]>
+          <div.col.medium-5.small-12.large-5>
+            <div.col-inner>
+              <div.row.row-small>
+                <div.col.medium-6.small-12.large-6>
+                  <div.col-inner>
+                    <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                      <div.img-inner.image-zoom.image-cover.dark [style=padding-top:75%;]>
+                        <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/phuquoc.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/phuquoc.jpg]>
+                <div.col.medium-6.small-12.large-6>
+                  <div.col-inner>
+                    <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                      <div.img-inner.image-zoom.image-cover.dark [style=padding-top:75%;]>
+                        <img.attachment-large.size-large.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/8655-7e9b-4f2e-a427-18087594164f_1704267988.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/8655-7e9b-4f2e-a427-18087594164f_1704267988.jpg]>
+                <div.col.medium-6.small-12.large-6>
+                  <div.col-inner>
+                    <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                      <div.img-inner.image-cover.dark [style=padding-top:75%;]>
+                        <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/kinh-nghiem-du-lich-thanh-do-trung-quoc-day-du-chi-tiet-nhat-5ffd498ad1d5f_1704267988.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/kinh-nghiem-du-lich-thanh-do-trung-quoc-day-du-chi-tiet-nhat-5ffd498ad1d5f_1704267988.jpg]>
+                <div.col.medium-6.small-12.large-6>
+                  <div.col-inner>
+                    <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                      <div.img-inner.image-zoom.image-cover.dark [style=padding-top:75%;]>
+                        <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-du-lich-thai-lan-1.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-du-lich-thai-lan-1.jpg]>
+    <section.section.section10>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row.row-small>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "KHÁCH HÀNG NÓI GÌ"
+                <strong>
+                  "VỀ CHÚNG TÔI"
+              <section.sec_customer.bg-light.pt-4.pb-4>
+                <div.container>
+                  <div.des.ps-sm-5.pe-sm-5.text-center.mb-4>
+                    <p [style=text-align: center;]>
+                      "Đánh giá, cảm nhận của khách hàng đã sử dụng dịch vụ của chúng tôi"
+          <div.col.medium-6.small-12.large-6>
+            <div.col-inner>
+              <blockquote>
+                <p>
+                  "Lại một lần nữa công ty SANSHIN đồng hành cùng Vietpower trong chuyến du lịch Hạ Long. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Vietpower trong mọi chuyến du lịch trong và ngoài nước. Vietpower luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Vietpower đã nhiệt tình hỗ trợ hết mình"
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 145px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <img.attachment-medium.size-medium.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Screenshot-2024-03-18-130615.png] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Screenshot-2024-03-18-130615.png]>
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "Công ty TNHH SANSHIN Hà Nội"
+                  <p>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                  <p>
+                    "Tour Hạ Long náo nhiệt"
+          <div.col.medium-6.small-12.large-6>
+            <div.col-inner>
+              <blockquote>
+                <p>
+                  "Chúng tôi du lịch tới đảo Phú Quốc xinh đẹp. Được đồng hành cùng công ty du lịch Vietpower. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Vietpower chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Vietpower sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau."
+              <div.icon-box.featured-box.icon-box-left.text-left>
+                <div.icon-box-img [style=width: 145px]>
+                  <div.icon>
+                    <div.icon-inner>
+                      <img.attachment-medium.size-medium.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Screenshot-2024-03-18-130622.png] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Screenshot-2024-03-18-130622.png]>
+                <div.icon-box-text.last-reset>
+                  <h3>
+                    "Nguyễn Khả Tâm"
+                  <p>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                    <i.fa.fa-star>
+                  <p>
+                    "Cảm nhận về tour Phú Quốc do công ty tổ chức"
+    <section.section.section11>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <div.row.row-collapse>
+                <div.col.medium-8.small-12.large-8>
+                  <div.col-inner.dark [style=background-color:rgb(0, 53, 148);]>
+                    <div.row.row-small>
+                      <div.col.medium-4.small-12.large-4>
+                        <div.col-inner>
+                          <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                            <div.img-inner.dark>
+                              <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Untitled-1-1.png] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Untitled-1-1.png]>
+                      <div.col.medium-8.small-12.large-8>
+                        <div.col-inner>
+                          <h2>
+                            "Giảm % cho khách hàng quan tâm kênh Zalo OA của CHÚNG TÔI"
+                          <p>
+                            "Đặt tour dễ dàng trên Website & Zalo"
+                          <div.row.row-small.row-divided>
+                            <div.col.medium-8.small-12.large-8>
+                              <div.col-inner>
+                                <p>
+                                  "Để lại mail chúng tôi sẽ gửi chương trình chi tiết tới bạn."
+                                <div#wpcf7-f485-p66-o1.wpcf7.js>
+                                  <div.screen-reader-response>
+                                    <p>
+                                    <ul>
+                                  <form.wpcf7-form.init>
+                                    <div [style=display: none;]>
+                                      <input [type=hidden] [value=485]>
+                                      <input [type=hidden] [value=6.0]>
+                                      <input [type=hidden] [value=vi]>
+                                      <input [type=hidden] [value=wpcf7-f485-p66-o1]>
+                                      <input [type=hidden] [value=66]>
+                                      <input [type=hidden]>
+                                    <div.row.row-small.form-email>
+                                      <div.col.large-9>
+                                        <p>
+                                          <span.wpcf7-form-control-wrap>
+                                            <input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email [placeholder=Địa chỉ email...] [type=email]>
+                                      <div.col.large-3>
+                                        <p>
+                                          <input.wpcf7-form-control.wpcf7-submit.has-spinner [type=submit] [value=Gửi]>
+                                          <span.wpcf7-spinner>
+                                    <div.wpcf7-response-output>
+                            <div.col.medium-4.small-12.large-4>
+                              <div.col-inner>
+                                <p>
+                                  <span [style=font-size: 85%;]>
+                                    "Quét mã QR để được tư vấn nhanh nhất"
+                                <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                                  <div.img-inner.dark>
+                                    <img.attachment-original.size-original.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/ed0f76206965803bd974.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/ed0f76206965803bd974.jpg]>
+    <section.section.section12>
+      <div.bg.section-bg.fill.bg-fill.bg-loaded>
+      <div.section-content.relative>
+        <div.row>
+          <div.col.small-12.large-12>
+            <div.col-inner>
+              <h2 [style=text-align: center;]>
+                "TIN TỨC"
+                <strong>
+                  "DU LỊCH"
+              <p [style=text-align: center;]>
+                "Chia sẽ những thông tin du lịch triển lãm nhanh nhất & những bí quyết khi tham gia tour hội chợ"
+              <div.gap-element.clearfix [style=display:block; height:auto;]>
+              <div.row.list-post.large-columns-3.medium-columns-1.small-columns-1.slider.row-slider.slider-nav-simple.slider-nav-outside.slider-nav-push.slider-lazy-load-active.is-draggable.flickity-enabled>
+                <div.flickity-viewport [style=height: 358.328px; touch-action: pan-y;]>
+                  <div.flickity-slider [style=left: 0px; transform: translateX(-200%);]>
+                    <div.col.post-item.is-selected [style=position: absolute; left: 200%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/top-5-diem-vui-choi-nghi-duong-tuyet-voi-tai-phu-quoc-gioi-tre-khong-the-bo-lo/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.attachment-original.size-original.wp-post-image.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Thiet-ke-chua-co-ten-2023-04-04T154602.978.png] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/Thiet-ke-chua-co-ten-2023-04-04T154602.978.png]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "TOP 5 điểm vui chơi nghỉ dưỡng tuyệt vời tại Phú Quốc giới trẻ không thể bỏ lỡ"
+                    <div.col.post-item.is-selected [style=position: absolute; left: 233.33%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/chi-voi-giay-thong-hanh-di-dau-du-lich-trung-quoc/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.attachment-original.size-original.wp-post-image.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/photo-1678784477194-1678784477280522466320.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/photo-1678784477194-1678784477280522466320.jpg]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch Tin tức"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "Chỉ Với Giấy Thông Hành, Đi Đâu Du Lịch Trung Quốc?"
+                    <div.col.post-item.is-selected [style=position: absolute; left: 266.67%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/dia-diem-vui-choi-trung-thu-tiet-kiem-nhat-tu-bac-vao-nam/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.attachment-original.size-original.wp-post-image.lazy-load-active [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-vui-choi-trung-thu-tiet-kiem-nhat-tu-bac-vao-nam-41.jpg] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/dia-diem-vui-choi-trung-thu-tiet-kiem-nhat-tu-bac-vao-nam-41.jpg]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch Tin tức"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "Địa điểm vui chơi trung thu tiết kiệm nhất từ Bắc vào Nam"
+                    <div.col.post-item [style=position: absolute; left: 100%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/nhung-dia-diem-du-lich-trung-quoc-khong-can-ho-chieu/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.lazy-load.attachment-original.size-original.wp-post-image [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/du-lich-phuong-hoang-co-tran-mua-nao-dep-nhat.jpg]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch Tin tức"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "Những địa điểm du lịch Trung Quốc không cần hộ chiếu"
+                    <div.col.post-item [style=position: absolute; left: 133.33%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/trai-nghiem-mot-ngay-tai-quan-ngheo-nhat-hong-kong-tham-thuy-bo/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.lazy-load.attachment-original.size-original.wp-post-image [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201280%20720%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/sham-shui-po-thumb-800-480.jpg]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "Trải nghiệm một ngày tại quận nghèo nhất hồng kông- thâm thủy bộ"
+                    <div.col.post-item [style=position: absolute; left: 166.67%;]>
+                      <div.col-inner>
+                        <a.plain [href=https://dulich2.themedep.top/du-lich-han-quoc-kham-pha-khu-rung-la-do-day-me-hoac-hwadam/]>
+                          <div.box.box-normal.box-text-bottom.box-blog-post.has-hover>
+                            <div.box-image>
+                              <div.image-cover [style=padding-top:55%;]>
+                                <img.lazy-load.attachment-original.size-original.wp-post-image [src=data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20780%20520%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E] [data-src=https://dulich2.themedep.top/wp-content/uploads/2024/03/autumn-travel-2.jpg]>
+                            <div.box-text.text-left>
+                              <div.box-text-inner.blog-post-inner>
+                                <p.cat-label.is-xxsmall.op-7.uppercase>
+                                  "Cẩm nang du lịch Tin tức"
+                                  <span.post-meta.is-small.op-8>
+                                    <i.fa.fa-calendar>
+                                    "18/03/2024"
+                                <h5.post-title.is-large>
+                                  "Du Lịch Hàn Quốc: Khám Phá Khu Rừng Lá Đỏ Đầy Mê Hoặc Hwadam"
+                <button.flickity-button.flickity-prev-next-button.previous [type=button]>
+                  <svg viewBox=0 0 100 100> (len 144)
+                <button.flickity-button.flickity-prev-next-button.next [type=button]>
+                  <svg viewBox=0 0 100 100> (len 189)
+
+=====FOOTER
+<footer#footer.footer-wrapper>
+  <section.section.footer-section>
+    <div.bg.section-bg.fill.bg-fill.bg-loaded>
+    <div.section-content.relative>
+      <div.row.row-small>
+        <div.col.medium-5.small-12.large-5>
+          <div.col-inner>
+            <h3.colortextmain>
+              "CÔNG TY TNHH XÚC TIẾN THƯƠNG MẠI DỊCH VỤ VÀ DU LỊCH ABC"
+            <p>
+              <strong>
+                "📍 Địa chỉ"
+              ": Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội, Việt Nam"
+            <p>
+              <strong>
+                "🏠 Chi nhánh Hoà Bình"
+              ": Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình"
+            <p>
+              <strong>
+                "🏠 Chi nhánh Hải Phòng"
+              ": Số 1235, Bặch Đằng, Thủy Nguyên, Hải Phòng"
+            <p>
+              <strong>
+                "🏠 Chi nhánh Nam Định"
+              ": D12P317 ngõ 189 Trần Huy Liệu, Phường Văn Miếu, Thành Phố Nam Định"
+            <p>
+              <strong>
+                "☎️ Hotline"
+              ": 0936 336 xxx"
+            <p>
+              <strong>
+                "✉️ Email"
+              ": info@abctravel.com"
+        <div.col.medium-7.small-12.large-7>
+          <div.col-inner>
+            <div.row.row-small>
+              <div.col.medium-4.small-12.large-4>
+                <div.col-inner>
+                  <h3>
+                    "THÔNG TIN CẦN BIẾT"
+                  <ul>
+                    <li>
+                      <a [href=/gioi-thieu]>
+                        "Giới thiệu"
+                    <li>
+                      <a [href=/lien-he]>
+                        "Liên hệ"
+                    <li>
+                      <a [href=#]>
+                        "Hình thức thanh toán"
+                    <li>
+                      <a [href=#]>
+                        "Chính sách hoàn hủy"
+                    <li>
+                      <a [href=#]>
+                        "Chính sách bảo mật"
+                    <li>
+                      <a [href=#]>
+                        "Điều khoản giao dịch"
+              <div.col.hide-for-small.medium-4.small-12.large-4>
+                <div.col-inner>
+                  <h3>
+                    "CHỨNG NHẬN"
+              <div.col.medium-4.small-12.large-4>
+                <div.col-inner>
+                  <h3>
+                    "ĐĂNG KÝ NHẬN BẢN TIN"
+                  <p>
+                    "Nhập địa chỉ email để nhận thông tin mới nhất từ chúng tôi."
+                  <div#wpcf7-f485-o2.wpcf7.js>
+                    <div.screen-reader-response>
+                      <p>
+                      <ul>
+                    <form.wpcf7-form.init>
+                      <div [style=display: none;]>
+                        <input [type=hidden] [value=485]>
+                        <input [type=hidden] [value=6.0]>
+                        <input [type=hidden] [value=vi]>
+                        <input [type=hidden] [value=wpcf7-f485-o2]>
+                        <input [type=hidden] [value=0]>
+                        <input [type=hidden]>
+                      <div.row.row-small.form-email>
+                        <div.col.large-9>
+                          <p>
+                            <span.wpcf7-form-control-wrap>
+                              <input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email [placeholder=Địa chỉ email...] [type=email]>
+                        <div.col.large-3>
+                          <p>
+                            <input.wpcf7-form-control.wpcf7-submit.has-spinner [type=submit] [value=Gửi]>
+                            <span.wpcf7-spinner>
+                      <div.wpcf7-response-output>
+        <div.col.hide-for-small.medium-5.small-12.large-5>
+          <div.col-inner>
+            <p>
+              "Giấy phép kinh doanh số 01033619401 do sở KH&ĐT TP abc cấp ngày 21/23 năm 2323"
+              <br>
+              "Giấy phép Kinh doanh Lữ hành Quốc tế số 01711D/S2015/TCDL-GPLHabc"
+        <div.col.hide-for-small.medium-7.small-12.large-7>
+          <div.col-inner>
+            <div.row.row-small>
+              <div.col.medium-4.small-12.large-4>
+                <div.col-inner>
+                  <h3>
+                    "Kết nối với chúng tôi"
+                  <div.social-icons.follow-icons [style=font-size:107%]>
+                    <a.icon.primary.button.circle.facebook.tooltip [href=http://url]>
+                      <i.icon-facebook>
+                    <a.icon.primary.button.circle.instagram.tooltip [href=http://url]>
+                      <i.icon-instagram>
+                    <a.icon.primary.button.circle.twitter.tooltip [href=http://url]>
+                      <i.icon-twitter>
+                    <a.icon.primary.button.circle.email.tooltip [href=mailto:your@email]>
+                      <i.icon-envelop>
+              <div.col.medium-4.small-12.large-4>
+                <div.col-inner>
+                  <h3>
+                    "Chấp nhận thanh toán"
+                  <div.img.has-hover.x.md-x.lg-x.y.md-y.lg-y>
+                    <div.img-inner.dark>
+                      <img.attachment-original.size-original [src=https://dulich2.themedep.top/wp-content/uploads/2024/03/thanhtoan.jpg]>
+  <div.absolute-footer.light.medium-text-center.small-text-center>
+    <div.container.clearfix>
+      <div.footer-primary.pull-left>
+        <div.copyright-footer>
+          "Copyright 2026 © Tour du lịch | Thiết kế bởi"
+          <a [href=https://khothemewp.vn] [style=color: #bfbfbf]>
+            "KHOTHEMEWP.VN"
+  <a#top-link.back-to-top.button.icon.invert.plain.fixed.bottom.z-1.is-outline.hide-for-medium.circle [href=#top]>
+    <i.icon-angle-up>
+
+=====OTHER
+A#.skip-link screen-reader-text
+DIV#wrapper.
+DIV#main-menu.mobile-sidebar no-scrollbar mfp-hide
+DIV#login-form-popup.lightbox-content mfp-hide
+SCRIPT#.
+LINK#wc-blocks-style-css.
+STYLE#global-styles-inline-css.
+SCRIPT#wp-hooks-js.
+SCRIPT#wp-i18n-js.
+SCRIPT#wp-i18n-js-after.
+SCRIPT#swv-js.
+SCRIPT#contact-form-7-js-translations.
+SCRIPT#contact-form-7-js-before.
+SCRIPT#contact-form-7-js.
+SCRIPT#flatsome-instant-page-js.
+SCRIPT#sourcebuster-js-js.
+SCRIPT#wc-order-attribution-js-extra.
+SCRIPT#wc-order-attribution-js.
+SCRIPT#wp-polyfill-js.
+SCRIPT#hoverIntent-js.
+SCRIPT#flatsome-js-js-extra.
+SCRIPT#flatsome-js-js.
+SCRIPT#flatsome-lazy-js.
+SCRIPT#flatsome-theme-woocommerce-js-js.
