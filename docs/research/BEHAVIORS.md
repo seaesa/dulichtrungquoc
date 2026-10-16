@@ -48,3 +48,10 @@ Breakpoints Flatsome: small ≤549px, medium 550–849px, large ≥850px.
 - Dải biểu tượng: CSS animation `dn-marquee` 40s chạy vô hạn (danh sách nhân đôi, dịch -50%), dừng khi hover/focus; tắt khi prefers-reduced-motion.
 - Bấm biểu tượng hoặc dot → nhảy tới slide tương ứng và dừng autoplay; biểu tượng/dot của slide hiện tại được tô xanh lá.
 - Slider địa điểm: autoplay 6s, kéo/vuốt, ảnh zoom chậm (Ken Burns 7s), nội dung thẻ hiện lần lượt. ≤849px ẩn mũi tên.
+
+## Tuỳ biến: Đa ngôn ngữ, LINE, thương hiệu
+- Chỉ có 2 ngôn ngữ: tiếng Nhật (mặc định, `index.html`) và tiếng Trung giản thể (`zh.html`). Build dựng trang tiếng Việt rồi `scripts/i18n.py` dịch theo bảng `TR`; build in ra đoạn nào chưa dịch.
+- Chuyển ngôn ngữ: dropdown ở top bar (desktop), nút viên ở top bar mobile và cuối menu off-canvas. Thông báo form trong `js/main.js` (`MSGS`) theo `<html lang>`.
+- Khối Zalo → LINE: màn hình điện thoại LINE dựng bằng HTML/CSS (`line_phone()`), QR thật ở `images/line-qr.jpg`.
+- Tên công ty Khánh An Tourist; logo chữ dựng bằng HTML/SVG (`BRAND_MARK`).
+- Link tới trang chưa làm đều là `href="#"` và bị chặn trong JS (không chuyển trang).

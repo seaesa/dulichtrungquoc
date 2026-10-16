@@ -476,6 +476,22 @@
    * Form email (giả lập Contact Form 7: validate + thông báo)
    * ------------------------------------------------------------------ */
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  /* Thông báo form theo ngôn ngữ trang (<html lang>): ja mặc định, zh */
+  var MSGS = {
+    ja: {
+      required: 'この項目は必須です。',
+      email: 'メールアドレスを入力してください。',
+      invalid: '入力内容に誤りがあります。確認してもう一度お試しください。',
+      sent: 'ご登録ありがとうございます。送信が完了しました。'
+    },
+    zh: {
+      required: '请填写此栏。',
+      email: '请输入电子邮箱地址。',
+      invalid: '有一项或多项输入有误，请检查后重试。',
+      sent: '感谢您的提交，信息已发送。'
+    }
+  };
+  var MSG = MSGS[(document.documentElement.lang || 'ja').slice(0, 2)] || MSGS.ja;
   document.querySelectorAll('.email-form').forEach(function (form) {
     var input = form.querySelector('input[type="email"]');
     var out = form.querySelector('.form-response');
@@ -501,8 +517,8 @@
     }
     function validate() {
       var v = input.value.trim();
-      if (!v) return 'Vui lòng nhập dữ liệu cho trường này.';
-      if (!EMAIL_RE.test(v)) return 'Vui lòng nhập địa chỉ email.';
+      if (!v) return MSG.required;
+      if (!EMAIL_RE.test(v)) return MSG.email;
       return '';
     }
     input.addEventListener('input', function () {
@@ -516,8 +532,8 @@
       out.hidden = false;
       out.classList.toggle('is-sent', !err);
       out.textContent = err
-        ? 'Có một hoặc nhiều mục nhập có lỗi. Vui lòng kiểm tra và thử lại.'
-        : 'Cảm ơn bạn đã gửi tin nhắn. Nó đã được gửi đi.';
+        ? MSG.invalid
+        : MSG.sent;
       if (!err) { input.value = ''; submitted = false; }
     });
   });

@@ -9,6 +9,7 @@ import re
 from pathlib import Path
 
 from danang_banner import banner
+import i18n
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / 'docs/research/content.json').read_text(encoding='utf8'))
@@ -127,7 +128,7 @@ WHY = [
     ('TOP 7', 'các đơn vị làm VISA nước ngoài'),
     ('ĐẶT TOUR', 'Dễ dàng nhanh chóng chỉ 3 bước'),
     ('THANH TOÁN', 'Đơn giản, an toàn và linh hoạt'),
-    ('HOTLINE', '0936 336 xxx Trực tuyến 24/7'),
+    ('HOTLINE', '0982 277 493 Trực tuyến 24/7'),
 ]
 SERVICES = [
     ('#fd6666', 'Hội chợ quốc tế', 'Chuyên tour hội chợ quốc tế các nước trên thế giới'),
@@ -141,9 +142,9 @@ MOMENTS = [
     ('dia-diem-du-lich-thai-lan-1.jpg', True),
 ]
 TESTIMONIALS = [
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Vietpower trong chuyến du lịch Hạ Long. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Vietpower trong mọi chuyến du lịch trong và ngoài nước. Vietpower luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Vietpower đã nhiệt tình hỗ trợ hết mình',
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hạ Long. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
      'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN Hà Nội', 'Tour Hạ Long náo nhiệt'),
-    ('Chúng tôi du lịch tới đảo Phú Quốc xinh đẹp. Được đồng hành cùng công ty du lịch Vietpower. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Vietpower chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Vietpower sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
+    ('Chúng tôi du lịch tới đảo Phú Quốc xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
      'Screenshot-2024-03-18-130622.png', 'Nguyễn Khả Tâm', 'Cảm nhận về tour Phú Quốc do công ty tổ chức'),
 ]
 NAV = [
@@ -183,9 +184,14 @@ def email_form(fid):
                 </form>'''
 
 
+BRAND_MARK = ('<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#003594"/>'
+              '<path d="M7 33l10-12 7 8 6-6 11 10z" fill="#89c440"/><circle cx="33" cy="15" r="4" fill="#ffd257"/>'
+              '<path d="M9 37q15-6 30 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>')
+
+
 def header():
-    contact = '''<li><a href="mailto:info.giuseart.com@gmail.com"><i class="icon-envelop"></i><span>info.giuseart.com@gmail.com</span></a></li>
-              <li><a href="tel:+47 900 99 000"><i class="icon-phone"></i><span>+47 900 99 000</span></a></li>'''
+    contact = '''<li><a href="mailto:truongvutienphuoc@gmail.com"><i class="icon-envelop"></i><span>truongvutienphuoc@gmail.com</span></a></li>
+              <li><a href="tel:0982277493"><i class="icon-phone"></i><span>0982 277 493</span></a></li>'''
     main_nav = []
     for label, href in NAV:
         if label == 'Tour du lịch':
@@ -212,19 +218,21 @@ def header():
             <li class="has-dropdown"><a href="{SITE}/gio-hang/" class="header-cart-link"><span class="header-cart-title">Giỏ hàng</span><i class="icon-shopping-cart"></i></a>
               <ul class="nav-dropdown"><li class="html"><p class="mini-cart-empty">Chưa có sản phẩm trong giỏ hàng.</p></li></ul>
             </li>
+            <!--LANG_SWITCH-->
           </ul>
         </div>
         <div class="flex-col show-for-medium flex-grow mobile-contact-wrap">
           <ul class="nav header-contact mobile-contact">
               {contact}
           </ul>
+          <!--LANG_SWITCH_MOBILE-->
         </div>
       </div>
     </div>
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="./" title="Mẫu website du lịch" rel="home"><img width="1024" height="818" src="images/logo-1024x818.jpg" alt="Mẫu website du lịch"></a>
+          <a href="./" title="Khánh An Tourist" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -272,12 +280,35 @@ def offcanvas():
                 {search_form('search-mobile')}
           </li>
           {items}
+          <!--LANG_SWITCH_SIDEBAR-->
         </ul>
       </div>
     </div>
   </div>
   <button title="Close (Esc)" type="button" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
 </div>'''
+
+
+def line_phone():
+    """Màn hình tài khoản LINE chính thức dựng bằng HTML/CSS (thay ảnh chụp Zalo cũ)."""
+    return '''<div class="line-phone" aria-hidden="true">
+                    <div class="lp-screen">
+                      <div class="lp-status"><span>9:41</span><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
+                      <div class="lp-bar"><i class="fa-solid fa-chevron-left"></i><span>Khánh An Tourist</span><i class="fa-solid fa-ellipsis"></i></div>
+                      <div class="lp-cover"><img src="images/danang/thumbs/cau-vang.jpg" alt="" loading="lazy"></div>
+                      <div class="lp-profile">
+                        <span class="lp-avatar">''' + BRAND_MARK + '''</span>
+                        <strong>Khánh An Tourist <i class="fa-solid fa-circle-check"></i></strong>
+                        <small>Tài khoản chính thức</small>
+                      </div>
+                      <span class="lp-add"><i class="fa-solid fa-user-plus"></i> Kết bạn</span>
+                      <ul class="lp-info">
+                        <li><i class="fa-solid fa-phone"></i> 0982 277 493</li>
+                        <li><i class="fa-regular fa-clock"></i> 8:00 – 18:00</li>
+                        <li><i class="fa-solid fa-ticket"></i> Ưu đãi cho bạn bè LINE</li>
+                      </ul>
+                    </div>
+                  </div>'''
 
 
 def main_content():
@@ -416,7 +447,7 @@ def main_content():
     </div>
   </section>
 
-  <!-- section11: Zalo OA -->
+  <!-- section11: LINE (thay Zalo OA) -->
   <section class="section section11">
     <div class="section-content">
       <div class="row">
@@ -425,11 +456,11 @@ def main_content():
             <div class="col zalo-col medium-8 small-12 large-8"><div class="col-inner zalo-box">
               <div class="row row-small">
                 <div class="col phone-col medium-4 small-12 large-4"><div class="col-inner">
-                  {lazy('/Untitled-1-1.png', 'Zalo OA Du lịch Vietpower')}
+                  {line_phone()}
                 </div></div>
                 <div class="col medium-8 small-12 large-8"><div class="col-inner">
-                  <h2>Giảm % cho khách hàng quan tâm kênh Zalo OA của CHÚNG TÔI</h2>
-                  <p>Đặt tour dễ dàng trên Website &amp; Zalo</p>
+                  <h2>Giảm % cho khách hàng kết bạn LINE chính thức của CHÚNG TÔI</h2>
+                  <p>Đặt tour dễ dàng trên Website &amp; LINE</p>
                   <div class="row row-small row-divided">
                     <div class="col medium-8 small-12 large-8"><div class="col-inner">
                       <p>Để lại mail chúng tôi sẽ gửi chương trình chi tiết tới bạn.</p>
@@ -437,7 +468,7 @@ def main_content():
                     </div></div>
                     <div class="col qr-col medium-4 small-12 large-4"><div class="col-inner">
                       <p><span>Quét mã QR để được tư vấn nhanh nhất</span></p>
-                      {lazy('/ed0f76206965803bd974.jpg', 'QR Zalo')}
+                      <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourist" loading="lazy">
                     </div></div>
                   </div>
                 </div></div>
@@ -476,13 +507,14 @@ def footer():
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
-          <h3>CÔNG TY TNHH XÚC TIẾN THƯƠNG MẠI DỊCH VỤ VÀ DU LỊCH ABC</h3>
+          <h3>KHÁNH AN TOURIST</h3>
           <p><strong>📍 Địa chỉ</strong>: Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội, Việt Nam</p>
           <p><strong>🏠 Chi nhánh Hoà Bình</strong>: Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình</p>
           <p><strong>🏠 Chi nhánh Hải Phòng</strong>: Số 1235, Bặch Đằng, Thủy Nguyên, Hải Phòng</p>
           <p><strong>🏠 Chi nhánh Nam Định</strong>: D12P317 ngõ 189 Trần Huy Liệu, Phường Văn Miếu, Thành Phố Nam Định</p>
-          <p><strong>☎️ Hotline</strong>: 0936 336 xxx</p>
-          <p><strong>✉️ Email</strong>: info@abctravel.com</p>
+          <p><strong>☎️ Hotline</strong>: <a href="tel:0982277493">0982 277 493</a></p>
+          <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0982277493" target="_blank" rel="noopener">0982 277 493</a></p>
+          <p><strong>✉️ Email</strong>: <a href="mailto:truongvutienphuoc@gmail.com">truongvutienphuoc@gmail.com</a></p>
         </div></div>
         <div class="col medium-7 small-12 large-7"><div class="col-inner">
           <div class="row row-small">
@@ -515,7 +547,7 @@ def footer():
             <div class="col medium-4 small-12 large-4"><div class="col-inner">
               <h3>Kết nối với chúng tôi</h3>
               <div class="social-icons">
-                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:your@email" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
+                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:truongvutienphuoc@gmail.com" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
               </div>
             </div></div>
             <div class="col medium-4 small-12 large-4"><div class="col-inner">
@@ -530,7 +562,7 @@ def footer():
   <div class="absolute-footer">
     <div class="container">
       <div class="footer-primary">
-        <div class="copyright-footer">Copyright 2026 © Tour du lịch | Thiết kế bởi <a href="https://khothemewp.vn" target="_blank" rel="noopener">KHOTHEMEWP.VN</a></div>
+        <div class="copyright-footer">Copyright 2026 © Khánh An Tourist</div>
       </div>
     </div>
   </div>
@@ -543,8 +575,8 @@ PAGE = f'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trang chủ - Mẫu website du lịch</title>
-<meta name="description" content="Mẫu website du lịch — tour trong nước, tour nước ngoài, visa, vé máy bay.">
+<title>Khánh An Tourist - Trang chủ</title>
+<meta name="description" content="Khánh An Tourist — tour trong nước, tour nước ngoài, visa, vé máy bay.">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="images/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="images/favicon-180.png">
@@ -568,5 +600,10 @@ PAGE = f'''<!DOCTYPE html>
 PAGE = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url|\?add-to-cart=\d+)"', 'href="#"', PAGE)
 PAGE = PAGE.replace(f'action="{SITE}/"', 'action="#"')
 
-(ROOT / 'index.html').write_text(PAGE, encoding='utf8')
-print('index.html:', len(PAGE), 'bytes')
+# Trang chỉ có tiếng Nhật (mặc định, index.html) và tiếng Trung (zh.html)
+for lang, conf in i18n.LANGS.items():
+    out = i18n.render(PAGE, lang)
+    (ROOT / conf['file']).write_text(out, encoding='utf8')
+    print(f"{conf['file']}: {len(out)} bytes")
+    for t in i18n.leftovers(out):
+        print(f'  [{lang}] chưa dịch: {t[:90]}')
