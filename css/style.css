@@ -655,3 +655,10 @@ html:lang(zh) { --font: 'Google Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto 
 .lp-info li { display: flex; align-items: center; gap: 8px; margin: 0; padding: 4px 0; color: #444; font-size: 10.5px; }
 .lp-info i { width: 12px; color: #06c755; text-align: center; }
 .section11 .line-qr { width: 100%; max-width: 140px; padding: 6px; border-radius: 10px; background: #fff; }
+
+/* Tour golf & du thuyền */
+#tour-golf, #tour-du-thuyen { scroll-margin-top: 80px; }
+.tour-credit { margin: 6px 0 0; color: #9aa3b2; font-size: 11px; line-height: 1.5; }
+.tour-credit a { color: inherit; }
+.tour-credit a:hover { color: var(--secondary); }
+.add-to-cart-button a { white-space: nowrap; max-width: none; }

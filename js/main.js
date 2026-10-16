@@ -464,6 +464,11 @@
   document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') closeMenu(); });
   MQ_LARGE.addEventListener && MQ_LARGE.addEventListener('change', function (m) { if (m.matches) closeMenu(); });
 
+  // Link tới một mục trong trang (vd. #tour-golf): đóng menu rồi cuộn tới mục đó
+  menuWrap.querySelectorAll('.nav-sidebar a[href^="#"]:not([href="#"])').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
   menuWrap.querySelectorAll('.nav-sidebar .toggle').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var li = btn.parentNode;

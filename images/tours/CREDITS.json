@@ -1,0 +1,58 @@
+[
+ {
+  "slug": "golf-hue",
+  "file": "golf-hue.jpg",
+  "author": "Christophe95",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Sân_Golf_Huế.jpg"
+ },
+ {
+  "slug": "golf-tam-dao",
+  "file": "golf-tam-dao.jpg",
+  "author": "Leanhtuan218",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tamdaogolf1.jpg"
+ },
+ {
+  "slug": "golf-palm-path",
+  "file": "golf-palm-path.jpg",
+  "author": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DZ6_2422_A_peaceful_golf_course_path_winding_through_sunlit_greens_and_towering_palm_trees_under_a_clear_blue_sky.jpg"
+ },
+ {
+  "slug": "golf-river",
+  "file": "golf-river.jpg",
+  "author": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DSC_6924_Sunny_golf_course_fairway_beside_a_calm_waterway_with_palm_trees_casting_long_shadows_under_a_clear_blue_sky.jpg"
+ },
+ {
+  "slug": "cruise-ha-long",
+  "file": "cruise-ha-long.jpg",
+  "author": "Mig Gilbert from Brighton",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cruising_Ha_Long_Bay_(25415940037).jpg"
+ },
+ {
+  "slug": "cruise-lan-ha-night",
+  "file": "cruise-lan-ha-night.jpg",
+  "author": "Radek Kucharski from Warsaw, Poland",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_night_in_Lan_Ha_Bay_-_Flickr_-_radkuch.13.jpg"
+ },
+ {
+  "slug": "cruise-ha-long-bay",
+  "file": "cruise-ha-long-bay.jpg",
+  "author": "Guerretto",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bahía_de_Halong_(14847479918).jpg"
+ },
+ {
+  "slug": "cruise-junk",
+  "file": "cruise-junk.jpg",
+  "author": "Arianos",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Asia_Cruise_Junk_in_Halong_bay.JPG"
+ }
+]

@@ -151,6 +151,32 @@ _ROWS = [
     ('Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ',
      '格安中国旅行：河口・屏辺・建水・蒙自 3日間', '中国特价游：河口 – 屏边 – 建水 – 蒙自 3天2晚'),
 
+    # --- tour golf & du thuyền
+    ('Tour golf', 'ゴルフツアー', '高尔夫线路'),
+    ('Tour du thuyền', 'クルーズツアー', '游轮线路'),
+    ('GOLF', 'ゴルフ', '高尔夫'),
+    ('DU THUYỀN', 'クルーズ', '游轮'),
+    ('Hà Nội, Đà Nẵng', 'ハノイ、ダナン', '河内、岘港'),
+    ('Đà Nẵng', 'ダナン', '岘港'),
+    ('Tour Golf Đà Nẵng – Hội An: BRG Danang Golf – Montgomerie Links – Hoiana Shores 4N3Đ',
+     'ダナン・ホイアン ゴルフツアー：BRGダナンゴルフ・モンゴメリーリンクス・ホイアナショアーズ 4日間',
+     '岘港 – 会安高尔夫之旅：BRG岘港高尔夫 – 蒙哥马利林克斯 – 会安娜海岸 4天3晚'),
+    ('Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ',
+     'フエ・ランコー ゴルフツアー：ラグーナゴルフ・ランコー＆フエのゴルフ場 3日間',
+     '顺化 – 朗姑高尔夫之旅：朗姑拉古娜高尔夫 & 顺化球场 3天2晚'),
+    ('Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ',
+     'バーナーヒルズ・ゴルフクラブ＆ダナンのビーチリゾート 2日間',
+     '巴拿山高尔夫俱乐部 & 岘港海滨度假 2天1晚'),
+    ('Tour Golf Hà Nội – Tam Đảo Golf Resort – Sky Lake 3N2Đ',
+     'ハノイ ゴルフツアー：タムダオ・ゴルフリゾート・スカイレイク 3日間',
+     '河内高尔夫之旅：三岛高尔夫度假村 – 天湖 3天2晚'),
+    ('Du thuyền 5 sao vịnh Hạ Long 2N1Đ', 'ハロン湾 5つ星クルーズ 2日間', '下龙湾五星游轮 2天1晚'),
+    ('Du thuyền vịnh Lan Hạ – Cát Bà 3N2Đ', 'ランハー湾・カットバ島クルーズ 3日間', '兰下湾 – 吉婆岛游轮 3天2晚'),
+    ('Du thuyền trong ngày vịnh Hạ Long – hang Sửng Sốt – đảo Ti Tốp',
+     'ハロン湾日帰りクルーズ：スンソット洞窟・ティートップ島', '下龙湾一日游轮：惊讶洞 – 天堂岛'),
+    ('Du thuyền buồm truyền thống ngắm hoàng hôn vịnh Hạ Long 2N1Đ',
+     '伝統的な帆船で楽しむハロン湾サンセットクルーズ 2日間', '传统帆船游下龙湾赏日落 2天1晚'),
+
     # --- vì sao chọn / dịch vụ
     ('VÌ SAO CHỌN', '選ばれる', '为什么选择'),
     ('CHÚNG TÔI', '理由', '我们'),
@@ -161,7 +187,7 @@ _ROWS = [
     ('Dễ dàng nhanh chóng chỉ 3 bước', 'わずか3ステップで簡単・スピーディー', '只需3步，简单快捷'),
     ('THANH TOÁN', 'お支払い', '付款'),
     ('Đơn giản, an toàn và linh hoạt', 'シンプル・安全・柔軟', '简单、安全、灵活'),
-    ('0982 277 493 Trực tuyến 24/7', '0982 277 493 24時間対応', '0982 277 493 24小时在线'),
+    ('Trực tuyến 24/7', '24時間対応', '24小时在线'),
     ('CÁC DỊCH VỤ', '私たちの', '我们的'),
     ('CỦA CHÚNG TÔI', 'サービス', '服务'),
     ('Hội chợ quốc tế', '国際見本市', '国际展会'),
@@ -282,6 +308,10 @@ def render(page, lang):
         else:
             out.append(_tr_text(p, lang))
     page = ''.join(out)
+    # Tiêu đề "TOUR <strong>X</strong>": tiếng Nhật/Trung đặt chữ "ツアー/线路" ra sau (ゴルフツアー, 游轮线路)
+    word = TR['TOUR'][lang]
+    page = re.sub(rf'<h2 class="home-title">{word} <strong>([^<]+)</strong></h2>',
+                  rf'<h2 class="home-title"><strong>\1</strong>{word}</h2>', page)
     page = page.replace('<html lang="vi">', f'<html lang="{LANGS[lang]["html_lang"]}">')
     alts = ''.join(f'<link rel="alternate" hreflang="{c["html_lang"]}" href="{c["file"]}">' for c in LANGS.values())
     page = page.replace('</head>', alts + '\n</head>', 1)

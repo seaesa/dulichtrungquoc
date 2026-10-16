@@ -20,6 +20,8 @@ e = html.escape
 
 
 def img(url):
+    if url.startswith('tours/'):
+        return 'images/' + url
     return 'images/' + url.rsplit('/', 1)[-1]
 
 
@@ -102,11 +104,11 @@ def tour_card(p):
           </div>'''
 
 
-def tour_section(block, first=False):
+def tour_section(block, first=False, sid='', credit=''):
     plain, strong = block['title'].split(' ', 1)
     cards = ''.join(tour_card(p) for p in block['prods'])
     return f'''
-  <section class="section section3{' pb-30' if first else ''}">
+  <section class="section section3{' pb-30' if first else ''}"{f' id="{sid}"' if sid else ''}>
     <div class="section-content">
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
@@ -115,11 +117,37 @@ def tour_section(block, first=False):
             <div class="slider-viewport"><div class="slider-track">{cards}
             </div></div>
             {ARROWS}
-          </div>
+          </div>{credit}
         </div></div>
       </div>
     </div>
   </section>'''
+
+
+# Tour golf & du thuyền (dữ liệu mẫu — sửa giá/lịch trình thật tại đây)
+EXTRA_TOURS = [
+    dict(sid='tour-golf', title='TOUR GOLF', prods=[
+        dict(img='tours/golf-river.jpg', title='Tour Golf Đà Nẵng – Hội An: BRG Danang Golf – Montgomerie Links – Hoiana Shores 4N3Đ', ma='KA-GOLF01', kh='Đà Nẵng', price='18.900.000', lh='86'),
+        dict(img='tours/golf-hue.jpg', title='Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ', ma='KA-GOLF02', kh='Đà Nẵng', price='12.500.000', lh='64'),
+        dict(img='tours/golf-palm-path.jpg', title='Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF03', kh='Đà Nẵng', price='8.900.000', lh='120'),
+        dict(img='tours/golf-tam-dao.jpg', title='Tour Golf Hà Nội – Tam Đảo Golf Resort – Sky Lake 3N2Đ', ma='KA-GOLF04', kh='Hà Nội', price='13.900.000', lh='72'),
+    ]),
+    dict(sid='tour-du-thuyen', title='TOUR DU THUYỀN', prods=[
+        dict(img='tours/cruise-ha-long.jpg', title='Du thuyền 5 sao vịnh Hạ Long 2N1Đ', ma='KA-CRU01', kh='Hà Nội', price='5.900.000', lh='150+'),
+        dict(img='tours/cruise-lan-ha-night.jpg', title='Du thuyền vịnh Lan Hạ – Cát Bà 3N2Đ', ma='KA-CRU02', kh='Hà Nội', price='8.500.000', lh='98'),
+        dict(img='tours/cruise-ha-long-bay.jpg', title='Du thuyền trong ngày vịnh Hạ Long – hang Sửng Sốt – đảo Ti Tốp', ma='KA-CRU03', kh='Hà Nội', price='1.890.000', lh='200'),
+        dict(img='tours/cruise-junk.jpg', title='Du thuyền buồm truyền thống ngắm hoàng hôn vịnh Hạ Long 2N1Đ', ma='KA-CRU04', kh='Hà Nội, Đà Nẵng', price='4.900.000', lh='75'),
+    ]),
+]
+TOUR_CREDITS = {c['file']: c for c in json.loads((ROOT / 'images/tours/CREDITS.json').read_text(encoding='utf8'))}
+
+
+def extra_tour_section(block):
+    for p in block['prods']:
+        p.update(href='#', cart='#')
+    used = [TOUR_CREDITS[p['img'].split('/')[-1]] for p in block['prods']]
+    credit = ' · '.join(f'<a href="{c["source"]}" target="_blank" rel="noopener">{e(c["author"])}</a> ({e(c["license"])})' for c in used)
+    return tour_section(block, sid=block['sid'], credit=f'\n          <p class="tour-credit">Ảnh: {credit} · Wikimedia Commons</p>')
 
 
 WHY = [
@@ -128,7 +156,7 @@ WHY = [
     ('TOP 7', 'các đơn vị làm VISA nước ngoài'),
     ('ĐẶT TOUR', 'Dễ dàng nhanh chóng chỉ 3 bước'),
     ('THANH TOÁN', 'Đơn giản, an toàn và linh hoạt'),
-    ('HOTLINE', '0982 277 493 Trực tuyến 24/7'),
+    ('HOTLINE', '0326 978 689 Trực tuyến 24/7'),
 ]
 SERVICES = [
     ('#fd6666', 'Hội chợ quốc tế', 'Chuyên tour hội chợ quốc tế các nước trên thế giới'),
@@ -156,7 +184,8 @@ NAV = [
     ('Tin tức', SITE + '/tin-tuc/'),
     ('Liên hệ', SITE + '/lien-he/'),
 ]
-SUBNAV = [('Tour nước ngoài', SITE + '/tour-nuoc-ngoai/'), ('Tour trong nước', SITE + '/tour-trong-nuoc/')]
+SUBNAV = [('Tour nước ngoài', SITE + '/tour-nuoc-ngoai/'), ('Tour trong nước', SITE + '/tour-trong-nuoc/'),
+          ('Tour golf', '#tour-golf'), ('Tour du thuyền', '#tour-du-thuyen')]
 
 
 def search_form(fid):
@@ -190,8 +219,8 @@ BRAND_MARK = ('<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><c
 
 
 def header():
-    contact = '''<li><a href="mailto:truongvutienphuoc@gmail.com"><i class="icon-envelop"></i><span>truongvutienphuoc@gmail.com</span></a></li>
-              <li><a href="tel:0982277493"><i class="icon-phone"></i><span>0982 277 493</span></a></li>'''
+    contact = '''<li><a href="mailto:nguyelyhungdd@gmail.com"><i class="icon-envelop"></i><span>nguyelyhungdd@gmail.com</span></a></li>
+              <li><a href="tel:0326978689"><i class="icon-phone"></i><span>0326 978 689</span></a></li>'''
     main_nav = []
     for label, href in NAV:
         if label == 'Tour du lịch':
@@ -303,7 +332,7 @@ def line_phone():
                       </div>
                       <span class="lp-add"><i class="fa-solid fa-user-plus"></i> Kết bạn</span>
                       <ul class="lp-info">
-                        <li><i class="fa-solid fa-phone"></i> 0982 277 493</li>
+                        <li><i class="fa-solid fa-phone"></i> 0326 978 689</li>
                         <li><i class="fa-regular fa-clock"></i> 8:00 – 18:00</li>
                         <li><i class="fa-solid fa-ticket"></i> Ưu đãi cho bạn bè LINE</li>
                       </ul>
@@ -413,6 +442,9 @@ def main_content():
     </div>
   </section>
 
+  {extra_tour_section(EXTRA_TOURS[0])}
+  {extra_tour_section(EXTRA_TOURS[1])}
+
   {tour_section(tours[1])}
   {tour_section(tours[2])}
   {tour_section(tours[3])}
@@ -512,9 +544,9 @@ def footer():
           <p><strong>🏠 Chi nhánh Hoà Bình</strong>: Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình</p>
           <p><strong>🏠 Chi nhánh Hải Phòng</strong>: Số 1235, Bặch Đằng, Thủy Nguyên, Hải Phòng</p>
           <p><strong>🏠 Chi nhánh Nam Định</strong>: D12P317 ngõ 189 Trần Huy Liệu, Phường Văn Miếu, Thành Phố Nam Định</p>
-          <p><strong>☎️ Hotline</strong>: <a href="tel:0982277493">0982 277 493</a></p>
-          <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0982277493" target="_blank" rel="noopener">0982 277 493</a></p>
-          <p><strong>✉️ Email</strong>: <a href="mailto:truongvutienphuoc@gmail.com">truongvutienphuoc@gmail.com</a></p>
+          <p><strong>☎️ Hotline</strong>: <a href="tel:0326978689">0326 978 689</a></p>
+          <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
+          <p><strong>✉️ Email</strong>: <a href="mailto:nguyelyhungdd@gmail.com">nguyelyhungdd@gmail.com</a></p>
         </div></div>
         <div class="col medium-7 small-12 large-7"><div class="col-inner">
           <div class="row row-small">
@@ -547,7 +579,7 @@ def footer():
             <div class="col medium-4 small-12 large-4"><div class="col-inner">
               <h3>Kết nối với chúng tôi</h3>
               <div class="social-icons">
-                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:truongvutienphuoc@gmail.com" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
+                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:nguyelyhungdd@gmail.com" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
               </div>
             </div></div>
             <div class="col medium-4 small-12 large-4"><div class="col-inner">

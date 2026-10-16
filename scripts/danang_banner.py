@@ -75,7 +75,7 @@ def slide(i, p):
               <ul class="dn-facts">{facts}</ul>
               <div class="dn-actions">
                 <a class="dn-btn" href="{TOUR_URL}">Xem tour Đà Nẵng <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                <a class="dn-link" href="tel:0982277493"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0982 277 493</a>
+                <a class="dn-link" href="tel:0326978689"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0326 978 689</a>
               </div>
             </div>
           </div>

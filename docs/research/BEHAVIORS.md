@@ -55,3 +55,4 @@ Breakpoints Flatsome: small ≤549px, medium 550–849px, large ≥850px.
 - Khối Zalo → LINE: màn hình điện thoại LINE dựng bằng HTML/CSS (`line_phone()`), QR thật ở `images/line-qr.jpg`.
 - Tên công ty Khánh An Tourist; logo chữ dựng bằng HTML/SVG (`BRAND_MARK`).
 - Link tới trang chưa làm đều là `href="#"` và bị chặn trong JS (không chuyển trang).
+- Tour golf (`#tour-golf`) và du thuyền (`#tour-du-thuyen`): dữ liệu mẫu trong `EXTRA_TOURS` (build-html.py), ảnh ở `images/tours/` (nguồn/giấy phép trong `CREDITS.json`, ghi nguồn dưới mỗi mục). Menu "Tour du lịch" có link tới 2 mục này; menu mobile tự đóng khi bấm.
