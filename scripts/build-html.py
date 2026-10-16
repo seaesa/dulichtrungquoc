@@ -5,6 +5,7 @@ Chạy: python3 scripts/build-html.py
 """
 import html
 import json
+import re
 from pathlib import Path
 
 from danang_banner import banner
@@ -562,6 +563,10 @@ PAGE = f'''<!DOCTYPE html>
 </body>
 </html>
 '''
+
+# Các trang con chưa làm: không dẫn đi đâu (không chuyển về web gốc). JS chặn click vào href="#".
+PAGE = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url|\?add-to-cart=\d+)"', 'href="#"', PAGE)
+PAGE = PAGE.replace(f'action="{SITE}/"', 'action="#"')
 
 (ROOT / 'index.html').write_text(PAGE, encoding='utf8')
 print('index.html:', len(PAGE), 'bytes')

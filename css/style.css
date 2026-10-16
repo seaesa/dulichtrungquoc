@@ -326,12 +326,15 @@ html.has-off-canvas { overflow: hidden; }
 .dn-marquee-list { display: flex; align-items: center; margin: 0; padding: 0; }
 .dn-marquee-list li { display: flex; align-items: center; }
 .dn-marquee-list li::after { content: ""; flex: 0 0 auto; width: 6px; height: 6px; margin: 0 28px; border-radius: 50%; background: var(--secondary); opacity: .7; }
-.dn-icon { display: flex; align-items: center; gap: 12px; margin: 0; padding: 8px 4px; border: 0; background: none; color: var(--primary); font: 600 16px/1.2 'Google Sans', sans-serif; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: color .3s; }
-.dn-icon-svg { width: 44px; height: 44px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s; }
-.dn-icon-svg .acc { stroke: var(--secondary); transition: stroke .3s; }
-.dn-icon:hover, .dn-icon.is-active { color: var(--secondary); }
-.dn-icon:hover .dn-icon-svg { transform: translateY(-3px); }
-.dn-icon.is-active .dn-icon-svg .acc { stroke: var(--primary); }
+.dn-icon { display: flex; align-items: center; gap: 12px; margin: 0; padding: 6px 14px 6px 6px; border: 0; border-radius: 40px; background: none; color: var(--primary); text-align: left; white-space: nowrap; cursor: pointer; transition: background-color .3s, color .3s; }
+.dn-thumb { width: 56px; height: 56px; flex: 0 0 auto; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #dfe6f1; transition: box-shadow .3s, transform .3s; }
+.dn-icon-text { display: flex; flex-direction: column; line-height: 1.2; }
+.dn-icon-text strong { font: 600 16px/1.25 'Google Sans', sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+.dn-icon-text small { font-size: 13px; color: #7a869a; }
+.dn-icon:hover, .dn-icon.is-active { background: #f1f6ea; color: var(--primary); }
+.dn-icon:hover .dn-thumb { transform: scale(1.06); }
+.dn-icon.is-active .dn-thumb { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--secondary); }
+.dn-icon.is-active strong { color: #5f9425; }
 
 /* BANNER ĐÀ NẴNG — slider địa điểm */
 .dn-places .slider-viewport { background: #0b1b3a; }
@@ -384,8 +387,10 @@ html.has-off-canvas { overflow: hidden; }
   .dn-marquee { height: 64px; }
   .dn-marquee-label { display: none; }
   .dn-marquee-list li::after { margin: 0 18px; }
-  .dn-icon { gap: 8px; font-size: 14px; }
-  .dn-icon-svg { width: 34px; height: 34px; }
+  .dn-icon { gap: 8px; padding: 4px 10px 4px 4px; }
+  .dn-thumb { width: 42px; height: 42px; }
+  .dn-icon-text strong { font-size: 14px; }
+  .dn-icon-text small { display: none; }
   .dn-slide { height: 580px; }
   .dn-media::after { background: linear-gradient(0deg, rgba(0,22,66,.95) 0%, rgba(0,22,66,.78) 52%, rgba(0,22,66,.1) 100%); }
   .dn-content { position: absolute; inset: 0; align-items: flex-end; padding-bottom: 52px; }

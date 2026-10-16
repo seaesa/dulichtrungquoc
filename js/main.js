@@ -521,4 +521,13 @@
       if (!err) { input.value = ''; submitted = false; }
     });
   });
+
+  /* ---------- Trang chưa làm: link href="#" và form tìm kiếm không dẫn đi đâu ---------- */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href="#"]');
+    if (a) ev.preventDefault();
+  });
+  document.querySelectorAll('form.searchform').forEach(function (form) {
+    form.addEventListener('submit', function (ev) { ev.preventDefault(); });
+  });
 })();

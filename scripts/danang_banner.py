@@ -8,27 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CREDITS = {c['slug']: c for c in json.loads((ROOT / 'images/danang/CREDITS.json').read_text(encoding='utf8'))}
-TOUR_URL = 'https://dulich2.themedep.top/tour-trong-nuoc/'
-
-# Biểu tượng nét vẽ (viewBox 64×64). Class "acc" = nét màu xanh lá nhấn.
-ICONS = {
-    'cau-vang': '''<path d="M3 23 Q32 11 61 23"/><path class="acc" d="M3 27.5 Q32 15.5 61 27.5"/>
-      <path d="M12 61V34a2 2 0 0 1 4 0V30a2 2 0 0 1 4 0V29a2 2 0 0 1 4 0V32a2 2 0 0 1 4 0V61M16 46V34M20 46V30M24 46V32"/>
-      <path d="M52 61V34a2 2 0 0 0-4 0V30a2 2 0 0 0-4 0V29a2 2 0 0 0-4 0V32a2 2 0 0 0-4 0V61M48 46V34M44 46V30M40 46V32"/>''',
-    'ba-na-hills': '''<path class="acc" d="M3 9l58 13"/><path d="M32 15.5V24"/><rect x="21" y="24" width="22" height="18" rx="4"/><path d="M21 32h22M32 32v10"/>
-      <path d="M2 61l15-15 9 8 14-16 22 23"/>''',
-    'hoi-an': '''<path d="M32 3v7M25 10h14"/><path d="M25 14Q13 29 25 46h14q12-17 0-32z"/><path class="acc" d="M32 14v32M28 14q-6 16 0 32M36 14q6 16 0 32"/>
-      <path d="M26 48h12M32 49v9M29 61h6"/>''',
-    'cau-rong': '''<path d="M2 44h60"/><path d="M5 44Q11 26 17 44M17 44Q23 26 29 44M29 44Q35 26 41 44"/>
-      <path d="M41 44Q44 33 50 31Q56 29 61 32L56 35Q54 37 51 36"/><path d="M50 31l-2-5M54 30l1-5"/><circle cx="55" cy="32" r=".6"/>
-      <path class="acc" d="M4 54q4-4 8 0t8 0 8 0 8 0 8 0 8 0 8 0"/>''',
-    'ngu-hanh-son': '''<path d="M2 54l12-20 7 9 11-24 10 18 7-9 13 26z"/><path class="acc" d="M29 19l3-7 3 7M28 24h8"/><path d="M2 60h60"/>''',
-    'my-khe': '''<circle class="acc" cx="50" cy="14" r="6"/><path d="M20 60q3-18-3-33"/><path d="M17 27Q7 21 3 28M17 27q11-8 18-2M17 27Q13 15 5 14M17 27q6-14 15-14"/>
-      <path class="acc" d="M28 48q5-4 10 0t10 0 10 0"/><path d="M2 60h60"/>''',
-    'son-tra': '''<circle class="acc" cx="32" cy="12" r="7.5"/><circle cx="32" cy="12" r="3.5"/>
-      <path d="M27.5 20Q24 35 22 48h20q-2-13-5.5-28Q32 17 27.5 20z"/><path d="M27 30q5 4 10 0"/>
-      <path class="acc" d="M17 49q7 7 15 0 8 7 15 0"/><path d="M15 59h34M20 55h24"/>''',
-}
+TOUR_URL = '#'  # trang tour chưa làm
 
 PLACES = [
     dict(slug='cau-vang', name='Cầu Vàng', area='Bà Nà Hills',
@@ -57,13 +37,13 @@ PLACES = [
 e = html.escape
 
 
-def icon_svg(slug):
-    return f'<svg class="dn-icon-svg" viewBox="0 0 64 64" aria-hidden="true">{ICONS[slug]}</svg>'
+def thumb(p):
+    return f'<img class="dn-thumb" src="images/danang/thumbs/{p["slug"]}.jpg" alt="" width="56" height="56" decoding="async">'
 
 
 def marquee():
     items = ''.join(
-        f'<li><button type="button" class="dn-icon" data-goto="{i}" aria-label="Xem {e(p["name"])}">{icon_svg(p["slug"])}<span>{e(p["name"])}</span></button></li>'
+        f'<li><button type="button" class="dn-icon" data-goto="{i}" aria-label="Xem {e(p["name"])}">{thumb(p)}<span class="dn-icon-text"><strong>{e(p["name"])}</strong><small>{e(p["area"])}</small></span></button></li>'
         for i, p in enumerate(PLACES))
     # lặp 2 lần để vòng chạy liền mạch; bản thứ 2 ẩn với trình đọc màn hình
     return f'''
