@@ -595,21 +595,22 @@ blockquote p { margin-bottom: 0; }
   .post-item .cat-label { font-size: 13px; }
 }
 
-/* ================= Đa ngôn ngữ (ja mặc định / zh) ================= */
-html:lang(zh) { --font: 'Google Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
-:lang(ja) body, :lang(zh) body { line-break: strict; word-break: normal; overflow-wrap: anywhere; }
+/* ================= Đa ngôn ngữ (ja mặc định / ko) ================= */
+html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+:lang(ja) body { line-break: strict; word-break: normal; overflow-wrap: anywhere; }
+:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* Logo chữ Khánh An Tourist */
 #logo .brand { display: inline-flex; align-items: center; gap: 10px; height: 74px; color: var(--primary); text-decoration: none; }
-.brand-mark { width: 46px; height: 46px; flex: 0 0 auto; }
+.brand-mark { width: auto; height: 64px; flex: 0 0 auto; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
-.brand-text strong { font-size: 22px; font-weight: 700; letter-spacing: .04em; }
-.brand-text small { margin-top: 4px; font-size: 12.5px; font-weight: 700; letter-spacing: .42em; color: var(--secondary); }
+.brand-text strong { font-size: 22px; font-weight: 700; letter-spacing: .04em; color: #12306b; }
+.brand-text small { margin-top: 4px; font-size: 12.5px; font-weight: 700; letter-spacing: .42em; color: #1597b5; }
 .stuck #logo .brand { height: 70px; }
 @media (max-width: 849px) { #logo .brand { justify-content: center; } }
 @media (max-width: 549px) {
   #logo .brand { height: 70px; gap: 8px; }
-  .brand-mark { width: 38px; height: 38px; }
+  .brand-mark { height: 48px; }
   .brand-text strong { font-size: 18px; }
   .brand-text small { font-size: 11px; letter-spacing: .36em; }
 }
@@ -646,7 +647,7 @@ html:lang(zh) { --font: 'Google Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto 
 .lp-cover img { width: 100%; height: 100%; object-fit: cover; }
 .lp-profile { display: flex; flex-direction: column; align-items: center; margin-top: -22px; padding: 0 10px; }
 .lp-avatar { display: inline-flex; width: 44px; height: 44px; padding: 3px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
-.lp-avatar svg { width: 100%; height: 100%; }
+.lp-avatar img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
 .lp-profile strong { margin-top: 6px; font-size: 13px; }
 .lp-profile strong i { color: #06c755; font-size: 11px; }
 .lp-profile small { color: #8a8f98; font-size: 10px; }
@@ -662,3 +663,9 @@ html:lang(zh) { --font: 'Google Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto 
 .tour-credit a { color: inherit; }
 .tour-credit a:hover { color: var(--secondary); }
 .add-to-cart-button a { white-space: nowrap; max-width: none; }
+
+/* Logo footer, nhãn "Bạn muốn đi đâu", tour lặn biển */
+.footer-logo { display: block; width: 150px; height: auto; margin: 0 0 12px; border-radius: 12px; }
+.dest-label { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--primary); font-size: 18px; }
+.dest-label i { color: var(--secondary); }
+#tour-lan-bien { scroll-margin-top: 80px; }

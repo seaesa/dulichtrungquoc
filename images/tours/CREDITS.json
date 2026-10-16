@@ -54,5 +54,33 @@
   "author": "Arianos",
   "license": "Public domain",
   "source": "https://commons.wikimedia.org/wiki/File:Asia_Cruise_Junk_in_Halong_bay.JPG"
+ },
+ {
+  "slug": "dive-cu-lao-cham",
+  "file": "dive-cu-lao-cham.jpg",
+  "author": "yeowatzup",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cu_Lao_Cham_Marine_Park,_Vietnam_(2594704519).jpg"
+ },
+ {
+  "slug": "dive-coral-fish",
+  "file": "dive-coral-fish.jpg",
+  "author": "NOAA (uncredited)",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Acanuthurus_nigricans_Ctenochaetus_diver_Aguijan_2022.png"
+ },
+ {
+  "slug": "dive-scad-school",
+  "file": "dive-scad-school.jpg",
+  "author": "NOAA Fisheries/Jeff Milisen",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:NOAA_diver_bigeye_scad_school_Saipan_2022.png"
+ },
+ {
+  "slug": "dive-jacks",
+  "file": "dive-jacks.jpg",
+  "author": "NOAA Fisheries",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:NOAA_diver_black_jacks_Howland_Island_2023.png"
  }
 ]

@@ -12,7 +12,7 @@
 <link rel="preload" href="fonts/GoogleSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="css/style.css">
-<link rel="alternate" hreflang="ja" href="index.html"><link rel="alternate" hreflang="zh-CN" href="zh.html">
+<link rel="alternate" hreflang="ja" href="index.html"><link rel="alternate" hreflang="ko" href="ko.html">
 </head>
 <body id="top">
 <a class="screen-reader-text" href="#main">本文へスキップ</a>
@@ -32,10 +32,7 @@
             <li><a href="#"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">採用情報</a></li>
             <li><a href="#"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">お支払い方法</a></li>
             <li><a href="#"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">お問い合わせ</a></li>
-            <li class="has-dropdown"><a href="#" class="header-cart-link"><span class="header-cart-title">カート</span><i class="icon-shopping-cart"></i></a>
-              <ul class="nav-dropdown"><li class="html"><p class="mini-cart-empty">カートに商品はありません。</p></li></ul>
-            </li>
-            <li class="has-dropdown lang-switch"><a href="#" aria-label="Language"><i class="fa-solid fa-globe" aria-hidden="true"></i>日本語<i class="icon-angle-down"></i></a><ul class="nav-dropdown"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="zh.html" hreflang="zh-CN" lang="zh-CN"><span class="lang-code">CN</span>中文</a></li></ul></li>
+            <li class="has-dropdown lang-switch"><a href="#" aria-label="Language"><i class="fa-solid fa-globe" aria-hidden="true"></i>日本語<i class="icon-angle-down"></i></a><ul class="nav-dropdown"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="ko.html" hreflang="ko" lang="ko"><span class="lang-code">KR</span>한국어</a></li></ul></li>
           </ul>
         </div>
         <div class="flex-col show-for-medium flex-grow mobile-contact-wrap">
@@ -43,14 +40,14 @@
               <li><a href="mailto:nguyelyhungdd@gmail.com"><i class="icon-envelop"></i><span>nguyelyhungdd@gmail.com</span></a></li>
               <li><a href="tel:0326978689"><i class="icon-phone"></i><span>0326 978 689</span></a></li>
           </ul>
-          <ul class="lang-pills" aria-label="Language"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="zh.html" hreflang="zh-CN" lang="zh-CN"><span class="lang-code">CN</span>中文</a></li></ul>
+          <ul class="lang-pills" aria-label="Language"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="ko.html" hreflang="ko" lang="ko"><span class="lang-code">KR</span>한국어</a></li></ul>
         </div>
       </div>
     </div>
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="./" title="Khánh An Tourist" rel="home" class="brand"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#003594"/><path d="M7 33l10-12 7 8 6-6 11 10z" fill="#89c440"/><circle cx="33" cy="15" r="4" fill="#ffd257"/><path d="M9 37q15-6 30 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
+          <a href="./" title="Khánh An Tourist" rel="home" class="brand"><img class="brand-mark" src="images/logo-emblem.png" width="225" height="160" alt=""><span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -61,7 +58,7 @@
           <ul class="nav nav-right header-nav-main">
             <li><a href="#">ホーム</a></li>
             <li><a href="#">会社案内</a></li>
-            <li class="has-dropdown"><a href="#">ツアー<i class="icon-angle-down"></i></a><ul class="nav-dropdown"><li><a href="#">海外ツアー</a></li><li><a href="#">ベトナム国内ツアー</a></li><li><a href="#tour-golf">ゴルフツアー</a></li><li><a href="#tour-du-thuyen">クルーズツアー</a></li></ul></li>
+            <li class="has-dropdown"><a href="#">ツアー<i class="icon-angle-down"></i></a><ul class="nav-dropdown"><li><a href="#">海外ツアー</a></li><li><a href="#">ベトナム国内ツアー</a></li><li><a href="#tour-golf">ゴルフツアー</a></li><li><a href="#tour-du-thuyen">クルーズツアー</a></li><li><a href="#tour-lan-bien">ダイビングツアー</a></li></ul></li>
             <li><a href="#">旅行ガイド</a></li>
             <li><a href="#">観光ビザ</a></li>
             <li><a href="#">ニュース</a></li>
@@ -85,9 +82,7 @@
           </ul>
         </div>
         <div class="flex-col show-for-medium mobile-right">
-          <ul class="nav nav-right mobile-nav">
-            <li><a href="#" aria-label="カート"><i class="icon-shopping-cart"></i></a></li>
-          </ul>
+          <ul class="nav nav-right mobile-nav"></ul>
         </div>
       </div>
     </div>
@@ -248,6 +243,7 @@
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
           <h2 class="home-title">どこへ <strong>行きたい？</strong></h2>
+          <h3 class="dest-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ダナンの人気スポット</h3>
           
         <div class="slider-wrapper slider-danh-muc">
           <div class="slider slider-nav-outside" data-slider='{"cellAlign":"center","autoPlay":4000,"adaptiveHeight":true,"attraction":0.1,"friction":0.6,"dragThreshold":10}'>
@@ -257,13 +253,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/dai-loan-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="台湾" decoding="async">
+                    <img data-src="images/danang/cau-vang.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ゴールデンブリッジ" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>台湾</h3>
+                <h3>ゴールデンブリッジ</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -273,13 +269,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/du-lich-nhat-ban-tu-tuc-1-1024x684-1-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="日本" decoding="async">
+                    <img data-src="images/danang/ba-na-hills.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="バーナーヒルズ" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>日本</h3>
+                <h3>バーナーヒルズ</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -289,13 +285,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/datnuochanquoc.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="韓国" decoding="async">
+                    <img data-src="images/danang/cau-rong.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ドラゴン橋" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>韓国</h3>
+                <h3>ドラゴン橋</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -305,13 +301,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/dia-diem-du-lich-thai-lan-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="タイ" decoding="async">
+                    <img data-src="images/danang/ngu-hanh-son.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="五行山" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>タイ</h3>
+                <h3>五行山</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -321,13 +317,45 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/du-lich-phuong-hoang-co-tran-mua-nao-dep-nhat.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="中国" decoding="async">
+                    <img data-src="images/danang/my-khe.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ミーケービーチ" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>中国</h3>
+                <h3>ミーケービーチ</h3>
+                <p>多数のお客様にご利用</p>
+              </div>
+            </div>
+          </div>
+          <div class="dm-cell">
+            <div class="box has-hover box-text-bottom">
+              <div class="box-image">
+                <a href="#">
+                  <div class="image-overlay-add image-cover">
+                    <img data-src="images/danang/son-tra.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ソンチャー半島" decoding="async">
+                    <div class="overlay"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="box-text text-left">
+                <h3>ソンチャー半島</h3>
+                <p>多数のお客様にご利用</p>
+              </div>
+            </div>
+          </div>
+          <div class="dm-cell">
+            <div class="box has-hover box-text-bottom">
+              <div class="box-image">
+                <a href="#">
+                  <div class="image-overlay-add image-cover">
+                    <img data-src="images/danang/hoi-an.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ホイアン旧市街" decoding="async">
+                    <div class="overlay"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="box-text text-left">
+                <h3>ホイアン旧市街</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -336,7 +364,8 @@
             <button class="slider-btn prev" type="button" aria-label="Previous"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="slider-btn next" type="button" aria-label="Next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
           </div>
         </div>
-          <div class="gap-15 hide-for-small"></div>
+          <div class="gap-15"></div>
+          <h3 class="dest-label"><i class="fa-solid fa-landmark" aria-hidden="true"></i> フエの帝廟</h3>
           
         <div class="slider-wrapper slider-danh-muc">
           <div class="slider slider-nav-outside" data-slider='{"cellAlign":"center","autoPlay":4000,"adaptiveHeight":true,"attraction":0.1,"friction":0.6,"dragThreshold":10}'>
@@ -346,13 +375,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/rung-tram-tra-su-ivivu.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="メコンデルタ" decoding="async">
+                    <img data-src="images/hue/lang-khai-dinh.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="カイディン帝廟" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>メコンデルタ</h3>
+                <h3>カイディン帝廟</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -362,13 +391,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/du-lich-tay-bac-cam-nang-kinh-nghiem-cho-nguoi-lan-dau-moi-di-202202182351323122.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="雄大な北部" decoding="async">
+                    <img data-src="images/hue/lang-tu-duc.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="トゥドゥック帝廟" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>雄大な北部</h3>
+                <h3>トゥドゥック帝廟</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -378,13 +407,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/dalat3_1596178817.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ダラット・中部高原" decoding="async">
+                    <img data-src="images/hue/lang-minh-mang.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ミンマン帝廟" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>ダラット・中部高原</h3>
+                <h3>ミンマン帝廟</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -394,29 +423,13 @@
               <div class="box-image">
                 <a href="#">
                   <div class="image-overlay-add image-cover">
-                    <img data-src="images/phuquoc.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="夢のフーコック島" decoding="async">
+                    <img data-src="images/hue/lang-dong-khanh.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ドンカイン帝廟" decoding="async">
                     <div class="overlay"></div>
                   </div>
                 </a>
               </div>
               <div class="box-text text-left">
-                <h3>夢のフーコック島</h3>
-                <p>多数のお客様にご利用</p>
-              </div>
-            </div>
-          </div>
-          <div class="dm-cell">
-            <div class="box has-hover box-text-bottom">
-              <div class="box-image">
-                <a href="#">
-                  <div class="image-overlay-add image-cover">
-                    <img data-src="images/danang.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="中部の海と空" decoding="async">
-                    <div class="overlay"></div>
-                  </div>
-                </a>
-              </div>
-              <div class="box-text text-left">
-                <h3>中部の海と空</h3>
+                <h3>ドンカイン帝廟</h3>
                 <p>多数のお客様にご利用</p>
               </div>
             </div>
@@ -425,6 +438,7 @@
             <button class="slider-btn prev" type="button" aria-label="Previous"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="slider-btn next" type="button" aria-label="Next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
           </div>
         </div>
+          <p class="tour-credit">写真: <a href="https://commons.wikimedia.org/wiki/File:Grab_von_Kaiser_Khai_Dinh,_Hue_(39513722502).jpg" target="_blank" rel="noopener">dronepicr</a> (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Hue_-_Tomb_of_Emperor_Tu_Duc_-_010.jpg" target="_blank" rel="noopener">Jean-Pierre Dalbéra</a> (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-01.jpg" target="_blank" rel="noopener">CEphoto, Uwe Aranas</a> (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Mausoleum_of_Emperor_Dong_Khanh_(Hue)_-_Lăng_Đồng_Khánh_(2024_July)_-_img_01.jpg" target="_blank" rel="noopener">Chainwit.</a> (CC BY 4.0) · Wikimedia Commons</p>
         </div></div>
       </div>
     </div>
@@ -970,6 +984,114 @@
             <button class="slider-btn prev" type="button" aria-label="Previous"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="slider-btn next" type="button" aria-label="Next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
           </div>
           <p class="tour-credit">写真: <a href="https://commons.wikimedia.org/wiki/File:Cruising_Ha_Long_Bay_(25415940037).jpg" target="_blank" rel="noopener">Mig Gilbert from Brighton</a> (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:A_night_in_Lan_Ha_Bay_-_Flickr_-_radkuch.13.jpg" target="_blank" rel="noopener">Radek Kucharski from Warsaw, Poland</a> (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Bahía_de_Halong_(14847479918).jpg" target="_blank" rel="noopener">Guerretto</a> (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Asia_Cruise_Junk_in_Halong_bay.JPG" target="_blank" rel="noopener">Arianos</a> (Public domain) · Wikimedia Commons</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section section3" id="tour-lan-bien">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+          <h2 class="home-title"><strong>ダイビング</strong>ツアー</h2>
+          <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}'>
+            <div class="slider-viewport"><div class="slider-track">
+          <div class="tour-cell">
+            <div class="col-inner">
+              <div class="product-small box has-hover box-text-bottom">
+                <div class="box-image">
+                  <div class="image-overlay-add image-cover">
+                    <a href="#" aria-label="チャム島（クーラオチャム）サンゴ礁ダイビング・ホイアン 日帰り"><img data-src="images/tours/dive-cu-lao-cham.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="チャム島（クーラオチャム）サンゴ礁ダイビング・ホイアン 日帰り" decoding="async"></a>
+                    <div class="overlay"></div>
+                  </div>
+                  <span class="box-ngay-khoi-hanh"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 毎週出発</span>
+                </div>
+                <div class="box-text">
+                  <div class="title-wrapper"><p class="product-title"><a href="#">チャム島（クーラオチャム）サンゴ礁ダイビング・ホイアン 日帰り</a></p></div>
+                  <div class="thong-tin-sp">
+                    <div class="ma-tour"><span class="label"><i class="fa-solid fa-qrcode"></i> ツアーコード: </span><span class="value">KA-DIVE01</span></div>
+                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 出発地: </span><span class="value">ダナン、ホイアン </span></div>
+                  </div>
+                  <div class="price-wrapper"><span class="price"><span class="amount">1.650.000&nbsp;<span class="currency">&#8363;</span></span><span class="price-suffix">/名</span></span></div>
+                  <div class="box-nguoi-lien-he"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="value">132</span><span class="label"> 件のお問い合わせ</span></div>
+                  <div class="add-to-cart-button"><a href="#" rel="nofollow">予約する</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tour-cell">
+            <div class="col-inner">
+              <div class="product-small box has-hover box-text-bottom">
+                <div class="box-image">
+                  <div class="image-overlay-add image-cover">
+                    <a href="#" aria-label="ソンチャー半島サンゴ礁ダイビング・ダナン 半日"><img data-src="images/tours/dive-coral-fish.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ソンチャー半島サンゴ礁ダイビング・ダナン 半日" decoding="async"></a>
+                    <div class="overlay"></div>
+                  </div>
+                  <span class="box-ngay-khoi-hanh"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 毎週出発</span>
+                </div>
+                <div class="box-text">
+                  <div class="title-wrapper"><p class="product-title"><a href="#">ソンチャー半島サンゴ礁ダイビング・ダナン 半日</a></p></div>
+                  <div class="thong-tin-sp">
+                    <div class="ma-tour"><span class="label"><i class="fa-solid fa-qrcode"></i> ツアーコード: </span><span class="value">KA-DIVE02</span></div>
+                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 出発地: </span><span class="value">ダナン </span></div>
+                  </div>
+                  <div class="price-wrapper"><span class="price"><span class="amount">1.250.000&nbsp;<span class="currency">&#8363;</span></span><span class="price-suffix">/名</span></span></div>
+                  <div class="box-nguoi-lien-he"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="value">88</span><span class="label"> 件のお問い合わせ</span></div>
+                  <div class="add-to-cart-button"><a href="#" rel="nofollow">予約する</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tour-cell">
+            <div class="col-inner">
+              <div class="product-small box has-hover box-text-bottom">
+                <div class="box-image">
+                  <div class="image-overlay-add image-cover">
+                    <a href="#" aria-label="ニャチャン湾 ホンムン島ダイビング 3日間"><img data-src="images/tours/dive-scad-school.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ニャチャン湾 ホンムン島ダイビング 3日間" decoding="async"></a>
+                    <div class="overlay"></div>
+                  </div>
+                  <span class="box-ngay-khoi-hanh"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 毎週出発</span>
+                </div>
+                <div class="box-text">
+                  <div class="title-wrapper"><p class="product-title"><a href="#">ニャチャン湾 ホンムン島ダイビング 3日間</a></p></div>
+                  <div class="thong-tin-sp">
+                    <div class="ma-tour"><span class="label"><i class="fa-solid fa-qrcode"></i> ツアーコード: </span><span class="value">KA-DIVE03</span></div>
+                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 出発地: </span><span class="value">ダナン </span></div>
+                  </div>
+                  <div class="price-wrapper"><span class="price"><span class="amount">6.900.000&nbsp;<span class="currency">&#8363;</span></span><span class="price-suffix">/名</span></span></div>
+                  <div class="box-nguoi-lien-he"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="value">105</span><span class="label"> 件のお問い合わせ</span></div>
+                  <div class="add-to-cart-button"><a href="#" rel="nofollow">予約する</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tour-cell">
+            <div class="col-inner">
+              <div class="product-small box has-hover box-text-bottom">
+                <div class="box-image">
+                  <div class="image-overlay-add image-cover">
+                    <a href="#" aria-label="ダナンで取るPADIオープンウォーター講習 3日間"><img data-src="images/tours/dive-jacks.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ダナンで取るPADIオープンウォーター講習 3日間" decoding="async"></a>
+                    <div class="overlay"></div>
+                  </div>
+                  <span class="box-ngay-khoi-hanh"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 毎週出発</span>
+                </div>
+                <div class="box-text">
+                  <div class="title-wrapper"><p class="product-title"><a href="#">ダナンで取るPADIオープンウォーター講習 3日間</a></p></div>
+                  <div class="thong-tin-sp">
+                    <div class="ma-tour"><span class="label"><i class="fa-solid fa-qrcode"></i> ツアーコード: </span><span class="value">KA-DIVE04</span></div>
+                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 出発地: </span><span class="value">ダナン </span></div>
+                  </div>
+                  <div class="price-wrapper"><span class="price"><span class="amount">9.500.000&nbsp;<span class="currency">&#8363;</span></span><span class="price-suffix">/名</span></span></div>
+                  <div class="box-nguoi-lien-he"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="value">47</span><span class="label"> 件のお問い合わせ</span></div>
+                  <div class="add-to-cart-button"><a href="#" rel="nofollow">予約する</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div></div>
+            <button class="slider-btn prev" type="button" aria-label="Previous"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button><button class="slider-btn next" type="button" aria-label="Next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
+          </div>
+          <p class="tour-credit">写真: <a href="https://commons.wikimedia.org/wiki/File:Cu_Lao_Cham_Marine_Park,_Vietnam_(2594704519).jpg" target="_blank" rel="noopener">yeowatzup</a> (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Acanuthurus_nigricans_Ctenochaetus_diver_Aguijan_2022.png" target="_blank" rel="noopener">NOAA (uncredited)</a> (Public domain) · <a href="https://commons.wikimedia.org/wiki/File:NOAA_diver_bigeye_scad_school_Saipan_2022.png" target="_blank" rel="noopener">NOAA Fisheries/Jeff Milisen</a> (Public domain) · <a href="https://commons.wikimedia.org/wiki/File:NOAA_diver_black_jacks_Howland_Island_2023.png" target="_blank" rel="noopener">NOAA Fisheries</a> (Public domain) · Wikimedia Commons</p>
         </div></div>
       </div>
     </div>
@@ -1583,7 +1705,7 @@
                       <div class="lp-bar"><i class="fa-solid fa-chevron-left"></i><span>Khánh An Tourist</span><i class="fa-solid fa-ellipsis"></i></div>
                       <div class="lp-cover"><img src="images/danang/thumbs/cau-vang.jpg" alt="" loading="lazy"></div>
                       <div class="lp-profile">
-                        <span class="lp-avatar"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#003594"/><path d="M7 33l10-12 7 8 6-6 11 10z" fill="#89c440"/><circle cx="33" cy="15" r="4" fill="#ffd257"/><path d="M9 37q15-6 30 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+                        <span class="lp-avatar"><img class="brand-mark" src="images/logo-emblem.png" width="225" height="160" alt=""></span>
                         <strong>Khánh An Tourist <i class="fa-solid fa-circle-check"></i></strong>
                         <small>公式アカウント</small>
                       </div>
@@ -1714,8 +1836,9 @@
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
+          <img class="footer-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourist" loading="lazy">
           <h3>KHÁNH AN TOURIST</h3>
-          <p><strong>📍 住所</strong>: Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, ハノイ, Việt Nam</p>
+          <p><strong>📍 住所</strong>: Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội, Việt Nam</p>
           <p><strong>🏠 ホアビン支店</strong>: Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình</p>
           <p><strong>🏠 ハイフォン支店</strong>: Số 1235, Bặch Đằng, Thủy Nguyên, Hải Phòng</p>
           <p><strong>🏠 ナムディン支店</strong>: D12P317 ngõ 189 Trần Huy Liệu, Phường Văn Miếu, Thành Phố Nam Định</p>
@@ -1804,12 +1927,12 @@
           </li>
           <li class="menu-item"><a href="#">ホーム</a></li>
           <li class="menu-item"><a href="#">会社案内</a></li>
-          <li class="menu-item has-child"><a href="#">ツアー</a><button class="toggle" type="button" aria-label="Toggle" aria-expanded="false"><i class="icon-angle-down"></i></button><ul class="sub-menu"><li><a href="#">海外ツアー</a></li><li><a href="#">ベトナム国内ツアー</a></li><li><a href="#tour-golf">ゴルフツアー</a></li><li><a href="#tour-du-thuyen">クルーズツアー</a></li></ul></li>
+          <li class="menu-item has-child"><a href="#">ツアー</a><button class="toggle" type="button" aria-label="Toggle" aria-expanded="false"><i class="icon-angle-down"></i></button><ul class="sub-menu"><li><a href="#">海外ツアー</a></li><li><a href="#">ベトナム国内ツアー</a></li><li><a href="#tour-golf">ゴルフツアー</a></li><li><a href="#tour-du-thuyen">クルーズツアー</a></li><li><a href="#tour-lan-bien">ダイビングツアー</a></li></ul></li>
           <li class="menu-item"><a href="#">旅行ガイド</a></li>
           <li class="menu-item"><a href="#">観光ビザ</a></li>
           <li class="menu-item"><a href="#">ニュース</a></li>
           <li class="menu-item"><a href="#">お問い合わせ</a></li>
-          <li class="html lang-sidebar"><ul class="lang-pills" aria-label="Language"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="zh.html" hreflang="zh-CN" lang="zh-CN"><span class="lang-code">CN</span>中文</a></li></ul></li>
+          <li class="html lang-sidebar"><ul class="lang-pills" aria-label="Language"><li><a href="index.html" hreflang="ja" lang="ja" class="active" aria-current="true"><span class="lang-code">JP</span>日本語</a></li><li><a href="ko.html" hreflang="ko" lang="ko"><span class="lang-code">KR</span>한국어</a></li></ul></li>
         </ul>
       </div>
     </div>

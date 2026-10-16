@@ -50,9 +50,11 @@ Breakpoints Flatsome: small ≤549px, medium 550–849px, large ≥850px.
 - Slider địa điểm: autoplay 6s, kéo/vuốt, ảnh zoom chậm (Ken Burns 7s), nội dung thẻ hiện lần lượt. ≤849px ẩn mũi tên.
 
 ## Tuỳ biến: Đa ngôn ngữ, LINE, thương hiệu
-- Chỉ có 2 ngôn ngữ: tiếng Nhật (mặc định, `index.html`) và tiếng Trung giản thể (`zh.html`). Build dựng trang tiếng Việt rồi `scripts/i18n.py` dịch theo bảng `TR`; build in ra đoạn nào chưa dịch.
+- Chỉ có 2 ngôn ngữ: tiếng Nhật (mặc định, `index.html`) và tiếng Hàn (`ko.html`). Build dựng trang tiếng Việt rồi `scripts/i18n.py` dịch theo bảng `TR`; build in ra đoạn nào chưa dịch.
 - Chuyển ngôn ngữ: dropdown ở top bar (desktop), nút viên ở top bar mobile và cuối menu off-canvas. Thông báo form trong `js/main.js` (`MSGS`) theo `<html lang>`.
 - Khối Zalo → LINE: màn hình điện thoại LINE dựng bằng HTML/CSS (`line_phone()`), QR thật ở `images/line-qr.jpg`.
-- Tên công ty Khánh An Tourist; logo chữ dựng bằng HTML/SVG (`BRAND_MARK`).
+- Tên công ty Khánh An Tourist; logo gốc `logo.png` → biểu tượng header `images/logo-emblem.png` + chữ, logo đầy đủ ở footer `images/logo-khanh-an.jpg`, favicon cắt từ logo. Đã bỏ giỏ hàng.
 - Link tới trang chưa làm đều là `href="#"` và bị chặn trong JS (không chuyển trang).
 - Tour golf (`#tour-golf`) và du thuyền (`#tour-du-thuyen`): dữ liệu mẫu trong `EXTRA_TOURS` (build-html.py), ảnh ở `images/tours/` (nguồn/giấy phép trong `CREDITS.json`, ghi nguồn dưới mỗi mục). Menu "Tour du lịch" có link tới 2 mục này; menu mobile tự đóng khi bấm.
+- "Bạn muốn đi đâu" (khách inbound): 2 hàng — điểm nổi tiếng Đà Nẵng (`images/danang/`) và lăng tẩm Huế (`images/hue/`, ghi nguồn). Dữ liệu `DESTS` trong build-html.py.
+- Tour lặn biển `#tour-lan-bien` (dữ liệu mẫu trong `EXTRA_TOURS`).

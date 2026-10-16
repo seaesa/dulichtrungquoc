@@ -481,7 +481,7 @@
    * Form email (giả lập Contact Form 7: validate + thông báo)
    * ------------------------------------------------------------------ */
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  /* Thông báo form theo ngôn ngữ trang (<html lang>): ja mặc định, zh */
+  /* Thông báo form theo ngôn ngữ trang (<html lang>): ja mặc định, ko */
   var MSGS = {
     ja: {
       required: 'この項目は必須です。',
@@ -489,11 +489,11 @@
       invalid: '入力内容に誤りがあります。確認してもう一度お試しください。',
       sent: 'ご登録ありがとうございます。送信が完了しました。'
     },
-    zh: {
-      required: '请填写此栏。',
-      email: '请输入电子邮箱地址。',
-      invalid: '有一项或多项输入有误，请检查后重试。',
-      sent: '感谢您的提交，信息已发送。'
+    ko: {
+      required: '이 항목은 필수입니다.',
+      email: '이메일 주소를 입력해 주세요.',
+      invalid: '입력 내용에 오류가 있습니다. 확인 후 다시 시도해 주세요.',
+      sent: '등록해 주셔서 감사합니다. 전송이 완료되었습니다.'
     }
   };
   var MSG = MSGS[(document.documentElement.lang || 'ja').slice(0, 2)] || MSGS.ja;

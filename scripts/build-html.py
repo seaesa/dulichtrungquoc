@@ -20,7 +20,7 @@ e = html.escape
 
 
 def img(url):
-    if url.startswith('tours/'):
+    if url.startswith(('tours/', 'danang/', 'hue/')):
         return 'images/' + url
     return 'images/' + url.rsplit('/', 1)[-1]
 
@@ -138,8 +138,20 @@ EXTRA_TOURS = [
         dict(img='tours/cruise-ha-long-bay.jpg', title='Du thuyền trong ngày vịnh Hạ Long – hang Sửng Sốt – đảo Ti Tốp', ma='KA-CRU03', kh='Hà Nội', price='1.890.000', lh='200'),
         dict(img='tours/cruise-junk.jpg', title='Du thuyền buồm truyền thống ngắm hoàng hôn vịnh Hạ Long 2N1Đ', ma='KA-CRU04', kh='Hà Nội, Đà Nẵng', price='4.900.000', lh='75'),
     ]),
+    dict(sid='tour-lan-bien', title='TOUR LẶN BIỂN', prods=[
+        dict(img='tours/dive-cu-lao-cham.jpg', title='Lặn biển ngắm san hô Cù Lao Chàm – Hội An 1 ngày', ma='KA-DIVE01', kh='Đà Nẵng, Hội An', price='1.650.000', lh='132'),
+        dict(img='tours/dive-coral-fish.jpg', title='Lặn ngắm san hô bán đảo Sơn Trà – Đà Nẵng nửa ngày', ma='KA-DIVE02', kh='Đà Nẵng', price='1.250.000', lh='88'),
+        dict(img='tours/dive-scad-school.jpg', title='Lặn biển Hòn Mun – vịnh Nha Trang 3N2Đ', ma='KA-DIVE03', kh='Đà Nẵng', price='6.900.000', lh='105'),
+        dict(img='tours/dive-jacks.jpg', title='Khóa học lặn PADI Open Water tại Đà Nẵng 3 ngày', ma='KA-DIVE04', kh='Đà Nẵng', price='9.500.000', lh='47'),
+    ]),
 ]
 TOUR_CREDITS = {c['file']: c for c in json.loads((ROOT / 'images/tours/CREDITS.json').read_text(encoding='utf8'))}
+
+
+def credit_line(path):
+    cs = json.loads((ROOT / path).read_text(encoding='utf8'))
+    links = ' · '.join(f'<a href="{c["source"]}" target="_blank" rel="noopener">{e(c["author"])}</a> ({e(c["license"])})' for c in cs)
+    return f'<p class="tour-credit">Ảnh: {links} · Wikimedia Commons</p>'
 
 
 def extra_tour_section(block):
@@ -148,6 +160,17 @@ def extra_tour_section(block):
     used = [TOUR_CREDITS[p['img'].split('/')[-1]] for p in block['prods']]
     credit = ' · '.join(f'<a href="{c["source"]}" target="_blank" rel="noopener">{e(c["author"])}</a> ({e(c["license"])})' for c in used)
     return tour_section(block, sid=block['sid'], credit=f'\n          <p class="tour-credit">Ảnh: {credit} · Wikimedia Commons</p>')
+
+
+# "Bạn muốn đi đâu": khách inbound → điểm nổi tiếng Đà Nẵng và lăng tẩm Huế
+DESTS = [
+    [dict(href='#', img=f'danang/{slug}.jpg', title=t) for slug, t in [
+        ('cau-vang', 'Cầu Vàng'), ('ba-na-hills', 'Bà Nà Hills'), ('cau-rong', 'Cầu Rồng'), ('ngu-hanh-son', 'Ngũ Hành Sơn'),
+        ('my-khe', 'Biển Mỹ Khê'), ('son-tra', 'Bán đảo Sơn Trà'), ('hoi-an', 'Phố cổ Hội An')]],
+    [dict(href='#', img=f'hue/{slug}.jpg', title=t) for slug, t in [
+        ('lang-khai-dinh', 'Lăng Khải Định'), ('lang-tu-duc', 'Lăng Tự Đức'), ('lang-minh-mang', 'Lăng Minh Mạng'),
+        ('lang-dong-khanh', 'Lăng Đồng Khánh')]],
+]
 
 
 WHY = [
@@ -185,7 +208,7 @@ NAV = [
     ('Liên hệ', SITE + '/lien-he/'),
 ]
 SUBNAV = [('Tour nước ngoài', SITE + '/tour-nuoc-ngoai/'), ('Tour trong nước', SITE + '/tour-trong-nuoc/'),
-          ('Tour golf', '#tour-golf'), ('Tour du thuyền', '#tour-du-thuyen')]
+          ('Tour golf', '#tour-golf'), ('Tour du thuyền', '#tour-du-thuyen'), ('Tour lặn biển', '#tour-lan-bien')]
 
 
 def search_form(fid):
@@ -213,9 +236,8 @@ def email_form(fid):
                 </form>'''
 
 
-BRAND_MARK = ('<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#003594"/>'
-              '<path d="M7 33l10-12 7 8 6-6 11 10z" fill="#89c440"/><circle cx="33" cy="15" r="4" fill="#ffd257"/>'
-              '<path d="M9 37q15-6 30 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>')
+# Biểu tượng cắt từ logo.png (logo đầy đủ: images/logo-khanh-an.jpg)
+BRAND_MARK = '<img class="brand-mark" src="images/logo-emblem.png" width="225" height="160" alt="">'
 
 
 def header():
@@ -244,9 +266,6 @@ def header():
             <li><a href="#"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
             <li><a href="{SITE}/huong-dan-thanh-toan/"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
             <li><a href="{SITE}/lien-he/"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
-            <li class="has-dropdown"><a href="{SITE}/gio-hang/" class="header-cart-link"><span class="header-cart-title">Giỏ hàng</span><i class="icon-shopping-cart"></i></a>
-              <ul class="nav-dropdown"><li class="html"><p class="mini-cart-empty">Chưa có sản phẩm trong giỏ hàng.</p></li></ul>
-            </li>
             <!--LANG_SWITCH-->
           </ul>
         </div>
@@ -279,9 +298,7 @@ def header():
           </ul>
         </div>
         <div class="flex-col show-for-medium mobile-right">
-          <ul class="nav nav-right mobile-nav">
-            <li><a href="{SITE}/gio-hang/" aria-label="Giỏ hàng"><i class="icon-shopping-cart"></i></a></li>
-          </ul>
+          <ul class="nav nav-right mobile-nav"></ul>
         </div>
       </div>
     </div>
@@ -341,7 +358,6 @@ def line_phone():
 
 
 def main_content():
-    s2 = DATA['section2']
     tours = DATA['section3']
     why = ''.join(f'''
             <div class="col why-col medium-2 small-12 large-2"><div class="col-inner">
@@ -408,9 +424,12 @@ def main_content():
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
           {title('BẠN MUỐN', 'ĐI ĐÂU')}
-          {destination_slider(s2[0])}
-          <div class="gap-15 hide-for-small"></div>
-          {destination_slider(s2[1])}
+          <h3 class="dest-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Địa điểm nổi tiếng Đà Nẵng</h3>
+          {destination_slider(DESTS[0])}
+          <div class="gap-15"></div>
+          <h3 class="dest-label"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Lăng tẩm Huế</h3>
+          {destination_slider(DESTS[1])}
+          {credit_line('images/hue/CREDITS.json')}
         </div></div>
       </div>
     </div>
@@ -444,6 +463,7 @@ def main_content():
 
   {extra_tour_section(EXTRA_TOURS[0])}
   {extra_tour_section(EXTRA_TOURS[1])}
+  {extra_tour_section(EXTRA_TOURS[2])}
 
   {tour_section(tours[1])}
   {tour_section(tours[2])}
@@ -539,6 +559,7 @@ def footer():
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
+          <img class="footer-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourist" loading="lazy">
           <h3>KHÁNH AN TOURIST</h3>
           <p><strong>📍 Địa chỉ</strong>: Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội, Việt Nam</p>
           <p><strong>🏠 Chi nhánh Hoà Bình</strong>: Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình</p>
@@ -632,7 +653,7 @@ PAGE = f'''<!DOCTYPE html>
 PAGE = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url|\?add-to-cart=\d+)"', 'href="#"', PAGE)
 PAGE = PAGE.replace(f'action="{SITE}/"', 'action="#"')
 
-# Trang chỉ có tiếng Nhật (mặc định, index.html) và tiếng Trung (zh.html)
+# Trang chỉ có tiếng Nhật (mặc định, index.html) và tiếng Hàn (ko.html)
 for lang, conf in i18n.LANGS.items():
     out = i18n.render(PAGE, lang)
     (ROOT / conf['file']).write_text(out, encoding='utf8')
