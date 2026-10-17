@@ -3,11 +3,7 @@
 Sửa nội dung trong PLACES rồi chạy lại: python3 scripts/build-html.py
 """
 import html
-import json
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-CREDITS = {c['slug']: c for c in json.loads((ROOT / 'images/danang/CREDITS.json').read_text(encoding='utf8'))}
 TOUR_URL = '#'  # trang tour chưa làm
 
 PLACES = [
@@ -59,7 +55,6 @@ def marquee():
 
 
 def slide(i, p):
-    c = CREDITS[p['slug']]
     src = f'images/danang/{p["slug"]}.jpg'
     img = (f'<img class="dn-photo" src="{src}" alt="{e(p["name"])}" fetchpriority="high">' if i == 0
            else f'<img class="dn-photo" data-src-deferred="{src}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{e(p["name"])}">')
@@ -79,7 +74,6 @@ def slide(i, p):
               </div>
             </div>
           </div>
-          <a class="dn-credit" href="{c['source']}" target="_blank" rel="noopener">Ảnh: {e(c['author'])} · {e(c['license'])}</a>
         </div>'''
 
 

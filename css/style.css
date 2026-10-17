@@ -281,7 +281,8 @@ html.has-off-canvas { overflow: hidden; }
 .slider-btn svg { position: absolute; top: 50%; left: 50%; width: 100%; height: auto; max-width: 100%; max-height: 100%; padding: 20%; transform: translate(-50%, -50%); background: #fff; border-radius: 99%; box-shadow: 2px 2px 20px rgba(0,0,0,.19); fill: currentColor; transition: all .3s; }
 .slider-btn .arrow { fill: currentColor; transition: all .3s; }
 .slider .slider-btn:hover svg, .slider .slider-btn:hover .arrow { fill: var(--primary); }
-@media (min-width: 850px) {
+/* Mũi tên ra ngoài khung chỉ khi đủ chỗ; màn hẹp hơn thì nằm trong để không tràn ngang */
+@media (min-width: 1380px) {
   .slider-nav-outside .slider-btn.prev { left: auto; right: 100%; }
   .slider-nav-outside .slider-btn.next { right: auto; left: 100%; }
 }
@@ -369,8 +370,6 @@ html.has-off-canvas { overflow: hidden; }
 .dn-btn:hover i { transform: translateX(4px); }
 .dn-link { color: #fff; font-weight: 600; }
 .dn-link:hover { color: var(--secondary); }
-.dn-credit { position: absolute; right: 12px; bottom: 10px; z-index: 1; font-size: 11px; color: rgba(255,255,255,.65); }
-.dn-credit:hover { color: #fff; }
 .dn-dots { position: absolute; left: 0; right: 0; bottom: 22px; z-index: 3; display: flex; justify-content: center; gap: 8px; pointer-events: none; }
 .dn-dot { width: 10px; height: 10px; margin: 0; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.5); cursor: pointer; pointer-events: auto; transition: width .3s, background .3s; }
 .dn-dot:hover { background: #fff; }
@@ -402,7 +401,6 @@ html.has-off-canvas { overflow: hidden; }
   .dn-facts i { flex-basis: 30px; width: 30px; height: 30px; font-size: 12px; }
   .dn-facts span { font-size: 13px; white-space: normal; }
   .dn-btn { padding: 10px 18px; font-size: 13px; }
-  .dn-credit { top: 8px; bottom: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   .dn-marquee-track { animation: none; }
@@ -693,7 +691,10 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
   .section5 .section-content > .row { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* "Khách hàng nói gì": 2 khung trích dẫn cùng hàng cao bằng nhau */
-.section10 .col.medium-6 { display: flex; }
-.section10 .col.medium-6 > .col-inner { display: flex; flex-direction: column; }
-.section10 .col.medium-6 blockquote { flex: 1; }
+/* "Khách hàng nói gì": khung trích dẫn và phần tên khách thẳng hàng giữa 2 cột (subgrid) */
+@media (min-width: 550px) {
+  .section10 .section-content > .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .section10 .section-content > .row > .large-12 { grid-column: 1 / -1; max-width: none; }
+  .section10 .col.medium-6 { display: grid; grid-row: span 2; grid-template-rows: subgrid; max-width: none; }
+  .section10 .col.medium-6 > .col-inner { display: contents; }
+}
