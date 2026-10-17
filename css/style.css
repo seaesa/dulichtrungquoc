@@ -669,3 +669,12 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 .dest-label { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--primary); font-size: 18px; }
 .dest-label i { color: var(--secondary); }
 #tour-lan-bien { scroll-margin-top: 80px; }
+
+/* おすすめツアー (tour tuỳ chọn) */
+#tour-goi-y { scroll-margin-top: 80px; }
+.op-card .op-route { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin: 0 0 6px; color: #5b6475; font-size: 13.5px; line-height: 1.5; }
+.op-card .thong-tin-sp { margin: 6px 0; }
+.op-card .fa-utensils { width: 16px; color: var(--secondary); }
+.op-card .price-wrapper { padding-bottom: 6px; }
+.op-note { margin: 4px 0 0; color: #5b6475; font-size: 13px; }
+.op-note i { color: var(--secondary); }

@@ -58,3 +58,4 @@ Breakpoints Flatsome: small ≤549px, medium 550–849px, large ≥850px.
 - Tour golf (`#tour-golf`) và du thuyền (`#tour-du-thuyen`): dữ liệu mẫu trong `EXTRA_TOURS` (build-html.py), ảnh ở `images/tours/` (nguồn/giấy phép trong `CREDITS.json`, ghi nguồn dưới mỗi mục). Menu "Tour du lịch" có link tới 2 mục này; menu mobile tự đóng khi bấm.
 - "Bạn muốn đi đâu" (khách inbound): 2 hàng — điểm nổi tiếng Đà Nẵng (`images/danang/`) và lăng tẩm Huế (`images/hue/`, ghi nguồn). Dữ liệu `DESTS` trong build-html.py.
 - Tour lặn biển `#tour-lan-bien` (dữ liệu mẫu trong `EXTRA_TOURS`).
+- "おすすめツアー" (`#tour-goi-y`, thay 海外ツアー): 16 tour tuỳ chọn theo bảng "Tour OP 10.2026", dữ liệu + bản dịch ja/ko trong `scripts/option_tours.py`. Giá USD/khách, ghi chú thanh toán bằng VND.

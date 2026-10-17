@@ -9,6 +9,7 @@ import re
 from pathlib import Path
 
 from danang_banner import banner
+import option_tours
 import i18n
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -154,6 +155,70 @@ def credit_line(path):
     return f'<p class="tour-credit">Ảnh: {links} · Wikimedia Commons</p>'
 
 
+def credits_for(imgs):
+    """Dòng ghi nguồn cho danh sách ảnh (đường dẫn trong images/, vd. 'hue/lang-tu-duc.jpg')."""
+    by_path = {}
+    for folder in ('danang', 'hue', 'tours'):
+        for c in json.loads((ROOT / f'images/{folder}/CREDITS.json').read_text(encoding='utf8')):
+            by_path[f"{folder}/{c['file']}"] = c
+    seen, links = set(), []
+    for path in imgs:
+        c = by_path.get(path)
+        if c and c['source'] not in seen:
+            seen.add(c['source'])
+            links.append(f'<a href="{c["source"]}" target="_blank" rel="noopener">{e(c["author"])}</a> ({e(c["license"])})')
+    return f'<p class="tour-credit">Ảnh: {" · ".join(links)} · Wikimedia Commons</p>'
+
+
+def option_card(t):
+    vi_title, vi_route = t['title'][0], t['route'][0]
+    price = f"${t['price']}{'〜' if t.get('from_') else ''}"
+    return f'''
+          <div class="tour-cell">
+            <div class="col-inner">
+              <div class="product-small box has-hover box-text-bottom op-card">
+                <div class="box-image">
+                  <div class="image-overlay-add image-cover">
+                    <a href="#" aria-label="{e(vi_title)}">{lazy(t['img'], vi_title)}</a>
+                    <div class="overlay"></div>
+                  </div>
+                  <span class="box-ngay-khoi-hanh"><i class="fa-regular fa-clock" aria-hidden="true"></i> {e(t['time'])}</span>
+                </div>
+                <div class="box-text">
+                  <div class="title-wrapper"><p class="product-title"><a href="#">{e(vi_title)}</a></p></div>
+                  <p class="op-route">{e(vi_route)}</p>
+                  <div class="thong-tin-sp">
+                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Bữa ăn: </span><span class="value">{e(t['meal'])}</span></div>
+                  </div>
+                  <div class="price-wrapper"><span class="price"><span class="amount">{price}</span><span class="price-suffix">{e(t.get('suffix', '/khách'))}</span></span></div>
+                  <div class="add-to-cart-button"><a href="#" rel="nofollow">Đặt Tour</a></div>
+                </div>
+              </div>
+            </div>
+          </div>'''
+
+
+def option_section():
+    cards = ''.join(option_card(t) for t in option_tours.TOURS)
+    return f'''
+  <section class="section section3" id="tour-goi-y">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+          {title('TOUR', 'GỢI Ý')}
+          <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}}'>
+            <div class="slider-viewport"><div class="slider-track">{cards}
+            </div></div>
+            {ARROWS}
+          </div>
+          <p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>
+          {credits_for([t['img'] for t in option_tours.TOURS])}
+        </div></div>
+      </div>
+    </div>
+  </section>'''
+
+
 def extra_tour_section(block):
     for p in block['prods']:
         p.update(href='#', cart='#')
@@ -166,7 +231,7 @@ def extra_tour_section(block):
 DESTS = [
     [dict(href='#', img=f'danang/{slug}.jpg', title=t) for slug, t in [
         ('cau-vang', 'Cầu Vàng'), ('ba-na-hills', 'Bà Nà Hills'), ('cau-rong', 'Cầu Rồng'), ('ngu-hanh-son', 'Ngũ Hành Sơn'),
-        ('my-khe', 'Biển Mỹ Khê'), ('son-tra', 'Bán đảo Sơn Trà'), ('hoi-an', 'Phố cổ Hội An')]],
+        ('my-khe', 'Biển Mỹ Khê'), ('son-tra', 'Bán đảo Sơn Trà'), ('hoi-an', 'Phố cổ Hội An'), ('my-son', 'Thánh địa Mỹ Sơn')]],
     [dict(href='#', img=f'hue/{slug}.jpg', title=t) for slug, t in [
         ('lang-khai-dinh', 'Lăng Khải Định'), ('lang-tu-duc', 'Lăng Tự Đức'), ('lang-minh-mang', 'Lăng Minh Mạng'),
         ('lang-dong-khanh', 'Lăng Đồng Khánh')]],
@@ -207,7 +272,7 @@ NAV = [
     ('Tin tức', SITE + '/tin-tuc/'),
     ('Liên hệ', SITE + '/lien-he/'),
 ]
-SUBNAV = [('Tour nước ngoài', SITE + '/tour-nuoc-ngoai/'), ('Tour trong nước', SITE + '/tour-trong-nuoc/'),
+SUBNAV = [('Tour gợi ý', '#tour-goi-y'), ('Tour trong nước', SITE + '/tour-trong-nuoc/'),
           ('Tour golf', '#tour-golf'), ('Tour du thuyền', '#tour-du-thuyen'), ('Tour lặn biển', '#tour-lan-bien')]
 
 
@@ -429,7 +494,7 @@ def main_content():
           <div class="gap-15"></div>
           <h3 class="dest-label"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Lăng tẩm Huế</h3>
           {destination_slider(DESTS[1])}
-          {credit_line('images/hue/CREDITS.json')}
+          {credits_for(['danang/my-son.jpg'] + [d['img'] for d in DESTS[1]])}
         </div></div>
       </div>
     </div>
@@ -465,7 +530,7 @@ def main_content():
   {extra_tour_section(EXTRA_TOURS[1])}
   {extra_tour_section(EXTRA_TOURS[2])}
 
-  {tour_section(tours[1])}
+  {option_section()}
   {tour_section(tours[2])}
   {tour_section(tours[3])}
 

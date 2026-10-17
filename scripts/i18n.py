@@ -8,6 +8,8 @@ nhớ thêm bản dịch vào TR; build sẽ báo những đoạn chưa dịch.
 import html
 import re
 
+import option_tours
+
 LANGS = {
     'ja': dict(file='index.html', html_lang='ja', label='日本語', flag='JP'),
     'ko': dict(file='ko.html', html_lang='ko', label='한국어', flag='KR'),
@@ -104,7 +106,7 @@ _ROWS = [
     ('ĐI ĐÂU', '行きたい？', '떠나볼까요?'),
     ('Đã có lượt khách', '多数のお客様にご利用', '많은 여행객이 방문'),
     ('TOUR', 'ツアー', '투어'),
-    ('NỔI BẬT', '注目', '추천'),
+    ('NỔI BẬT', '注目', '인기'),
     ('NƯỚC NGOÀI', '海外', '해외'),
     ('TRONG NƯỚC', '国内', '국내'),
     ('COMBO GIÁ RẺ', 'お得なパック', '알뜰 패키지'),
@@ -248,6 +250,8 @@ _ROWS = [
     ('Lặn biển Hòn Mun – vịnh Nha Trang 3N2Đ', 'ニャチャン湾 ホンムン島ダイビング 3日間', '나트랑만 혼문섬 다이빙 2박 3일'),
     ('Khóa học lặn PADI Open Water tại Đà Nẵng 3 ngày', 'ダナンで取るPADIオープンウォーター講習 3日間', '다낭 PADI 오픈워터 다이빙 코스 3일'),
 ]
+
+_ROWS += option_tours.ROWS
 
 # Địa chỉ giữ nguyên tiếng Việt (không dịch lẻ từng địa danh bên trong)
 for _addr in ['Quận Thanh Xuân, Hà Nội, Việt Nam']:

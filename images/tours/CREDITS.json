@@ -82,5 +82,61 @@
   "author": "NOAA Fisheries",
   "license": "Public domain",
   "source": "https://commons.wikimedia.org/wiki/File:NOAA_diver_black_jacks_Howland_Island_2023.png"
+ },
+ {
+  "slug": "op-my-son",
+  "file": "op-my-son.jpg",
+  "author": "Chainwit.",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2024_-_Mỹ_Sơn_Sanctuary_Temple_E7_-_img_01.jpg"
+ },
+ {
+  "slug": "op-banh-mi",
+  "file": "op-banh-mi.jpg",
+  "author": "stu_spivack",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Banh_mi_and_cuon.jpg"
+ },
+ {
+  "slug": "op-han-market",
+  "file": "op-han-market.jpg",
+  "author": "Daderot",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Han_Market_-_Da_Nang,_Vietnam_-_DSC02375.JPG"
+ },
+ {
+  "slug": "op-hoi-an-river",
+  "file": "op-hoi-an-river.jpg",
+  "author": "lumoplank",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hoi_An_-_HoiAn1441.jpg"
+ },
+ {
+  "slug": "op-lanterns",
+  "file": "op-lanterns.jpg",
+  "author": "dronepicr",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hoi_An_Laternen_und_Lampions_(39543426861).jpg"
+ },
+ {
+  "slug": "op-basket-boat",
+  "file": "op-basket-boat.jpg",
+  "author": "Chester Ho chesterho",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Basket_Boat_and_the_Bamboo_forest_(Unsplash).jpg"
+ },
+ {
+  "slug": "op-danang-night",
+  "file": "op-danang-night.jpg",
+  "author": "NGO TUNG thanhtungo",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bright_Da_Nang_skyline_(Unsplash).jpg"
+ },
+ {
+  "slug": "op-han-river",
+  "file": "op-han-river.jpg",
+  "author": "lumoplank",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Da_Nang_-_DaNang1492.jpg"
  }
 ]
