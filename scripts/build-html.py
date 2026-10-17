@@ -69,7 +69,7 @@ def destination_slider(items):
           </div>''' for it in items)
     return f'''
         <div class="slider-wrapper slider-danh-muc">
-          <div class="slider slider-nav-outside" data-slider='{{"cellAlign":"center","autoPlay":4000,"adaptiveHeight":true,"attraction":0.1,"friction":0.6,"dragThreshold":10}}'>
+          <div class="slider slider-nav-outside" data-slider='{{"cellAlign":"center","autoPlay":4000,"adaptiveHeight":true,"attraction":0.1,"friction":0.6,"dragThreshold":10,"equalize":".box-text"}}'>
             <div class="slider-viewport"><div class="slider-track">{cells}
             </div></div>
             {ARROWS}
@@ -605,7 +605,7 @@ def main_content():
           {title('TIN TỨC', 'DU LỊCH')}
           <p class="lead">Chia sẽ những thông tin du lịch triển lãm nhanh nhất &amp; những bí quyết khi tham gia tour hội chợ</p>
           <div class="gap-10"></div>
-          <div class="slider row-slider list-post slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":0,"dragThreshold":5}}'>
+          <div class="slider row-slider list-post slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":0,"dragThreshold":5,"equalize":".box-text"}}'>
             <div class="slider-viewport"><div class="slider-track">{posts}
             </div></div>
             {ARROWS}

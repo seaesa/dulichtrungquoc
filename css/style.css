@@ -692,3 +692,8 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
   .section4 .why-inner > .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section5 .section-content > .row { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* "Khách hàng nói gì": 2 khung trích dẫn cùng hàng cao bằng nhau */
+.section10 .col.medium-6 { display: flex; }
+.section10 .col.medium-6 > .col-inner { display: flex; flex-direction: column; }
+.section10 .col.medium-6 blockquote { flex: 1; }
