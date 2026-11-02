@@ -228,11 +228,10 @@ def option_section():
   </section>'''
 
 
-def group_sections():
-    out = []
-    for g in option_tours.GROUPS:
-        cards = ''.join(option_card(x) for x in g['tours'])
-        out.append(f'''
+def group_section(sid):
+    g = next(x for x in option_tours.GROUPS if x['sid'] == sid)
+    cards = ''.join(option_card(x) for x in g['tours'])
+    return f'''
   <section class="section section3" id="{g['sid']}">
     <div class="section-content">
       <div class="row row-small">
@@ -248,8 +247,27 @@ def group_sections():
         </div></div>
       </div>
     </div>
-  </section>''')
-    return ''.join(out)
+  </section>'''
+
+
+def outbound_section():
+    block = dict(title='TOUR NƯỚC NGOÀI', prods=DATA['section3'][0]['prods'])
+    return tour_section(block, sid='outbound')
+
+
+def cta_section():
+    return f'''
+  <section class="section section-cta">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner text-center">
+          {title('NHẬN BÁO GIÁ', 'TRONG 24 GIỜ')}
+          <p class="lead">Cho chúng tôi biết ngày đi, số người, có trẻ nhỏ hoặc người cao tuổi đi cùng hay không. Chúng tôi sẽ gửi lịch trình và báo giá trong vòng 24 giờ.</p>
+          <a class="button primary" href="contact.html">Yêu cầu báo giá</a>
+        </div></div>
+      </div>
+    </div>
+  </section>'''
 
 
 def extra_tour_section(block):
@@ -270,18 +288,18 @@ DESTS = [
 
 
 WHY = [
-    ('TOP 1', 'Dịch vụ Tour nội địa và quốc tế'),
-    ('TOP 5', 'Công ty lữ hành tại Việt Nam'),
-    ('TOP 7', 'các đơn vị làm VISA nước ngoài'),
+    ('TOUR RIÊNG', 'Thiết kế lịch trình theo yêu cầu, xe riêng 4–16 chỗ'),
+    ('HƯỚNG DẪN VIÊN', 'Hỗ trợ tiếng Nhật và tiếng Hàn'),
+    ('BÁO GIÁ 24 GIỜ', 'Báo giá rõ ràng, minh bạch qua email hoặc LINE'),
     ('ĐẶT TOUR', 'Dễ dàng nhanh chóng chỉ 3 bước'),
     ('THANH TOÁN', 'Đơn giản, an toàn và linh hoạt'),
     ('HOTLINE', '0326 978 689 Trực tuyến 24/7'),
 ]
 SERVICES = [
-    ('#fd6666', 'Hội chợ quốc tế', 'Chuyên tour hội chợ quốc tế các nước trên thế giới'),
-    ('#003594', 'Sim quốc tế', 'Bán sim nghe gọi &amp; data các nước trên thế giới'),
-    ('#fd8008', 'VISA', 'Dịch vụ Visa nhanh, rẻ. Visa trọn gói, thủ tục đơn giản'),
-    ('#89c440', 'Vé máy bay', 'Vé máy bay giá rẻ nhất, nhiều khuyến mãi hấp dẫn'),
+    ('#fd6666', 'Đón tiễn sân bay', 'Xe 4–16 chỗ, đón theo giờ bay, hỗ trợ qua LINE'),
+    ('#003594', 'Thuê xe có tài xế', 'Xe riêng kèm tài xế, linh hoạt theo lịch trình'),
+    ('#fd8008', 'Khách sạn &amp; nhà hàng', 'Đặt phòng, đặt bàn, set menu riêng cho khách'),
+    ('#89c440', 'Phiên dịch', 'Phiên dịch tiếng Nhật, tiếng Hàn cho tour và công tác'),
 ]
 MOMENTS = [
     ('8655-7e9b-4f2e-a427-18087594164f_1704267988.jpg', True),
@@ -303,8 +321,7 @@ NAV = [
     ('Tin tức', 'news.html'),
     ('Liên hệ', 'contact.html'),
 ]
-SUBNAV = [('Tour gợi ý', 'index.html#recommended'), ('Tour trong nước', 'domestic-tours.html'),
-          ('Tour golf', 'index.html#golf'), ('Tour suối nước nóng', 'index.html#hot-spring'), ('Tour lặn biển &amp; núi rừng', 'index.html#diving-trekking')]
+SUBNAV = []
 
 
 def search_form(fid):
@@ -341,7 +358,7 @@ def header():
               <li><a href="tel:0326978689"><i class="icon-phone"></i><span>0326 978 689</span></a></li>'''
     main_nav = []
     for label, href in NAV:
-        if label == 'Tour du lịch':
+        if label == 'Tour du lịch' and SUBNAV:
             subs = ''.join(f'<li><a href="{h}">{l}</a></li>' for l, h in SUBNAV)
             main_nav.append(f'<li class="has-dropdown"><a href="{href}">{label}<i class="icon-angle-down"></i></a><ul class="nav-dropdown">{subs}</ul></li>')
         else:
@@ -405,7 +422,7 @@ def header():
 def offcanvas():
     items = []
     for label, href in NAV:
-        if label == 'Tour du lịch':
+        if label == 'Tour du lịch' and SUBNAV:
             subs = ''.join(f'<li><a href="{h}">{l}</a></li>' for l, h in SUBNAV)
             items.append(f'<li class="menu-item has-child"><a href="{href}">{label}</a><button class="toggle" type="button" aria-label="Toggle" aria-expanded="false"><i class="icon-angle-down"></i></button><ul class="sub-menu">{subs}</ul></li>')
         else:
@@ -535,8 +552,6 @@ def main_content():
     </div>
   </section>
 
-  {tour_section(tours[0], first=True)}
-
   <!-- section4: Vì sao chọn chúng tôi -->
   <section class="section section4">
     <div class="section-content">
@@ -550,6 +565,9 @@ def main_content():
     </div>
   </section>
 
+  {option_section()}
+  {cta_section()}
+
   <!-- section5: Các dịch vụ -->
   <section class="section section5">
     <div class="section-content">
@@ -560,14 +578,6 @@ def main_content():
       </div>
     </div>
   </section>
-
-  {extra_tour_section(EXTRA_TOURS[0])}
-  {extra_tour_section(EXTRA_TOURS[1])}
-  {extra_tour_section(EXTRA_TOURS[2])}
-
-  {option_section()}
-  {group_sections()}
-  {tour_section(tours[3])}
 
   <!-- section9: Khoảnh khắc đẹp nhất -->
   <section class="section section9">
@@ -774,17 +784,13 @@ def tour_group(plain, strong, inner, credit=''):
 
 def tours_block(kind):
     out = []
+
+    def grp(g):
+        return tour_group(g['plain'], g['strong'], '<div class="tour-grid">' + ''.join(option_card(x) for x in g['tours']) + '</div>',
+                          credits_for([x['img'] for x in g['tours']]))
     ops = ''.join(option_card(t) for t in option_tours.TOURS)
     out.append(tour_group('TOUR', 'GỢI Ý', f'<div class="tour-grid">{ops}</div>\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>',
                           credits_for([t['img'] for t in option_tours.TOURS])))
-    for g in option_tours.GROUPS:
-        out.append(tour_group(g['plain'], g['strong'], '<div class="tour-grid">' + ''.join(option_card(x) for x in g['tours']) + '</div>',
-                              credits_for([x['img'] for x in g['tours']])))
-    for blk in EXTRA_TOURS:
-        plain, strong = blk['title'].split(' ', 1)
-        out.append(tour_group(plain, strong, grid_tours(blk['prods']), credits_for([p['img'] for p in blk['prods']])))
-    if kind == 'all':
-        out.append(tour_group('TOUR', 'NỔI BẬT', grid_tours(DATA['section3'][0]['prods'])))
     return ''.join(out)
 
 
@@ -794,11 +800,16 @@ def contact_block(k):
             ('fa-clock', ('営業時間', '영업시간'), ('毎日 8:00 – 18:00（ホットラインは24時間）', '매일 8:00 – 18:00 (핫라인은 24시간)'))]
     items = ''.join(f'<li><i class="fa-solid {ic}" aria-hidden="true"></i><div><strong>{lab[k]}</strong><span>{val if isinstance(val, str) else val[k]}</span></div></li>' for ic, lab, val in rows)
     maps = ('Googleマップで見る', 'Google 지도에서 보기')[k]
-    msg = ('メールアドレスをご入力ください。担当者より折り返しご連絡します。', '이메일 주소를 입력해 주세요. 담당자가 회신해 드립니다.')[k]
+    msg = ('メールアドレスをご入力ください。担当者より24時間以内にご連絡します。', '이메일 주소를 입력해 주세요. 담당자가 24시간 이내에 연락드립니다.')[k]
+    ask = (('お見積もりのためにお知らせいただきたいこと', '견적을 위해 알려 주세요'),
+           [('出発日・滞在日数', '출발일·체류 일수'), ('ご参加人数（お子様・ご年配の方の有無）', '참가 인원(어린이·어르신 동반 여부)'),
+            ('ご希望のホテルのグレード', '희망 호텔 등급'), ('ご興味のある観光地・体験', '관심 있는 관광지·체험')])
+    askhtml = f'<h3 class="ask-h">{ask[0][k]}</h3><ul class="page-list">' + ''.join(f'<li>{x[k]}</li>' for x in ask[1]) + '</ul>'
     qr = ('QRコードをスキャンして、LINEでご相談ください。', 'QR 코드를 스캔해 LINE으로 상담하세요.')[k]
     return f'''<div class="row row-small contact-grid">
   <div class="col medium-6 small-12 large-6"><div class="col-inner">
     <ul class="contact-list">{items}</ul>
+    {askhtml}
     <a class="button primary" href="https://www.google.com/maps/search/?api=1&amp;query=108+Ph%E1%BA%A1m+Xu%C3%A2n+%E1%BA%A8n+C%E1%BA%A9m+L%E1%BB%87+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">{maps}</a>
   </div></div>
   <div class="col medium-6 small-12 large-6"><div class="col-inner contact-side">
@@ -877,7 +888,7 @@ def sub_main(slug, lang):
 </main>'''
 
 
-HOME_DESC = 'Khánh An Tourist — tour trong nước, tour nước ngoài, visa, vé máy bay.'
+HOME_DESC = 'Khánh An Tourist — tour riêng, tour gia đình, tour trọn gói Đà Nẵng – Hội An – Huế.'
 HOME = finish(shell(main_content(), 'Khánh An Tourist - Trang chủ', HOME_DESC))
 
 # Trang chỉ có tiếng Nhật (mặc định) và tiếng Hàn

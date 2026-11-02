@@ -744,3 +744,9 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
   .page-body { padding: 28px 0 40px; }
   .page-group .home-title { font-size: 22px; }
 }
+
+/* Khối "Nhận báo giá" ở trang chủ */
+.section-cta { padding: 20px 0 50px; }
+.section-cta .col-inner { max-width: 760px; margin: 0 auto; padding: 36px 24px; border-radius: 16px; background: var(--gray-bg); }
+.section-cta .lead { margin-bottom: 20px; color: #5b6475; }
+.ask-h { margin: 6px 0 8px; font-size: 17px; color: var(--primary); }

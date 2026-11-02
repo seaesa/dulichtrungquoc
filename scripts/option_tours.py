@@ -115,6 +115,35 @@ TOURS = [
 # Nhóm sản phẩm theo kế hoạch Inbound (chat "Chọn options Inbound"). Giá = giá bán mục tiêu thấp nhất,
 # quy đổi từ VND sang USD theo ~25.000 VND/USD (làm tròn). Chưa phải báo giá chốt.
 LABELS += [
+    ('TOUR RIÊNG', 'オーダーメイドの専用ツアー', '맞춤형 프라이빗 투어'),
+    ('Thiết kế lịch trình theo yêu cầu, xe riêng 4–16 chỗ', 'ご希望に合わせた日程設計。4〜16人乗りの専用車', '요청에 맞춘 일정 설계, 4~16인승 전용 차량'),
+    ('HƯỚNG DẪN VIÊN', '日本語・韓国語ガイド', '일본어·한국어 가이드'),
+    ('Hỗ trợ tiếng Nhật và tiếng Hàn', '日本語・韓国語に対応', '일본어·한국어 지원'),
+    ('BÁO GIÁ 24 GIỜ', '24時間以内にお見積もり', '24시간 내 견적'),
+    ('Báo giá rõ ràng, minh bạch qua email hoặc LINE', 'メールまたはLINEで、明朗なお見積もりをお届け', '이메일 또는 LINE으로 투명한 견적 제공'),
+    ('Đón tiễn sân bay', '空港送迎', '공항 송영'),
+    ('Xe 4–16 chỗ, đón theo giờ bay, hỗ trợ qua LINE', '4〜16人乗り。フライトに合わせて送迎、LINEでサポート', '4~16인승, 항공편에 맞춘 송영, LINE 지원'),
+    ('Thuê xe có tài xế', '運転手付きレンタカー', '기사 포함 차량 대여'),
+    ('Xe riêng kèm tài xế, linh hoạt theo lịch trình', '専用車＋ドライバー。日程に合わせて柔軟に対応', '전용 차량과 기사, 일정에 맞춰 유연하게'),
+    ('Khách sạn & nhà hàng', 'ホテル＆レストラン', '호텔 & 레스토랑'),
+    ('Đặt phòng, đặt bàn, set menu riêng cho khách', 'お部屋・お席の予約、お客様専用のセットメニュー', '객실·좌석 예약, 고객 맞춤 세트 메뉴'),
+    ('Phiên dịch', '通訳', '통역'),
+    ('Phiên dịch tiếng Nhật, tiếng Hàn cho tour và công tác', 'ツアーや出張のための日本語・韓国語通訳', '투어와 출장을 위한 일본어·한국어 통역'),
+    ('NHẬN BÁO GIÁ', 'お見積もりを', '견적을'),
+    ('TRONG 24 GIỜ', '24時間以内にお届け', '24시간 내 받아보세요'),
+    ('Cho chúng tôi biết ngày đi, số người, có trẻ nhỏ hoặc người cao tuổi đi cùng hay không. Chúng tôi sẽ gửi lịch trình và báo giá trong vòng 24 giờ.',
+     '出発日・人数・お子様やご年配の方のご同行の有無をお知らせください。24時間以内に日程案とお見積もりをお送りします。',
+     '출발일, 인원, 어린이나 어르신 동반 여부를 알려 주세요. 24시간 이내에 일정안과 견적을 보내 드립니다.'),
+    ('Yêu cầu báo giá', '見積もりを依頼する', '견적 요청하기'),
+    ('Tour trọn gói & gia đình', 'パッケージ＆ファミリーツアー', '패키지 & 가족 투어'),
+    ('Tour riêng (Private)', 'プライベートツアー', '프라이빗 투어'),
+    ('Tour trải nghiệm', '体験ツアー', '체험 투어'),
+    ('Đưa đón sân bay', '空港送迎', '공항 픽업'),
+    ('Doanh nghiệp & MICE', 'ビジネス＆MICE', '비즈니스 & MICE'),
+    ('Tour nước ngoài', '海外ツアー', '해외 투어'),
+    ('Khánh An Tourist — tour riêng, tour gia đình, tour trọn gói Đà Nẵng – Hội An – Huế.',
+     'Khánh An Tourist — ダナン・ホイアン・フエのプライベートツアー、ファミリーツアー、パッケージツアー。',
+     'Khánh An Tourist — 다낭·호이안·후에 프라이빗 투어, 가족 투어, 패키지 투어.'),
     ('Giá tham khảo tính theo USD (xem đơn vị cạnh giá) · Thanh toán bằng VND', '料金は米ドル表示の目安（単位は価格の横に記載）・お支払いはベトナムドン（VND）のみ', '요금은 미화 표시(단위는 가격 옆 참고) · 결제는 베트남 동(VND)만 가능'),
     ('3 ngày 2 đêm', '2泊3日', '2박 3일'),
     ('4 ngày 3 đêm', '3泊4日', '3박 4일'),
@@ -262,4 +291,7 @@ GROUPS = [
 
 # Hàng dịch cho i18n.py
 ALL = TOURS + [t for g in GROUPS for t in g['tours']]
+# Chỉ triển khai các tour số 2, 3, 5, 6, 8, 11, 13, 14 trong bảng "Tour OP (10.2026)"
+TOURS = [TOURS[i - 1] for i in (2, 3, 5, 6, 8, 11, 13, 14)]
+GROUPS = []
 ROWS = LABELS + [t['title'] for t in ALL] + [t['route'] for t in ALL]
