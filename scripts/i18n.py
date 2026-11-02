@@ -16,6 +16,18 @@ LANGS = {
 }
 DEFAULT = 'ja'
 
+
+def page_url(lang, slug=None):
+    """URL sạch (không .html). Tiếng Nhật: /slug/ ; tiếng Hàn: /ko/slug/ ; trang chủ: / và /ko/."""
+    base = '/' if lang == DEFAULT else f'/{lang}/'
+    return base + (f'{slug}/' if slug else '')
+
+
+def page_file(lang, slug=None):
+    """Đường dẫn file ghi ra đĩa: mỗi trang là một thư mục chứa index.html."""
+    return page_url(lang, slug).lstrip('/') + 'index.html'
+
+
 # (tiếng Việt, tiếng Nhật, tiếng Hàn)
 _ROWS = [
     ('Khánh An Tourist - Trang chủ', 'Khánh An Tourist - ホーム', 'Khánh An Tourist - 홈'),
@@ -116,43 +128,17 @@ _ROWS = [
     ('/khách', '/名', '/인'),
     ('đã liên hệ', '件のお問い合わせ', '건 문의'),
     ('Đặt Tour', '予約する', '예약하기'),
-    ('Đà Nẵng, Hà Nội, Tp Hồ Chí Minh', 'ダナン、ハノイ、ホーチミン', '다낭, 하노이, 호찌민'),
-    ('Đà Nẵng, Hà Nội', 'ダナン、ハノイ', '다낭, 하노이'),
-    ('Hà Nội', 'ハノイ', '하노이'),
     ('Du lịch Trung Quốc: Đảo Hải Nam – Tam Á – Hải Hoa Đảo 4N3Đ', '中国旅行：海南島・三亜・海花島 4日間', '중국 여행: 하이난섬 – 싼야 – 하이화섬 3박 4일'),
-    ('Du lịch Trung Quốc: Hà Nội – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ',
-     '中国旅行：ハノイ・成都・都江堰・九寨溝・茂県・甲居山 6日間',
-     '중국 여행: 하노이 – 청두 – 두장옌 – 주자이거우 – 마오현 – 자쥐산 5박 6일'),
-    ('Tour Du Lịch Hà Giang – Sông Nho Quế – Cao Nguyên Đá Đồng Văn 3N2Đ',
-     'ハザン・ニョークエ川・ドンバン石灰岩高原ツアー 3日間',
-     '하장 – 뇨꿰강 – 동반 카르스트 고원 투어 2박 3일'),
-    ('Du Lịch Tây Bắc: Mù Cang Chải – Đèo Khau Phạ – Tú Lệ – Trạm Tấu 3N2Đ',
-     '西北部の旅：ムーカンチャイ・カウファー峠・トゥレ・チャムタウ 3日間',
-     '서북부 여행: 무캉짜이 – 카우파 고개 – 뚜레 – 짬따우 2박 3일'),
-    ('Du Lịch Mộc Châu – Mai Châu – Cầu Kính Bạch Long 2N1Đ', 'モックチャウ・マイチャウ・バクロンガラス橋 2日間', '목쩌우 – 마이쩌우 – 박롱 유리다리 1박 2일'),
     ('Du Lịch Đài Loan: Đài Bắc – Đài Trung – Cao Hùng 5N4Đ', '台湾旅行：台北・台中・高雄 5日間', '대만 여행: 타이베이 – 타이중 – 가오슝 4박 5일'),
     ('Du Lịch Trung Quốc Giá Rẻ: Hà Khẩu – Bình Biên – Kiến Thủy – Mông Tự 3N2Đ',
      '格安中国旅行：河口・屏辺・建水・蒙自 3日間',
      '중국 알뜰 여행: 허커우 – 핑볜 – 젠수이 – 멍쯔 2박 3일'),
     ('Tour golf', 'ゴルフツアー', '골프 투어'),
-    ('Tour du thuyền', 'クルーズツアー', '크루즈 투어'),
     ('GOLF', 'ゴルフ', '골프'),
-    ('DU THUYỀN', 'クルーズ', '크루즈'),
-    ('Hà Nội, Đà Nẵng', 'ハノイ、ダナン', '하노이, 다낭'),
-    ('Tour Golf Đà Nẵng – Hội An: BRG Danang Golf – Montgomerie Links – Hoiana Shores 4N3Đ',
-     'ダナン・ホイアン ゴルフツアー：BRGダナンゴルフ・モンゴメリーリンクス・ホイアナショアーズ 4日間',
-     '다낭 – 호이안 골프 투어: BRG 다낭 골프 – 몽고메리 링크스 – 호이아나 쇼어스 3박 4일'),
     ('Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ',
      'フエ・ランコー ゴルフツアー：ラグーナゴルフ・ランコー＆フエのゴルフ場 3日間',
      '후에 – 랑꼬 골프 투어: 라구나 골프 랑꼬 & 후에 골프장 2박 3일'),
     ('Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ', 'バーナーヒルズ・ゴルフクラブ＆ダナンのビーチリゾート 2日間', '바나힐 골프 클럽 & 다낭 해변 휴양 1박 2일'),
-    ('Tour Golf Hà Nội – Tam Đảo Golf Resort – Sky Lake 3N2Đ', 'ハノイ ゴルフツアー：タムダオ・ゴルフリゾート・スカイレイク 3日間', '하노이 골프 투어: 땀다오 골프 리조트 – 스카이 레이크 2박 3일'),
-    ('Du thuyền 5 sao vịnh Hạ Long 2N1Đ', 'ハロン湾 5つ星クルーズ 2日間', '하롱베이 5성급 크루즈 1박 2일'),
-    ('Du thuyền vịnh Lan Hạ – Cát Bà 3N2Đ', 'ランハー湾・カットバ島クルーズ 3日間', '란하베이 – 깟바섬 크루즈 2박 3일'),
-    ('Du thuyền trong ngày vịnh Hạ Long – hang Sửng Sốt – đảo Ti Tốp',
-     'ハロン湾日帰りクルーズ：スンソット洞窟・ティートップ島',
-     '하롱베이 당일 크루즈: 승솟 동굴 – 티톱섬'),
-    ('Du thuyền buồm truyền thống ngắm hoàng hôn vịnh Hạ Long 2N1Đ', '伝統的な帆船で楽しむハロン湾サンセットクルーズ 2日間', '전통 범선으로 즐기는 하롱베이 선셋 크루즈 1박 2일'),
     ('VÌ SAO CHỌN', '選ばれる', '선택하는'),
     ('CHÚNG TÔI', '理由', '이유'),
     ('Dịch vụ Tour nội địa và quốc tế', '国内・海外ツアーサービス', '국내·해외 투어 서비스'),
@@ -180,15 +166,6 @@ _ROWS = [
     ('Đánh giá, cảm nhận của khách hàng đã sử dụng dịch vụ của chúng tôi',
      '当社をご利用いただいたお客様からのご感想',
      '저희 서비스를 이용하신 고객님들의 후기'),
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hạ Long. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
-     '今回もSANSHINはKhánh An Touristと一緒にハロン湾旅行へ行きました。すべてが素晴らしく、ガイドの「タインさん」は毎回の食事からホテルの部屋まで細やかに気を配ってくれました。国内外どの旅行でもKhánh An Touristと一緒なら安心です。旅行を考えるとき、いつも真っ先に思い浮かぶのがKhánh An Touristです。心のこもったサポートをありがとうございました。',
-     '이번에도 SANSHIN은 Khánh An Tourist와 함께 하롱베이 여행을 다녀왔습니다. 모든 것이 훌륭했고, 가이드 “타잉 씨”는 매 식사와 호텔 객실까지 세심하게 챙겨 주었습니다. 국내외 어떤 여행이든 Khánh An Tourist와 함께라면 안심입니다. 여행을 계획할 때마다 가장 먼저 떠오르는 곳이 Khánh An Tourist입니다. 정성 어린 지원에 감사드립니다.'),
-    ('Công ty TNHH SANSHIN Hà Nội', 'SANSHIN ハノイ有限会社', 'SANSHIN 하노이 유한회사'),
-    ('Tour Hạ Long náo nhiệt', 'にぎやかなハロン湾ツアー', '활기찬 하롱베이 투어'),
-    ('Chúng tôi du lịch tới đảo Phú Quốc xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
-     'Khánh An Touristと一緒に美しいフーコック島へ旅行しました。旅行中は食事から睡眠まで心のこもったお世話をしていただきました。ガイドさんも親切で丁寧です。出発前には出発時刻や持ち物を一人ひとりに案内してくれました。次の旅行もKhánh An Touristにお願いしたいと思います。',
-     'Khánh An Tourist와 함께 아름다운 푸꾸옥섬을 여행했습니다. 여행 내내 식사부터 숙박까지 세심한 보살핌을 받았고, 가이드도 친절하고 꼼꼼했습니다. 출발 전에는 출발 시간과 준비물을 한 사람씩 안내해 주었습니다. 다음 여행도 Khánh An Tourist에 맡기고 싶습니다.'),
-    ('Cảm nhận về tour Phú Quốc do công ty tổ chức', '当社主催フーコック島ツアーのご感想', '당사 푸꾸옥 투어 이용 후기'),
     ('Tài khoản chính thức', '公式アカウント', '공식 계정'),
     ('Kết bạn', '友だち追加', '친구 추가'),
     ('Ưu đãi cho bạn bè LINE', 'LINE友だち限定クーポン', 'LINE 친구 전용 쿠폰'),
@@ -213,9 +190,6 @@ _ROWS = [
      '홍콩의 서민 동네 삼수이포에서 보내는 하루'),
     ('Du Lịch Hàn Quốc: Khám Phá Khu Rừng Lá Đỏ Đầy Mê Hoặc Hwadam', '韓国旅行：魅惑の紅葉の森・花潭（ファダム）を探訪', '한국 여행: 매혹적인 단풍 숲 화담숲 탐방'),
     ('📍 Địa chỉ', '📍 住所', '📍 주소'),
-    ('🏠 Chi nhánh Hoà Bình', '🏠 ホアビン支店', '🏠 호아빈 지점'),
-    ('🏠 Chi nhánh Hải Phòng', '🏠 ハイフォン支店', '🏠 하이퐁 지점'),
-    ('🏠 Chi nhánh Nam Định', '🏠 ナムディン支店', '🏠 남딘 지점'),
     ('☎️ Hotline', '☎️ ホットライン', '☎️ 핫라인'),
     ('✉️ Email', '✉️ メール', '✉️ 이메일'),
     ('THÔNG TIN CẦN BIẾT', 'ご案内', '이용 안내'),
@@ -223,15 +197,8 @@ _ROWS = [
     ('Chính sách hoàn hủy', 'キャンセルポリシー', '취소·환불 정책'),
     ('Chính sách bảo mật', 'プライバシーポリシー', '개인정보 처리방침'),
     ('Điều khoản giao dịch', 'ご利用規約', '이용 약관'),
-    ('CHỨNG NHẬN', '認証', '인증'),
     ('ĐĂNG KÝ NHẬN BẢN TIN', 'ニュースレター登録', '뉴스레터 구독'),
     ('Nhập địa chỉ email để nhận thông tin mới nhất từ chúng tôi.', 'メールアドレスを入力して最新情報を受け取る。', '이메일을 입력하고 최신 소식을 받아 보세요.'),
-    ('Giấy phép kinh doanh số 01033619401 do sở KH&ĐT TP abc cấp ngày 21/23 năm 2323',
-     '事業登録番号 01033619401（abc市計画投資局 発行日 2323年21/23）',
-     '사업자 등록번호 01033619401 (abc시 기획투자국 발급, 2323년 21/23)'),
-    ('Giấy phép Kinh doanh Lữ hành Quốc tế số 01711D/S2015/TCDL-GPLHabc',
-     '国際旅行業登録番号 01711D/S2015/TCDL-GPLHabc',
-     '국제 여행업 허가번호 01711D/S2015/TCDL-GPLHabc'),
     ('Kết nối với chúng tôi', 'フォローする', '팔로우하기'),
     ('Chấp nhận thanh toán', '対応決済', '결제 수단'),
     ('Địa chỉ email...', 'メールアドレス...', '이메일 주소...'),
@@ -242,19 +209,35 @@ _ROWS = [
     ('Lăng Tự Đức', 'トゥドゥック帝廟', '뜨득 황릉'),
     ('Lăng Minh Mạng', 'ミンマン帝廟', '민망 황릉'),
     ('Lăng Đồng Khánh', 'ドンカイン帝廟', '동카인 황릉'),
-    ('Tour lặn biển', 'ダイビングツアー', '다이빙 투어'),
-    ('LẶN BIỂN', 'ダイビング', '다이빙'),
     ('Đà Nẵng, Hội An', 'ダナン、ホイアン', '다낭, 호이안'),
     ('Lặn biển ngắm san hô Cù Lao Chàm – Hội An 1 ngày', 'チャム島（クーラオチャム）サンゴ礁ダイビング・ホイアン 日帰り', '참섬(꾸라오짬) 산호초 다이빙 – 호이안 당일'),
-    ('Lặn ngắm san hô bán đảo Sơn Trà – Đà Nẵng nửa ngày', 'ソンチャー半島サンゴ礁ダイビング・ダナン 半日', '선짜 반도 산호초 다이빙 – 다낭 반나절'),
-    ('Lặn biển Hòn Mun – vịnh Nha Trang 3N2Đ', 'ニャチャン湾 ホンムン島ダイビング 3日間', '나트랑만 혼문섬 다이빙 2박 3일'),
-    ('Khóa học lặn PADI Open Water tại Đà Nẵng 3 ngày', 'ダナンで取るPADIオープンウォーター講習 3日間', '다낭 PADI 오픈워터 다이빙 코스 3일'),
+    ('Đà Nẵng, Huế', 'ダナン、フエ', '다낭, 후에'),
+    ('Đà Nẵng, Tp Hồ Chí Minh', 'ダナン、ホーチミン', '다낭, 호찌민'),
+    ('Du lịch Trung Quốc: Đà Nẵng – Thành Đô – Đô Giang Yến – Cửu Trại Câu –Mậu Huyện – Gia Cô Sơn 6N5Đ', '中国旅行：ダナン・成都・都江堰・九寨溝・茂県・甲居山 6日間', '중국 여행: 다낭 – 청두 – 두장옌 – 주자이거우 – 마오현 – 자쥐산 5박 6일'),
+    ('Golf BRG Danang Golf Resort & nghỉ dưỡng biển Đà Nẵng 2N1Đ', 'BRGダナン・ゴルフリゾート＆ダナンのビーチリゾート 2日間', 'BRG 다낭 골프 리조트 & 다낭 해변 휴양 1박 2일'),
+    ('Golf Montgomerie Links – sân golf ven biển Hội An 2N1Đ', 'モンゴメリー・リンクス（ホイアン海沿いのゴルフ場） 2日間', '몽고메리 링크스 – 호이안 해안 골프장 1박 2일'),
+    ('Tour suối nước nóng', '温泉ツアー', '온천 투어'),
+    ('SUỐI NƯỚC NÓNG', '温泉', '온천'),
+    ('Tour lặn biển & núi rừng', 'ダイビング＆ジャングルツアー', '다이빙 & 정글 투어'),
+    ('LẶN BIỂN & KHÁM PHÁ NÚI RỪNG', 'ダイビング＆ジャングル探検', '다이빙 & 정글 탐험'),
+    ('Tắm khoáng nóng Núi Thần Tài – Đà Nẵng nửa ngày', 'タンタイ山ミネラル温泉・ダナン 半日', '턴타이산 미네랄 온천 – 다낭 반나절'),
+    ('Tắm khoáng nóng Núi Thần Tài & phố cổ Hội An về đêm 1 ngày', 'タンタイ山ミネラル温泉＆夜のホイアン旧市街 日帰り', '턴타이산 미네랄 온천 & 야간 호이안 구시가지 당일'),
+    ('Nghỉ dưỡng tắm khoáng nóng & Bà Nà Hills 2N1Đ', '温泉リゾート＆バーナーヒルズ 2日間', '온천 휴양 & 바나힐 1박 2일'),
+    ('Cù Lao Chàm cano cao tốc: bãi Xếp – bãi Ông, lặn ngắm san hô 1 ngày', 'チャム島 スピードボートで巡るビーチ＆サンゴ礁ダイビング 日帰り', '참섬 스피드보트: 해변 투어 & 산호초 다이빙 당일'),
+    ('Trekking rừng Bạch Mã – tắm suối, thác Đỗ Quyên 1 ngày', 'バックマー国立公園トレッキング・渓流水浴び・ドークエン滝 日帰り', '바익마 국립공원 트레킹 – 계곡 물놀이, 도꾸옌 폭포 당일'),
+    ('Khám phá suối Mơ – rừng Bà Nà Hills 1 ngày', 'モー渓流とバーナーヒルズの森を探検 日帰り', '바나힐 숲과 모 계곡 탐험 당일'),
+    ('Trekking rừng nguyên sinh bán đảo Sơn Trà 1 ngày', 'ソンチャー半島 原生林トレッキング 日帰り', '선짜 반도 원시림 트레킹 당일'),
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình', '今回もSANSHINはKhánh An Touristと一緒にホイアン旅行へ行きました。すべてが素晴らしく、ガイドの「タインさん」は毎回の食事からホテルの部屋まで細やかに気を配ってくれました。国内外どの旅行でもKhánh An Touristと一緒なら安心です。旅行を考えるとき、いつも真っ先に思い浮かぶのがKhánh An Touristです。心のこもったサポートをありがとうございました。', '이번에도 SANSHIN은 Khánh An Tourist와 함께 호이안 여행을 다녀왔습니다. 모든 것이 훌륭했고, 가이드 “타잉 씨”는 매 식사와 호텔 객실까지 세심하게 챙겨 주었습니다. 국내외 어떤 여행이든 Khánh An Tourist와 함께라면 안심입니다. 여행을 계획할 때마다 가장 먼저 떠오르는 곳이 Khánh An Tourist입니다. 정성 어린 지원에 감사드립니다.'),
+    ('Công ty TNHH SANSHIN', 'SANSHIN有限会社', 'SANSHIN 유한회사'),
+    ('Tour Hội An lung linh', 'きらめくホイアンツアー', '반짝이는 호이안 투어'),
+    ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.', 'Khánh An Touristと一緒に美しいバーナーヒルズへ旅行しました。旅行中は食事から睡眠まで心のこもったお世話をしていただきました。ガイドさんも親切で丁寧です。出発前には出発時刻や持ち物を一人ひとりに案内してくれました。次の旅行もKhánh An Touristにお願いしたいと思います。', 'Khánh An Tourist와 함께 아름다운 바나힐을 여행했습니다. 여행 내내 식사부터 숙박까지 세심한 보살핌을 받았고, 가이드도 친절하고 꼼꼼했습니다. 출발 전에는 출발 시간과 준비물을 한 사람씩 안내해 주었습니다. 다음 여행도 Khánh An Tourist에 맡기고 싶습니다.'),
+    ('Cảm nhận về tour Bà Nà Hills do công ty tổ chức', '当社主催バーナーヒルズツアーのご感想', '당사 바나힐 투어 이용 후기'),
 ]
 
 _ROWS += option_tours.ROWS
 
 # Địa chỉ giữ nguyên tiếng Việt (không dịch lẻ từng địa danh bên trong)
-for _addr in ['Quận Thanh Xuân, Hà Nội, Việt Nam']:
+for _addr in ['108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng']:
     _ROWS.append((_addr, _addr, _addr))
 
 PLACE_NAMES = ['Cầu Vàng', 'Bà Nà Hills', 'Phố cổ Hội An', 'Cầu Rồng', 'Ngũ Hành Sơn', 'Biển Mỹ Khê', 'Bán đảo Sơn Trà']
@@ -264,7 +247,7 @@ for _n in PLACE_NAMES:
     TR['Xem ' + _n] = {'ja': TR[_n]['ja'] + 'を見る', 'ko': TR[_n]['ko'] + ' 보기'}
 
 # Tên riêng / địa chỉ được giữ nguyên tiếng Việt (không báo là chưa dịch)
-KEEP = ['Jean-Pierre Dalbéra', 'Khánh An', 'KHÁNH AN', 'Nguyễn Khả Tâm', 'Tòa nhà Tuấn Hạnh', 'Điện Biên Phủ', 'Bặch Đằng', 'Trần Huy Liệu']
+KEEP = ['108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng', 'Jean-Pierre Dalbéra', 'Khánh An', 'KHÁNH AN', 'Nguyễn Khả Tâm', 'Phạm Xuân Ẩn', 'Trần Thanh Minh Khuê']
 
 _KEYS = sorted(TR, key=len, reverse=True)
 # Chữ trong HTML đã được escape (&amp;...), nên khớp theo dạng đã escape
@@ -277,10 +260,10 @@ def _tr_text(text, lang):
     return _RE.sub(lambda m: html.escape(TR[_HTML_KEY[m.group(0)]][lang], quote=False), text)
 
 
-def _switch(lang, cls):
+def _switch(lang, cls, slug=None):
     active = ' class="active" aria-current="true"'
     items = ''.join(
-        f'<li><a href="{c["file"]}" hreflang="{c["html_lang"]}" lang="{c["html_lang"]}"{active if k == lang else ""}>'
+        f'<li><a href="{page_url(k, slug)}" hreflang="{c["html_lang"]}" lang="{c["html_lang"]}"{active if k == lang else ""}>'
         f'<span class="lang-code">{c["flag"]}</span>{c["label"]}</a></li>'
         for k, c in LANGS.items())
     cur = LANGS[lang]
@@ -292,7 +275,7 @@ def _switch(lang, cls):
     return f'<li class="html lang-sidebar"><ul class="lang-pills" aria-label="Language">{items}</ul></li>'
 
 
-def render(page, lang):
+def render(page, lang, slug=None):
     parts = re.split(r'(<script[\s\S]*?</script>|<[^>]+>)', page)
     out = []
     for p in parts:
@@ -312,11 +295,11 @@ def render(page, lang):
     page = re.sub(rf'<h2 class="home-title">{word} <strong>([^<]+)</strong></h2>',
                   rf'<h2 class="home-title"><strong>\1</strong>{sep}{word}</h2>', page)
     page = page.replace('<html lang="vi">', f'<html lang="{LANGS[lang]["html_lang"]}">')
-    alts = ''.join(f'<link rel="alternate" hreflang="{c["html_lang"]}" href="{c["file"]}">' for c in LANGS.values())
+    alts = ''.join(f'<link rel="alternate" hreflang="{c["html_lang"]}" href="{page_url(k, slug)}">' for k, c in LANGS.items())
     page = page.replace('</head>', alts + '\n</head>', 1)
-    page = (page.replace('<!--LANG_SWITCH-->', _switch(lang, 'top'))
-                .replace('<!--LANG_SWITCH_MOBILE-->', _switch(lang, 'mobile'))
-                .replace('<!--LANG_SWITCH_SIDEBAR-->', _switch(lang, 'sidebar')))
+    page = (page.replace('<!--LANG_SWITCH-->', _switch(lang, 'top', slug))
+                .replace('<!--LANG_SWITCH_MOBILE-->', _switch(lang, 'mobile', slug))
+                .replace('<!--LANG_SWITCH_SIDEBAR-->', _switch(lang, 'sidebar', slug)))
     return page
 
 

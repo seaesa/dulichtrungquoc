@@ -11,6 +11,7 @@ from pathlib import Path
 from danang_banner import banner
 import option_tours
 import i18n
+import pages
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / 'docs/research/content.json').read_text(encoding='utf8'))
@@ -18,6 +19,15 @@ ICONS = json.loads((ROOT / 'docs/research/icons.json').read_text(encoding='utf8'
 SITE = 'https://dulich2.themedep.top'
 
 e = html.escape
+
+# Bỏ tour miền Bắc; điểm khởi hành chuyển về Đà Nẵng
+NORTH_TOURS = ('Hà Giang', 'Tây Bắc', 'Mộc Châu')
+for _b in DATA['section3']:
+    _b['prods'] = [p for p in _b['prods'] if not any(k in p['title'] for k in NORTH_TOURS)]
+    for p in _b['prods']:
+        p['kh'] = ', '.join(x for x in p['kh'].split(', ') if x != 'Hà Nội') or 'Đà Nẵng'
+        p['kh'] = p['kh'] if 'Đà Nẵng' in p['kh'] else 'Đà Nẵng, ' + p['kh']
+        p['title'] = p['title'].replace('Hà Nội – Thành Đô', 'Đà Nẵng – Thành Đô')
 
 
 def img(url):
@@ -125,28 +135,27 @@ def tour_section(block, first=False, sid='', credit=''):
   </section>'''
 
 
-# Tour golf & du thuyền (dữ liệu mẫu — sửa giá/lịch trình thật tại đây)
+# Special tour: golf (4 sân), tắm suối nước nóng, lặn biển & khám phá núi rừng (dữ liệu mẫu — sửa giá/lịch trình thật tại đây)
 EXTRA_TOURS = [
     dict(sid='tour-golf', title='TOUR GOLF', prods=[
-        dict(img='tours/golf-river.jpg', title='Tour Golf Đà Nẵng – Hội An: BRG Danang Golf – Montgomerie Links – Hoiana Shores 4N3Đ', ma='KA-GOLF01', kh='Đà Nẵng', price='18.900.000', lh='86'),
-        dict(img='tours/golf-hue.jpg', title='Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ', ma='KA-GOLF02', kh='Đà Nẵng', price='12.500.000', lh='64'),
+        dict(img='tours/golf-river.jpg', title='Golf BRG Danang Golf Resort & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF01', kh='Đà Nẵng', price='6.900.000', lh='86'),
+        dict(img='tours/golf-cart-path.jpg', title='Golf Montgomerie Links – sân golf ven biển Hội An 2N1Đ', ma='KA-GOLF02', kh='Đà Nẵng', price='7.900.000', lh='64'),
         dict(img='tours/golf-palm-path.jpg', title='Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF03', kh='Đà Nẵng', price='8.900.000', lh='120'),
-        dict(img='tours/golf-tam-dao.jpg', title='Tour Golf Hà Nội – Tam Đảo Golf Resort – Sky Lake 3N2Đ', ma='KA-GOLF04', kh='Hà Nội', price='13.900.000', lh='72'),
+        dict(img='tours/golf-hue.jpg', title='Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ', ma='KA-GOLF04', kh='Đà Nẵng', price='12.500.000', lh='72'),
     ]),
-    dict(sid='tour-du-thuyen', title='TOUR DU THUYỀN', prods=[
-        dict(img='tours/cruise-ha-long.jpg', title='Du thuyền 5 sao vịnh Hạ Long 2N1Đ', ma='KA-CRU01', kh='Hà Nội', price='5.900.000', lh='150+'),
-        dict(img='tours/cruise-lan-ha-night.jpg', title='Du thuyền vịnh Lan Hạ – Cát Bà 3N2Đ', ma='KA-CRU02', kh='Hà Nội', price='8.500.000', lh='98'),
-        dict(img='tours/cruise-ha-long-bay.jpg', title='Du thuyền trong ngày vịnh Hạ Long – hang Sửng Sốt – đảo Ti Tốp', ma='KA-CRU03', kh='Hà Nội', price='1.890.000', lh='200'),
-        dict(img='tours/cruise-junk.jpg', title='Du thuyền buồm truyền thống ngắm hoàng hôn vịnh Hạ Long 2N1Đ', ma='KA-CRU04', kh='Hà Nội, Đà Nẵng', price='4.900.000', lh='75'),
+    dict(sid='tour-suoi-nong', title='TOUR SUỐI NƯỚC NÓNG', prods=[
+        dict(img='tours/spring-than-tai.jpg', title='Tắm khoáng nóng Núi Thần Tài – Đà Nẵng nửa ngày', ma='KA-ONSEN01', kh='Đà Nẵng', price='850.000', lh='140'),
+        dict(img='tours/spring-than-tai-2.jpg', title='Tắm khoáng nóng Núi Thần Tài & phố cổ Hội An về đêm 1 ngày', ma='KA-ONSEN02', kh='Đà Nẵng, Hội An', price='1.350.000', lh='95'),
+        dict(img='danang/ba-na-hills.jpg', title='Nghỉ dưỡng tắm khoáng nóng & Bà Nà Hills 2N1Đ', ma='KA-ONSEN03', kh='Đà Nẵng', price='3.200.000', lh='58'),
     ]),
-    dict(sid='tour-lan-bien', title='TOUR LẶN BIỂN', prods=[
+    dict(sid='tour-lan-bien', title='TOUR LẶN BIỂN &amp; KHÁM PHÁ NÚI RỪNG', prods=[
         dict(img='tours/dive-cu-lao-cham.jpg', title='Lặn biển ngắm san hô Cù Lao Chàm – Hội An 1 ngày', ma='KA-DIVE01', kh='Đà Nẵng, Hội An', price='1.650.000', lh='132'),
-        dict(img='tours/dive-coral-fish.jpg', title='Lặn ngắm san hô bán đảo Sơn Trà – Đà Nẵng nửa ngày', ma='KA-DIVE02', kh='Đà Nẵng', price='1.250.000', lh='88'),
-        dict(img='tours/dive-scad-school.jpg', title='Lặn biển Hòn Mun – vịnh Nha Trang 3N2Đ', ma='KA-DIVE03', kh='Đà Nẵng', price='6.900.000', lh='105'),
-        dict(img='tours/dive-jacks.jpg', title='Khóa học lặn PADI Open Water tại Đà Nẵng 3 ngày', ma='KA-DIVE04', kh='Đà Nẵng', price='9.500.000', lh='47'),
+        dict(img='tours/dive-cham-seaside.jpg', title='Cù Lao Chàm cano cao tốc: bãi Xếp – bãi Ông, lặn ngắm san hô 1 ngày', ma='KA-DIVE02', kh='Đà Nẵng, Hội An', price='1.450.000', lh='88'),
+        dict(img='tours/forest-bach-ma.jpg', title='Trekking rừng Bạch Mã – tắm suối, thác Đỗ Quyên 1 ngày', ma='KA-FOREST01', kh='Đà Nẵng, Huế', price='1.850.000', lh='76'),
+        dict(img='tours/stream-suoi-mo.jpg', title='Khám phá suối Mơ – rừng Bà Nà Hills 1 ngày', ma='KA-FOREST02', kh='Đà Nẵng', price='1.250.000', lh='64'),
+        dict(img='tours/forest-son-tra.jpg', title='Trekking rừng nguyên sinh bán đảo Sơn Trà 1 ngày', ma='KA-FOREST03', kh='Đà Nẵng', price='1.150.000', lh='51'),
     ]),
 ]
-TOUR_CREDITS = {c['file']: c for c in json.loads((ROOT / 'images/tours/CREDITS.json').read_text(encoding='utf8'))}
 
 
 def credit_line(path):
@@ -191,7 +200,7 @@ def option_card(t):
                     <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Bữa ăn: </span><span class="value">{e(t['meal'])}</span></div>
                   </div>
                   <div class="price-wrapper"><span class="price"><span class="amount">{price}</span><span class="price-suffix">{e(t.get('suffix', '/khách'))}</span></span></div>
-                  <div class="add-to-cart-button"><a href="#" rel="nofollow">Đặt Tour</a></div>
+                  <div class="add-to-cart-button"><a href="lien-he.html" rel="nofollow">Đặt Tour</a></div>
                 </div>
               </div>
             </div>
@@ -221,10 +230,8 @@ def option_section():
 
 def extra_tour_section(block):
     for p in block['prods']:
-        p.update(href='#', cart='#')
-    used = [TOUR_CREDITS[p['img'].split('/')[-1]] for p in block['prods']]
-    credit = ' · '.join(f'<a href="{c["source"]}" target="_blank" rel="noopener">{e(c["author"])}</a> ({e(c["license"])})' for c in used)
-    return tour_section(block, sid=block['sid'], credit=f'\n          <p class="tour-credit">Ảnh: {credit} · Wikimedia Commons</p>')
+        p.update(href='#', cart='lien-he.html')
+    return tour_section(block, sid=block['sid'], credit='\n          ' + credits_for([p['img'] for p in block['prods']]))
 
 
 # "Bạn muốn đi đâu": khách inbound → điểm nổi tiếng Đà Nẵng và lăng tẩm Huế
@@ -258,22 +265,22 @@ MOMENTS = [
     ('dia-diem-du-lich-thai-lan-1.jpg', True),
 ]
 TESTIMONIALS = [
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hạ Long. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
-     'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN Hà Nội', 'Tour Hạ Long náo nhiệt'),
-    ('Chúng tôi du lịch tới đảo Phú Quốc xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
-     'Screenshot-2024-03-18-130622.png', 'Nguyễn Khả Tâm', 'Cảm nhận về tour Phú Quốc do công ty tổ chức'),
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
+     'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN', 'Tour Hội An lung linh'),
+    ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
+     'Screenshot-2024-03-18-130622.png', 'Nguyễn Khả Tâm', 'Cảm nhận về tour Bà Nà Hills do công ty tổ chức'),
 ]
 NAV = [
-    ('Trang chủ', 'http://dulich2.khothemewp.vn/'),
-    ('Giới thiệu', SITE + '/gioi-thieu/'),
-    ('Tour du lịch', SITE + '/tour/'),
-    ('Cẩm nang du lịch', SITE + '/cam-nang-du-lich/'),
-    ('Visa du lịch', '#'),
-    ('Tin tức', SITE + '/tin-tuc/'),
-    ('Liên hệ', SITE + '/lien-he/'),
+    ('Trang chủ', 'index.html'),
+    ('Giới thiệu', 'gioi-thieu.html'),
+    ('Tour du lịch', 'tour.html'),
+    ('Cẩm nang du lịch', 'cam-nang-du-lich.html'),
+    ('Visa du lịch', 'visa-du-lich.html'),
+    ('Tin tức', 'tin-tuc.html'),
+    ('Liên hệ', 'lien-he.html'),
 ]
-SUBNAV = [('Tour gợi ý', '#tour-goi-y'), ('Tour trong nước', SITE + '/tour-trong-nuoc/'),
-          ('Tour golf', '#tour-golf'), ('Tour du thuyền', '#tour-du-thuyen'), ('Tour lặn biển', '#tour-lan-bien')]
+SUBNAV = [('Tour gợi ý', 'index.html#tour-goi-y'), ('Tour trong nước', 'tour-trong-nuoc.html'),
+          ('Tour golf', 'index.html#tour-golf'), ('Tour suối nước nóng', 'index.html#tour-suoi-nong'), ('Tour lặn biển &amp; núi rừng', 'index.html#tour-lan-bien')]
 
 
 def search_form(fid):
@@ -328,9 +335,9 @@ def header():
         </div>
         <div class="flex-col hide-for-medium flex-right">
           <ul class="nav nav-right top-bar-nav">
-            <li><a href="#"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
-            <li><a href="{SITE}/huong-dan-thanh-toan/"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
-            <li><a href="{SITE}/lien-he/"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
+            <li><a href="tuyen-dung.html"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
+            <li><a href="huong-dan-thanh-toan.html"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
+            <li><a href="lien-he.html"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
             <!--LANG_SWITCH-->
           </ul>
         </div>
@@ -345,7 +352,7 @@ def header():
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="./" title="Khánh An Tourist" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
+          <a href="index.html" title="Khánh An Tourist" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -422,6 +429,21 @@ def line_phone():
                   </div>'''
 
 
+def post_cards(items):
+    return ''.join(f'''
+          <div class="post-item">
+            <a href="{p['href']}" class="plain">
+              <div class="box box-blog-post has-hover">
+                <div class="box-image"><div class="image-cover">{lazy(p['img'], p['title'])}</div></div>
+                <div class="box-text text-left">
+                  <p class="cat-label">{e(p['cat'])} <span class="post-meta"><i class="fa-solid fa-calendar-days"></i> {p['date']}</span></p>
+                  <h5 class="post-title">{e(p['title'])}</h5>
+                </div>
+              </div>
+            </a>
+          </div>''' for p in items)
+
+
 def main_content():
     tours = DATA['section3']
     why = ''.join(f'''
@@ -454,18 +476,7 @@ def main_content():
             </div>
           </div>
         </div></div>''' for q, a, n, r in TESTIMONIALS)
-    posts = ''.join(f'''
-          <div class="post-item">
-            <a href="{p['href']}" class="plain">
-              <div class="box box-blog-post has-hover">
-                <div class="box-image"><div class="image-cover">{lazy(p['img'], p['title'])}</div></div>
-                <div class="box-text text-left">
-                  <p class="cat-label">{e(p['cat'])} <span class="post-meta"><i class="fa-solid fa-calendar-days"></i> {p['date']}</span></p>
-                  <h5 class="post-title">{e(p['title'])}</h5>
-                </div>
-              </div>
-            </a>
-          </div>''' for p in DATA['section12'])
+    posts = post_cards(DATA['section12'])
 
     return f'''
 <main id="main">
@@ -531,7 +542,6 @@ def main_content():
   {extra_tour_section(EXTRA_TOURS[2])}
 
   {option_section()}
-  {tour_section(tours[2])}
   {tour_section(tours[3])}
 
   <!-- section9: Khoảnh khắc đẹp nhất -->
@@ -626,39 +636,30 @@ def footer():
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
           <img class="footer-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourist" loading="lazy">
           <h3>KHÁNH AN TOURIST</h3>
-          <p><strong>📍 Địa chỉ</strong>: Tòa nhà Tuấn Hạnh, Số 832, Ngõ 1126, Phố Nhân Hòa, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội, Việt Nam</p>
-          <p><strong>🏠 Chi nhánh Hoà Bình</strong>: Số 2430, Điện Biên Phủ, Phương Lâm, Hòa Bình</p>
-          <p><strong>🏠 Chi nhánh Hải Phòng</strong>: Số 1235, Bặch Đằng, Thủy Nguyên, Hải Phòng</p>
-          <p><strong>🏠 Chi nhánh Nam Định</strong>: D12P317 ngõ 189 Trần Huy Liệu, Phường Văn Miếu, Thành Phố Nam Định</p>
+          <p><strong>📍 Địa chỉ</strong>: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng</p>
           <p><strong>☎️ Hotline</strong>: <a href="tel:0326978689">0326 978 689</a></p>
           <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
           <p><strong>✉️ Email</strong>: <a href="mailto:nguyelyhungdd@gmail.com">nguyelyhungdd@gmail.com</a></p>
         </div></div>
         <div class="col medium-7 small-12 large-7"><div class="col-inner">
           <div class="row row-small">
-            <div class="col medium-4 small-12 large-4"><div class="col-inner">
+            <div class="col medium-6 small-12 large-6"><div class="col-inner">
               <h3>THÔNG TIN CẦN BIẾT</h3>
               <ul>
-                <li><a href="{SITE}/gioi-thieu">Giới thiệu</a></li>
-                <li><a href="{SITE}/lien-he">Liên hệ</a></li>
-                <li><a href="#">Hình thức thanh toán</a></li>
-                <li><a href="#">Chính sách hoàn hủy</a></li>
-                <li><a href="#">Chính sách bảo mật</a></li>
-                <li><a href="#">Điều khoản giao dịch</a></li>
+                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+                <li><a href="huong-dan-thanh-toan.html">Hình thức thanh toán</a></li>
+                <li><a href="chinh-sach-hoan-huy.html">Chính sách hoàn hủy</a></li>
+                <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
+                <li><a href="dieu-khoan-giao-dich.html">Điều khoản giao dịch</a></li>
               </ul>
             </div></div>
-            <div class="col hide-for-small medium-4 small-12 large-4"><div class="col-inner">
-              <h3>CHỨNG NHẬN</h3>
-            </div></div>
-            <div class="col medium-4 small-12 large-4"><div class="col-inner">
+            <div class="col medium-6 small-12 large-6"><div class="col-inner">
               <h3>ĐĂNG KÝ NHẬN BẢN TIN</h3>
               <p>Nhập địa chỉ email để nhận thông tin mới nhất từ chúng tôi.</p>
               {email_form('email-footer')}
             </div></div>
           </div>
-        </div></div>
-        <div class="col hide-for-small medium-5 small-12 large-5"><div class="col-inner">
-          <p>Giấy phép kinh doanh số 01033619401 do sở KH&amp;ĐT TP abc cấp ngày 21/23 năm 2323<br>Giấy phép Kinh doanh Lữ hành Quốc tế số 01711D/S2015/TCDL-GPLHabc</p>
         </div></div>
         <div class="col hide-for-small medium-7 small-12 large-7"><div class="col-inner">
           <div class="row row-small">
@@ -688,13 +689,14 @@ def footer():
 </footer>'''
 
 
-PAGE = f'''<!DOCTYPE html>
+def shell(main, title, desc, lang_attr='vi'):
+    return f'''<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khánh An Tourist - Trang chủ</title>
-<meta name="description" content="Khánh An Tourist — tour trong nước, tour nước ngoài, visa, vé máy bay.">
+<title>{title}</title>
+<meta name="description" content="{desc}">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="images/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="images/favicon-180.png">
@@ -706,7 +708,7 @@ PAGE = f'''<!DOCTYPE html>
 <body id="top">
 <a class="screen-reader-text" href="#main">Skip to content</a>
 {header()}
-{main_content()}
+{main}
 {footer()}
 {offcanvas()}
 <script src="js/main.js"></script>
@@ -714,14 +716,154 @@ PAGE = f'''<!DOCTYPE html>
 </html>
 '''
 
-# Các trang con chưa làm: không dẫn đi đâu (không chuyển về web gốc). JS chặn click vào href="#".
-PAGE = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url|\?add-to-cart=\d+)"', 'href="#"', PAGE)
-PAGE = PAGE.replace(f'action="{SITE}/"', 'action="#"')
 
-# Trang chỉ có tiếng Nhật (mặc định, index.html) và tiếng Hàn (ko.html)
+def finish(page):
+    """Link ngoài chưa làm → '#'. Nút Đặt Tour → trang liên hệ."""
+    page = re.sub(r'href="\?add-to-cart=\d+"', 'href="lien-he.html"', page)
+    page = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url)"', 'href="#"', page)
+    return page.replace(f'action="{SITE}/"', 'action="#"')
+
+
+# ---------------------------------------------------------------- trang con
+SLUGS = list(pages.PAGES)
+
+
+def localize(page, lang, slug=None):
+    """Link nội bộ → URL sạch theo ngôn ngữ; đường dẫn tài nguyên → tuyệt đối (trang nằm trong thư mục con)."""
+    home = i18n.page_url(lang)
+    if slug is None:
+        page = page.replace('href="index.html#', 'href="#')
+    for s in SLUGS:
+        page = page.replace(f'href="{s}.html"', f'href="{i18n.page_url(lang, s)}"')
+    page = page.replace('href="index.html#', f'href="{home}#').replace('href="index.html"', f'href="{home}"')
+    return re.sub(r'(\b(?:src|href|data-src|data-src-deferred)=")((?:images|css|js|fonts)/)', r'\1/\2', page)
+
+
+def grid_tours(prods):
+    return '<div class="tour-grid">' + ''.join(tour_card(dict(p, href='#', cart='lien-he.html')) for p in prods) + '</div>'
+
+
+def tour_group(plain, strong, inner, credit=''):
+    return f'<div class="page-group">{title(plain, strong)}{inner}{credit}</div>'
+
+
+def tours_block(kind):
+    out = []
+    ops = ''.join(option_card(t) for t in option_tours.TOURS)
+    out.append(tour_group('TOUR', 'GỢI Ý', f'<div class="tour-grid">{ops}</div>\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>',
+                          credits_for([t['img'] for t in option_tours.TOURS])))
+    for blk in EXTRA_TOURS:
+        plain, strong = blk['title'].split(' ', 1)
+        out.append(tour_group(plain, strong, grid_tours(blk['prods']), credits_for([p['img'] for p in blk['prods']])))
+    if kind == 'all':
+        out.append(tour_group('TOUR', 'NỔI BẬT', grid_tours(DATA['section3'][0]['prods'])))
+    return ''.join(out)
+
+
+def contact_block(k):
+    rows = [('fa-location-dot', ('住所', '주소'), ADDR), ('fa-phone', ('ホットライン', '핫라인'), f'<a href="tel:0326978689">{pages.PHONE}</a>'),
+            ('fa-envelope', ('メール', '이메일'), f'<a href="mailto:{pages.EMAIL}">{pages.EMAIL}</a>'),
+            ('fa-clock', ('営業時間', '영업시간'), ('毎日 8:00 – 18:00（ホットラインは24時間）', '매일 8:00 – 18:00 (핫라인은 24시간)'))]
+    items = ''.join(f'<li><i class="fa-solid {ic}" aria-hidden="true"></i><div><strong>{lab[k]}</strong><span>{val if isinstance(val, str) else val[k]}</span></div></li>' for ic, lab, val in rows)
+    maps = ('Googleマップで見る', 'Google 지도에서 보기')[k]
+    msg = ('メールアドレスをご入力ください。担当者より折り返しご連絡します。', '이메일 주소를 입력해 주세요. 담당자가 회신해 드립니다.')[k]
+    qr = ('QRコードをスキャンして、LINEでご相談ください。', 'QR 코드를 스캔해 LINE으로 상담하세요.')[k]
+    return f'''<div class="row row-small contact-grid">
+  <div class="col medium-6 small-12 large-6"><div class="col-inner">
+    <ul class="contact-list">{items}</ul>
+    <a class="button primary" href="https://www.google.com/maps/search/?api=1&amp;query=108+Ph%E1%BA%A1m+Xu%C3%A2n+%E1%BA%A8n+C%E1%BA%A9m+L%E1%BB%87+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">{maps}</a>
+  </div></div>
+  <div class="col medium-6 small-12 large-6"><div class="col-inner contact-side">
+    <p>{msg}</p>
+    {email_form('email-contact')}
+    <p class="qr-text">{qr}</p>
+    <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourist" loading="lazy">
+  </div></div>
+</div>'''
+
+
+ADDR = pages.ADDRESS
+
+
+def sub_blocks(slug, lang):
+    k = 0 if lang == 'ja' else 1
+    out = []
+    for b in pages.PAGES[slug]['blocks']:
+        kind = b[0]
+        if kind == 'h':
+            out.append(f'<h2 class="page-h">{e(b[1][k])}</h2>')
+        elif kind == 'p':
+            out.append(f'<p>{e(b[1][k])}</p>')
+        elif kind == 'ul':
+            out.append('<ul class="page-list">' + ''.join(f'<li>{e(x[k])}</li>' for x in b[1]) + '</ul>')
+        elif kind == 'note':
+            out.append(f'<p class="page-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> {e(b[1][k])}</p>')
+        elif kind == 'cards':
+            out.append('<div class="info-cards">' + ''.join(
+                f'<div class="info-card"><i class="fa-solid {ic}" aria-hidden="true"></i><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div>' for ic, ti, de in b[1]) + '</div>')
+        elif kind == 'steps':
+            out.append('<ol class="steps">' + ''.join(
+                f'<li><span class="step-no">{n}</span><div><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div></li>' for n, (ti, de) in enumerate(b[1], 1)) + '</ol>')
+        elif kind == 'jobs':
+            out.append('<div class="info-cards jobs">' + ''.join(
+                f'<div class="info-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div>' for ti, de in b[1]) + '</div>')
+        elif kind == 'tours':
+            out.append(tours_block(b[1]))
+        elif kind == 'posts':
+            items = DATA['section12'] if b[1] == 'all' else [p for p in DATA['section12'] if p['cat'].startswith('Cẩm nang du lịch')]
+            out.append(f'<div class="list-post post-grid">{post_cards(items)}</div>')
+        elif kind == 'contact':
+            out.append(contact_block(k))
+        elif kind == 'contact_cta':
+            out.append(f'<p><a class="button primary" href="lien-he.html">{("お問い合わせはこちら", "문의하기")[k]}</a></p>')
+        elif kind == 'pay':
+            out.append('<div class="payment-img"><img src="images/thanhtoan.jpg" width="418" height="62" alt="Chấp nhận thanh toán" loading="lazy"></div>')
+    return '\n'.join(out)
+
+
+def sub_main(slug, lang):
+    pg = pages.PAGES[slug]
+    k = 0 if lang == 'ja' else 1
+    return f'''
+<main id="main">
+  <section class="section page-hero">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Trang chủ</a> <i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span>{pg['title']}</span></nav>
+          <h1>{pg['title']}</h1>
+          <p class="lead">{e(pg['lead'][k])}</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-body">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+{sub_blocks(slug, lang)}
+        </div></div>
+      </div>
+    </div>
+  </section>
+</main>'''
+
+
+HOME_DESC = 'Khánh An Tourist — tour trong nước, tour nước ngoài, visa, vé máy bay.'
+HOME = finish(shell(main_content(), 'Khánh An Tourist - Trang chủ', HOME_DESC))
+
+# Trang chỉ có tiếng Nhật (mặc định) và tiếng Hàn
 for lang, conf in i18n.LANGS.items():
-    out = i18n.render(PAGE, lang)
-    (ROOT / conf['file']).write_text(out, encoding='utf8')
-    print(f"{conf['file']}: {len(out)} bytes")
-    for t in i18n.leftovers(out):
-        print(f'  [{lang}] chưa dịch: {t[:90]}')
+    jobs = [(None, localize(HOME, lang), HOME_DESC)]
+    for slug, pg in pages.PAGES.items():
+        k = 0 if lang == 'ja' else 1
+        ttl = i18n.TR[pg['title']][lang] + ' - Khánh An Tourist'
+        jobs.append((slug, localize(finish(shell(sub_main(slug, lang), ttl, e(pg['lead'][k]))), lang, slug), None))
+    for slug, page, _ in jobs:
+        out = i18n.render(page, lang, slug)
+        name = i18n.page_file(lang, slug)
+        (ROOT / name).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / name).write_text(out, encoding='utf8')
+        print(f'{name}: {len(out)} bytes')
+        for x in i18n.leftovers(out):
+            print(f'  [{name}] chưa dịch: {x[:90]}')

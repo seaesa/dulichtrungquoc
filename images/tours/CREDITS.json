@@ -7,13 +7,6 @@
   "source": "https://commons.wikimedia.org/wiki/File:Sân_Golf_Huế.jpg"
  },
  {
-  "slug": "golf-tam-dao",
-  "file": "golf-tam-dao.jpg",
-  "author": "Leanhtuan218",
-  "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Tamdaogolf1.jpg"
- },
- {
   "slug": "golf-palm-path",
   "file": "golf-palm-path.jpg",
   "author": "PattayaPatrol",
@@ -28,60 +21,11 @@
   "source": "https://commons.wikimedia.org/wiki/File:DSC_6924_Sunny_golf_course_fairway_beside_a_calm_waterway_with_palm_trees_casting_long_shadows_under_a_clear_blue_sky.jpg"
  },
  {
-  "slug": "cruise-ha-long",
-  "file": "cruise-ha-long.jpg",
-  "author": "Mig Gilbert from Brighton",
-  "license": "CC BY-SA 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Cruising_Ha_Long_Bay_(25415940037).jpg"
- },
- {
-  "slug": "cruise-lan-ha-night",
-  "file": "cruise-lan-ha-night.jpg",
-  "author": "Radek Kucharski from Warsaw, Poland",
-  "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:A_night_in_Lan_Ha_Bay_-_Flickr_-_radkuch.13.jpg"
- },
- {
-  "slug": "cruise-ha-long-bay",
-  "file": "cruise-ha-long-bay.jpg",
-  "author": "Guerretto",
-  "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Bahía_de_Halong_(14847479918).jpg"
- },
- {
-  "slug": "cruise-junk",
-  "file": "cruise-junk.jpg",
-  "author": "Arianos",
-  "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Asia_Cruise_Junk_in_Halong_bay.JPG"
- },
- {
   "slug": "dive-cu-lao-cham",
   "file": "dive-cu-lao-cham.jpg",
   "author": "yeowatzup",
   "license": "CC BY 2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Cu_Lao_Cham_Marine_Park,_Vietnam_(2594704519).jpg"
- },
- {
-  "slug": "dive-coral-fish",
-  "file": "dive-coral-fish.jpg",
-  "author": "NOAA (uncredited)",
-  "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:Acanuthurus_nigricans_Ctenochaetus_diver_Aguijan_2022.png"
- },
- {
-  "slug": "dive-scad-school",
-  "file": "dive-scad-school.jpg",
-  "author": "NOAA Fisheries/Jeff Milisen",
-  "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:NOAA_diver_bigeye_scad_school_Saipan_2022.png"
- },
- {
-  "slug": "dive-jacks",
-  "file": "dive-jacks.jpg",
-  "author": "NOAA Fisheries",
-  "license": "Public domain",
-  "source": "https://commons.wikimedia.org/wiki/File:NOAA_diver_black_jacks_Howland_Island_2023.png"
  },
  {
   "slug": "op-my-son",
@@ -138,5 +82,68 @@
   "author": "lumoplank",
   "license": "CC0",
   "source": "https://commons.wikimedia.org/wiki/File:Da_Nang_-_DaNang1492.jpg"
+ },
+ {
+  "slug": "dive-cham-seaside",
+  "file": "dive-cham-seaside.jpg",
+  "author": "Theguywithkpdomain",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_seaside_shot_in_C%C3%B9_Lao_Ch%C3%A0m,_Qu%E1%BA%A3ng_Nam_province,_taken_in_July_2024.jpg"
+ },
+ {
+  "slug": "dive-cham-park",
+  "file": "dive-cham-park.jpg",
+  "author": "Kok Leng Yeo",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cu_Lao_Cham_Marine_Park,_Vietnam.jpg"
+ },
+ {
+  "slug": "forest-bach-ma",
+  "file": "forest-bach-ma.jpg",
+  "author": "Trần Thanh Minh Khuê",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bach_Ma_National_Park,_Vietnam.jpg"
+ },
+ {
+  "slug": "forest-son-tra",
+  "file": "forest-son-tra.jpg",
+  "author": "Christophe95",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Son_Tra_Mountain_3.jpg"
+ },
+ {
+  "slug": "forest-ba-na",
+  "file": "forest-ba-na.jpg",
+  "author": "Phương Huy",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:V%C3%B4_KDL_B%C3%A0_N%C3%A0,_th3n2021,_c%C3%A2y_c%E1%BB%91i,_t%C3%A1n_r%E1%BB%ABng_(5).jpg"
+ },
+ {
+  "slug": "stream-suoi-mo",
+  "file": "stream-suoi-mo.jpg",
+  "author": "Thevu69",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Suoi_Mo-Dream_Creek.jpg"
+ },
+ {
+  "slug": "spring-than-tai",
+  "file": "spring-than-tai.jpg",
+  "author": "Laitanphuoc",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:C%C3%B4ng_Vi%C3%AAn_Su%E1%BB%91i_Kho%C3%A1ng_N%C3%B3ng_N%C3%BAi_Th%E1%BA%A7n_T%C3%A0i.jpg"
+ },
+ {
+  "slug": "spring-than-tai-2",
+  "file": "spring-than-tai-2.jpg",
+  "author": "Linhvvn",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:CVKSN_N%C3%BAi_Th%E1%BA%A7n_T%C3%A0i.jpg"
+ },
+ {
+  "slug": "golf-cart-path",
+  "file": "golf-cart-path.jpg",
+  "author": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:DSC_6938_A_paved_cart_path_winds_through_a_sunny_well-kept_golf_course_lined_with_scattered_trees_under_a_clear_blue_sky.jpg"
  }
 ]
