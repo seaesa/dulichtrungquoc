@@ -20,7 +20,7 @@ EMAIL = 'nguyelyhungdd@gmail.com'
 ADDRESS = '108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng'
 
 PAGES = {
-    'gioi-thieu': dict(
+    'about': dict(
         title='Giới thiệu',
         lead=('ダナン発、ホイアン・フエまで。日本・韓国からのお客様に寄り添う現地旅行会社です。',
               '다낭에서 호이안·후에까지. 일본·한국 고객에게 가까이 다가가는 현지 여행사입니다.'),
@@ -45,31 +45,31 @@ PAGES = {
             ('note', ('ご旅行のご相談は無料です。人数・日程・ご予算をお知らせください。', '여행 상담은 무료입니다. 인원·일정·예산을 알려 주세요.')),
         ]),
 
-    'tour': dict(
+    'tours': dict(
         title='Tour du lịch',
         lead=('おすすめツアーからスペシャルツアー、海外ツアーまで、すべてのツアーをご覧いただけます。',
               '추천 투어부터 스페셜 투어, 해외 투어까지 모든 투어를 한눈에 확인하세요.'),
         blocks=[('tours', 'all')]),
 
-    'tour-trong-nuoc': dict(
+    'domestic-tours': dict(
         title='Tour trong nước',
         lead=('ダナン・ホイアン・フエを巡る、ベトナム国内ツアーです。',
               '다낭·호이안·후에를 둘러보는 베트남 국내 투어입니다.'),
         blocks=[('tours', 'domestic')]),
 
-    'cam-nang-du-lich': dict(
+    'travel-guide': dict(
         title='Cẩm nang du lịch',
         lead=('旅の準備に役立つ、現地発のガイドと体験談です。',
               '여행 준비에 도움이 되는 현지 가이드와 체험담입니다.'),
         blocks=[('posts', 'guide')]),
 
-    'tin-tuc': dict(
+    'news': dict(
         title='Tin tức',
         lead=('旅行に関する最新のお知らせとニュースです。',
               '여행 관련 최신 소식과 뉴스입니다.'),
         blocks=[('posts', 'all')]),
 
-    'visa-du-lich': dict(
+    'visa': dict(
         title='Visa du lịch',
         lead=('ベトナム入国に必要な手続きと、当社のビザサポートをご案内します。',
               '베트남 입국에 필요한 절차와 당사의 비자 지원 서비스를 안내합니다.'),
@@ -92,13 +92,13 @@ PAGES = {
             ('contact_cta',),
         ]),
 
-    'lien-he': dict(
+    'contact': dict(
         title='Liên hệ',
         lead=('ツアーのご相談・お見積もりは、お気軽にご連絡ください。',
               '투어 상담 및 견적은 편하게 연락해 주세요.'),
         blocks=[('contact',)]),
 
-    'tuyen-dung': dict(
+    'careers': dict(
         title='Tuyển dụng',
         lead=('ダナンで、お客様の旅を一緒に支えてくれる仲間を募集しています。',
               '다낭에서 고객의 여행을 함께 만들어 갈 동료를 모집합니다.'),
@@ -116,7 +116,7 @@ PAGES = {
             ('p', (f'勤務地: {ADDRESS}', f'근무지: {ADDRESS}')),
         ]),
 
-    'huong-dan-thanh-toan': dict(
+    'payment': dict(
         title='Hướng dẫn thanh toán',
         lead=('ご予約からお支払いまでの流れと、ご利用いただけるお支払い方法です。',
               '예약부터 결제까지의 절차와 이용 가능한 결제 방법입니다.'),
@@ -138,7 +138,7 @@ PAGES = {
                       '요금은 참고용으로 미화로 표시하지만, 결제는 베트남 동(VND)으로만 가능합니다. 환율은 예약 시 안내해 드립니다.')),
         ]),
 
-    'chinh-sach-hoan-huy': dict(
+    'refund-policy': dict(
         title='Chính sách hoàn hủy',
         lead=('ご予約のキャンセルと返金に関する基本方針です。',
               '예약 취소 및 환불에 관한 기본 방침입니다.'),
@@ -159,7 +159,7 @@ PAGES = {
                    '악천후나 안전상의 이유로 투어를 진행할 수 없는 경우, 일정 변경 또는 전액 환불 중 하나를 안내해 드립니다.')),
         ]),
 
-    'chinh-sach-bao-mat': dict(
+    'privacy-policy': dict(
         title='Chính sách bảo mật',
         lead=('お客様の個人情報の取り扱いについてご説明します。',
               '고객의 개인정보 취급에 대해 설명드립니다.'),
@@ -181,7 +181,7 @@ PAGES = {
                    f'본인 정보의 열람·정정·삭제를 원하시면 {EMAIL} 로 연락해 주세요.')),
         ]),
 
-    'dieu-khoan-giao-dich': dict(
+    'terms': dict(
         title='Điều khoản giao dịch',
         lead=('ご予約・ご利用にあたっての基本的な取り決めです。',
               '예약 및 이용에 관한 기본 약정입니다.'),

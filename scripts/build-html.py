@@ -137,18 +137,18 @@ def tour_section(block, first=False, sid='', credit=''):
 
 # Special tour: golf (4 sân), tắm suối nước nóng, lặn biển & khám phá núi rừng (dữ liệu mẫu — sửa giá/lịch trình thật tại đây)
 EXTRA_TOURS = [
-    dict(sid='tour-golf', title='TOUR GOLF', prods=[
+    dict(sid='golf', title='TOUR GOLF', prods=[
         dict(img='tours/golf-river.jpg', title='Golf BRG Danang Golf Resort & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF01', kh='Đà Nẵng', price='6.900.000', lh='86'),
         dict(img='tours/golf-cart-path.jpg', title='Golf Montgomerie Links – sân golf ven biển Hội An 2N1Đ', ma='KA-GOLF02', kh='Đà Nẵng', price='7.900.000', lh='64'),
         dict(img='tours/golf-palm-path.jpg', title='Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF03', kh='Đà Nẵng', price='8.900.000', lh='120'),
         dict(img='tours/golf-hue.jpg', title='Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ', ma='KA-GOLF04', kh='Đà Nẵng', price='12.500.000', lh='72'),
     ]),
-    dict(sid='tour-suoi-nong', title='TOUR SUỐI NƯỚC NÓNG', prods=[
+    dict(sid='hot-spring', title='TOUR SUỐI NƯỚC NÓNG', prods=[
         dict(img='tours/spring-than-tai.jpg', title='Tắm khoáng nóng Núi Thần Tài – Đà Nẵng nửa ngày', ma='KA-ONSEN01', kh='Đà Nẵng', price='850.000', lh='140'),
         dict(img='tours/spring-than-tai-2.jpg', title='Tắm khoáng nóng Núi Thần Tài & phố cổ Hội An về đêm 1 ngày', ma='KA-ONSEN02', kh='Đà Nẵng, Hội An', price='1.350.000', lh='95'),
         dict(img='danang/ba-na-hills.jpg', title='Nghỉ dưỡng tắm khoáng nóng & Bà Nà Hills 2N1Đ', ma='KA-ONSEN03', kh='Đà Nẵng', price='3.200.000', lh='58'),
     ]),
-    dict(sid='tour-lan-bien', title='TOUR LẶN BIỂN &amp; KHÁM PHÁ NÚI RỪNG', prods=[
+    dict(sid='diving-trekking', title='TOUR LẶN BIỂN &amp; KHÁM PHÁ NÚI RỪNG', prods=[
         dict(img='tours/dive-cu-lao-cham.jpg', title='Lặn biển ngắm san hô Cù Lao Chàm – Hội An 1 ngày', ma='KA-DIVE01', kh='Đà Nẵng, Hội An', price='1.650.000', lh='132'),
         dict(img='tours/dive-cham-seaside.jpg', title='Cù Lao Chàm cano cao tốc: bãi Xếp – bãi Ông, lặn ngắm san hô 1 ngày', ma='KA-DIVE02', kh='Đà Nẵng, Hội An', price='1.450.000', lh='88'),
         dict(img='tours/forest-bach-ma.jpg', title='Trekking rừng Bạch Mã – tắm suối, thác Đỗ Quyên 1 ngày', ma='KA-FOREST01', kh='Đà Nẵng, Huế', price='1.850.000', lh='76'),
@@ -200,7 +200,7 @@ def option_card(t):
                     <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Bữa ăn: </span><span class="value">{e(t['meal'])}</span></div>
                   </div>
                   <div class="price-wrapper"><span class="price"><span class="amount">{price}</span><span class="price-suffix">{e(t.get('suffix', '/khách'))}</span></span></div>
-                  <div class="add-to-cart-button"><a href="lien-he.html" rel="nofollow">Đặt Tour</a></div>
+                  <div class="add-to-cart-button"><a href="contact.html" rel="nofollow">Đặt Tour</a></div>
                 </div>
               </div>
             </div>
@@ -210,7 +210,7 @@ def option_card(t):
 def option_section():
     cards = ''.join(option_card(t) for t in option_tours.TOURS)
     return f'''
-  <section class="section section3" id="tour-goi-y">
+  <section class="section section3" id="recommended">
     <div class="section-content">
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
@@ -230,7 +230,7 @@ def option_section():
 
 def extra_tour_section(block):
     for p in block['prods']:
-        p.update(href='#', cart='lien-he.html')
+        p.update(href='#', cart='contact.html')
     return tour_section(block, sid=block['sid'], credit='\n          ' + credits_for([p['img'] for p in block['prods']]))
 
 
@@ -272,15 +272,15 @@ TESTIMONIALS = [
 ]
 NAV = [
     ('Trang chủ', 'index.html'),
-    ('Giới thiệu', 'gioi-thieu.html'),
-    ('Tour du lịch', 'tour.html'),
-    ('Cẩm nang du lịch', 'cam-nang-du-lich.html'),
-    ('Visa du lịch', 'visa-du-lich.html'),
-    ('Tin tức', 'tin-tuc.html'),
-    ('Liên hệ', 'lien-he.html'),
+    ('Giới thiệu', 'about.html'),
+    ('Tour du lịch', 'tours.html'),
+    ('Cẩm nang du lịch', 'travel-guide.html'),
+    ('Visa du lịch', 'visa.html'),
+    ('Tin tức', 'news.html'),
+    ('Liên hệ', 'contact.html'),
 ]
-SUBNAV = [('Tour gợi ý', 'index.html#tour-goi-y'), ('Tour trong nước', 'tour-trong-nuoc.html'),
-          ('Tour golf', 'index.html#tour-golf'), ('Tour suối nước nóng', 'index.html#tour-suoi-nong'), ('Tour lặn biển &amp; núi rừng', 'index.html#tour-lan-bien')]
+SUBNAV = [('Tour gợi ý', 'index.html#recommended'), ('Tour trong nước', 'domestic-tours.html'),
+          ('Tour golf', 'index.html#golf'), ('Tour suối nước nóng', 'index.html#hot-spring'), ('Tour lặn biển &amp; núi rừng', 'index.html#diving-trekking')]
 
 
 def search_form(fid):
@@ -335,9 +335,9 @@ def header():
         </div>
         <div class="flex-col hide-for-medium flex-right">
           <ul class="nav nav-right top-bar-nav">
-            <li><a href="tuyen-dung.html"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
-            <li><a href="huong-dan-thanh-toan.html"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
-            <li><a href="lien-he.html"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
+            <li><a href="careers.html"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
+            <li><a href="payment.html"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
+            <li><a href="contact.html"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
             <!--LANG_SWITCH-->
           </ul>
         </div>
@@ -646,12 +646,12 @@ def footer():
             <div class="col medium-6 small-12 large-6"><div class="col-inner">
               <h3>THÔNG TIN CẦN BIẾT</h3>
               <ul>
-                <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-                <li><a href="lien-he.html">Liên hệ</a></li>
-                <li><a href="huong-dan-thanh-toan.html">Hình thức thanh toán</a></li>
-                <li><a href="chinh-sach-hoan-huy.html">Chính sách hoàn hủy</a></li>
-                <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
-                <li><a href="dieu-khoan-giao-dich.html">Điều khoản giao dịch</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="payment.html">Hình thức thanh toán</a></li>
+                <li><a href="refund-policy.html">Chính sách hoàn hủy</a></li>
+                <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
+                <li><a href="terms.html">Điều khoản giao dịch</a></li>
               </ul>
             </div></div>
             <div class="col medium-6 small-12 large-6"><div class="col-inner">
@@ -719,7 +719,7 @@ def shell(main, title, desc, lang_attr='vi'):
 
 def finish(page):
     """Link ngoài chưa làm → '#'. Nút Đặt Tour → trang liên hệ."""
-    page = re.sub(r'href="\?add-to-cart=\d+"', 'href="lien-he.html"', page)
+    page = re.sub(r'href="\?add-to-cart=\d+"', 'href="contact.html"', page)
     page = re.sub(r'href="(?:https?://(?:dulich2\.themedep\.top|dulich2\.khothemewp\.vn|khothemewp\.vn)[^"]*|http://url)"', 'href="#"', page)
     return page.replace(f'action="{SITE}/"', 'action="#"')
 
@@ -740,7 +740,7 @@ def localize(page, lang, slug=None):
 
 
 def grid_tours(prods):
-    return '<div class="tour-grid">' + ''.join(tour_card(dict(p, href='#', cart='lien-he.html')) for p in prods) + '</div>'
+    return '<div class="tour-grid">' + ''.join(tour_card(dict(p, href='#', cart='contact.html')) for p in prods) + '</div>'
 
 
 def tour_group(plain, strong, inner, credit=''):
@@ -815,7 +815,7 @@ def sub_blocks(slug, lang):
         elif kind == 'contact':
             out.append(contact_block(k))
         elif kind == 'contact_cta':
-            out.append(f'<p><a class="button primary" href="lien-he.html">{("お問い合わせはこちら", "문의하기")[k]}</a></p>')
+            out.append(f'<p><a class="button primary" href="contact.html">{("お問い合わせはこちら", "문의하기")[k]}</a></p>')
         elif kind == 'pay':
             out.append('<div class="payment-img"><img src="images/thanhtoan.jpg" width="418" height="62" alt="Chấp nhận thanh toán" loading="lazy"></div>')
     return '\n'.join(out)
