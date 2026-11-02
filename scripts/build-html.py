@@ -181,7 +181,9 @@ def credits_for(imgs):
 
 def option_card(t):
     vi_title, vi_route = t['title'][0], t['route'][0]
-    price = f"${t['price']}{'〜' if t.get('from_') else ''}"
+    price = f"${t['price']:,}{'〜' if t.get('from_') else ''}"
+    meal_row = (f'<div class="thong-tin-sp"><div class="khoi-hanh"><span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Bữa ăn: </span><span class="value">{e(t["meal"])}</span></div></div>'
+                if t.get('meal') else '')
     return f'''
           <div class="tour-cell">
             <div class="col-inner">
@@ -196,9 +198,7 @@ def option_card(t):
                 <div class="box-text">
                   <div class="title-wrapper"><p class="product-title"><a href="#">{e(vi_title)}</a></p></div>
                   <p class="op-route">{e(vi_route)}</p>
-                  <div class="thong-tin-sp">
-                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Bữa ăn: </span><span class="value">{e(t['meal'])}</span></div>
-                  </div>
+                  {meal_row}
                   <div class="price-wrapper"><span class="price"><span class="amount">{price}</span><span class="price-suffix">{e(t.get('suffix', '/khách'))}</span></span></div>
                   <div class="add-to-cart-button"><a href="contact.html" rel="nofollow">Đặt Tour</a></div>
                 </div>
@@ -226,6 +226,30 @@ def option_section():
       </div>
     </div>
   </section>'''
+
+
+def group_sections():
+    out = []
+    for g in option_tours.GROUPS:
+        cards = ''.join(option_card(x) for x in g['tours'])
+        out.append(f'''
+  <section class="section section3" id="{g['sid']}">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+          {title(g['plain'], g['strong'])}
+          <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}}'>
+            <div class="slider-viewport"><div class="slider-track">{cards}
+            </div></div>
+            {ARROWS}
+          </div>
+          <p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD (xem đơn vị cạnh giá) · Thanh toán bằng VND</p>
+          {credits_for([x['img'] for x in g['tours']])}
+        </div></div>
+      </div>
+    </div>
+  </section>''')
+    return ''.join(out)
 
 
 def extra_tour_section(block):
@@ -542,6 +566,7 @@ def main_content():
   {extra_tour_section(EXTRA_TOURS[2])}
 
   {option_section()}
+  {group_sections()}
   {tour_section(tours[3])}
 
   <!-- section9: Khoảnh khắc đẹp nhất -->
@@ -752,6 +777,9 @@ def tours_block(kind):
     ops = ''.join(option_card(t) for t in option_tours.TOURS)
     out.append(tour_group('TOUR', 'GỢI Ý', f'<div class="tour-grid">{ops}</div>\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>',
                           credits_for([t['img'] for t in option_tours.TOURS])))
+    for g in option_tours.GROUPS:
+        out.append(tour_group(g['plain'], g['strong'], '<div class="tour-grid">' + ''.join(option_card(x) for x in g['tours']) + '</div>',
+                              credits_for([x['img'] for x in g['tours']])))
     for blk in EXTRA_TOURS:
         plain, strong = blk['title'].split(' ', 1)
         out.append(tour_group(plain, strong, grid_tours(blk['prods']), credits_for([p['img'] for p in blk['prods']])))
