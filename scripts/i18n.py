@@ -227,11 +227,36 @@ _ROWS = [
     ('Trekking rừng Bạch Mã – tắm suối, thác Đỗ Quyên 1 ngày', 'バックマー国立公園トレッキング・渓流水浴び・ドークエン滝 日帰り', '바익마 국립공원 트레킹 – 계곡 물놀이, 도꾸옌 폭포 당일'),
     ('Khám phá suối Mơ – rừng Bà Nà Hills 1 ngày', 'モー渓流とバーナーヒルズの森を探検 日帰り', '바나힐 숲과 모 계곡 탐험 당일'),
     ('Trekking rừng nguyên sinh bán đảo Sơn Trà 1 ngày', 'ソンチャー半島 原生林トレッキング 日帰り', '선짜 반도 원시림 트레킹 당일'),
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình', '今回もSANSHINはKhánh An Touristと一緒にホイアン旅行へ行きました。すべてが素晴らしく、ガイドの「タインさん」は毎回の食事からホテルの部屋まで細やかに気を配ってくれました。国内外どの旅行でもKhánh An Touristと一緒なら安心です。旅行を考えるとき、いつも真っ先に思い浮かぶのがKhánh An Touristです。心のこもったサポートをありがとうございました。', '이번에도 SANSHIN은 Khánh An Tourist와 함께 호이안 여행을 다녀왔습니다. 모든 것이 훌륭했고, 가이드 “타잉 씨”는 매 식사와 호텔 객실까지 세심하게 챙겨 주었습니다. 국내외 어떤 여행이든 Khánh An Tourist와 함께라면 안심입니다. 여행을 계획할 때마다 가장 먼저 떠오르는 곳이 Khánh An Tourist입니다. 정성 어린 지원에 감사드립니다.'),
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình', '今回もSANSHINはKhánh An Touristと一緒にホイアン旅行へ行きました。すべてが素晴らしく、ガイドの「タインさん」は毎回の食事からホテルの部屋まで細やかに気を配ってくれました。どの旅行でもKhánh An Touristと一緒なら安心です。旅行を考えるとき、いつも真っ先に思い浮かぶのがKhánh An Touristです。心のこもったサポートをありがとうございました。', '이번에도 SANSHIN은 Khánh An Tourist와 함께 호이안 여행을 다녀왔습니다. 모든 것이 훌륭했고, 가이드 “타잉 씨”는 매 식사와 호텔 객실까지 세심하게 챙겨 주었습니다. 어떤 여행이든 Khánh An Tourist와 함께라면 안심입니다. 여행을 계획할 때마다 가장 먼저 떠오르는 곳이 Khánh An Tourist입니다. 정성 어린 지원에 감사드립니다.'),
     ('Công ty TNHH SANSHIN', 'SANSHIN有限会社', 'SANSHIN 유한회사'),
     ('Tour Hội An lung linh', 'きらめくホイアンツアー', '반짝이는 호이안 투어'),
     ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.', 'Khánh An Touristと一緒に美しいバーナーヒルズへ旅行しました。旅行中は食事から睡眠まで心のこもったお世話をしていただきました。ガイドさんも親切で丁寧です。出発前には出発時刻や持ち物を一人ひとりに案内してくれました。次の旅行もKhánh An Touristにお願いしたいと思います。', 'Khánh An Tourist와 함께 아름다운 바나힐을 여행했습니다. 여행 내내 식사부터 숙박까지 세심한 보살핌을 받았고, 가이드도 친절하고 꼼꼼했습니다. 출발 전에는 출발 시간과 준비물을 한 사람씩 안내해 주었습니다. 다음 여행도 Khánh An Tourist에 맡기고 싶습니다.'),
     ('Cảm nhận về tour Bà Nà Hills do công ty tổ chức', '当社主催バーナーヒルズツアーのご感想', '당사 바나힐 투어 이용 후기'),
+]
+
+# Bài viết / tin tức miền Trung
+_ROWS += [
+    ('Kinh nghiệm và thông tin du lịch Đà Nẵng, Hội An, Huế dành cho du khách Nhật Bản và Hàn Quốc',
+     'ダナン・ホイアン・フエを旅する日本・韓国のお客様向けの旅行情報とヒントをお届けします。',
+     '다낭·호이안·후에를 여행하는 일본·한국 고객을 위한 여행 정보와 팁을 전해 드립니다.'),
+    ('Cầu Vàng Bà Nà Hills: kinh nghiệm đi cáp treo và giờ đẹp để ngắm cảnh',
+     'バーナーヒルズのゴールデンブリッジ：ケーブルカーの乗り方と景色が美しい時間帯',
+     '바나힐 골든 브리지: 케이블카 이용 팁과 풍경이 가장 아름다운 시간대'),
+    ('Hội An về đêm: thả đèn hoa đăng và những món ăn nên thử',
+     '夜のホイアン：灯篭流しと食べておきたい名物料理',
+     '야경의 호이안: 등불 띄우기와 꼭 먹어봐야 할 명물 요리'),
+    ('Thánh địa Mỹ Sơn: vì sao nên đi vào buổi sáng',
+     'ミーソン遺跡：午前中の訪問がおすすめな理由',
+     '미선 유적: 오전 방문을 추천하는 이유'),
+    ('Khám phá lăng Khải Định, lăng Tự Đức và Đại Nội trong một ngày ở Huế',
+     'フエ1日観光：カイディン帝廟・トゥドゥック帝廟・グエン朝王宮を巡る',
+     '후에 하루 여행: 카이딘 황릉·뜨득 황릉·응우옌 왕궁 둘러보기'),
+    ('Cầu Rồng phun lửa và du thuyền sông Hàn: lịch trình buổi tối ở Đà Nẵng',
+     'ドラゴン橋の火のショーとハン川クルーズ：ダナンの夜の過ごし方',
+     '용다리 불쇼와 한강 크루즈: 다낭의 저녁 일정'),
+    ('Ngũ Hành Sơn, biển Mỹ Khê và chùa Linh Ứng: nửa ngày tham quan Đà Nẵng',
+     '五行山・ミーケービーチ・リンウン寺：ダナン半日観光モデルコース',
+     '오행산·미케 비치·린응사: 다낭 반나절 관광 코스'),
 ]
 
 _ROWS += option_tours.ROWS

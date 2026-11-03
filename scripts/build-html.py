@@ -20,16 +20,6 @@ SITE = 'https://dulich2.themedep.top'
 
 e = html.escape
 
-# Bỏ tour miền Bắc; điểm khởi hành chuyển về Đà Nẵng
-NORTH_TOURS = ('Hà Giang', 'Tây Bắc', 'Mộc Châu')
-for _b in DATA['section3']:
-    _b['prods'] = [p for p in _b['prods'] if not any(k in p['title'] for k in NORTH_TOURS)]
-    for p in _b['prods']:
-        p['kh'] = ', '.join(x for x in p['kh'].split(', ') if x != 'Hà Nội') or 'Đà Nẵng'
-        p['kh'] = p['kh'] if 'Đà Nẵng' in p['kh'] else 'Đà Nẵng, ' + p['kh']
-        p['title'] = p['title'].replace('Hà Nội – Thành Đô', 'Đà Nẵng – Thành Đô')
-
-
 def img(url):
     if url.startswith(('tours/', 'danang/', 'hue/')):
         return 'images/' + url
@@ -85,77 +75,6 @@ def destination_slider(items):
             {ARROWS}
           </div>
         </div>'''
-
-
-def tour_card(p):
-    href = p['href']
-    return f'''
-          <div class="tour-cell">
-            <div class="col-inner">
-              <div class="product-small box has-hover box-text-bottom">
-                <div class="box-image">
-                  <div class="image-overlay-add image-cover">
-                    <a href="{href}" aria-label="{e(p['title'])}">{lazy(p['img'], p['title'])}</a>
-                    <div class="overlay"></div>
-                  </div>
-                  <span class="box-ngay-khoi-hanh"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Khởi hành hàng tuần</span>
-                </div>
-                <div class="box-text">
-                  <div class="title-wrapper"><p class="product-title"><a href="{href}">{e(p['title'])}</a></p></div>
-                  <div class="thong-tin-sp">
-                    <div class="ma-tour"><span class="label"><i class="fa-solid fa-qrcode"></i> Mã tour: </span><span class="value">{e(p['ma'])}</span></div>
-                    <div class="khoi-hanh"><span class="label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Khởi hành: </span><span class="value">{e(p['kh'])} </span></div>
-                  </div>
-                  <div class="price-wrapper"><span class="price"><span class="amount">{e(p['price'])}&nbsp;<span class="currency">&#8363;</span></span><span class="price-suffix">/khách</span></span></div>
-                  <div class="box-nguoi-lien-he"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="value">{e(p['lh'])}</span><span class="label"> đã liên hệ</span></div>
-                  <div class="add-to-cart-button"><a href="{p['cart']}" rel="nofollow">Đặt Tour</a></div>
-                </div>
-              </div>
-            </div>
-          </div>'''
-
-
-def tour_section(block, first=False, sid='', credit=''):
-    plain, strong = block['title'].split(' ', 1)
-    cards = ''.join(tour_card(p) for p in block['prods'])
-    return f'''
-  <section class="section section3{' pb-30' if first else ''}"{f' id="{sid}"' if sid else ''}>
-    <div class="section-content">
-      <div class="row row-small">
-        <div class="col small-12 large-12"><div class="col-inner">
-          {title(plain, strong)}
-          <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}}'>
-            <div class="slider-viewport"><div class="slider-track">{cards}
-            </div></div>
-            {ARROWS}
-          </div>{credit}
-        </div></div>
-      </div>
-    </div>
-  </section>'''
-
-
-# Special tour: golf (4 sân), tắm suối nước nóng, lặn biển & khám phá núi rừng (dữ liệu mẫu — sửa giá/lịch trình thật tại đây)
-EXTRA_TOURS = [
-    dict(sid='golf', title='TOUR GOLF', prods=[
-        dict(img='tours/golf-river.jpg', title='Golf BRG Danang Golf Resort & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF01', kh='Đà Nẵng', price='6.900.000', lh='86'),
-        dict(img='tours/golf-cart-path.jpg', title='Golf Montgomerie Links – sân golf ven biển Hội An 2N1Đ', ma='KA-GOLF02', kh='Đà Nẵng', price='7.900.000', lh='64'),
-        dict(img='tours/golf-palm-path.jpg', title='Golf Bà Nà Hills Golf Club & nghỉ dưỡng biển Đà Nẵng 2N1Đ', ma='KA-GOLF03', kh='Đà Nẵng', price='8.900.000', lh='120'),
-        dict(img='tours/golf-hue.jpg', title='Tour Golf Huế – Lăng Cô: Laguna Golf Lăng Cô & sân golf Huế 3N2Đ', ma='KA-GOLF04', kh='Đà Nẵng', price='12.500.000', lh='72'),
-    ]),
-    dict(sid='hot-spring', title='TOUR SUỐI NƯỚC NÓNG', prods=[
-        dict(img='tours/spring-than-tai.jpg', title='Tắm khoáng nóng Núi Thần Tài – Đà Nẵng nửa ngày', ma='KA-ONSEN01', kh='Đà Nẵng', price='850.000', lh='140'),
-        dict(img='tours/spring-than-tai-2.jpg', title='Tắm khoáng nóng Núi Thần Tài & phố cổ Hội An về đêm 1 ngày', ma='KA-ONSEN02', kh='Đà Nẵng, Hội An', price='1.350.000', lh='95'),
-        dict(img='danang/ba-na-hills.jpg', title='Nghỉ dưỡng tắm khoáng nóng & Bà Nà Hills 2N1Đ', ma='KA-ONSEN03', kh='Đà Nẵng', price='3.200.000', lh='58'),
-    ]),
-    dict(sid='diving-trekking', title='TOUR LẶN BIỂN &amp; KHÁM PHÁ NÚI RỪNG', prods=[
-        dict(img='tours/dive-cu-lao-cham.jpg', title='Lặn biển ngắm san hô Cù Lao Chàm – Hội An 1 ngày', ma='KA-DIVE01', kh='Đà Nẵng, Hội An', price='1.650.000', lh='132'),
-        dict(img='tours/dive-cham-seaside.jpg', title='Cù Lao Chàm cano cao tốc: bãi Xếp – bãi Ông, lặn ngắm san hô 1 ngày', ma='KA-DIVE02', kh='Đà Nẵng, Hội An', price='1.450.000', lh='88'),
-        dict(img='tours/forest-bach-ma.jpg', title='Trekking rừng Bạch Mã – tắm suối, thác Đỗ Quyên 1 ngày', ma='KA-FOREST01', kh='Đà Nẵng, Huế', price='1.850.000', lh='76'),
-        dict(img='tours/stream-suoi-mo.jpg', title='Khám phá suối Mơ – rừng Bà Nà Hills 1 ngày', ma='KA-FOREST02', kh='Đà Nẵng', price='1.250.000', lh='64'),
-        dict(img='tours/forest-son-tra.jpg', title='Trekking rừng nguyên sinh bán đảo Sơn Trà 1 ngày', ma='KA-FOREST03', kh='Đà Nẵng', price='1.150.000', lh='51'),
-    ]),
-]
 
 
 def credit_line(path):
@@ -228,33 +147,6 @@ def option_section():
   </section>'''
 
 
-def group_section(sid):
-    g = next(x for x in option_tours.GROUPS if x['sid'] == sid)
-    cards = ''.join(option_card(x) for x in g['tours'])
-    return f'''
-  <section class="section section3" id="{g['sid']}">
-    <div class="section-content">
-      <div class="row row-small">
-        <div class="col small-12 large-12"><div class="col-inner">
-          {title(g['plain'], g['strong'])}
-          <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}}'>
-            <div class="slider-viewport"><div class="slider-track">{cards}
-            </div></div>
-            {ARROWS}
-          </div>
-          <p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD (xem đơn vị cạnh giá) · Thanh toán bằng VND</p>
-          {credits_for([x['img'] for x in g['tours']])}
-        </div></div>
-      </div>
-    </div>
-  </section>'''
-
-
-def outbound_section():
-    block = dict(title='TOUR NƯỚC NGOÀI', prods=DATA['section3'][0]['prods'])
-    return tour_section(block, sid='outbound')
-
-
 def cta_section():
     return f'''
   <section class="section section-cta">
@@ -268,12 +160,6 @@ def cta_section():
       </div>
     </div>
   </section>'''
-
-
-def extra_tour_section(block):
-    for p in block['prods']:
-        p.update(href='#', cart='contact.html')
-    return tour_section(block, sid=block['sid'], credit='\n          ' + credits_for([p['img'] for p in block['prods']]))
 
 
 # "Bạn muốn đi đâu": khách inbound → điểm nổi tiếng Đà Nẵng và lăng tẩm Huế
@@ -301,13 +187,23 @@ SERVICES = [
     ('#fd8008', 'Khách sạn &amp; nhà hàng', 'Đặt phòng, đặt bàn, set menu riêng cho khách'),
     ('#89c440', 'Phiên dịch', 'Phiên dịch tiếng Nhật, tiếng Hàn cho tour và công tác'),
 ]
+NEWS = [dict(href='#', img=f'danang/{i}.jpg' if f else f'{i}.jpg', cat=c, date='03/11/2026', title=t) for i, f, c, t in [
+    ('cau-vang', 1, 'Cẩm nang du lịch', 'Cầu Vàng Bà Nà Hills: kinh nghiệm đi cáp treo và giờ đẹp để ngắm cảnh'),
+    ('hoi-an', 1, 'Cẩm nang du lịch Tin tức', 'Hội An về đêm: thả đèn hoa đăng và những món ăn nên thử'),
+    ('my-son', 1, 'Cẩm nang du lịch', 'Thánh địa Mỹ Sơn: vì sao nên đi vào buổi sáng'),
+    ('hue/lang-khai-dinh', 0, 'Cẩm nang du lịch Tin tức', 'Khám phá lăng Khải Định, lăng Tự Đức và Đại Nội trong một ngày ở Huế'),
+    ('cau-rong', 1, 'Cẩm nang du lịch', 'Cầu Rồng phun lửa và du thuyền sông Hàn: lịch trình buổi tối ở Đà Nẵng'),
+    ('ngu-hanh-son', 1, 'Cẩm nang du lịch Tin tức', 'Ngũ Hành Sơn, biển Mỹ Khê và chùa Linh Ứng: nửa ngày tham quan Đà Nẵng'),
+]]
+
 MOMENTS = [
-    ('8655-7e9b-4f2e-a427-18087594164f_1704267988.jpg', True),
-    ('kinh-nghiem-du-lich-thanh-do-trung-quoc-day-du-chi-tiet-nhat-5ffd498ad1d5f_1704267988.jpg', False),
-    ('dia-diem-du-lich-thai-lan-1.jpg', True),
+    ('danang/ba-na-hills.jpg', True),
+    ('danang/hoi-an.jpg', False),
+    ('danang/my-khe.jpg', True),
+    ('danang/son-tra.jpg', False),
 ]
 TESTIMONIALS = [
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch trong và ngoài nước. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
      'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN', 'Tour Hội An lung linh'),
     ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
      'Screenshot-2024-03-18-130622.png', 'Nguyễn Khả Tâm', 'Cảm nhận về tour Bà Nà Hills do công ty tổ chức'),
@@ -503,8 +399,8 @@ def main_content():
         </div></div>''' for i, (bg, t, d) in enumerate(SERVICES))
     moments = ''.join(f'''
               <div class="col small-img medium-6 small-12 large-6"><div class="col-inner">
-                <div class="img has-hover"><div class="img-inner{' image-zoom' if zoom else ''} image-cover" style="padding-top:75%;">{lazy(f'/{f}')}</div></div>
-              </div></div>''' for f, zoom in [('phuquoc.jpg', True)] + MOMENTS)
+                <div class="img has-hover"><div class="img-inner{' image-zoom' if zoom else ''} image-cover" style="padding-top:75%;">{lazy(f)}</div></div>
+              </div></div>''' for f, zoom in MOMENTS)
     testimonials = ''.join(f'''
         <div class="col medium-6 small-12 large-6"><div class="col-inner">
           <blockquote><p>{q}</p></blockquote>
@@ -517,7 +413,7 @@ def main_content():
             </div>
           </div>
         </div></div>''' for q, a, n, r in TESTIMONIALS)
-    posts = post_cards(DATA['section12'])
+    posts = post_cards(NEWS)
 
     return f'''
 <main id="main">
@@ -587,7 +483,7 @@ def main_content():
           {title('KHOẢNH KHẮC', 'ĐẸP NHẤT')}
         </div></div>
         <div class="col medium-7 small-12 large-7"><div class="col-inner">
-          <div class="img has-hover"><div class="img-inner image-zoom image-cover" style="padding-top:53.7%;">{lazy('/dai-loan.jpg')}</div></div>
+          <div class="img has-hover"><div class="img-inner image-zoom image-cover" style="padding-top:53.7%;">{lazy('danang/cau-rong.jpg')}</div></div>
         </div></div>
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
           <div class="row row-small">{moments}
@@ -648,7 +544,7 @@ def main_content():
       <div class="row">
         <div class="col small-12 large-12"><div class="col-inner">
           {title('TIN TỨC', 'DU LỊCH')}
-          <p class="lead">Chia sẽ những thông tin du lịch triển lãm nhanh nhất &amp; những bí quyết khi tham gia tour hội chợ</p>
+          <p class="lead">Kinh nghiệm và thông tin du lịch Đà Nẵng, Hội An, Huế dành cho du khách Nhật Bản và Hàn Quốc</p>
           <div class="gap-10"></div>
           <div class="slider row-slider list-post slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":0,"dragThreshold":5,"equalize":".box-text"}}'>
             <div class="slider-viewport"><div class="slider-track">{posts}
@@ -774,10 +670,6 @@ def localize(page, lang, slug=None):
     return re.sub(r'(\b(?:src|href|data-src|data-src-deferred)=")((?:images|css|js|fonts)/)', r'\1/\2', page)
 
 
-def grid_tours(prods):
-    return '<div class="tour-grid">' + ''.join(tour_card(dict(p, href='#', cart='contact.html')) for p in prods) + '</div>'
-
-
 def tour_group(plain, strong, inner, credit=''):
     return f'<div class="page-group">{title(plain, strong)}{inner}{credit}</div>'
 
@@ -785,9 +677,6 @@ def tour_group(plain, strong, inner, credit=''):
 def tours_block(kind):
     out = []
 
-    def grp(g):
-        return tour_group(g['plain'], g['strong'], '<div class="tour-grid">' + ''.join(option_card(x) for x in g['tours']) + '</div>',
-                          credits_for([x['img'] for x in g['tours']]))
     ops = ''.join(option_card(t) for t in option_tours.TOURS)
     out.append(tour_group('TOUR', 'GỢI Ý', f'<div class="tour-grid">{ops}</div>\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>',
                           credits_for([t['img'] for t in option_tours.TOURS])))
@@ -849,7 +738,7 @@ def sub_blocks(slug, lang):
         elif kind == 'tours':
             out.append(tours_block(b[1]))
         elif kind == 'posts':
-            items = DATA['section12'] if b[1] == 'all' else [p for p in DATA['section12'] if p['cat'].startswith('Cẩm nang du lịch')]
+            items = NEWS if b[1] == 'all' else [p for p in NEWS if p['cat'].startswith('Cẩm nang du lịch')]
             out.append(f'<div class="list-post post-grid">{post_cards(items)}</div>')
         elif kind == 'contact':
             out.append(contact_block(k))
@@ -888,7 +777,7 @@ def sub_main(slug, lang):
 </main>'''
 
 
-HOME_DESC = 'Khánh An Tourist — tour riêng, tour gia đình, tour trọn gói Đà Nẵng – Hội An – Huế.'
+HOME_DESC = 'Khánh An Tourist — tour Đà Nẵng – Hội An – Huế, đưa đón và hướng dẫn viên tiếng Nhật, tiếng Hàn.'
 HOME = finish(shell(main_content(), 'Khánh An Tourist - Trang chủ', HOME_DESC))
 
 # Trang chỉ có tiếng Nhật (mặc định) và tiếng Hàn
