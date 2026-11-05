@@ -27,6 +27,17 @@ LABELS = [
 ]
 
 LABELS += [
+    ('RIÊNG', 'プライベート', '프라이빗'),
+    ('GIA ĐÌNH', 'ファミリー', '패밀리'),
+    ('ĐẶC BIỆT', '特別', '스페셜'),
+    ('1 ngày', '1日', '1일'),
+    ('2 ngày 1 đêm', '1泊2日', '1박 2일'),
+    ('3 ngày 2 đêm', '2泊3日', '2박 3일'),
+    ('4 ngày 3 đêm', '3泊4日', '3박 4일'),
+    ('Theo yêu cầu', 'ご希望に応じて', '요청 시 제공'),
+]
+
+LABELS += [
     ('TOUR RIÊNG', 'オーダーメイドの専用ツアー', '맞춤형 프라이빗 투어'),
     ('Thiết kế lịch trình theo yêu cầu, xe riêng 4–16 chỗ', 'ご希望に合わせた日程設計。4〜16人乗りの専用車', '요청에 맞춘 일정 설계, 4~16인승 전용 차량'),
     ('HƯỚNG DẪN VIÊN', '日本語・韓国語ガイド', '일본어·한국어 가이드'),
@@ -96,4 +107,85 @@ TOURS = [
                 '뜨득 황릉 – 카이딘 황릉 – 궁중 요리 점심 – 응우옌 왕궁 – 티엔무 사원')),
 ]
 
-ROWS = LABELS + [t['title'] for t in TOURS] + [t['route'] for t in TOURS]
+# Tour riêng: chỉ 1 ngày (theo yêu cầu)
+PRIVATE_TOURS = [
+    dict(img='danang/cau-rong.jpg', time='1 ngày', meal='Theo yêu cầu', price=190, from_=True, suffix='/2 khách',
+         title=('Tour riêng Đà Nẵng 1 ngày', 'ダナン市内 プライベートツアー 1日', '다낭 시내 프라이빗 투어 1일'),
+         route=('Ngũ Hành Sơn – biển Mỹ Khê – chùa Linh Ứng – Cầu Rồng – bảo tàng Chăm – chợ Hàn – nhà thờ Đà Nẵng',
+                '五行山・ミーケービーチ・リンウン寺・ドラゴン橋・チャム彫刻博物館・ハン市場・ダナン大聖堂',
+                '오행산 – 미케 비치 – 린응사 – 용다리 – 참 조각 박물관 – 한 시장 – 다낭 대성당')),
+    dict(img='danang/ba-na-hills.jpg', time='1 ngày', meal='Theo yêu cầu', price=230, from_=True, suffix='/2 khách',
+         title=('Tour riêng Bà Nà Hills 1 ngày', 'バーナーヒルズ プライベートツアー 1日', '바나힐 프라이빗 투어 1일'),
+         route=('Bà Nà Hills (vé Wow Pass) – Làng Pháp – vườn hoa Le Jardin – Cầu Vàng – buffet trưa',
+                'バーナーヒルズ（ワウパス付き）・フランス村・ル・ジャルダン庭園・ゴールデンブリッジ・ランチビュッフェ',
+                '바나힐(와우패스 포함) – 프랑스 마을 – 르 자르댕 정원 – 골든브릿지 – 점심 뷔페')),
+    dict(img='tours/op-lanterns.jpg', time='1 ngày', meal='Theo yêu cầu', price=200, from_=True, suffix='/2 khách',
+         title=('Tour riêng Hội An & rừng dừa Cẩm Thanh 1 ngày', 'ホイアン＆カムタン ココナッツ林 プライベートツアー 1日', '호이안 & 깜타인 코코넛 숲 프라이빗 투어 1일'),
+         route=('Phố cổ Hội An – thuyền thúng rừng dừa Cẩm Thanh – làng nghề truyền thống – chợ đêm',
+                'ホイアン旧市街・カムタン ココナッツ林のバスケットボート・伝統工芸村・ナイトマーケット',
+                '호이안 구시가지 – 깜타인 코코넛 숲 바구니배 – 전통 공예 마을 – 야시장')),
+    dict(img='danang/my-son.jpg', time='1 ngày', meal='Theo yêu cầu', price=220, from_=True, suffix='/2 khách',
+         title=('Tour riêng Mỹ Sơn & Hội An 1 ngày', 'ミーソン遺跡＆ホイアン プライベートツアー 1日', '미선 유적 & 호이안 프라이빗 투어 1일'),
+         route=('Thánh địa Mỹ Sơn – làng gốm Thanh Hà – phố cổ Hội An – thả đèn hoa đăng',
+                'ミーソン遺跡・タインハー陶芸村・ホイアン旧市街・灯篭流し',
+                '미선 유적 – 타인하 도자기 마을 – 호이안 구시가지 – 등불 띄우기')),
+    dict(img='hue/lang-tu-duc.jpg', time='1 ngày', meal='Theo yêu cầu', price=260, from_=True, suffix='/2 khách',
+         title=('Tour riêng Huế – Đà Nẵng 1 ngày', 'フエ～ダナン プライベートツアー 1日', '후에~다낭 프라이빗 투어 1일'),
+         route=('Lăng Tự Đức – lăng Khải Định – Đại Nội – chùa Thiên Mụ – đèo Hải Vân',
+                'トゥドゥック帝廟・カイディン帝廟・グエン朝王宮・ティエンムー寺・ハイヴァン峠',
+                '뜨득 황릉 – 카이딘 황릉 – 응우옌 왕궁 – 티엔무 사원 – 하이반 고개')),
+]
+
+# Tour gia đình: 2 ngày 1 đêm, 3 ngày 2 đêm, 4 ngày 3 đêm
+FAMILY_TOURS = [
+    dict(img='danang/cau-vang.jpg', time='2 ngày 1 đêm', price=300,
+         title=('Tour gia đình Đà Nẵng – Hội An 2 ngày 1 đêm', 'ダナン・ホイアン ファミリーツアー 1泊2日', '다낭·호이안 패밀리 투어 1박 2일'),
+         route=('Bà Nà Hills – phố cổ Hội An – thuyền thúng rừng dừa – chợ đêm Hội An',
+                'バーナーヒルズ・ホイアン旧市街・ココナッツボート・ホイアンナイトマーケット',
+                '바나힐 – 호이안 구시가지 – 코코넛 바구니배 – 호이안 야시장')),
+    dict(img='danang/hoi-an.jpg', time='3 ngày 2 đêm', price=400,
+         title=('Tour gia đình Đà Nẵng – Hội An – Huế 3 ngày 2 đêm', 'ダナン・ホイアン・フエ ファミリーツアー 2泊3日', '다낭·호이안·후에 패밀리 투어 2박 3일'),
+         route=('Bà Nà Hills – Hội An – Mỹ Sơn – Huế – biển Mỹ Khê',
+                'バーナーヒルズ・ホイアン・ミーソン遺跡・フエ・ミーケービーチ',
+                '바나힐 – 호이안 – 미선 유적 – 후에 – 미케 비치')),
+    dict(img='hue/lang-khai-dinh.jpg', time='4 ngày 3 đêm', price=500,
+         title=('Tour gia đình miền Trung 4 ngày 3 đêm', 'ベトナム中部 ファミリーツアー 3泊4日', '베트남 중부 패밀리 투어 3박 4일'),
+         route=('Đà Nẵng – Bà Nà Hills – Hội An – Mỹ Sơn – Huế – biển Mỹ Khê',
+                'ダナン・バーナーヒルズ・ホイアン・ミーソン遺跡・フエ・ミーケービーチ',
+                '다낭 – 바나힐 – 호이안 – 미선 유적 – 후에 – 미케 비치')),
+]
+
+# Tour đặc biệt: golf, trekking, lặn biển, trải nghiệm đời sống địa phương
+SPECIAL_TOURS = [
+    dict(img='tours/golf-palm-path.jpg', time='2 ngày 1 đêm', price=350, from_=True,
+         title=('Tour golf Bà Nà Hills 2 ngày 1 đêm', 'バーナーヒルズ ゴルフツアー 1泊2日', '바나힐 골프 투어 1박 2일'),
+         route=('18 lỗ tại sân golf Bà Nà Hills – caddie – xe đưa đón – khách sạn 4 sao',
+                'バーナーヒルズゴルフコース18ホール・キャディー・送迎・4つ星ホテル',
+                '바나힐 골프장 18홀 – 캐디 – 송영 – 4성급 호텔')),
+    dict(img='tours/forest-son-tra.jpg', time='1 ngày', price=75,
+         title=('Trekking bán đảo Sơn Trà 1 ngày', 'ソンチャー半島 トレッキング 1日', '선짜 반도 트레킹 1일'),
+         route=('Rừng nguyên sinh Sơn Trà – ngắm vịnh Đà Nẵng – bãi biển hoang sơ – hải đăng',
+                'ソンチャー原生林・ダナン湾の眺め・手つかずのビーチ・灯台',
+                '선짜 원시림 – 다낭만 전망 – 자연 그대로의 해변 – 등대')),
+    dict(img='tours/dive-cu-lao-cham.jpg', time='1 ngày', price=68,
+         title=('Lặn biển ngắm san hô Cù Lao Chàm 1 ngày', 'クーラオチャム サンゴ礁ダイビング 1日', '꾸라오짬 산호초 다이빙 1일'),
+         route=('Cano cao tốc ra Cù Lao Chàm – lặn ngắm san hô – bãi Ông – bữa trưa hải sản',
+                'スピードボートでクーラオチャムへ・サンゴ礁ダイビング・バイオンビーチ・シーフードランチ',
+                '스피드보트로 꾸라오짬 이동 – 산호초 다이빙 – 바이옹 해변 – 해산물 점심')),
+    dict(img='tours/op-basket-boat.jpg', time='1 ngày', price=55,
+         title=('Trải nghiệm đời sống địa phương Hội An 1 ngày', 'ホイアン ローカル生活体験 1日', '호이안 현지 생활 체험 1일'),
+         route=('Đi chợ sớm – nấu món Việt – thuyền thúng rừng dừa – thăm nhà dân – làm nghề truyền thống',
+                '朝市散策・ベトナム料理作り・ココナッツボート・地元の家訪問・伝統工芸体験',
+                '아침 시장 – 베트남 요리 만들기 – 코코넛 바구니배 – 현지 가정 방문 – 전통 공예 체험')),
+]
+
+GROUPS = [
+    ('RIÊNG', PRIVATE_TOURS),
+    ('GIA ĐÌNH', FAMILY_TOURS),
+    ('ĐẶC BIỆT', SPECIAL_TOURS),
+]
+
+ALL_TOURS = TOURS + PRIVATE_TOURS + FAMILY_TOURS + SPECIAL_TOURS
+
+ROWS = LABELS + [t['title'] for t in ALL_TOURS] + [t['route'] for t in ALL_TOURS]
+

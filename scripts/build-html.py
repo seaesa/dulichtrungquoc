@@ -676,10 +676,13 @@ def tour_group(plain, strong, inner, credit=''):
 
 def tours_block(kind):
     out = []
-
-    ops = ''.join(option_card(t) for t in option_tours.TOURS)
-    out.append(tour_group('TOUR', 'GỢI Ý', f'<div class="tour-grid">{ops}</div>\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>',
-                          credits_for([t['img'] for t in option_tours.TOURS])))
+    groups = [('GỢI Ý', option_tours.TOURS)] + list(option_tours.GROUPS)
+    for i, (name, tours) in enumerate(groups):
+        cards = ''.join(option_card(t) for t in tours)
+        note = ('\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>'
+                if i == 0 else '')
+        out.append(tour_group('TOUR', name, f'<div class="tour-grid">{cards}</div>{note}',
+                              credits_for([t['img'] for t in tours])))
     return ''.join(out)
 
 
