@@ -203,9 +203,9 @@ MOMENTS = [
     ('danang/son-tra.jpg', False),
 ]
 TESTIMONIALS = [
-    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourist trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourist trong mọi chuyến du lịch. Khánh An Tourist luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourist đã nhiệt tình hỗ trợ hết mình',
+    ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourism trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourism trong mọi chuyến du lịch. Khánh An Tourism luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourism đã nhiệt tình hỗ trợ hết mình',
      'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN', 'Tour Hội An lung linh'),
-    ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourist. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourist chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourist sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
+    ('Chúng tôi du lịch tới Bà Nà Hills xinh đẹp. Được đồng hành cùng công ty du lịch Khánh An Tourism. Chúng tôi thấy được quan tâm chăm sóc tận tình từng bữa ăn giấc ngủ khi đi du lịch. Hướng dẫn viên của công ty Khánh An Tourism chu đáo, tận tình. Trước ngày đi chúng tôi còn được công ty thông báo đến từng người giờ khởi hành và những thứ cần chuẩn bị. Công ty Khánh An Tourism sẽ là lựa chọn tin tưởng nhất cho những chuyến du lịch lần sau.',
      'Screenshot-2024-03-18-130622.png', 'Nguyễn Khả Tâm', 'Cảm nhận về tour Bà Nà Hills do công ty tổ chức'),
 ]
 NAV = [
@@ -289,7 +289,7 @@ def header():
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="index.html" title="Khánh An Tourist" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURIST</small></span></a>
+          <a href="index.html" title="Khánh An Tourism" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURISM</small></span></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -349,11 +349,11 @@ def line_phone():
     return '''<div class="line-phone" aria-hidden="true">
                     <div class="lp-screen">
                       <div class="lp-status"><span>9:41</span><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
-                      <div class="lp-bar"><i class="fa-solid fa-chevron-left"></i><span>Khánh An Tourist</span><i class="fa-solid fa-ellipsis"></i></div>
+                      <div class="lp-bar"><i class="fa-solid fa-chevron-left"></i><span>Khánh An Tourism</span><i class="fa-solid fa-ellipsis"></i></div>
                       <div class="lp-cover"><img src="images/danang/thumbs/cau-vang.jpg" alt="" loading="lazy"></div>
                       <div class="lp-profile">
                         <span class="lp-avatar">''' + BRAND_MARK + '''</span>
-                        <strong>Khánh An Tourist <i class="fa-solid fa-circle-check"></i></strong>
+                        <strong>Khánh An Tourism <i class="fa-solid fa-circle-check"></i></strong>
                         <small>Tài khoản chính thức</small>
                       </div>
                       <span class="lp-add"><i class="fa-solid fa-user-plus"></i> Kết bạn</span>
@@ -493,6 +493,19 @@ def main_content():
     </div>
   </section>
 
+  <!-- section-kh: Khách hàng đồng hành -->
+  <section class="section section-kh">
+    <div class="section-content">
+      <div class="row row-small">
+        <div class="col small-12 large-12"><div class="col-inner">
+          {title('KHÁCH HÀNG', 'ĐỒNG HÀNH')}
+          <p class="lead">Những khoảnh khắc của du khách trên hành trình cùng Khánh An Tourism</p>
+          <div class="kh-grid"><a class="kh-item" href="images/khach-hang/kh-01.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-01.jpg" width="900" height="675" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-02.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-02.jpg" width="900" height="675" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-03.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-03.jpg" width="675" height="900" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-04.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-04.jpg" width="675" height="900" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-05.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-05.jpg" width="675" height="900" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-06.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-06.jpg" width="900" height="675" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-07.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-07.jpg" width="900" height="675" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-08.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-08.jpg" width="900" height="675" alt="" decoding="async"></a><a class="kh-item" href="images/khach-hang/kh-09.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/khach-hang/kh-09.jpg" width="900" height="675" alt="" decoding="async"></a></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- section10: Khách hàng nói gì -->
   <section class="section section10">
     <div class="section-content">
@@ -526,7 +539,7 @@ def main_content():
                     </div></div>
                     <div class="col qr-col medium-4 small-12 large-4"><div class="col-inner">
                       <p><span>Quét mã QR để được tư vấn nhanh nhất</span></p>
-                      <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourist" loading="lazy">
+                      <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourism" loading="lazy">
                     </div></div>
                   </div>
                 </div></div>
@@ -565,8 +578,8 @@ def footer():
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
-          <img class="footer-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourist" loading="lazy">
-          <h3>KHÁNH AN TOURIST</h3>
+          <img class="footer-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourism" loading="lazy">
+          <h3>KHÁNH AN TOURISM</h3>
           <p><strong>📍 Địa chỉ</strong>: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng</p>
           <p><strong>☎️ Hotline</strong>: <a href="tel:0326978689">0326 978 689</a></p>
           <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
@@ -612,7 +625,7 @@ def footer():
   <div class="absolute-footer">
     <div class="container">
       <div class="footer-primary">
-        <div class="copyright-footer">Copyright 2026 © Khánh An Tourist</div>
+        <div class="copyright-footer">Copyright 2026 © Khánh An Tourism</div>
       </div>
     </div>
   </div>
@@ -708,7 +721,7 @@ def contact_block(k):
     <p>{msg}</p>
     {email_form('email-contact')}
     <p class="qr-text">{qr}</p>
-    <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourist" loading="lazy">
+    <img class="line-qr" src="images/line-qr.jpg" width="644" height="645" alt="Mã QR LINE Khánh An Tourism" loading="lazy">
   </div></div>
 </div>'''
 
@@ -780,15 +793,15 @@ def sub_main(slug, lang):
 </main>'''
 
 
-HOME_DESC = 'Khánh An Tourist — tour Đà Nẵng – Hội An – Huế, đưa đón và hướng dẫn viên tiếng Nhật, tiếng Hàn.'
-HOME = finish(shell(main_content(), 'Khánh An Tourist - Trang chủ', HOME_DESC))
+HOME_DESC = 'Khánh An Tourism — tour Đà Nẵng – Hội An – Huế, đưa đón và hướng dẫn viên tiếng Nhật, tiếng Hàn.'
+HOME = finish(shell(main_content(), 'Khánh An Tourism - Trang chủ', HOME_DESC))
 
 # Trang chỉ có tiếng Nhật (mặc định) và tiếng Hàn
 for lang, conf in i18n.LANGS.items():
     jobs = [(None, localize(HOME, lang), HOME_DESC)]
     for slug, pg in pages.PAGES.items():
         k = 0 if lang == 'ja' else 1
-        ttl = i18n.TR[pg['title']][lang] + ' - Khánh An Tourist'
+        ttl = i18n.TR[pg['title']][lang] + ' - Khánh An Tourism'
         jobs.append((slug, localize(finish(shell(sub_main(slug, lang), ttl, e(pg['lead'][k]))), lang, slug), None))
     for slug, page, _ in jobs:
         out = i18n.render(page, lang, slug)

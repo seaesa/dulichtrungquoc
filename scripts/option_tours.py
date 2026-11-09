@@ -58,9 +58,9 @@ LABELS += [
      '出発日・人数・お子様やご年配の方のご同行の有無をお知らせください。24時間以内に日程案とお見積もりをお送りします。',
      '출발일, 인원, 어린이나 어르신 동반 여부를 알려 주세요. 24시간 이내에 일정안과 견적을 보내 드립니다.'),
     ('Yêu cầu báo giá', '見積もりを依頼する', '견적 요청하기'),
-    ('Khánh An Tourist — tour Đà Nẵng – Hội An – Huế, đưa đón và hướng dẫn viên tiếng Nhật, tiếng Hàn.',
-     'Khánh An Tourist — ダナン・ホイアン・フエのオプショナルツアー、送迎、ガイド手配。',
-     'Khánh An Tourist — 다낭·호이안·후에 옵션 투어, 송영, 가이드 수배.'),
+    ('Khánh An Tourism — tour Đà Nẵng – Hội An – Huế, đưa đón và hướng dẫn viên tiếng Nhật, tiếng Hàn.',
+     'Khánh An Tourism — ダナン・ホイアン・フエのオプショナルツアー、送迎、ガイド手配。',
+     'Khánh An Tourism — 다낭·호이안·후에 옵션 투어, 송영, 가이드 수배.'),
 ]
 
 
