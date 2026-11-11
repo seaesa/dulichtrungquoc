@@ -289,7 +289,7 @@ def header():
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="index.html" title="Khánh An Tourism" rel="home" class="brand">{BRAND_MARK}<span class="brand-text"><strong>KHÁNH AN</strong><small>TOURISM</small></span></a>
+          <a href="index.html" title="Khánh An Tourism" rel="home" class="brand"><img class="brand-logo" src="images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourism"></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">

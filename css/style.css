@@ -150,12 +150,12 @@ input[type="email"]:focus, input[type="search"]:focus { box-shadow: 0 0 5px #ccc
 .top-bar-nav .icon-shopping-cart { font-size: 15px; margin-left: 5px; color: inherit; transition: color .3s; }
 
 /* Main header */
-.header-main { position: relative; z-index: 10; height: 74px; background-color: #fff; }
+.header-main { position: relative; z-index: 10; height: 100px; background-color: #fff; }
 .header-inner { height: 100%; max-width: 1290px; margin: 0 auto; padding: 0 15px; }
-#logo { width: 221px; margin: 0 30px 0 0; line-height: 1; }
+#logo { width: auto; margin: 0 30px 0 0; line-height: 1; }
 #logo a { display: block; }
 #logo img { display: block; width: auto; max-height: 74px; padding: 8px 0; transition: max-height .5s; }
-.stuck .header-main { height: 70px !important; }
+.stuck .header-main { height: 84px !important; }
 .stuck #logo img { max-height: 70px !important; transition: none; }
 
 .header-nav-main > li { margin: 0 15px; }
@@ -199,7 +199,7 @@ input[type="email"]:focus, input[type="search"]:focus { box-shadow: 0 0 5px #ccc
   .header-top .flex-row { justify-content: center; }
   .header-top .mobile-contact-wrap { display: flex; justify-content: center; }
   .header-top .mobile-contact { display: inline-flex; width: auto; justify-content: flex-start; }
-  .header-main { height: 74px; }
+  .header-main { height: 88px; }
   .header-inner { justify-content: space-between; }
   .header-inner .mobile-left, .header-inner .mobile-right { flex: 1 1 0; }
   .header-inner .mobile-right .nav { justify-content: flex-end; }
@@ -209,7 +209,7 @@ input[type="email"]:focus, input[type="search"]:focus { box-shadow: 0 0 5px #ccc
   .header-inner .mobile-right { order: 3; }
 }
 @media (max-width: 549px) {
-  .header-main { height: 70px; }
+  .header-main { height: 80px; }
   #logo img { max-height: 70px; }
   .mobile-nav .icon-menu { font-size: 24px; color: var(--primary); }
   .mobile-nav .icon-shopping-cart { font-size: 20px; }
@@ -621,18 +621,16 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 :lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* Logo chữ Khánh An Tourism */
-#logo .brand { display: inline-flex; align-items: center; gap: 10px; height: 74px; color: var(--primary); text-decoration: none; }
+#logo .brand { display: inline-flex; align-items: center; gap: 10px; height: 100px; color: var(--primary); text-decoration: none; }
 .brand-mark { width: auto; height: 64px; flex: 0 0 auto; }
-.brand-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
-.brand-text strong { font-size: 22px; font-weight: 700; letter-spacing: .04em; color: #12306b; }
-.brand-text small { margin-top: 4px; font-size: 12.5px; font-weight: 700; letter-spacing: .42em; color: #1597b5; }
-.stuck #logo .brand { height: 70px; }
-@media (max-width: 849px) { #logo .brand { justify-content: center; } }
+#logo .brand-logo { height: 90px; width: auto; max-height: none; padding: 0; }
+.stuck #logo .brand-logo { height: 76px; }
+.stuck #logo .brand { height: 84px; }
+@media (max-width: 849px) { #logo .brand { justify-content: center; } #logo .brand-logo { height: 80px; } }
 @media (max-width: 549px) {
-  #logo .brand { height: 70px; gap: 8px; }
+  #logo .brand { height: 80px; gap: 8px; }
   .brand-mark { height: 48px; }
-  .brand-text strong { font-size: 18px; }
-  .brand-text small { font-size: 11px; letter-spacing: .36em; }
+  #logo .brand-logo { height: 72px; }
 }
 
 /* Chuyển ngôn ngữ */
