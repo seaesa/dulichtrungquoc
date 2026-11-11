@@ -700,17 +700,17 @@ def tours_block(kind):
 
 
 def contact_block(k):
-    rows = [('fa-location-dot', ('住所', '주소'), ADDR), ('fa-phone', ('ホットライン', '핫라인'), f'<a href="tel:0326978689">{pages.PHONE}</a>'),
-            ('fa-envelope', ('メール', '이메일'), f'<a href="mailto:{pages.EMAIL}">{pages.EMAIL}</a>'),
-            ('fa-clock', ('営業時間', '영업시간'), ('毎日 8:00 – 18:00（ホットラインは24時間）', '매일 8:00 – 18:00 (핫라인은 24시간)'))]
+    rows = [('fa-location-dot', ('住所', '주소', 'Address'), ADDR), ('fa-phone', ('ホットライン', '핫라인', 'Hotline'), f'<a href="tel:0326978689">{pages.PHONE}</a>'),
+            ('fa-envelope', ('メール', '이메일', 'Email'), f'<a href="mailto:{pages.EMAIL}">{pages.EMAIL}</a>'),
+            ('fa-clock', ('営業時間', '영업시간', 'Opening hours'), ('毎日 8:00 – 18:00（ホットラインは24時間）', '매일 8:00 – 18:00 (핫라인은 24시간)', 'Daily 8:00 – 18:00 (hotline open 24 hours)'))]
     items = ''.join(f'<li><i class="fa-solid {ic}" aria-hidden="true"></i><div><strong>{lab[k]}</strong><span>{val if isinstance(val, str) else val[k]}</span></div></li>' for ic, lab, val in rows)
-    maps = ('Googleマップで見る', 'Google 지도에서 보기')[k]
-    msg = ('メールアドレスをご入力ください。担当者より24時間以内にご連絡します。', '이메일 주소를 입력해 주세요. 담당자가 24시간 이내에 연락드립니다.')[k]
-    ask = (('お見積もりのためにお知らせいただきたいこと', '견적을 위해 알려 주세요'),
-           [('出発日・滞在日数', '출발일·체류 일수'), ('ご参加人数（お子様・ご年配の方の有無）', '참가 인원(어린이·어르신 동반 여부)'),
-            ('ご希望のホテルのグレード', '희망 호텔 등급'), ('ご興味のある観光地・体験', '관심 있는 관광지·체험')])
+    maps = ('Googleマップで見る', 'Google 지도에서 보기', 'View on Google Maps')[k]
+    msg = ('メールアドレスをご入力ください。担当者より24時間以内にご連絡します。', '이메일 주소를 입력해 주세요. 담당자가 24시간 이내에 연락드립니다.', 'Enter your email address and we will get back to you within 24 hours.')[k]
+    ask = (('お見積もりのためにお知らせいただきたいこと', '견적을 위해 알려 주세요', 'To prepare your quote, please tell us'),
+           [('出発日・滞在日数', '출발일·체류 일수', 'Departure date and length of stay'), ('ご参加人数（お子様・ご年配の方の有無）', '참가 인원(어린이·어르신 동반 여부)', 'Number of guests (any children or seniors)'),
+            ('ご希望のホテルのグレード', '희망 호텔 등급', 'Preferred hotel class'), ('ご興味のある観光地・体験', '관심 있는 관광지·체험', 'Sights and experiences you are interested in')])
     askhtml = f'<h3 class="ask-h">{ask[0][k]}</h3><ul class="page-list">' + ''.join(f'<li>{x[k]}</li>' for x in ask[1]) + '</ul>'
-    qr = ('QRコードをスキャンして、LINEでご相談ください。', 'QR 코드를 스캔해 LINE으로 상담하세요.')[k]
+    qr = ('QRコードをスキャンして、LINEでご相談ください。', 'QR 코드를 스캔해 LINE으로 상담하세요.', 'Scan the QR code to chat with us on LINE.')[k]
     return f'''<div class="row row-small contact-grid">
   <div class="col medium-6 small-12 large-6"><div class="col-inner">
     <ul class="contact-list">{items}</ul>
@@ -729,28 +729,33 @@ def contact_block(k):
 ADDR = pages.ADDRESS
 
 
+def pk(pair, k):
+    """Chọn bản dịch ja/ko từ cặp; tiếng Anh (k=2) tra theo chữ tiếng Nhật."""
+    return pair[k] if k < 2 else i18n.en_page(pair[0])
+
+
 def sub_blocks(slug, lang):
-    k = 0 if lang == 'ja' else 1
+    k = i18n.KIDX[lang]
     out = []
     for b in pages.PAGES[slug]['blocks']:
         kind = b[0]
         if kind == 'h':
-            out.append(f'<h2 class="page-h">{e(b[1][k])}</h2>')
+            out.append(f'<h2 class="page-h">{e(pk(b[1],k))}</h2>')
         elif kind == 'p':
-            out.append(f'<p>{e(b[1][k])}</p>')
+            out.append(f'<p>{e(pk(b[1],k))}</p>')
         elif kind == 'ul':
-            out.append('<ul class="page-list">' + ''.join(f'<li>{e(x[k])}</li>' for x in b[1]) + '</ul>')
+            out.append('<ul class="page-list">' + ''.join(f'<li>{e(pk(x,k))}</li>' for x in b[1]) + '</ul>')
         elif kind == 'note':
-            out.append(f'<p class="page-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> {e(b[1][k])}</p>')
+            out.append(f'<p class="page-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> {e(pk(b[1],k))}</p>')
         elif kind == 'cards':
             out.append('<div class="info-cards">' + ''.join(
-                f'<div class="info-card"><i class="fa-solid {ic}" aria-hidden="true"></i><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div>' for ic, ti, de in b[1]) + '</div>')
+                f'<div class="info-card"><i class="fa-solid {ic}" aria-hidden="true"></i><h3>{e(pk(ti,k))}</h3><p>{e(pk(de,k))}</p></div>' for ic, ti, de in b[1]) + '</div>')
         elif kind == 'steps':
             out.append('<ol class="steps">' + ''.join(
-                f'<li><span class="step-no">{n}</span><div><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div></li>' for n, (ti, de) in enumerate(b[1], 1)) + '</ol>')
+                f'<li><span class="step-no">{n}</span><div><h3>{e(pk(ti,k))}</h3><p>{e(pk(de,k))}</p></div></li>' for n, (ti, de) in enumerate(b[1], 1)) + '</ol>')
         elif kind == 'jobs':
             out.append('<div class="info-cards jobs">' + ''.join(
-                f'<div class="info-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>{e(ti[k])}</h3><p>{e(de[k])}</p></div>' for ti, de in b[1]) + '</div>')
+                f'<div class="info-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><h3>{e(pk(ti,k))}</h3><p>{e(pk(de,k))}</p></div>' for ti, de in b[1]) + '</div>')
         elif kind == 'tours':
             out.append(tours_block(b[1]))
         elif kind == 'posts':
@@ -759,7 +764,7 @@ def sub_blocks(slug, lang):
         elif kind == 'contact':
             out.append(contact_block(k))
         elif kind == 'contact_cta':
-            out.append(f'<p><a class="button primary" href="contact.html">{("お問い合わせはこちら", "문의하기")[k]}</a></p>')
+            out.append(f'<p><a class="button primary" href="contact.html">{("お問い合わせはこちら", "문의하기", "Contact us")[k]}</a></p>')
         elif kind == 'pay':
             out.append('<div class="payment-img"><img src="images/thanhtoan.jpg" width="418" height="62" alt="Chấp nhận thanh toán" loading="lazy"></div>')
     return '\n'.join(out)
@@ -767,7 +772,7 @@ def sub_blocks(slug, lang):
 
 def sub_main(slug, lang):
     pg = pages.PAGES[slug]
-    k = 0 if lang == 'ja' else 1
+    k = i18n.KIDX[lang]
     return f'''
 <main id="main">
   <section class="section page-hero">
@@ -776,7 +781,7 @@ def sub_main(slug, lang):
         <div class="col small-12 large-12"><div class="col-inner">
           <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Trang chủ</a> <i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span>{pg['title']}</span></nav>
           <h1>{pg['title']}</h1>
-          <p class="lead">{e(pg['lead'][k])}</p>
+          <p class="lead">{e(pk(pg['lead'],k))}</p>
         </div></div>
       </div>
     </div>
@@ -800,9 +805,9 @@ HOME = finish(shell(main_content(), 'Khánh An Tourism - Trang chủ', HOME_DESC
 for lang, conf in i18n.LANGS.items():
     jobs = [(None, localize(HOME, lang), HOME_DESC)]
     for slug, pg in pages.PAGES.items():
-        k = 0 if lang == 'ja' else 1
+        k = i18n.KIDX[lang]
         ttl = i18n.TR[pg['title']][lang] + ' - Khánh An Tourism'
-        jobs.append((slug, localize(finish(shell(sub_main(slug, lang), ttl, e(pg['lead'][k]))), lang, slug), None))
+        jobs.append((slug, localize(finish(shell(sub_main(slug, lang), ttl, e(pk(pg['lead'],k)))), lang, slug), None))
     for slug, page, _ in jobs:
         out = i18n.render(page, lang, slug)
         name = i18n.page_file(lang, slug)

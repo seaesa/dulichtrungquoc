@@ -9,12 +9,25 @@ import html
 import re
 
 import option_tours
+import i18n_en
 
 LANGS = {
     'ja': dict(file='index.html', html_lang='ja', label='日本語', flag='JP'),
     'ko': dict(file='ko.html', html_lang='ko', label='한국어', flag='KR'),
+    'en': dict(file='en.html', html_lang='en', label='English', flag='EN'),
 }
 DEFAULT = 'ja'
+KIDX = {'ja': 0, 'ko': 1, 'en': 2}  # vị trí bản dịch trong các cặp (ja, ko[, en])
+
+
+def en_page(ja):
+    """Bản tiếng Anh của nội dung trang con (pages.py), tra theo chữ tiếng Nhật."""
+    if ja in i18n_en.PAGES_EN:
+        return i18n_en.PAGES_EN[ja]
+    hits = [p for p in i18n_en.PAGES_EN_PREFIX if ja.startswith(p)]
+    if not hits:
+        raise KeyError(f'Thiếu bản dịch tiếng Anh: {ja[:40]!r}')
+    return i18n_en.PAGES_EN_PREFIX[max(hits, key=len)]
 
 
 def page_url(lang, slug=None):
@@ -276,9 +289,18 @@ for _addr in ['108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng']:
 
 PLACE_NAMES = ['Cầu Vàng', 'Bà Nà Hills', 'Phố cổ Hội An', 'Cầu Rồng', 'Ngũ Hành Sơn', 'Biển Mỹ Khê', 'Bán đảo Sơn Trà']
 
-TR = {vi: {'ja': ja, 'ko': ko} for vi, ja, ko in _ROWS}
+def _en(vi):
+    if vi in i18n_en.EN:
+        return i18n_en.EN[vi]
+    hits = [p for p in i18n_en.EN_PREFIX if vi.startswith(p)]
+    if not hits:
+        raise KeyError(f'Thiếu bản dịch tiếng Anh: {vi[:70]!r}')
+    return i18n_en.EN_PREFIX[max(hits, key=len)]
+
+
+TR = {vi: {'ja': ja, 'ko': ko, 'en': _en(vi)} for vi, ja, ko in _ROWS}
 for _n in PLACE_NAMES:
-    TR['Xem ' + _n] = {'ja': TR[_n]['ja'] + 'を見る', 'ko': TR[_n]['ko'] + ' 보기'}
+    TR['Xem ' + _n] = {'ja': TR[_n]['ja'] + 'を見る', 'ko': TR[_n]['ko'] + ' 보기', 'en': 'View ' + TR[_n]['en']}
 
 # Tên riêng / địa chỉ được giữ nguyên tiếng Việt (không báo là chưa dịch)
 KEEP = ['108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng', 'Jean-Pierre Dalbéra', 'Khánh An', 'KHÁNH AN', 'Nguyễn Khả Tâm', 'Phạm Xuân Ẩn', 'Trần Thanh Minh Khuê']
@@ -325,9 +347,11 @@ def render(page, lang, slug=None):
     page = ''.join(out)
     # Tiêu đề "TOUR <strong>X</strong>": đặt chữ "ツアー/투어" ra sau (ゴルフツアー, 골프 투어)
     word = TR['TOUR'][lang]
-    sep = ' ' if lang == 'ko' else ''
+    sep = ' ' if lang in ('ko', 'en') else ''
     page = re.sub(rf'<h2 class="home-title">{word} <strong>([^<]+)</strong></h2>',
                   rf'<h2 class="home-title"><strong>\1</strong>{sep}{word}</h2>', page)
+    if lang == 'en':
+        page = page.replace('〜', '+')
     page = page.replace('<html lang="vi">', f'<html lang="{LANGS[lang]["html_lang"]}">')
     alts = ''.join(f'<link rel="alternate" hreflang="{c["html_lang"]}" href="{page_url(k, slug)}">' for k, c in LANGS.items())
     page = page.replace('</head>', alts + '\n</head>', 1)
