@@ -150,12 +150,12 @@ input[type="email"]:focus, input[type="search"]:focus { box-shadow: 0 0 5px #ccc
 .top-bar-nav .icon-shopping-cart { font-size: 15px; margin-left: 5px; color: inherit; transition: color .3s; }
 
 /* Main header */
-.header-main { position: relative; z-index: 10; height: 100px; background-color: #fff; }
+.header-main { position: relative; z-index: 10; height: 96px; background-color: #fff; }
 .header-inner { height: 100%; max-width: 1290px; margin: 0 auto; padding: 0 15px; }
 #logo { width: auto; margin: 0 30px 0 0; line-height: 1; }
 #logo a { display: block; }
 #logo img { display: block; width: auto; max-height: 74px; padding: 8px 0; transition: max-height .5s; }
-.stuck .header-main { height: 84px !important; }
+.stuck .header-main { height: 80px !important; }
 .stuck #logo img { max-height: 70px !important; transition: none; }
 
 .header-nav-main > li { margin: 0 15px; }
@@ -209,7 +209,7 @@ input[type="email"]:focus, input[type="search"]:focus { box-shadow: 0 0 5px #ccc
   .header-inner .mobile-right { order: 3; }
 }
 @media (max-width: 549px) {
-  .header-main { height: 80px; }
+  .header-main { height: 78px; }
   #logo img { max-height: 70px; }
   .mobile-nav .icon-menu { font-size: 24px; color: var(--primary); }
   .mobile-nav .icon-shopping-cart { font-size: 20px; }
@@ -621,16 +621,16 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 :lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* Logo chữ Khánh An Tourism */
-#logo .brand { display: inline-flex; align-items: center; gap: 10px; height: 100px; color: var(--primary); text-decoration: none; }
+#logo .brand { display: inline-flex; align-items: center; gap: 10px; height: 96px; color: var(--primary); text-decoration: none; }
 .brand-mark { width: auto; height: 64px; flex: 0 0 auto; }
-#logo .brand-logo { height: 90px; width: auto; max-height: none; padding: 0; }
-.stuck #logo .brand-logo { height: 76px; }
-.stuck #logo .brand { height: 84px; }
-@media (max-width: 849px) { #logo .brand { justify-content: center; } #logo .brand-logo { height: 80px; } }
+#logo .brand-logo { height: 84px; width: auto; max-height: none; padding: 0; }
+.stuck #logo .brand-logo { height: 70px; }
+.stuck #logo .brand { height: 80px; }
+@media (max-width: 849px) { #logo .brand { justify-content: center; } #logo .brand-logo { height: 76px; } }
 @media (max-width: 549px) {
-  #logo .brand { height: 80px; gap: 8px; }
+  #logo .brand { height: 78px; gap: 8px; }
   .brand-mark { height: 48px; }
-  #logo .brand-logo { height: 72px; }
+  #logo .brand-logo { height: 66px; }
 }
 
 /* Chuyển ngôn ngữ */
