@@ -411,3 +411,9 @@ PAGES_EN_PREFIX = {
     '天候、交通状況、施設の都合': 'Depending on weather, traffic conditions or facility circumstances, content or order may change. In that case, we will offer the closest possible equivalent.',
     'パスポート・ビザ・保険': 'Preparing the passport, visa, insurance and other travel documents is the customer’s responsibility. During the tour, please follow your guide’s instructions and meeting times.',
 }
+
+EN.update({
+    'Golf Đà Nẵng: Bà Nà Hills, Montgomerie Links và những sân golf nên chơi': 'Golf in Da Nang: Ba Na Hills, Montgomerie Links and other courses worth playing',
+    'Núi Thần Tài: tắm khoáng nóng, tắm bùn và kinh nghiệm đi trong ngày': 'Than Tai Mountain: hot-spring and mud baths, plus tips for a day trip',
+    'VinWonders Nam Hội An: giá vé, giờ mở cửa và kinh nghiệm vui chơi': 'VinWonders Nam Hoi An: tickets, opening hours and tips',
+})

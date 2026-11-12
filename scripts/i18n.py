@@ -281,6 +281,18 @@ _ROWS += [
      '오행산·미케 비치·린응사: 다낭 반나절 관광 코스'),
 ]
 
+_ROWS += [
+    ('Golf Đà Nẵng: Bà Nà Hills, Montgomerie Links và những sân golf nên chơi',
+     'ダナンのゴルフ：バーナーヒルズ、モンゴメリーリンクスなどおすすめコース',
+     '다낭 골프: 바나힐, 몽고메리 링크스 등 추천 골프장'),
+    ('Núi Thần Tài: tắm khoáng nóng, tắm bùn và kinh nghiệm đi trong ngày',
+     'ヌイタンタイ：温泉・泥風呂と日帰りで楽しむコツ',
+     '누이턴따이: 온천·머드 목욕과 당일 여행 팁'),
+    ('VinWonders Nam Hội An: giá vé, giờ mở cửa và kinh nghiệm vui chơi',
+     'ヴィンワンダーズ・ナムホイアン：チケット料金・営業時間・遊び方のコツ',
+     '빈원더스 남호이안: 입장권 요금·운영 시간·이용 팁'),
+]
+
 _ROWS += option_tours.ROWS
 
 # Địa chỉ giữ nguyên tiếng Việt (không dịch lẻ từng địa danh bên trong)

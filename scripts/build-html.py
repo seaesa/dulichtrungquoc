@@ -188,6 +188,9 @@ SERVICES = [
     ('#89c440', 'Phiên dịch', 'Phiên dịch tiếng Nhật, tiếng Hàn cho tour và công tác'),
 ]
 NEWS = [dict(href='#', img=f'danang/{i}.jpg' if f else f'{i}.jpg', cat=c, date='03/11/2026', title=t) for i, f, c, t in [
+    ('tours/golf-palm-path', 0, 'Cẩm nang du lịch Tin tức', 'Golf Đà Nẵng: Bà Nà Hills, Montgomerie Links và những sân golf nên chơi'),
+    ('tours/nui-than-tai', 0, 'Cẩm nang du lịch Tin tức', 'Núi Thần Tài: tắm khoáng nóng, tắm bùn và kinh nghiệm đi trong ngày'),
+    ('tours/vinwonders-nam-hoi-an', 0, 'Cẩm nang du lịch Tin tức', 'VinWonders Nam Hội An: giá vé, giờ mở cửa và kinh nghiệm vui chơi'),
     ('cau-vang', 1, 'Cẩm nang du lịch', 'Cầu Vàng Bà Nà Hills: kinh nghiệm đi cáp treo và giờ đẹp để ngắm cảnh'),
     ('hoi-an', 1, 'Cẩm nang du lịch Tin tức', 'Hội An về đêm: thả đèn hoa đăng và những món ăn nên thử'),
     ('my-son', 1, 'Cẩm nang du lịch', 'Thánh địa Mỹ Sơn: vì sao nên đi vào buổi sáng'),
@@ -195,6 +198,9 @@ NEWS = [dict(href='#', img=f'danang/{i}.jpg' if f else f'{i}.jpg', cat=c, date='
     ('cau-rong', 1, 'Cẩm nang du lịch', 'Cầu Rồng phun lửa và du thuyền sông Hàn: lịch trình buổi tối ở Đà Nẵng'),
     ('ngu-hanh-son', 1, 'Cẩm nang du lịch Tin tức', 'Ngũ Hành Sơn, biển Mỹ Khê và chùa Linh Ứng: nửa ngày tham quan Đà Nẵng'),
 ]]
+for _p in NEWS[:3]:
+    _p['date'] = '12/11/2026'
+NEWS_CREDITS = ['tours/golf-palm-path.jpg', 'tours/nui-than-tai.jpg', 'tours/vinwonders-nam-hoi-an.jpg']
 
 MOMENTS = [
     ('danang/ba-na-hills.jpg', True),
@@ -350,7 +356,7 @@ def line_phone():
                     <div class="lp-screen">
                       <div class="lp-status"><span>9:41</span><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
                       <div class="lp-bar"><i class="fa-solid fa-chevron-left"></i><span>Khánh An Tourism</span><i class="fa-solid fa-ellipsis"></i></div>
-                      <div class="lp-cover"><img src="images/danang/thumbs/cau-vang.jpg" alt="" loading="lazy"></div>
+                      <div class="lp-cover"><img src="images/line-cover.jpg" alt="" loading="lazy"></div>
                       <div class="lp-profile">
                         <span class="lp-avatar">''' + BRAND_MARK + '''</span>
                         <strong>Khánh An Tourism <i class="fa-solid fa-circle-check"></i></strong>
@@ -761,6 +767,7 @@ def sub_blocks(slug, lang):
         elif kind == 'posts':
             items = NEWS if b[1] == 'all' else [p for p in NEWS if p['cat'].startswith('Cẩm nang du lịch')]
             out.append(f'<div class="list-post post-grid">{post_cards(items)}</div>')
+            out.append(credits_for(NEWS_CREDITS))
         elif kind == 'contact':
             out.append(contact_block(k))
         elif kind == 'contact_cta':
