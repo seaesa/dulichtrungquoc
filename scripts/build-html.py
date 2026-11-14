@@ -126,21 +126,20 @@ def option_card(t):
           </div>'''
 
 
-def option_section():
-    cards = ''.join(option_card(t) for t in option_tours.TOURS)
+def option_section(tours=None, strong='GỢI Ý', sid='recommended'):
+    tours = tours or option_tours.TOURS
+    cards = ''.join(option_card(t) for t in tours)
     return f'''
-  <section class="section section3" id="recommended">
+  <section class="section section3" id="{sid}">
     <div class="section-content">
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
-          {title('TOUR', 'GỢI Ý')}
+          {title('TOUR', strong)}
           <div class="slider row-slider tour-slider slider-nav-outside slider-nav-push" data-slider='{{"cellAlign":"left","groupCells":true,"autoPlay":4000,"dragThreshold":5,"equalize":".box-text"}}'>
             <div class="slider-viewport"><div class="slider-track">{cards}
             </div></div>
             {ARROWS}
           </div>
-          <p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>
-          {credits_for([t['img'] for t in option_tours.TOURS])}
         </div></div>
       </div>
     </div>
@@ -448,7 +447,6 @@ def main_content():
           <div class="gap-15"></div>
           <h3 class="dest-label"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Lăng tẩm Huế</h3>
           {destination_slider(DESTS[1])}
-          {credits_for(['danang/my-son.jpg'] + [d['img'] for d in DESTS[1]])}
         </div></div>
       </div>
     </div>
@@ -468,6 +466,7 @@ def main_content():
   </section>
 
   {option_section()}
+  {option_section(option_tours.SPECIAL_TOURS, 'ĐẶC BIỆT', 'special-tours')}
   {cta_section()}
 
   <!-- section5: Các dịch vụ -->
@@ -689,19 +688,18 @@ def localize(page, lang, slug=None):
     return re.sub(r'(\b(?:src|href|data-src|data-src-deferred)=")((?:images|css|js|fonts)/)', r'\1/\2', page)
 
 
-def tour_group(plain, strong, inner, credit=''):
-    return f'<div class="page-group">{title(plain, strong)}{inner}{credit}</div>'
+def tour_group(plain, strong, inner, credit='', gid=''):
+    return f'<div class="page-group" id="{gid}">{title(plain, strong)}{inner}{credit}</div>'
 
 
 def tours_block(kind):
-    out = []
     groups = [('GỢI Ý', option_tours.TOURS)] + list(option_tours.GROUPS)
+    ids = ['goi-y', 'rieng', 'gia-dinh', 'dac-biet']
+    chips = ''.join(f'<a href="#{ids[i]}"{" class=\"is-special\"" if ids[i] == "dac-biet" else ""}>{name}</a>' for i, (name, _) in enumerate(groups))
+    out = [f'<nav class="tour-chips" aria-label="Tour">{chips}</nav>']
     for i, (name, tours) in enumerate(groups):
         cards = ''.join(option_card(t) for t in tours)
-        note = ('\n<p class="op-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Giá tham khảo tính theo USD/khách · Thanh toán bằng VND</p>'
-                if i == 0 else '')
-        out.append(tour_group('TOUR', name, f'<div class="tour-grid">{cards}</div>{note}',
-                              credits_for([t['img'] for t in tours])))
+        out.append(tour_group('TOUR', name, f'<div class="tour-grid">{cards}</div>', gid=ids[i]))
     return ''.join(out)
 
 

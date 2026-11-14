@@ -776,3 +776,11 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 .top-bar-nav .lang-switch .nav-dropdown { top: 100%; transition: opacity .25s, visibility 0s linear .35s, left 0s linear .35s; }
 .top-bar-nav .lang-switch .nav-dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
 .top-bar-nav .lang-switch:hover > .nav-dropdown, .top-bar-nav .lang-switch:focus-within > .nav-dropdown { left: auto; right: -15px; transition-delay: 0s; }
+
+/* Chip điều hướng nhóm tour (thấy ngay tour đặc biệt trên mobile) */
+.tour-chips { display: flex; gap: 8px; margin: 0 0 24px; padding: 2px 0 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.tour-chips::-webkit-scrollbar { display: none; }
+.tour-chips a { flex: 0 0 auto; padding: 8px 16px; border: 1px solid var(--primary); border-radius: 20px; color: var(--primary); font-size: 14px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.tour-chips a.is-special { background: var(--secondary); border-color: var(--secondary); color: #fff; }
+.page-group { scroll-margin-top: 90px; }
+@media (max-width: 549px) { .tour-chips { gap: 6px; } .tour-chips a { padding: 8px 11px; font-size: 13px; } }

@@ -417,3 +417,15 @@ EN.update({
     'Núi Thần Tài: tắm khoáng nóng, tắm bùn và kinh nghiệm đi trong ngày': 'Than Tai Mountain: hot-spring and mud baths, plus tips for a day trip',
     'VinWonders Nam Hội An: giá vé, giờ mở cửa và kinh nghiệm vui chơi': 'VinWonders Nam Hoi An: tickets, opening hours and tips',
 })
+
+
+EN.update({
+    'Golf + Spa + Khách sạn Đà Nẵng 3 ngày 2 đêm': 'Da Nang Golf + Spa + Hotel, 3 days 2 nights',
+    '18 lỗ golf – tắm khoáng nóng và bùn Núi Thần Tài – spa thư giãn – khách sạn 4–5 sao – đưa đón sân bay': '18-hole golf – Nui Than Tai hot-spring and mud bath – relaxing spa – 4–5 star hotel – airport transfers',
+    'Du thuyền ngắm hoàng hôn và lặn biển Đà Nẵng 1 ngày': 'Da Nang sunset cruise & diving, 1 day',
+    'Du thuyền sang trọng – lặn ngắm san hô – tiệc hải sản trên boong – ngắm hoàng hôn trên biển': 'Luxury cruise – coral diving – seafood feast on deck – sunset at sea',
+    'Học nghề truyền thống Hội An 1 ngày': 'Hoi An traditional crafts workshop, 1 day',
+    'Làng mộc Kim Bồng – làng gốm Thanh Hà – làm đèn lồng – trò chuyện cùng nghệ nhân': 'Kim Bong carpentry village – Thanh Ha pottery village – lantern making – meet the artisans',
+    'Du lịch MICE Đà Nẵng – Hội An (đoàn từ 20 khách)': 'Da Nang – Hoi An MICE tours (groups of 20+)',
+    'Họp và hội nghị – team building – gala dinner – tham quan theo chủ đề – xe, hướng dẫn viên và khách sạn trọn gói': 'Meetings and conferences – team building – gala dinner – themed sightseeing – transport, guide and hotel in one package',
+})
