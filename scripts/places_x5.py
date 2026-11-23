@@ -1,0 +1,115 @@
+"""Nội dung mở rộng (ja, ko, en) — đợt 5: lăng Tự Đức, Minh Mạng, Đồng Khánh. Thông tin tham khảo."""
+TIPS = ('旅の準備とヒント', '여행 준비와 팁', 'Planning tips')
+X = {
+ 'lang-tu-duc': [
+  (('トゥドゥック帝廟とは', '뜨득 황릉은', 'About Tu Duc’s Tomb'), [
+   ('トゥドゥック帝廟は、阮朝第4代皇帝トゥドゥック帝の陵墓で、フエ市街の南約6kmの松林に囲まれた丘陵地にあります。皇帝は1848年から1883年まで在位した、阮朝で最も長く統治した君主です。廟は1864年ごろから約3年をかけて造られ、皇帝は生前からここを離宮として使いました。',
+    '뜨득 황릉은 응우옌 왕조 제4대 황제 뜨득의 능으로, 후에 시내 남쪽 약 6km의 소나무 숲에 둘러싸인 구릉지에 있습니다. 황제는 1848년부터 1883년까지 재위한 응우옌 왕조에서 가장 오래 통치한 군주입니다. 능은 1864년경부터 약 3년에 걸쳐 조성되었으며 황제는 생전부터 이곳을 별궁으로 사용했습니다.',
+    'Tu Duc’s Tomb is the mausoleum of the 4th Nguyen emperor, set among pine groves on hilly ground about 6 km south of Hue. He reigned from 1848 to 1883, the longest of the dynasty. The tomb was built over about three years from around 1864, and the emperor used it as a retreat during his lifetime.'),
+   ('ほかの廟が荘厳な雰囲気であるのに対し、この廟は庭園のように穏やかでロマンチックな空気に包まれています。詩作を愛した皇帝にふさわしく、自然と建築が調和した、美しい景観が魅力です。',
+    '다른 능이 장엄한 분위기인 데 비해 이 능은 정원처럼 평온하고 낭만적인 분위기에 싸여 있습니다. 시 짓기를 좋아한 황제에 걸맞게 자연과 건축이 조화를 이룬 아름다운 경관이 매력입니다.',
+    'Where other tombs feel solemn, this one has a peaceful, romantic, garden-like air. Fitting for an emperor who loved poetry, its charm lies in the beautiful harmony of nature and architecture.')]),
+  (('湖と建物', '호수와 건물', 'The lake and buildings'), [
+   ('敷地の中央には、蓮が浮かぶ湖があり、湖畔には休憩のための東屋や、船着き場の跡が残っています。皇帝はここで詩を詠み、舟遊びを楽しんだと伝えられています。水辺の静かな景色は、散策に最適です。',
+    '부지 중앙에는 연꽃이 떠 있는 호수가 있고 호숫가에는 쉬어 가는 정자와 선착장 터가 남아 있습니다. 황제는 이곳에서 시를 읊고 뱃놀이를 즐겼다고 전해집니다. 물가의 고요한 풍경은 산책하기에 안성맞춤입니다.',
+    'At the centre of the grounds is a lake with lotuses, with pavilions for resting and the remains of a landing stage on its shore. The emperor is said to have composed poems and enjoyed boating here. The quiet waterside scenery is ideal for a stroll.'),
+   ('皇帝が日常を過ごした宮殿風の建物や、後に皇帝を祀る殿舎、碑亭などが点在しています。特に、巨大な石碑が納められた碑亭は、皇帝が自らの生涯を振り返って綴った文章が刻まれていることで知られています。',
+    '황제가 일상을 보내던 궁전풍 건물과 훗날 황제를 모신 전각, 비각 등이 곳곳에 있습니다. 특히 거대한 석비가 모셔진 비각에는 황제가 자신의 생애를 돌아보며 쓴 글이 새겨져 있는 것으로 유명합니다.',
+    'Palace-style buildings where the emperor lived, halls that later honoured him and stele pavilions are scattered about. The pavilion with a huge stone stele is known for carrying a text the emperor wrote reflecting on his own life.')]),
+  (('皇帝の物語', '황제의 이야기', 'The emperor’s story'), [
+   ('トゥドゥック帝は学問と文学に秀で、多くの詩を残したことで知られます。同時に、フランスの進出が進む難しい時代の統治者でもあり、その治世は国の転換期でした。廟を歩くと、そうした複雑な時代背景や皇帝の人柄に思いを巡らせることができます。',
+    '뜨득 황제는 학문과 문학에 뛰어나 많은 시를 남긴 것으로 알려져 있습니다. 동시에 프랑스의 진출이 이어지는 어려운 시대의 통치자이기도 했으며 그의 치세는 나라의 전환기였습니다. 능을 걷다 보면 이러한 복잡한 시대 배경과 황제의 인품에 생각을 보낼 수 있습니다.',
+    'Tu Duc was a learned man and a gifted writer who left many poems. He also ruled in a difficult era as French influence grew, and his reign was a turning point for the country. Walking the tomb lets you reflect on that complex background and the emperor’s character.'),
+   ('皇帝の本当の埋葬場所は、盗掘を避けるために秘密にされたと伝えられており、廟に収められているのは墓所とは別の場所だとも言われています。こうした逸話も、この廟の魅力のひとつです。',
+    '황제의 실제 매장 장소는 도굴을 피하기 위해 비밀로 했다고 전해지며 능에 모셔진 곳은 묘소와 별개의 장소라고도 합니다. 이러한 일화도 이 능의 매력 중 하나입니다.',
+    'The emperor’s actual burial place is said to have been kept secret to avoid looters, and what lies within the complex is reported to be separate from the grave itself. Such tales add to the tomb’s appeal.')]),
+  (('行き方と見学時間', '뜨득 가는 방법과 관람 시간', 'Getting there and visit time'), [
+   ('フエ市街から車やタクシーで約15分と近く、ほかの廟と一緒に回るのに便利です。敷地は広めですが、ゆっくり歩いて1時間から1時間半ほどで見学できます。',
+    '후에 시내에서 차나 택시로 약 15분으로 가까워 다른 능과 함께 돌기 편리합니다. 부지는 넓은 편이지만 천천히 걸어서 1시간에서 1시간 반 정도면 관람할 수 있습니다.',
+    'It is only about 15 minutes by car or taxi from Hue city, so it is convenient to combine with other tombs. The grounds are fairly large, but a slow walk takes about 1 to 1.5 hours.'),
+   ('朝や夕方は光がやわらかく、湖面に映る景色が特に美しい時間帯です。蓮は夏の時期に見頃を迎えることが多く、季節ごとに異なる景色が楽しめます。',
+    '아침이나 저녁은 빛이 부드러워 호수에 비치는 경치가 특히 아름다운 시간대입니다. 연꽃은 여름철에 절정을 맞는 경우가 많아 계절마다 다른 풍경을 즐길 수 있습니다.',
+    'Morning and late afternoon have soft light and the lake reflections are especially lovely. Lotuses often peak in summer, so the scenery changes with the seasons.')]),
+  (TIPS, [
+   ('日差しが強い日は、帽子や日傘、水を用意すると安心です。ゆったり歩けるよう、歩きやすい靴を選びましょう。静かな雰囲気を楽しむために、大声での会話は控えめにするのがマナーです。',
+    '햇볕이 강한 날은 모자나 양산, 물을 준비하면 안심입니다. 느긋하게 걸을 수 있도록 편한 신발을 고르세요. 조용한 분위기를 즐길 수 있도록 큰 소리로 대화하는 것은 삼가는 것이 매너입니다.',
+    'On sunny days bring a hat or parasol and water. Choose comfortable shoes for an unhurried walk. To enjoy the quiet, keep conversation low.'),
+   ('Khánh An Tourismでは、トゥドゥック帝廟を含むフエの帝廟めぐりをご案内します。ご希望の日程を教えてください。',
+    'Khánh An Tourism은 뜨득 황릉을 포함한 후에 황릉 투어를 안내해 드립니다. 원하시는 일정을 알려 주세요.',
+    'Khanh An Tourism offers Hue royal-tomb tours that include Tu Duc’s Tomb. Let us know your preferred dates.')]),
+ ],
+ 'lang-minh-mang': [
+  (('ミンマン帝廟とは', '민망 황릉은', 'About Minh Mang’s Tomb'), [
+   ('ミンマン帝廟は、阮朝第2代皇帝ミンマン帝の陵墓で、フエ市街の南西約12km、香江の西岸に位置します。皇帝は1820年から1841年まで統治し、国の制度を整えた人物として知られます。廟の建設は皇帝の死の年にあたる1840年に始まり、後継の皇帝のもとで完成しました。',
+    '민망 황릉은 응우옌 왕조 제2대 황제 민망의 능으로 후에 시내 남서쪽 약 12km, 향강 서안에 있습니다. 황제는 1820년부터 1841년까지 통치했으며 나라의 제도를 정비한 인물로 알려져 있습니다. 능의 건설은 1840년에 시작되어 후계 황제 때 완성되었습니다.',
+    'Minh Mang’s Tomb is the mausoleum of the 2nd Nguyen emperor, about 12 km south-west of Hue on the west bank of the Perfume River. He ruled from 1820 to 1841 and is known for strengthening the state’s institutions. Construction began in 1840 and was completed under his successor.'),
+   ('廟は、自然の山や湖、森を取り込みながら、中国の影響を受けた伝統的な様式で造られています。左右対称に整えられた構成は、規律と秩序を重んじた皇帝の思想を表していると言われます。',
+    '능은 자연의 산과 호수, 숲을 끌어안으면서 중국의 영향을 받은 전통 양식으로 지어졌습니다. 좌우 대칭으로 정돈된 구성은 규율과 질서를 중시한 황제의 사상을 나타낸다고 합니다.',
+    'The tomb takes in natural hills, lakes and forest while following a traditional style influenced by China. Its symmetrical layout is said to reflect the emperor’s emphasis on discipline and order.')]),
+  (('一直線の構成', '일직선 구성', 'The central axis'), [
+   ('入口の大紅門から、碑亭、献殿、明楼などが一直線に並び、最奥に皇帝の墓所が位置します。建物のあいだを、橋や池、庭園が結んでおり、歩くほどに景色が変化する構成です。',
+    '입구의 대홍문에서 비각, 헌전, 명루 등이 일직선으로 늘어서고 가장 안쪽에 황제의 묘소가 자리합니다. 건물 사이를 다리와 연못, 정원이 이어 주어 걸을수록 풍경이 변하는 구성입니다.',
+    'From the main gate, the stele pavilion, offering hall and Minh Lau pavilion line up in a row, with the emperor’s burial mound at the far end. Bridges, ponds and gardens link the buildings, so the scenery changes as you walk.'),
+   ('特に印象的なのは、湖に面した明楼と、その周囲の橋や池です。水面に映る建物は、静かで厳かな雰囲気を醸し出しています。奥へ進むほど静けさが増し、時間の流れがゆっくりになるように感じられます。',
+    '특히 인상적인 곳은 호수에 면한 명루와 그 주변의 다리, 연못입니다. 수면에 비친 건물은 고요하고 엄숙한 분위기를 자아냅니다. 안쪽으로 갈수록 고요함이 깊어져 시간이 천천히 흐르는 듯합니다.',
+    'Most striking is the Minh Lau pavilion facing the lake, with bridges and ponds around it. The buildings reflected in the water create a calm, solemn mood. The deeper you go, the quieter it feels, as if time slows down.')]),
+  (('自然と景観', '자연과 경관', 'Nature and scenery'), [
+   ('敷地には、松や緑豊かな森が広がり、季節ごとに異なる表情を見せます。木漏れ日の中を歩く遊歩道は、涼しく心地よいのが魅力です。散策中に鳥のさえずりを聞きながら、ゆったりした時間を過ごせます。',
+    '부지에는 소나무와 푸른 숲이 펼쳐져 계절마다 다른 표정을 보여 줍니다. 햇살이 스며드는 산책로는 시원하고 쾌적한 것이 매력입니다. 산책 중 새소리를 들으며 여유로운 시간을 보낼 수 있습니다.',
+    'Pines and green forest cover the grounds and change with the seasons. The paths under dappled light are cool and pleasant. You can listen to birdsong while you spend a relaxed time walking.'),
+   ('香江沿いにあるため、帝廟めぐりと香江クルーズを組み合わせたツアーが人気です。船で川を上りながら、周辺の景色や寺院を眺めるのも、フエならではの体験です。',
+    '향강변에 있어 황릉 투어와 향강 크루즈를 결합한 투어가 인기입니다. 배로 강을 거슬러 오르며 주변 경치와 사찰을 바라보는 것도 후에만의 경험입니다.',
+    'Because it lies by the Perfume River, tours that combine tombs with a river cruise are popular. Sailing upriver and watching the scenery and pagodas is a very Hue experience.')]),
+  (('行き方と所要時間', '민망 가는 방법과 소요 시간', 'Getting there and time needed'), [
+   ('フエ市街から車で約25分から30分です。敷地が広く、奥まで歩くと距離があるため、見学時間は1時間半から2時間を見ておくと安心です。',
+    '후에 시내에서 차로 약 25분에서 30분 거리입니다. 부지가 넓고 안쪽까지 걸으면 거리가 있어 관람 시간은 1시간 반에서 2시간을 잡아 두면 안심입니다.',
+    'It is about 25 to 30 minutes by car from Hue city. The site is large and the walk to the far end is long, so allow 1.5 to 2 hours.'),
+   ('午前中は涼しく、静かに見学しやすい時間帯です。夏は暑さが厳しいため、日陰で休みながら回りましょう。',
+    '오전은 시원하고 조용히 관람하기 좋은 시간대입니다. 여름에는 더위가 심하니 그늘에서 쉬면서 돌아보세요.',
+    'Mornings are cool and quiet. Summers are hot, so rest in the shade as you go.')]),
+  (TIPS, [
+   ('歩く距離が長いため、歩きやすい靴と飲み物は必須です。虫よけもあると便利です。肩と膝が隠れる服装が望ましく、廟内では静かに見学するようにしましょう。',
+    '걷는 거리가 길어 편한 신발과 음료는 필수입니다. 방충제도 있으면 편리합니다. 어깨와 무릎을 가리는 복장이 바람직하며 능 안에서는 조용히 관람하세요.',
+    'There is a lot of walking, so comfortable shoes and drinks are essential, and insect repellent helps. Cover shoulders and knees, and keep quiet inside the tomb.'),
+   ('Khánh An Tourismでは、ミンマン帝廟と香江クルーズを組み合わせたプランも承ります。日程やご予算をお知らせください。',
+    'Khánh An Tourism은 민망 황릉과 향강 크루즈를 결합한 플랜도 받습니다. 일정과 예산을 알려 주세요.',
+    'Khanh An Tourism can also arrange plans combining Minh Mang’s Tomb with a Perfume River cruise. Tell us your dates and budget.')]),
+ ],
+ 'lang-dong-khanh': [
+  (('ドンカイン帝廟とは', '동카인 황릉은', 'About Dong Khanh’s Tomb'), [
+   ('ドンカイン帝廟は、阮朝第9代皇帝ドンカイン帝の陵墓で、フエ市街から南へ約8kmの場所にあります。皇帝の在位は1885年から1889年と短く、廟は20世紀初頭に、後を継いだ皇帝のもとで整備されました。ほかの帝廟に比べて小規模ながら、細やかな装飾で知られています。',
+    '동카인 황릉은 응우옌 왕조 제9대 황제 동카인의 능으로 후에 시내에서 남쪽으로 약 8km 떨어진 곳에 있습니다. 황제의 재위는 1885년부터 1889년까지로 짧았으며, 능은 20세기 초 뒤를 이은 황제 때 정비되었습니다. 다른 황릉에 비해 소규모지만 섬세한 장식으로 알려져 있습니다.',
+    'Dong Khanh’s Tomb is the mausoleum of the 9th Nguyen emperor, about 8 km south of Hue city. He reigned only from 1885 to 1889, and the tomb was developed in the early 20th century under a later emperor. It is smaller than the other tombs but known for its delicate decoration.'),
+   ('廟は、ベトナムの伝統的な建築に、西洋の要素が控えめに取り入れられた、独特の雰囲気を持っています。観光客が比較的少なく、落ち着いて見学できるのも魅力です。',
+    '능은 베트남 전통 건축에 서양 요소가 절제되어 가미된 독특한 분위기를 지니고 있습니다. 관광객이 비교적 적어 차분히 관람할 수 있는 점도 매력입니다.',
+    'The tomb has a distinctive atmosphere, with Western touches used sparingly on traditional Vietnamese architecture. Relatively few tourists come, so it is calm to visit.')]),
+  (('建物の特徴', '건물의 특징', 'The buildings'), [
+   ('敷地はコンパクトで、主要な建物が近い距離にまとまっています。中心となる殿舎には、壁や柱に、花や鳥、幾何学模様などの精巧な装飾が施されており、近くで見るとその繊細さに驚かされます。',
+    '부지는 아담하고 주요 건물이 가까운 거리에 모여 있습니다. 중심 전각에는 벽과 기둥에 꽃, 새, 기하학 문양 등 정교한 장식이 되어 있어 가까이서 보면 섬세함에 놀라게 됩니다.',
+    'The grounds are compact, with the main buildings close together. The central hall has intricate decoration of flowers, birds and geometric patterns on walls and columns, and the delicacy is striking up close.'),
+   ('内部には、陶器やガラスの装飾、壁画などが見られます。限られた空間の中に、豊かな色彩と細かな工芸が詰め込まれており、短い時間でも見応えがあります。',
+    '내부에는 도자기와 유리 장식, 벽화 등이 보입니다. 제한된 공간 안에 풍부한 색채와 정교한 공예가 담겨 있어 짧은 시간에도 볼 만합니다.',
+    'Inside you can see ceramic and glass decoration and wall paintings. A rich palette and fine craft are packed into a small space, so it is rewarding even in a short visit.')]),
+  (('ほかの廟との違い', '다른 능과의 차이', 'How it differs from other tombs'), [
+   ('壮大なミンマン帝廟、庭園のようなトゥドゥック帝廟、個性的なカイディン帝廟と比べると、ドンカイン帝廟はより親しみやすく、人の暮らしに近い雰囲気があります。複数の廟を訪れて比べてみると、それぞれの皇帝の時代背景や好みの違いが見えてきます。',
+    '웅장한 민망 황릉, 정원 같은 뜨득 황릉, 개성적인 카이딘 황릉에 비해 동카인 황릉은 더 친근하고 사람의 생활에 가까운 분위기가 있습니다. 여러 능을 방문해 비교해 보면 각 황제의 시대 배경과 취향의 차이가 보입니다.',
+    'Compared with the grand Minh Mang tomb, the garden-like Tu Duc tomb and the distinctive Khai Dinh tomb, Dong Khanh’s feels more approachable and closer to everyday life. Visiting several lets you compare them and see each emperor’s era and tastes.'),
+   ('1日で回る場合は、移動を含めて4つの廟を見学するのは忙しくなるため、2〜3か所に絞るか、ゆとりのある日程を組むのがおすすめです。',
+    '하루에 돌 경우 이동을 포함해 네 곳의 능을 보는 것은 바쁘므로 두세 곳으로 좁히거나 여유 있는 일정을 짜는 것을 추천합니다.',
+    'If you go in one day, seeing all four tombs with transfers is rushed, so pick two or three or plan a more relaxed schedule.')]),
+  (('行き方と見学時間', '동카인 가는 방법과 관람 시간', 'Getting there and visit time'), [
+   ('フエ市街から車やタクシーで約20分です。見学時間は45分から1時間ほどが目安で、周辺の村の風景を眺めながら移動するのも楽しみのひとつです。',
+    '후에 시내에서 차나 택시로 약 20분 거리입니다. 관람 시간은 45분에서 1시간 정도가 기준이며 주변 마을 풍경을 보며 이동하는 것도 즐거움 중 하나입니다.',
+    'It is about 20 minutes by car or taxi from Hue city. A visit takes roughly 45 minutes to an hour, and the village scenery on the way is part of the pleasure.'),
+   ('小規模で見学しやすいため、ほかの廟と組み合わせた日帰りツアーに含めやすいスポットです。午前中の涼しい時間に訪れるのがおすすめです。',
+    '소규모라 관람하기 쉬워 다른 능과 결합한 당일 투어에 넣기 좋은 장소입니다. 오전의 선선한 시간에 방문하는 것을 추천합니다.',
+    'Being small and easy to visit, it fits well into a day tour with other tombs. A cool morning visit is recommended.')]),
+  (TIPS, [
+   ('入場料や開館時間は変更されることがあります。歩きやすい靴と、肩と膝が隠れる服装でお越しください。建物の内部では、装飾に手を触れないようにしましょう。',
+    '입장료와 개관 시간은 변경될 수 있습니다. 편한 신발과 어깨·무릎을 가리는 복장으로 오세요. 건물 내부에서는 장식에 손대지 마세요.',
+    'Entry fees and opening hours may change. Wear comfortable shoes and cover shoulders and knees. Do not touch the decoration inside the buildings.'),
+   ('Khánh An Tourismでは、ドンカイン帝廟を含むフエの帝廟めぐりをご案内します。日本語・韓国語ガイドのご希望もご相談ください。',
+    'Khánh An Tourism은 동카인 황릉을 포함한 후에 황릉 투어를 안내해 드립니다. 일본어·한국어 가이드도 문의해 주세요.',
+    'Khanh An Tourism offers Hue royal-tomb tours including Dong Khanh’s Tomb. Ask us about Japanese- or Korean-speaking guides too.')]),
+ ],
+}

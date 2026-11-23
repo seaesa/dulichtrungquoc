@@ -131,18 +131,37 @@ P = [
   ('他の廟とセットで巡ると、それぞれの違いが分かって楽しめます。', '다른 능과 함께 돌면 각각의 차이를 알 수 있어 즐겁습니다.', 'Visiting several tombs together makes the differences easy to see.')),
 ]
 
+import importlib
+EXTRA = {}
+for _m in ('places_x1', 'places_x2', 'places_x3', 'places_x4', 'places_x5'):
+    try:
+        EXTRA.update(importlib.import_module(_m).X)
+    except ModuleNotFoundError:
+        pass
+try:  # phần bổ sung: chèn trước mục cuối (mẹo)
+    for _k, _secs in importlib.import_module('places_x1b').ADD.items():
+        EXTRA[_k][-1:-1] = _secs
+except ModuleNotFoundError:
+    pass
+
 PLACE_PAGES = {}
 for slug, vi, img, lead, info, hl, tip in P:
     PLACE_PAGES[slug] = dict(
         title=vi, img=img, lead=lead[:2],
         blocks=[('place_img', img), ('h', INFO[:2]), ('cards', [(ic, lb[:2], v[:2]) for ic, lb, v in info]),
-                ('h', HEAD[:2]), ('ul', [x[:2] for x in hl]), ('note', tip[:2]), ('contact_cta',)])
+                ('h', HEAD[:2]), ('ul', [x[:2] for x in hl])]
+               + [b for h, ps in EXTRA.get(slug, []) for b in [('h', h[:2])] + [('p', q[:2]) for q in ps]]
+               + [('note', tip[:2]), ('contact_cta',)])
     # tiếng Anh tra theo chữ tiếng Nhật
     en = {lead[0]: lead[2], INFO[0]: INFO[2], HEAD[0]: HEAD[2], tip[0]: tip[2]}
     for ic, lb, v in info:
         en[lb[0]] = lb[2]; en[v[0]] = v[2]
     for x in hl:
         en[x[0]] = x[2]
+    for h, ps in EXTRA.get(slug, []):
+        en[h[0]] = h[2]
+        for q in ps:
+            en[q[0]] = q[2]
     for ja, e_ in en.items():
         if i18n_en.PAGES_EN.get(ja, e_) != e_:
             raise ValueError(f'Trùng khoá tiếng Nhật, khác bản tiếng Anh: {ja[:30]}')

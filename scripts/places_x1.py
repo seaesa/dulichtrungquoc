@@ -1,0 +1,123 @@
+"""Nội dung mở rộng (ja, ko, en) cho các trang điểm đến — đợt 1. Thông tin tham khảo, có thể thay đổi."""
+X = {
+ 'cau-vang': [
+  (('ゴールデンブリッジとは', '골든 브리지는', 'About the Golden Bridge'), [
+   ('ゴールデンブリッジ（ベトナム語でカウヴァン）は、2018年にバーナーヒルズの山腹に開通した歩道橋です。全長は約150m。橋の両側を、苔むした岩のような質感を持つ2つの巨大な手が支えており、まるで神様の手のひらに乗って雲の上を歩いているような不思議な景観を生み出しています。開通以来、SNSで世界中に拡散され、ダナンを代表する観光名所となりました。',
+    '골든 브리지(베트남어로 꺼우번)는 2018년 바나힐 산자락에 개통한 보행교로, 길이는 약 150m입니다. 이끼 낀 바위 같은 질감의 거대한 두 손이 다리를 받치고 있어, 마치 신의 손바닥 위에서 구름 위를 걷는 듯한 신비로운 풍경을 만들어 냅니다. 개통 이후 SNS를 통해 전 세계에 알려지며 다낭을 대표하는 관광 명소가 되었습니다.',
+    'The Golden Bridge (Cau Vang in Vietnamese) is a pedestrian bridge that opened in 2018 on the slopes of Ba Na Hills. It is about 150 m long and is held up by two giant hands with a mossy, rock-like texture, so walking across feels like strolling on the palm of a god above the clouds. Since opening it has spread across social media worldwide and become one of Da Nang’s best-known attractions.'),
+   ('橋は、バーナーヒルズ全体のリゾート開発の一環として造られました。周囲にはヨーロッパ風の街並みを再現したフレンチビレッジや、色とりどりの花が咲く庭園があり、橋はそれらを結ぶ散策路のハイライトになっています。標高が高いため、天気がよければ山々の緑と遠くの海まで見渡せます。',
+    '이 다리는 바나힐 리조트 개발의 일환으로 만들어졌습니다. 주변에는 유럽풍 거리를 재현한 프렌치 빌리지와 색색의 꽃이 피는 정원이 있고, 다리는 이들을 잇는 산책로의 하이라이트입니다. 고도가 높아 날씨가 좋으면 푸른 산과 멀리 바다까지 내다볼 수 있습니다.',
+    'The bridge was built as part of the wider Ba Na Hills resort. Around it you will find the French Village, a re-creation of a European town, and flower gardens in many colours, and the bridge is the highlight of the walking route that links them. At this altitude you can see green mountains and, on a clear day, the distant sea.')]),
+  (('行き方とベストシーズン', '가는 방법과 최적의 시기', 'Getting there and when to go'), [
+   ('ダナン市街からバーナーヒルズまでは車で約40分から1時間です。麓の駅からロープウェイに乗って山上へ向かい、さらに園内を歩いたり、小さな乗り物に乗ったりして橋へ向かいます。ロープウェイは世界でも有数の長さとして知られ、乗っている時間自体も絶景のひとときです。個人で行く場合はタクシーやGrabを使うこともできますが、ツアーを利用すると送迎や入場の手配が楽になります。',
+    '다낭 시내에서 바나힐까지는 차로 약 40분에서 1시간 걸립니다. 산기슭 역에서 케이블카를 타고 산 위로 올라간 뒤, 공원 안을 걷거나 작은 탈것을 이용해 다리로 이동합니다. 이 케이블카는 세계적으로도 긴 편으로 알려져 있으며, 타고 가는 시간 자체가 멋진 경치 감상 시간입니다. 개별로 갈 때는 택시나 Grab을 이용할 수 있지만, 투어를 이용하면 송영과 입장 수속이 편합니다.',
+    'The drive from central Da Nang to Ba Na Hills takes about 40 minutes to an hour. From the base station you ride the cable car up the mountain, then walk or take small rides inside the park to reach the bridge. The cable car is among the longest in the world, and the ride itself offers superb views. You can go independently by taxi or Grab, but a tour makes transfers and tickets much easier.'),
+   ('時間帯は、人が少なく視界も開けやすい開園直後の午前中がおすすめです。昼前後は団体客で混み合い、写真を撮るのに順番待ちになることもあります。山の上は天気が変わりやすく、霧に包まれる日もあります。霧の日は幻想的ですが、景色は見えにくくなるため、予定に余裕を持たせると安心です。',
+    '시간대는 사람이 적고 시야가 트이기 쉬운 개장 직후 오전을 추천합니다. 정오 무렵에는 단체 관광객으로 붐벼 사진을 찍는 데 줄을 서야 할 수도 있습니다. 산 위는 날씨가 자주 바뀌고 안개에 싸이는 날도 있습니다. 안개 낀 날은 환상적이지만 경치가 잘 보이지 않으니 일정에 여유를 두는 것이 좋습니다.',
+    'The best time is the morning right after opening, when there are fewer people and views are clearer. Around midday tour groups crowd the bridge and you may queue for photos. Weather on the mountain changes quickly and some days it is wrapped in mist. Mist looks atmospheric but hides the view, so leave some flexibility in your plan.')]),
+  (('見どころと過ごし方', '볼거리와 보내는 방법', 'What to see and do'), [
+   ('橋の上では、ゆっくり歩きながら両側の景色を眺めましょう。手の彫刻は近くで見ると細かな質感が分かり、写真に収める人気スポットです。橋の先には庭園やカフェがあり、ひと休みしながら山の空気を楽しめます。時間があれば、フレンチビレッジの街並み散策、ル・ジャルダン・ダムール庭園、屋内遊園地のファンタジーパークなども合わせて回れます。',
+    '다리 위에서는 천천히 걸으며 양쪽 경치를 감상해 보세요. 손 조각은 가까이서 보면 섬세한 질감이 보이고 사진 찍기 인기 장소입니다. 다리 너머에는 정원과 카페가 있어 쉬면서 산 공기를 즐길 수 있습니다. 시간이 있다면 프렌치 빌리지 산책, 르 자르댕 다무르 정원, 실내 놀이공원 판타지 파크도 함께 둘러볼 수 있습니다.',
+    'On the bridge, walk slowly and enjoy the views on both sides. Up close the stone hands show a fine texture and make a popular photo spot. Beyond the bridge there are gardens and coffee shops where you can rest in the mountain air. If you have time, add a stroll through the French Village, the Le Jardin d’Amour gardens and the indoor Fantasy Park.'),
+   ('食事はリゾート内のレストランで取れますが、観光地価格になりがちです。軽食を持参するか、ダナン市街へ戻ってから地元料理を楽しむのも一案です。帰りは夕方にロープウェイが混むことがあるため、少し早めに下山を始めるとスムーズです。',
+    '식사는 리조트 안 레스토랑에서 할 수 있지만 관광지 가격인 경우가 많습니다. 간식을 챙기거나 다낭 시내로 돌아와 현지 음식을 즐기는 것도 방법입니다. 저녁에는 케이블카가 붐빌 수 있으니 조금 일찍 하산을 시작하면 원활합니다.',
+    'You can eat at restaurants inside the resort, though prices are tourist-level. Bring a snack, or save a local meal for when you are back in Da Nang. Late-afternoon queues for the cable car can build up, so start heading down a little early.')]),
+  (('旅の準備とヒント', '여행 준비와 팁', 'Planning tips'), [
+   ('歩く距離と階段が多いため、歩きやすい靴が必須です。山上は平地より数度涼しく、風が強い日もあるので、薄手の上着があると安心です。日差しが強い日は帽子や日焼け止めも忘れずに。小さなお子様連れやご年配の方は、無理のないペースで、休憩を挟みながら回りましょう。',
+    '걷는 거리와 계단이 많아 편한 신발이 필수입니다. 산 위는 평지보다 몇 도 선선하고 바람이 센 날도 있어 얇은 겉옷이 있으면 좋습니다. 햇볕이 강한 날은 모자와 선크림도 챙기세요. 어린이 동반이나 어르신은 무리하지 말고 휴식을 넣으며 둘러보세요.',
+    'There is a lot of walking and many steps, so comfortable shoes are a must. It is a few degrees cooler up the mountain and windy at times, so a thin jacket helps. Bring a hat and sunscreen on sunny days. With young children or older travellers, go at an easy pace and take breaks.'),
+   ('Khánh An Tourismでは、バーナーヒルズのチケット手配、ダナンやホイアンからの送迎、日本語・韓国語ガイドの手配をお手伝いします。人数や日程をお知らせいただければ、ご希望に合わせたプランとお見積もりをご案内します。',
+    'Khánh An Tourism에서는 바나힐 티켓 수배, 다낭·호이안에서의 송영, 일본어·한국어 가이드 수배를 도와드립니다. 인원과 일정을 알려 주시면 요청에 맞춘 플랜과 견적을 안내해 드립니다.',
+    'Khanh An Tourism can arrange Ba Na Hills tickets, transfers from Da Nang or Hoi An, and a Japanese- or Korean-speaking guide. Tell us your group size and dates and we will send a plan and quote to suit you.')]),
+ ],
+ 'ba-na-hills': [
+  (('バーナーヒルズとは', '바나힐은', 'About Ba Na Hills'), [
+   ('バーナーヒルズは、ダナン市の西、標高約1,487mのチュア山にあるリゾート・観光地です。もともとは1900年代初頭にフランス人が避暑地として開発した場所で、平地が暑い夏でも涼しい気候が魅力でした。現在はロープウェイや整備された園内、ホテル、レストラン、遊園地などを備えた一大リゾートになっています。',
+    '바나힐은 다낭시 서쪽, 해발 약 1,487m의 쭈아산에 있는 리조트 겸 관광지입니다. 원래 1900년대 초 프랑스인이 피서지로 개발한 곳으로, 평지가 더운 여름에도 시원한 기후가 매력이었습니다. 지금은 케이블카, 정비된 공원, 호텔, 레스토랑, 놀이공원 등을 갖춘 대형 리조트가 되었습니다.',
+    'Ba Na Hills is a mountain resort and attraction west of Da Nang, on Chua Mountain at about 1,487 m. It began in the early 1900s as a hill station built by the French to escape the lowland heat, and its cool climate is still a draw. Today it is a large resort with cable cars, landscaped grounds, hotels, restaurants and an amusement park.'),
+   ('「1日の中に四季がある」と言われるほど天候が変わりやすく、朝は涼しく、昼は日差しが強く、午後は霧や小雨になることもあります。そのため、気温差に対応できる服装で訪れるのがおすすめです。',
+    '‘하루에 사계절이 있다’고 할 만큼 날씨 변화가 잦아, 아침에는 선선하고 낮에는 햇볕이 강하며 오후에는 안개나 약한 비가 오기도 합니다. 그래서 기온 차에 대응할 수 있는 옷차림으로 방문하는 것이 좋습니다.',
+    'People say you can get four seasons in a day: cool in the morning, strong sun at noon, and mist or light rain by the afternoon. Dress in layers so you can cope with the changes in temperature.')]),
+  (('行き方とチケット', '가는 방법과 티켓', 'Getting there and tickets'), [
+   ('ダナン市街から車で約40分から1時間。麓にある駅からロープウェイで山頂方面へ向かいます。ロープウェイは複数の路線があり、乗車時間は10分以上かかる区間もあります。入場券はロープウェイの往復を含むのが一般的で、金額や内容は時期によって変わる場合があります。',
+    '다낭 시내에서 차로 약 40분에서 1시간. 산기슭 역에서 케이블카로 정상 방면으로 올라갑니다. 케이블카는 여러 노선이 있으며 구간에 따라 탑승 시간이 10분 이상 걸리기도 합니다. 입장권은 케이블카 왕복이 포함된 경우가 일반적이며, 금액과 내용은 시기에 따라 달라질 수 있습니다.',
+    'It is about 40 minutes to an hour by car from central Da Nang. From the base station you take the cable car towards the summit. There are several lines and some rides take more than 10 minutes. Tickets usually include the return cable car ride, but prices and inclusions can change over time.'),
+   ('ホテルや市内から送迎付きのツアーを利用すると、チケット購入の手間や待ち時間を減らせます。ホイアンからも日帰りで訪れられる距離にあり、ダナンとホイアンを組み合わせた旅程にも組み込みやすい人気コースです。',
+    '호텔이나 시내에서 송영이 포함된 투어를 이용하면 티켓 구매 수고와 대기 시간을 줄일 수 있습니다. 호이안에서도 당일로 다녀올 수 있는 거리에 있어 다낭과 호이안을 결합한 일정에 넣기 좋은 인기 코스입니다.',
+    'A tour with hotel or city pick-up saves the hassle and waiting of buying tickets. It is also an easy day trip from Hoi An, so it fits well into a Da Nang and Hoi An itinerary.')]),
+  (('園内の楽しみ方', '공원 안 즐기는 법', 'Enjoying the park'), [
+   ('主な見どころは、ゴールデンブリッジ、フレンチビレッジ、ル・ジャルダン・ダムール庭園、ファンタジーパークです。フレンチビレッジでは、石畳の小道とカラフルな建物が並び、ヨーロッパを旅しているような雰囲気を味わえます。庭園は季節ごとに花が変わり、散策にぴったりです。',
+    '주요 볼거리는 골든 브리지, 프렌치 빌리지, 르 자르댕 다무르 정원, 판타지 파크입니다. 프렌치 빌리지에는 돌길과 알록달록한 건물이 늘어서 유럽을 여행하는 듯한 분위기를 즐길 수 있습니다. 정원은 계절마다 꽃이 바뀌어 산책하기 좋습니다.',
+    'The main sights are the Golden Bridge, the French Village, the Le Jardin d’Amour gardens and Fantasy Park. The French Village has cobbled lanes and colourful buildings that feel a bit like Europe. The gardens change flowers with the seasons and are lovely for a stroll.'),
+   ('ファンタジーパークは屋内の遊園地で、天候に左右されず楽しめるため、雨や霧の日にも便利です。お子様連れの家族には特に人気があります。園内は広いので、見たい場所に優先順位をつけて回ると、時間を有効に使えます。',
+    '판타지 파크는 실내 놀이공원이라 날씨에 상관없이 즐길 수 있어 비나 안개 낀 날에도 편리합니다. 아이를 동반한 가족에게 특히 인기가 있습니다. 공원이 넓으니 보고 싶은 곳에 우선순위를 정해 돌면 시간을 효율적으로 쓸 수 있습니다.',
+    'Fantasy Park is an indoor amusement park, so it works in any weather and is handy on rainy or misty days. Families with children especially like it. The resort is large, so rank what you most want to see and plan around that.')]),
+  (('旅の準備とヒント', '여행 준비와 팁', 'Planning tips'), [
+   ('山の上は涼しく、風や霧で体感温度が下がることがあります。薄手の上着、歩きやすい靴、日焼け止めを用意しましょう。人気スポットは昼前後に混み合うため、午前の早い時間に到着し、ゴールデンブリッジを先に訪れるのがおすすめです。',
+    '산 위는 선선하고 바람과 안개로 체감 온도가 내려가기도 합니다. 얇은 겉옷, 편한 신발, 선크림을 준비하세요. 인기 스팟은 정오 무렵 붐비니 오전 이른 시간에 도착해 골든 브리지를 먼저 보는 것을 추천합니다.',
+    'It is cool on the mountain and wind or mist can make it feel colder. Bring a thin jacket, comfortable shoes and sunscreen. Popular spots get crowded around midday, so arrive early and visit the Golden Bridge first.'),
+   ('Khánh An Tourismでは、バーナーヒルズ日帰りツアーや、ダナン・ホイアンとの組み合わせプランをご用意しています。日本語・韓国語ガイドの手配もお気軽にご相談ください。',
+    'Khánh An Tourism은 바나힐 당일 투어와 다낭·호이안 결합 플랜을 준비하고 있습니다. 일본어·한국어 가이드 수배도 편하게 문의해 주세요.',
+    'Khanh An Tourism offers Ba Na Hills day tours and plans that combine Da Nang and Hoi An. Feel free to ask about Japanese- or Korean-speaking guides too.')]),
+ ],
+ 'cau-rong': [
+  (('ドラゴン橋とは', '용다리는', 'About the Dragon Bridge'), [
+   ('ドラゴン橋（カウロン）は、2013年にハン川に架けられた長さ約666mの橋です。橋全体が龍の形をしており、龍の頭は東岸側、尾は西岸側へ向かっています。ベトナムでは龍は幸運と力の象徴とされており、ダナンの発展を象徴するランドマークとして市民にも観光客にも親しまれています。',
+    '용다리(꺼우롱)는 2013년 한강에 놓인 길이 약 666m의 다리입니다. 다리 전체가 용의 모양이며, 머리는 동쪽, 꼬리는 서쪽을 향합니다. 베트남에서 용은 행운과 힘의 상징으로, 다낭 발전을 상징하는 랜드마크로서 시민과 관광객 모두에게 사랑받고 있습니다.',
+    'The Dragon Bridge (Cau Rong) opened in 2013 and spans the Han River for about 666 m. The whole bridge is shaped like a dragon, with its head towards the east bank and its tail to the west. In Vietnam the dragon stands for luck and strength, and the bridge has become a landmark that symbolises Da Nang’s growth for locals and visitors alike.'),
+   ('昼間は黄金色の龍の姿を眺められますが、真価を発揮するのは夜です。夜になると全体が色とりどりにライトアップされ、川面に光が反射して幻想的な景色が広がります。',
+    '낮에는 황금빛 용의 모습을 볼 수 있지만, 진가를 발휘하는 것은 밤입니다. 밤이 되면 전체가 알록달록하게 조명으로 물들고 강물에 빛이 비쳐 환상적인 풍경이 펼쳐집니다.',
+    'By day you can admire the golden dragon, but it really shines at night. After dark the whole bridge is lit in changing colours that reflect on the river for a magical view.')]),
+  (('火と水のショー', '불과 물 쇼', 'The fire and water show'), [
+   ('週末（主に土曜と日曜）の夜には、龍の頭から火を噴き、続いて水を噴き出すショーが行われます。開始時刻は通常夜9時前後ですが、時期や運営状況で変わる場合があるため、事前に確認しておくと安心です。ショーの時間帯は橋周辺の交通が規制されることがあります。',
+    '주말(주로 토요일과 일요일) 밤에는 용의 머리에서 불을 뿜고 이어서 물을 뿜는 쇼가 열립니다. 시작 시간은 보통 밤 9시 전후지만, 시기와 운영 상황에 따라 달라질 수 있으니 미리 확인해 두면 좋습니다. 쇼 시간에는 다리 주변 교통이 통제될 수 있습니다.',
+    'On weekend nights (mainly Saturday and Sunday) the dragon’s head breathes fire and then sprays water. The show usually starts around 9 pm, but times can change by season and operations, so it is worth checking in advance. Traffic near the bridge may be restricted during the show.'),
+   ('観覧は橋のたもと付近の川沿いが人気です。混雑するので、早めに場所を確保するとよいでしょう。炎の熱を感じるほど近い場所もあるため、前列で見る場合は少し離れる配慮も必要です。',
+    '관람은 다리 근처 강변이 인기입니다. 붐비니 일찍 자리를 잡는 것이 좋습니다. 불꽃의 열기가 느껴질 만큼 가까운 곳도 있으니 앞줄에서 볼 때는 조금 떨어지는 것도 필요합니다.',
+    'The riverbank near the bridge head is a popular viewing area. It gets crowded, so claim a spot early. Some places are close enough to feel the heat of the flames, so keep a little distance if you are at the front.')]),
+  (('夜の過ごし方', '밤을 보내는 방법', 'Spending the evening'), [
+   ('ドラゴン橋の周辺は、ナイトスポットが集まっています。ハン川沿いのカフェでドリンクを飲みながら橋を眺めたり、ナイトクルーズに乗って川から龍の橋を見上げたりするのも人気です。近くにはマーケットや食堂もあり、軽い夕食をとってからショーを待つこともできます。',
+    '용다리 주변에는 야경 명소가 모여 있습니다. 한강변 카페에서 음료를 마시며 다리를 바라보거나, 야간 크루즈를 타고 강 위에서 용다리를 올려다보는 것도 인기입니다. 근처에는 시장과 식당도 있어 가볍게 저녁을 먹으며 쇼를 기다릴 수도 있습니다.',
+    'The area around the Dragon Bridge is full of evening spots. Many visitors have a drink at a riverside coffee shop while looking at the bridge, or take a night cruise to see the dragon from the water. There are also markets and eateries nearby, so you can have a light dinner while you wait for the show.'),
+   ('橋の東側にはビーチ方面へ続く通りがあり、海辺のレストランも多くあります。夕食後にライトアップされた市内を散策すれば、ダナンの夜をゆったり楽しめます。',
+    '다리 동쪽에는 해변 방면으로 이어지는 길이 있고 해변 레스토랑도 많습니다. 저녁 식사 후 조명이 켜진 시내를 산책하면 다낭의 밤을 여유롭게 즐길 수 있습니다.',
+    'On the east side of the bridge, streets lead to the beach where there are many seaside restaurants. After dinner, a walk through the lit-up city is a relaxed way to enjoy Da Nang at night.')]),
+  (('旅の準備とヒント', '여행 준비와 팁', 'Planning tips'), [
+   ('ショーの日は橋周辺が非常に混み合うため、移動に余裕を持たせましょう。夜は昼より涼しいものの、人混みでは暑く感じることもあります。スリや置き引きには十分注意し、貴重品は身につけておくと安心です。',
+    '쇼가 있는 날은 다리 주변이 매우 붐비니 이동에 여유를 두세요. 밤은 낮보다 선선하지만 인파 속에서는 덥게 느껴질 수 있습니다. 소매치기와 분실에 충분히 주의하고 귀중품은 몸에 지니세요.',
+    'The area is very busy on show nights, so allow extra travel time. Evenings are cooler than daytime but it can still feel hot in a crowd. Watch out for pickpockets and keep valuables on you.'),
+   ('Khánh An Tourismでは、ドラゴン橋のショー観賞とハン川ナイトクルーズを組み合わせたプランもご案内できます。ホテルからの送迎付きで、安心して夜のダナンをお楽しみいただけます。',
+    'Khánh An Tourism에서는 용다리 쇼 관람과 한강 야간 크루즈를 결합한 플랜도 안내해 드립니다. 호텔 송영이 포함되어 안심하고 다낭의 밤을 즐기실 수 있습니다.',
+    'Khanh An Tourism can offer a plan combining the Dragon Bridge show with a Han River night cruise, with hotel transfers included, so you can enjoy Da Nang at night with peace of mind.')]),
+ ],
+ 'ngu-hanh-son': [
+  (('五行山とは', '오행산은', 'About Marble Mountains'), [
+   ('ングーハインソン（五行山）は、ダナン市街の南東約8km、ミーケービーチの近くにある5つの石灰岩・大理石の小山の総称です。名前は、東洋思想の「五行」である金・木・水・火・土にちなみ、それぞれの山にその名がつけられています。山々は古くから信仰の対象で、洞窟の中には仏像や祠が祀られています。',
+    '응우한선(오행산)은 다낭 시내에서 남동쪽으로 약 8km, 미케 해변 근처에 있는 5개의 석회암·대리석 작은 산을 통틀어 부르는 이름입니다. 동양 사상의 오행인 금·목·수·화·토에서 이름을 따 각 산에 붙였습니다. 산들은 예로부터 신앙의 대상이었으며 동굴 안에는 불상과 사당이 모셔져 있습니다.',
+    'Ngu Hanh Son, or the Marble Mountains, is a group of five limestone and marble hills about 8 km south-east of central Da Nang, near My Khe Beach. They are named after the five elements of Eastern thought: metal, wood, water, fire and earth. The hills have long been sacred, with Buddha statues and shrines inside the caves.'),
+   ('この周辺は大理石の彫刻で有名で、麓の村には石の仏像や動物の彫刻を作る工房が並びます。観光のついでにお土産を探したり、職人の作業を見学したりするのも楽しみのひとつです。',
+    '이 일대는 대리석 조각으로 유명해, 산기슭 마을에는 석불과 동물 조각을 만드는 공방이 늘어서 있습니다. 관광 겸 기념품을 찾거나 장인의 작업을 구경하는 것도 즐거움 중 하나입니다.',
+    'The area is famous for marble carving, and workshops at the foot of the hills make stone Buddhas and animals. Browsing for souvenirs or watching the craftspeople at work is part of the fun.')]),
+  (('主な見どころ', '주요 볼거리', 'What to see'), [
+   ('最も大きく、観光の中心となるのがトゥイーソン（水山）です。入口から階段を登ると、洞窟や寺院が点在しています。ホアギエム洞窟、フエンコン洞窟などでは、岩の隙間から差し込む光が神秘的な雰囲気をつくります。展望台からは、ミーケービーチや市街地を一望できます。',
+    '가장 크고 관광의 중심이 되는 곳은 투이선(수산)입니다. 입구에서 계단을 오르면 동굴과 사원이 곳곳에 있습니다. 화이엠 동굴, 후엔콩 동굴 등에서는 바위 틈으로 들어오는 빛이 신비로운 분위기를 만듭니다. 전망대에서는 미케 해변과 시내를 한눈에 내려다볼 수 있습니다.',
+    'Thuy Son (Water Mountain) is the largest and the centre of most visits. Steps from the entrance lead up to caves and pagodas scattered across the hill. In caves such as Huyen Khong, light falling through gaps in the rock creates a mystical mood. From the viewpoints you can see My Khe Beach and the city.'),
+   ('山の一部にはエレベーターもあり、体力に自信のない方でも途中まで楽に上がれます。ただし、洞窟内や山頂付近は階段や岩場が多く、足元には注意が必要です。',
+    '산의 일부에는 엘리베이터도 있어 체력에 자신이 없는 분도 중간까지 편하게 오를 수 있습니다. 다만 동굴 안과 정상 부근은 계단과 바위가 많아 발밑에 주의해야 합니다.',
+    'A lift serves part of the hill so those less fit can get partway up easily. Caves and the upper paths have many steps and rocky ground, so watch your footing.')]),
+  (('行き方と時間帯', '가는 방법과 시간대', 'Getting there and timing'), [
+   ('ダナン市街から車やタクシーで約20分と近く、ホイアンへの移動途中に立ち寄るのにも便利です。ダナン・ホイアンの半日・1日ツアーに組み込まれることが多く、ミーケービーチやリンウン寺と合わせて回る人も多いです。',
+    '다낭 시내에서 차나 택시로 약 20분이면 갈 수 있어 가깝고, 호이안으로 이동하는 길에 들르기에도 편리합니다. 다낭·호이안 반일·일일 투어에 포함되는 경우가 많고, 미케 해변이나 린응사와 함께 도는 사람도 많습니다.',
+    'It is only about 20 minutes by car or taxi from central Da Nang and is a handy stop on the way to Hoi An. It is often included in half-day and full-day Da Nang and Hoi An tours, and many people combine it with My Khe Beach and Linh Ung Pagoda.'),
+   ('日中は日差しが強く、石段が熱を帯びるため、朝か夕方の涼しい時間帯の訪問がおすすめです。雨の日は石段が滑りやすくなるので十分に気をつけてください。',
+    '낮에는 햇볕이 강해 돌계단이 뜨거워지므로 아침이나 저녁의 선선한 시간대 방문을 추천합니다. 비 오는 날은 돌계단이 미끄러우니 충분히 주의하세요.',
+    'Strong midday sun heats the stone steps, so morning or late afternoon is best. Steps get slippery in the rain, so take extra care.')]),
+  (('旅の準備とヒント', '여행 준비와 팁', 'Planning tips'), [
+   ('寺院や洞窟に入る際は、肩と膝が隠れる服装を心がけてください。階段が多いため歩きやすい靴を選び、飲み物を持参しましょう。入場券は窓口で購入でき、エレベーターは別料金になることがあります。',
+    '사원과 동굴에 들어갈 때는 어깨와 무릎을 가리는 복장을 갖추세요. 계단이 많으니 편한 신발을 신고 음료를 챙기세요. 입장권은 매표소에서 구입하며 엘리베이터는 별도 요금일 수 있습니다.',
+    'Cover shoulders and knees when entering pagodas and caves. Wear comfortable shoes for the many steps and bring water. Tickets are sold at the entrance, and the lift may cost extra.'),
+   ('Khánh An Tourismでは、五行山・ミーケービーチ・リンウン寺をめぐる半日ツアーや、ホイアンへの移動と組み合わせたプランをご用意しています。日本語・韓国語ガイドのご希望もお知らせください。',
+    'Khánh An Tourism은 오행산·미케 해변·린응사를 도는 반일 투어와 호이안 이동을 결합한 플랜을 준비하고 있습니다. 일본어·한국어 가이드가 필요하시면 알려 주세요.',
+    'Khanh An Tourism offers a half-day tour of the Marble Mountains, My Khe Beach and Linh Ung Pagoda, as well as plans that combine them with the transfer to Hoi An. Let us know if you would like a Japanese- or Korean-speaking guide.')]),
+ ],
+}
