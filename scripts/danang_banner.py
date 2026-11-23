@@ -31,6 +31,12 @@ PLACES = [
     dict(slug='son-tra', name='Bán đảo Sơn Trà', area='Chùa Linh Ứng',
          desc='“Lá phổi xanh” của Đà Nẵng với rừng nguyên sinh và loài voọc chà vá chân nâu quý hiếm. Chùa Linh Ứng trên bán đảo có tượng Phật Bà Quan Âm cao 67 m hướng ra biển Đông.',
          facts=[('fa-monument', 'Tượng Quan Âm', 'Cao 67 m'), ('fa-route', 'Khoảng cách', '~10 km'), ('fa-camera', 'Nên đi', 'Sáng sớm, hoàng hôn')]),
+    dict(slug='vinwonders', name='VinWonders Nam Hội An', area='Quảng Nam',
+         desc='Tổ hợp công viên giải trí của Vinpearl tại Núi Thành, Quảng Nam, gần Hội An, với công viên chủ đề, trò chơi cảm giác mạnh, công viên nước và vườn thú Safari. Phù hợp cho cả gia đình có trẻ nhỏ.',
+         facts=[('fa-location-dot', 'Vị trí', 'Núi Thành, Quảng Nam'), ('fa-ticket', 'Giá vé', '~600.000đ'), ('fa-clock', 'Giờ mở cửa', '9:00 – 19:00')]),
+    dict(slug='golf', name='Golf Đà Nẵng – Huế', area='Miền Trung',
+         desc='Bốn sân golf nổi bật của miền Trung: Bà Nà Hills Golf Club, BRG Đà Nẵng Golf Resort, Montgomerie Links và Laguna Lăng Cô. Khánh An Tourism hỗ trợ đặt giờ tee, xe đưa đón và gói golf + spa + khách sạn.',
+         facts=[('fa-golf-ball-tee', 'Số sân golf', '4 sân'), ('fa-location-dot', 'Khu vực', 'Đà Nẵng – Huế'), ('fa-car', 'Dịch vụ', 'Đặt giờ tee, xe đưa đón')]),
 ]
 
 e = html.escape

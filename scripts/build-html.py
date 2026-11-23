@@ -33,7 +33,7 @@ def lazy(url, alt='', cls=''):
 
 
 def link(href):
-    return href if href.startswith('http') or href.startswith('#') or href.startswith('?') else SITE + href
+    return href if href.startswith(('http', '#', '?')) or (href.endswith('.html') and '/' not in href) else SITE + href
 
 
 ARROWS = (
@@ -163,11 +163,11 @@ def cta_section():
 
 # "Bạn muốn đi đâu": khách inbound → điểm nổi tiếng Đà Nẵng và lăng tẩm Huế
 DESTS = [
-    [dict(href='#', img=f'danang/{slug}.jpg', title=t) for slug, t in [
+    [dict(href=f'{slug}.html', img=f'danang/{slug}.jpg', title=t) for slug, t in [
         ('cau-vang', 'Cầu Vàng'), ('ba-na-hills', 'Bà Nà Hills'), ('cau-rong', 'Cầu Rồng'), ('ngu-hanh-son', 'Ngũ Hành Sơn'),
         ('my-khe', 'Biển Mỹ Khê'), ('son-tra', 'Bán đảo Sơn Trà'), ('hoi-an', 'Phố cổ Hội An'), ('my-son', 'Thánh địa Mỹ Sơn')]],
-    [dict(href='#', img=f'hue/{slug}.jpg', title=t) for slug, t in [
-        ('lang-khai-dinh', 'Lăng Khải Định'), ('lang-tu-duc', 'Lăng Tự Đức'), ('lang-minh-mang', 'Lăng Minh Mạng'),
+    [dict(href=f'{slug}.html', img=f'hue/{slug}.jpg', title=t) for slug, t in [
+        ('dai-noi', 'Đại Nội Huế'), ('lang-khai-dinh', 'Lăng Khải Định'), ('lang-tu-duc', 'Lăng Tự Đức'), ('lang-minh-mang', 'Lăng Minh Mạng'),
         ('lang-dong-khanh', 'Lăng Đồng Khánh')]],
 ]
 
@@ -277,7 +277,6 @@ def header():
         </div>
         <div class="flex-col hide-for-medium flex-right">
           <ul class="nav nav-right top-bar-nav">
-            <li><a href="careers.html"><img class="ux-menu-icon" src="images/user-id-svgrepo-com.svg" width="22" height="22" alt="">Tuyển dụng</a></li>
             <li><a href="payment.html"><img class="ux-menu-icon" src="images/pay-svgrepo-com.svg" width="22" height="22" alt="">Hướng dẫn thanh toán</a></li>
             <li><a href="contact.html"><img class="ux-menu-icon" src="images/contact-us-svgrepo-com.svg" width="22" height="22" alt="">Liên hệ</a></li>
             <!--LANG_SWITCH-->
@@ -743,7 +742,9 @@ def sub_blocks(slug, lang):
     out = []
     for b in pages.PAGES[slug]['blocks']:
         kind = b[0]
-        if kind == 'h':
+        if kind == 'place_img':
+            out.append(f'<p class="place-hero"><img src="images/{b[1]}" alt="{e(pages.PAGES[slug]["title"])}" width="900" height="600"></p>')
+        elif kind == 'h':
             out.append(f'<h2 class="page-h">{e(pk(b[1],k))}</h2>')
         elif kind == 'p':
             out.append(f'<p>{e(pk(b[1],k))}</p>')

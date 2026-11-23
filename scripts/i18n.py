@@ -293,6 +293,32 @@ _ROWS += [
      '빈원더스 남호이안: 입장권 요금·운영 시간·이용 팁'),
 ]
 
+_ROWS += [
+    ('VinWonders Nam Hội An', 'ヴィンワンダーズ ナムホイアン', '빈원더스 남호이안'),
+    ('Quảng Nam', 'クアンナム省', '꽝남성'),
+    ('Núi Thành, Quảng Nam', 'クアンナム省 ヌイタイン', '꽝남성 누이타인'),
+    ('Giá vé', 'チケット料金', '입장료'),
+    ('~600.000đ', '約600,000ドン', '약 600,000동'),
+    ('Giờ mở cửa', '営業時間', '운영 시간'),
+    ('9:00 – 19:00', '9:00 – 19:00', '9:00 – 19:00'),
+    ('Tổ hợp công viên giải trí của Vinpearl tại Núi Thành, Quảng Nam, gần Hội An, với công viên chủ đề, trò chơi cảm giác mạnh, công viên nước và vườn thú Safari. Phù hợp cho cả gia đình có trẻ nhỏ.',
+     'ホイアン近郊、クアンナム省ヌイタインにあるヴィンパールのテーマパーク複合施設。テーマパーク、絶叫アトラクション、ウォーターパーク、サファリ動物園があり、小さなお子様連れのご家族にもおすすめです。',
+     '호이안 인근 꽝남성 누이타인에 있는 빈펄의 복합 테마파크. 테마파크, 스릴 어트랙션, 워터파크, 사파리가 있어 어린이 동반 가족에게 좋습니다.'),
+]
+_ROWS += [('Đại Nội Huế', 'フエ王宮（大内）', '후에 황성(다이노이)')]
+_ROWS += [
+    ('Golf Đà Nẵng – Huế', 'ダナン・フエ ゴルフ', '다낭·후에 골프'),
+    ('Miền Trung', 'ベトナム中部', '베트남 중부'),
+    ('Số sân golf', 'ゴルフ場', '골프장 수'),
+    ('4 sân', '4コース', '4개 코스'),
+    ('Khu vực', 'エリア', '지역'),
+    ('Đà Nẵng – Huế', 'ダナン・フエ', '다낭·후에'),
+    ('Dịch vụ', 'サービス', '서비스'),
+    ('Đặt giờ tee, xe đưa đón', 'ティータイム予約・送迎', '티타임 예약·송영'),
+    ('Bốn sân golf nổi bật của miền Trung: Bà Nà Hills Golf Club, BRG Đà Nẵng Golf Resort, Montgomerie Links và Laguna Lăng Cô. Khánh An Tourism hỗ trợ đặt giờ tee, xe đưa đón và gói golf + spa + khách sạn.',
+     'ベトナム中部を代表する4つのゴルフ場：バナヒルズ・ゴルフクラブ、BRGダナン・ゴルフリゾート、モンゴメリー・リンクス、ラグナ・ランコー。ティータイム予約、送迎、ゴルフ＋スパ＋ホテルのプランをKhánh An Tourismがお手伝いします。',
+     '베트남 중부의 대표 골프장 4곳: 바나힐 골프클럽, BRG 다낭 골프 리조트, 몽고메리 링크스, 라구나 랑코. 티타임 예약, 송영, 골프+스파+호텔 패키지를 Khánh An Tourism이 도와드립니다.'),
+]
 _ROWS += option_tours.ROWS
 
 # Địa chỉ giữ nguyên tiếng Việt (không dịch lẻ từng địa danh bên trong)

@@ -201,3 +201,7 @@ PAGES = {
             ('p', ('本規約はベトナムの法令に従います。', '본 약관은 베트남 법령을 따릅니다.')),
         ]),
 }
+
+
+import places  # noqa: E402
+PAGES.update(places.PLACE_PAGES)

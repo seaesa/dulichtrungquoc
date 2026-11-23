@@ -43,10 +43,10 @@
  },
  {
   "slug": "son-tra",
-  "file": "pexels-photo-36748260.jpeg",
-  "author": "Tuan Phan",
-  "license": "Pexels License",
-  "source": "https://www.pexels.com/photo/scenic-coastal-view-of-s-n-tra-peninsula-vietnam-36748260/"
+  "file": "File:Lady Buddha Statue at Linh Ung Pagoda.jpg",
+  "author": "Wikimedia Commons contributor",
+  "license": "CC0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lady_Buddha_Statue_at_Linh_Ung_Pagoda.jpg"
  },
  {
   "slug": "my-son",
@@ -54,5 +54,19 @@
   "author": "Chainwit.",
   "license": "CC BY 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg"
+ },
+ {
+  "slug": "vinwonders",
+  "file": "File:A clear summer day at Vinpearl Nam Hoi An.jpg",
+  "author": "Wikimedia Commons contributor",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_clear_summer_day_at_Vinpearl_Nam_Hoi_An.jpg"
+ },
+ {
+  "slug": "golf",
+  "file": "golf.jpg",
+  "author": "Pexels contributors (photo ids 12389371, 17383426, 30702205, 12389370)",
+  "license": "Pexels License (free to use)",
+  "source": "https://www.pexels.com/photo/aerial-view-of-a-golf-course-12389371/"
  }
 ]

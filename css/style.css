@@ -784,3 +784,7 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 .tour-chips a.is-special { background: var(--secondary); border-color: var(--secondary); color: #fff; }
 .page-group { scroll-margin-top: 90px; }
 @media (max-width: 549px) { .tour-chips { gap: 6px; } .tour-chips a { padding: 8px 11px; font-size: 13px; } }
+
+/* Trang điểm đến */
+.place-hero{margin:0 0 24px}
+.place-hero img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:10px}

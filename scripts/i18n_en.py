@@ -429,3 +429,37 @@ EN.update({
     'Du lịch MICE Đà Nẵng – Hội An (đoàn từ 20 khách)': 'Da Nang – Hoi An MICE tours (groups of 20+)',
     'Họp và hội nghị – team building – gala dinner – tham quan theo chủ đề – xe, hướng dẫn viên và khách sạn trọn gói': 'Meetings and conferences – team building – gala dinner – themed sightseeing – transport, guide and hotel in one package',
 })
+
+
+EN.update({
+    'Nửa ngày': 'Half day', 'Khoảng 1 giờ': 'About 1 hour',
+    'Bà Nà Hills & Cầu Vàng 1 ngày từ Đà Nẵng': 'Ba Na Hills & Golden Bridge day trip from Da Nang',
+    'Xe đưa đón khách sạn – cáp treo khứ hồi – Cầu Vàng – Làng Pháp – vườn hoa Le Jardin d’Amour': 'Hotel transfers – round-trip cable car – Golden Bridge – French Village – Le Jardin d’Amour flower garden',
+    'Vé Sun World Bà Nà Hills (gồm cáp treo)': 'Sun World Ba Na Hills ticket (cable car included)',
+    'Vé vào cổng kèm cáp treo khứ hồi – tự do tham quan, không gồm xe đưa đón': 'Entrance ticket with round-trip cable car – explore freely, transfers not included',
+    'Thánh địa Mỹ Sơn nửa ngày': 'My Son Sanctuary half-day tour',
+    'Đón tại khách sạn Đà Nẵng hoặc Hội An – tham quan đền tháp Chăm Pa cùng hướng dẫn viên (vé vào cổng tính riêng)': 'Pickup from your Da Nang or Hoi An hotel – guided visit to the Cham temple towers (entrance fee not included)',
+    'Thuyền sông Hoài & thả đèn hoa đăng Hội An': 'Hoi An Hoai River boat & lantern release',
+    'Đi thuyền trên sông Hoài vào buổi tối – thả đèn hoa đăng – ngắm phố cổ lên đèn': 'Evening boat ride on the Hoai River – release a floating lantern – see the Old Town lit up',
+    'Tour riêng Đà Nẵng – Hội An 1 ngày': 'Private Da Nang – Hoi An day tour',
+    'Ngũ Hành Sơn – thuyền thúng rừng dừa – phố cổ Hội An – xe riêng và hướng dẫn viên': 'Marble Mountains – coconut-forest basket boat – Hoi An Ancient Town – private car and guide',
+    'Huế 1 ngày từ Đà Nẵng: Đại Nội & lăng tẩm': 'Hue day trip from Da Nang: Imperial City & tombs',
+    'Qua đèo Hải Vân – Đại Nội Huế – lăng Khải Định – chùa Thiên Mụ – xe đưa đón khứ hồi': 'Hai Van Pass – Hue Imperial City – Khai Dinh Tomb – Thien Mu Pagoda – round-trip transfers',
+    'Huế Đại Nội 1 ngày đi tàu di sản': 'Hue Imperial City day tour by heritage train',
+    'Đi tàu hỏa ngắm cảnh đèo Hải Vân – Đại Nội – lăng tẩm hoàng gia – ẩm thực cung đình': 'Scenic train ride past Hai Van Pass – Imperial City – royal tombs – royal cuisine',
+})
+
+
+EN.update({
+    'VinWonders Nam Hội An': 'VinWonders Nam Hoi An', 'Quảng Nam': 'Quang Nam', 'Núi Thành, Quảng Nam': 'Nui Thanh, Quang Nam',
+    'Giá vé': 'Ticket', '~600.000đ': '~600,000 VND', 'Giờ mở cửa': 'Opening hours', '9:00 – 19:00': '9:00 – 19:00',
+    'Tổ hợp công viên giải trí của Vinpearl tại Núi Thành, Quảng Nam, gần Hội An, với công viên chủ đề, trò chơi cảm giác mạnh, công viên nước và vườn thú Safari. Phù hợp cho cả gia đình có trẻ nhỏ.': 'Vinpearl’s entertainment complex in Nui Thanh, Quang Nam, close to Hoi An, with themed parks, thrill rides, a water park and a safari zoo. A great pick for families with young children.',
+})
+
+EN['Đại Nội Huế'] = 'Hue Imperial City'
+
+EN.update({
+    'Golf Đà Nẵng – Huế': 'Golf in Da Nang & Hue', 'Miền Trung': 'Central Vietnam', 'Số sân golf': 'Golf courses', '4 sân': '4 courses',
+    'Khu vực': 'Area', 'Đà Nẵng – Huế': 'Da Nang – Hue', 'Dịch vụ': 'Services', 'Đặt giờ tee, xe đưa đón': 'Tee times, transfers',
+    'Bốn sân golf nổi bật của miền Trung: Bà Nà Hills Golf Club, BRG Đà Nẵng Golf Resort, Montgomerie Links và Laguna Lăng Cô. Khánh An Tourism hỗ trợ đặt giờ tee, xe đưa đón và gói golf + spa + khách sạn.': 'Four standout courses in central Vietnam: Ba Na Hills Golf Club, BRG Da Nang Golf Resort, Montgomerie Links and Laguna Lang Co. Khanh An Tourism can arrange tee times, transfers and golf + spa + hotel packages.',
+})
