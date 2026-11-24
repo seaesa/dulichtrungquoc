@@ -293,14 +293,11 @@ EN.update({
     'Bà Nà Hills – Hội An – Mỹ Sơn – Huế – biển Mỹ Khê': 'Ba Na Hills – Hoi An – My Son – Hue – My Khe Beach',
     'Tour gia đình miền Trung 4 ngày 3 đêm': 'Central Vietnam family tour, 4 days 3 nights',
     'Đà Nẵng – Bà Nà Hills – Hội An – Mỹ Sơn – Huế – biển Mỹ Khê': 'Da Nang – Ba Na Hills – Hoi An – My Son – Hue – My Khe Beach',
-    'Tour golf Bà Nà Hills 2 ngày 1 đêm': 'Ba Na Hills golf tour, 2 days 1 night',
+    'Tour golf Đà Nẵng 2 ngày 1 đêm': 'Da Nang golf tour, 2 days 1 night',
     '18 lỗ tại sân golf Bà Nà Hills – caddie – xe đưa đón – khách sạn 4 sao': '18 holes at Ba Na Hills Golf Club – caddie – transfers – 4-star hotel',
     'Trekking bán đảo Sơn Trà 1 ngày': 'Son Tra Peninsula trekking, 1 day',
     'Rừng nguyên sinh Sơn Trà – ngắm vịnh Đà Nẵng – bãi biển hoang sơ – hải đăng':
         'Son Tra primary forest – Da Nang Bay views – unspoiled beach – lighthouse',
-    'Lặn biển ngắm san hô Cù Lao Chàm 1 ngày': 'Cham Island coral diving, 1 day',
-    'Cano cao tốc ra Cù Lao Chàm – lặn ngắm san hô – bãi Ông – bữa trưa hải sản':
-        'Speedboat to Cham Island – coral diving – Bai Ong beach – seafood lunch',
     'Trải nghiệm đời sống địa phương Hội An 1 ngày': 'Hoi An local life experience, 1 day',
     'Đi chợ sớm – nấu món Việt – thuyền thúng rừng dừa – thăm nhà dân – làm nghề truyền thống':
         'Early morning market – Vietnamese cooking – coconut-forest basket boat – local home visit – traditional crafts',
@@ -390,7 +387,7 @@ PAGES_EN_PREFIX = {
     '韓国のお客様をご案内': 'Guide Korean guests. Conversational Korean required.',
     'ホテル・車・ガイドの手配、スケジュール': 'Arrange hotels, vehicles and guides, and manage schedules.',
     'お問い合わせ対応、お見積もり作成': 'Handle inquiries, prepare quotes and provide guidance via LINE.',
-    '履歴書と希望職種を': 'Please send your CV and desired position to nguyelyhungdd@gmail.com. After reviewing your documents, we will contact you about an interview.',
+    '履歴書と希望職種を': 'Please send your CV and desired position to Khanhantourism@gmail.com. After reviewing your documents, we will contact you about an interview.',
     '勤務地:': 'Workplace: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng',
     'ご予約からお支払いまで': 'The booking-to-payment process and the payment methods available.',
     '料金と内容をご案内': 'We explain the price and details. Your booking is confirmed once you agree.',
@@ -404,7 +401,7 @@ PAGES_EN_PREFIX = {
     'お客様の個人情報の取り扱い': 'How we handle your personal information.',
     'ご予約・お問い合わせの際に': 'When you book or make an inquiry, we ask for your name, contact details (email, phone number, LINE ID), travel dates, and passport information (if visa procedures are required).',
     '手配に必要な範囲': 'Except where needed for arrangements (hotels, transport companies, airlines, visa authorities, etc.), we do not share personal information with third parties without your consent.',
-    'ご自身の情報の開示': 'If you wish to access, correct or delete your information, please contact nguyelyhungdd@gmail.com.',
+    'ご自身の情報の開示': 'If you wish to access, correct or delete your information, please contact Khanhantourism@gmail.com.',
     'ご予約・ご利用にあたって': 'The basic terms for booking and using our services.',
     'お見積もりの内容にご同意': 'Your booking is confirmed once you agree to the quote and we have confirmed the required payment.',
     '料金は参考として米ドルで表示し': 'Prices are shown in US dollars for reference, and payment is made in Vietnamese dong (VND).',

@@ -16,7 +16,7 @@ Loại block (nội dung là cặp (ja, ko)):
 """
 
 PHONE = '0326 978 689'
-EMAIL = 'nguyelyhungdd@gmail.com'
+EMAIL = 'Khanhantourism@gmail.com'
 ADDRESS = '108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng'
 
 PAGES = {

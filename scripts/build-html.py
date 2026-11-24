@@ -199,14 +199,8 @@ NEWS = [dict(href='#', img=f'danang/{i}.jpg' if f else f'{i}.jpg', cat=c, date='
 ]]
 for _p in NEWS[:3]:
     _p['date'] = '12/11/2026'
-NEWS_CREDITS = ['tours/golf-palm-path.jpg', 'tours/nui-than-tai.jpg', 'tours/vinwonders-nam-hoi-an.jpg']
+NEWS_CREDITS = ['tours/vinwonders-nam-hoi-an.jpg']
 
-MOMENTS = [
-    ('danang/ba-na-hills.jpg', True),
-    ('danang/hoi-an.jpg', False),
-    ('danang/my-khe.jpg', True),
-    ('danang/son-tra.jpg', False),
-]
 TESTIMONIALS = [
     ('Lại một lần nữa công ty SANSHIN đồng hành cùng Khánh An Tourism trong chuyến du lịch Hội An. Mọi thứ đều tốt đẹp, hướng dẫn viên “anh Thành” luôn chu đáo từng bữa ăn, từng chỗ ngủ trong khách sạn, đoàn chúng tôi luôn an tâm khi đi cùng Khánh An Tourism trong mọi chuyến du lịch. Khánh An Tourism luôn trong suy nghĩ đầu tiên của chúng tôi trong mỗi lần có ý định đi du lịch. Cảm ơn Khánh An Tourism đã nhiệt tình hỗ trợ hết mình',
      'Screenshot-2024-03-18-130615.png', 'Công ty TNHH SANSHIN', 'Tour Hội An lung linh'),
@@ -255,7 +249,7 @@ BRAND_MARK = '<img class="brand-mark" src="images/logo-emblem.png" width="225" h
 
 
 def header():
-    contact = '''<li><a href="mailto:nguyelyhungdd@gmail.com"><i class="icon-envelop"></i><span>nguyelyhungdd@gmail.com</span></a></li>
+    contact = '''<li><a href="mailto:Khanhantourism@gmail.com"><i class="icon-envelop"></i><span>Khanhantourism@gmail.com</span></a></li>
               <li><a href="tel:0326978689"><i class="icon-phone"></i><span>0326 978 689</span></a></li>'''
     main_nav = []
     for label, href in NAV:
@@ -401,10 +395,6 @@ def main_content():
             <div class="icon-box-text last-reset"><h3>{t}</h3><p>{d}</p></div>
           </div>
         </div></div>''' for i, (bg, t, d) in enumerate(SERVICES))
-    moments = ''.join(f'''
-              <div class="col small-img medium-6 small-12 large-6"><div class="col-inner">
-                <div class="img has-hover"><div class="img-inner{' image-zoom' if zoom else ''} image-cover" style="padding-top:75%;">{lazy(f)}</div></div>
-              </div></div>''' for f, zoom in MOMENTS)
     testimonials = ''.join(f'''
         <div class="col medium-6 small-12 large-6"><div class="col-inner">
           <blockquote><p>{q}</p></blockquote>
@@ -475,24 +465,6 @@ def main_content():
         <div class="col small-12 large-12"><div class="col-inner">
           {title('CÁC DỊCH VỤ', 'CỦA CHÚNG TÔI')}
         </div></div>{services}
-      </div>
-    </div>
-  </section>
-
-  <!-- section9: Khoảnh khắc đẹp nhất -->
-  <section class="section section9">
-    <div class="section-content">
-      <div class="row row-small">
-        <div class="col small-12 large-12"><div class="col-inner">
-          {title('KHOẢNH KHẮC', 'ĐẸP NHẤT')}
-        </div></div>
-        <div class="col medium-7 small-12 large-7"><div class="col-inner">
-          <div class="img has-hover"><div class="img-inner image-zoom image-cover" style="padding-top:53.7%;">{lazy('danang/cau-rong.jpg')}</div></div>
-        </div></div>
-        <div class="col medium-5 small-12 large-5"><div class="col-inner">
-          <div class="row row-small">{moments}
-          </div>
-        </div></div>
       </div>
     </div>
   </section>
@@ -587,7 +559,7 @@ def footer():
           <p><strong>📍 Địa chỉ</strong>: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng</p>
           <p><strong>☎️ Hotline</strong>: <a href="tel:0326978689">0326 978 689</a></p>
           <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
-          <p><strong>✉️ Email</strong>: <a href="mailto:nguyelyhungdd@gmail.com">nguyelyhungdd@gmail.com</a></p>
+          <p><strong>✉️ Email</strong>: <a href="mailto:Khanhantourism@gmail.com">Khanhantourism@gmail.com</a></p>
         </div></div>
         <div class="col medium-7 small-12 large-7"><div class="col-inner">
           <div class="row row-small">
@@ -614,7 +586,7 @@ def footer():
             <div class="col medium-4 small-12 large-4"><div class="col-inner">
               <h3>Kết nối với chúng tôi</h3>
               <div class="social-icons">
-                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:nguyelyhungdd@gmail.com" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
+                <a href="http://url" target="_blank" rel="noopener nofollow" class="button icon facebook" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon instagram" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url" target="_blank" rel="noopener nofollow" class="button icon twitter" title="Follow on Twitter" aria-label="Follow on Twitter"><i class="icon-twitter"></i></a><a href="mailto:Khanhantourism@gmail.com" target="_blank" rel="nofollow" class="button icon email" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a>
               </div>
             </div></div>
             <div class="col medium-4 small-12 large-4"><div class="col-inner">
