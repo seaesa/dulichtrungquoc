@@ -551,4 +551,24 @@
   document.querySelectorAll('form.searchform').forEach(function (form) {
     form.addEventListener('submit', function (ev) { ev.preventDefault(); });
   });
+  /* ---------- Slide ảnh trang điểm đến ---------- */
+  document.querySelectorAll('[data-place-gallery]').forEach(function (g) {
+    var track = g.querySelector('.pg-track'), slides = g.querySelectorAll('.pg-slide'),
+        thumbs = g.querySelectorAll('.pg-thumb'), count = g.querySelector('.pg-count'), timer;
+    function cur() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function go(i) { i = (i + slides.length) % slides.length; track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }); }
+    function sync() {
+      var i = Math.min(cur(), slides.length - 1);
+      thumbs.forEach(function (t, n) { t.classList.toggle('is-active', n === i); });
+      if (count) count.textContent = (i + 1) + ' / ' + slides.length;
+    }
+    function auto() { clearInterval(timer); timer = setInterval(function () { go(cur() + 1); }, 5000); }
+    g.querySelector('.prev').addEventListener('click', function () { go(cur() - 1); auto(); });
+    g.querySelector('.next').addEventListener('click', function () { go(cur() + 1); auto(); });
+    thumbs.forEach(function (t, n) { t.addEventListener('click', function () { go(n); auto(); }); });
+    track.addEventListener('scroll', sync, { passive: true });
+    track.addEventListener('pointerdown', function () { clearInterval(timer); });
+    window.addEventListener('resize', sync);
+    sync(); auto();
+  });
 })();

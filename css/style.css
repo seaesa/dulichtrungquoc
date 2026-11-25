@@ -786,5 +786,27 @@ html:lang(ko) { --font: 'Google Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'M
 @media (max-width: 549px) { .tour-chips { gap: 6px; } .tour-chips a { padding: 8px 11px; font-size: 13px; } }
 
 /* Trang điểm đến */
-.place-hero{margin:0 0 24px}
-.place-hero img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:10px}
+
+/* Slide ảnh trang điểm đến */
+.place-gallery{margin:0 0 34px}
+.pg-viewport{position:relative;border-radius:14px;overflow:hidden;background:#0b1b33;box-shadow:0 10px 30px rgba(0,32,80,.14)}
+.pg-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-slide{flex:0 0 100%;margin:0;scroll-snap-align:center;aspect-ratio:16/8.5}
+.pg-slide img{display:block;width:100%;height:100%;object-fit:cover}
+.pg-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--primary);box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.pg-btn:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+.pg-btn.prev{left:14px}.pg-btn.next{right:14px}
+.pg-count{position:absolute;right:14px;bottom:14px;padding:4px 12px;border-radius:99px;background:rgba(0,20,50,.62);color:#fff;font-size:13px;letter-spacing:.04em}
+.pg-thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:10px;margin-top:10px}
+.pg-thumb{padding:0;border:2px solid transparent;border-radius:9px;overflow:hidden;background:none;cursor:pointer;opacity:.62;aspect-ratio:3/2;transition:opacity .2s,border-color .2s}
+.pg-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.pg-thumb:hover{opacity:.9}.pg-thumb.is-active{opacity:1;border-color:var(--secondary)}
+@media (max-width:549px){.pg-slide{aspect-ratio:4/3}.pg-btn{width:36px;height:36px}.pg-thumbs{gap:6px}.pg-viewport{border-radius:10px}}
+/* Bố cục trang điểm đến: cột nội dung gọn, căn giữa */
+main:has(.place-gallery) .col-inner { max-width: 1040px; margin-left: auto; margin-right: auto; }
+main:has(.place-gallery) .page-body .col-inner > p, main:has(.place-gallery) .page-body .page-list { max-width: none; }
+main:has(.place-gallery) .page-body .col-inner > p { font-size: 17px; line-height: 1.85; }
+main:has(.place-gallery) .info-cards { grid-template-columns: repeat(3, 1fr); }
+main:has(.place-gallery) .page-h { padding-bottom: 8px; border-bottom: 2px solid #e6e9ef; }
+@media (max-width: 849px) { main:has(.place-gallery) .info-cards { grid-template-columns: 1fr; } }

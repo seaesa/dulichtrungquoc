@@ -709,13 +709,32 @@ def pk(pair, k):
     return pair[k] if k < 2 else i18n.en_page(pair[0])
 
 
+def place_gallery(slug, hero):
+    """Slide ảnh đầu trang điểm đến: ảnh chính + các ảnh trong images/gallery/{slug}-N.jpg."""
+    import os
+    files = [f'images/{hero}'] + [f'images/gallery/{slug}-{n}.jpg' for n in range(2, 9) if os.path.exists(f'images/gallery/{slug}-{n}.jpg')]
+    alt = e(pages.PAGES[slug]['title'])
+    slides = ''.join(
+        f'<figure class="pg-slide"><img src="{f}" alt="{alt} {i + 1}" width="1600" height="900"{"" if i == 0 else " loading=\"lazy\""}></figure>'
+        for i, f in enumerate(files))
+    thumbs = ''.join(
+        f'<button type="button" class="pg-thumb" aria-label="{alt} {i + 1}"><img src="{f}" alt="" width="120" height="80" loading="lazy"></button>'
+        for i, f in enumerate(files))
+    return (f'<div class="place-gallery" data-place-gallery>'
+            f'<div class="pg-viewport"><div class="pg-track">{slides}</div>'
+            f'<button type="button" class="pg-btn prev" aria-label="Prev"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>'
+            f'<button type="button" class="pg-btn next" aria-label="Next"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>'
+            f'<span class="pg-count"></span></div>'
+            f'<div class="pg-thumbs">{thumbs}</div></div>')
+
+
 def sub_blocks(slug, lang):
     k = i18n.KIDX[lang]
     out = []
     for b in pages.PAGES[slug]['blocks']:
         kind = b[0]
         if kind == 'place_img':
-            out.append(f'<p class="place-hero"><img src="images/{b[1]}" alt="{e(pages.PAGES[slug]["title"])}" width="900" height="600"></p>')
+            out.append(place_gallery(slug, b[1]))
         elif kind == 'h':
             out.append(f'<h2 class="page-h">{e(pk(b[1],k))}</h2>')
         elif kind == 'p':
