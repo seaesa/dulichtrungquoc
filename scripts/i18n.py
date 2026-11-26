@@ -319,6 +319,26 @@ _ROWS += [
      'ベトナム中部を代表する4つのゴルフ場：バナヒルズ・ゴルフクラブ、BRGダナン・ゴルフリゾート、モンゴメリー・リンクス、ラグナ・ランコー。ティータイム予約、送迎、ゴルフ＋スパ＋ホテルのプランをKhánh An Tourismがお手伝いします。',
      '베트남 중부의 대표 골프장 4곳: 바나힐 골프클럽, BRG 다낭 골프 리조트, 몽고메리 링크스, 라구나 랑코. 티타임 예약, 송영, 골프+스파+호텔 패키지를 Khánh An Tourism이 도와드립니다.'),
 ]
+# Biểu mẫu đặt chỗ
+_ROWS += [
+    ('Tên tour', 'ツアー名', '투어명'),
+    ('Họ và tên', 'お名前', '성함'),
+    ('Địa chỉ email', 'メールアドレス', '이메일 주소'),
+    ('Số điện thoại', '電話番号', '전화번호'),
+    ('Ngày đặt', 'ご利用希望日', '이용 희망일'),
+    ('Số lượng', '人数', '인원'),
+    ('Người lớn', '大人', '성인'),
+    ('Trẻ em', '子供', '어린이'),
+    ('Yêu cầu', 'ご要望', '요청 사항'),
+    ('Ghi chú thêm nếu có', 'ご要望があればご記入ください', '요청 사항을 적어 주세요'),
+    ('Sao chép thông tin đặt chỗ', '予約内容をコピー', '예약 정보 복사'),
+    ('Đã sao chép!', 'コピーしました', '복사되었습니다'),
+    ('Đóng', '閉じる', '닫기'),
+    ('Biểu mẫu này chỉ soạn thông tin, không gửi đi đâu. Hãy sao chép rồi dán vào LINE hoặc email Khanhantourism@gmail.com.',
+     'このフォームは内容をまとめるだけで、送信はされません。コピーしてLINEまたはメール（Khanhantourism@gmail.com）でお送りください。',
+     '이 양식은 내용을 정리할 뿐 전송되지 않습니다. 복사하여 LINE 또는 이메일(Khanhantourism@gmail.com)로 보내 주세요.'),
+]
+
 _ROWS += option_tours.ROWS
 
 # Địa chỉ giữ nguyên tiếng Việt (không dịch lẻ từng địa danh bên trong)

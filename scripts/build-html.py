@@ -119,7 +119,7 @@ def option_card(t):
                   <p class="op-route">{e(vi_route)}</p>
                   {meal_row}
                   <div class="price-wrapper"><span class="price"><span class="amount">{price}</span><span class="price-suffix">{e(t.get('suffix', '/khách'))}</span></span></div>
-                  <div class="add-to-cart-button"><a href="contact.html" rel="nofollow">Đặt Tour</a></div>
+                  <div class="add-to-cart-button"><a href="#booking" class="op-book" role="button" rel="nofollow">Đặt Tour</a></div>
                 </div>
               </div>
             </div>
@@ -631,10 +631,36 @@ def shell(main, title, desc, lang_attr='vi'):
 {main}
 {footer()}
 {offcanvas()}
+{booking_dialog()}
 <script src="js/main.js"></script>
 </body>
 </html>
 '''
+
+
+def booking_dialog():
+    """Biểu mẫu đặt chỗ (chỉ soạn & sao chép thông tin, không gửi đi đâu)."""
+    return '''<dialog id="booking-dialog" class="bk" aria-labelledby="bk-title">
+  <form class="bk-form" onsubmit="return false">
+    <button type="button" class="bk-close" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <h3 id="bk-title">Đặt Tour</h3>
+    <p class="bk-tour"><span class="bk-tour-label">Tên tour</span>: <strong class="bk-tour-name"></strong></p>
+    <label class="bk-f"><span>Họ và tên</span><input type="text" name="name" autocomplete="name"></label>
+    <div class="bk-row">
+      <label class="bk-f"><span>Địa chỉ email</span><input type="email" name="email" autocomplete="email"></label>
+      <label class="bk-f"><span>Số điện thoại</span><input type="tel" name="phone" autocomplete="tel"></label>
+    </div>
+    <label class="bk-f"><span class="bk-date-label">Ngày đặt</span><input type="date" name="date"></label>
+    <fieldset class="bk-f bk-qty"><legend class="bk-qty-label">Số lượng</legend>
+      <label><span class="bk-adult-label">Người lớn</span><input type="number" name="adults" min="1" value="2" inputmode="numeric"></label>
+      <label><span class="bk-child-label">Trẻ em</span><input type="number" name="children" min="0" value="0" inputmode="numeric"></label>
+    </fieldset>
+    <label class="bk-f"><span class="bk-req-label">Yêu cầu</span><textarea name="request" rows="3" placeholder="Ghi chú thêm nếu có"></textarea></label>
+    <button type="button" class="bk-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span>Sao chép thông tin đặt chỗ</span></button>
+    <span class="bk-done" hidden>Đã sao chép!</span>
+    <p class="bk-note">Biểu mẫu này chỉ soạn thông tin, không gửi đi đâu. Hãy sao chép rồi dán vào LINE hoặc email Khanhantourism@gmail.com.</p>
+  </form>
+</dialog>'''
 
 
 def finish(page):
@@ -807,6 +833,7 @@ for lang, conf in i18n.LANGS.items():
         jobs.append((slug, localize(finish(shell(sub_main(slug, lang), ttl, e(pk(pg['lead'],k)))), lang, slug), None))
     for slug, page, _ in jobs:
         out = i18n.render(page, lang, slug)
+        out = out.replace('Khánh An', 'Khanh An').replace('KHÁNH AN', 'KHANH AN')
         name = i18n.page_file(lang, slug)
         (ROOT / name).parent.mkdir(parents=True, exist_ok=True)
         (ROOT / name).write_text(out, encoding='utf8')

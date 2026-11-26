@@ -810,3 +810,26 @@ main:has(.place-gallery) .page-body .col-inner > p { font-size: 17px; line-heigh
 main:has(.place-gallery) .info-cards { grid-template-columns: repeat(3, 1fr); }
 main:has(.place-gallery) .page-h { padding-bottom: 8px; border-bottom: 2px solid #e6e9ef; }
 @media (max-width: 849px) { main:has(.place-gallery) .info-cards { grid-template-columns: 1fr; } }
+
+/* Biểu mẫu đặt chỗ */
+.bk { width: min(480px, calc(100vw - 24px)); max-height: calc(100vh - 24px); padding: 0; border: 0; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.3); overflow: auto; }
+.bk::backdrop { background: rgba(10,20,40,.55); }
+.bk-form { position: relative; padding: 24px 22px 20px; }
+.bk-form h3 { margin: 0 28px 6px 0; color: var(--primary, #0b3a8c); font-size: 22px; }
+.bk-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f1f3f7; color: #333; cursor: pointer; font-size: 16px; }
+.bk-tour { margin: 0 0 14px; font-size: 14px; color: #555; }
+.bk-tour strong { color: #222; }
+.bk-f { display: block; margin: 0 0 12px; padding: 0; border: 0; min-width: 0; }
+.bk-f > span, .bk-f > legend { display: block; margin-bottom: 4px; padding: 0; font-size: 13px; font-weight: 600; color: #444; }
+.bk-f input, .bk-f textarea { width: 100%; min-height: 44px; padding: 10px 12px; font: inherit; font-size: 16px; border: 1px solid #cfd6e2; border-radius: 10px; background: #fff; box-sizing: border-box; }
+.bk-f textarea { min-height: 84px; resize: vertical; }
+.bk-row, .bk-qty { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.bk-row .bk-f { margin-bottom: 12px; }
+.bk-qty legend { grid-column: 1 / -1; }
+.bk-qty label span { display: block; margin-bottom: 4px; font-size: 13px; color: #555; }
+.bk-copy { display: block; width: 100%; min-height: 46px; margin-top: 4px; border: 0; border-radius: 10px; background: var(--secondary, #77b12f); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.bk-copy:hover { background: #146c43; }
+.bk-done { display: block; margin-top: 8px; text-align: center; font-weight: 700; color: #146c43; }
+.bk-done[hidden] { display: none; }
+.bk-note { margin: 10px 0 0; font-size: 12.5px; line-height: 1.5; color: #777; }
+@media (max-width: 549px) { .bk-row { grid-template-columns: 1fr; gap: 0; } }

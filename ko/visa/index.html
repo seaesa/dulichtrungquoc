@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>관광 비자 - Khánh An Tourism</title>
+<title>관광 비자 - Khanh An Tourism</title>
 <meta name="description" content="베트남 입국에 필요한 절차와 당사의 비자 지원 서비스를 안내합니다.">
 <link rel="icon" href="/images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="/images/favicon-192.png" sizes="192x192">
@@ -46,7 +46,7 @@
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="/ko/" title="Khánh An Tourism" rel="home" class="brand"><img class="brand-logo" src="/images/logo-khanh-an-ngang.png" width="972" height="300" alt="Khánh An Tourism"></a>
+          <a href="/ko/" title="Khanh An Tourism" rel="home" class="brand"><img class="brand-logo" src="/images/logo-khanh-an-ngang.png" width="972" height="300" alt="Khanh An Tourism"></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -121,8 +121,8 @@
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
-          <img class="footer-logo" src="/images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourism" loading="lazy">
-          <h3>KHÁNH AN TOURISM</h3>
+          <img class="footer-logo" src="/images/logo-khanh-an.jpg" width="600" height="600" alt="Khanh An Tourism" loading="lazy">
+          <h3>KHANH AN TOURISM</h3>
           <p><strong>📍 주소</strong>: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng</p>
           <p><strong>☎️ 핫라인</strong>: <a href="tel:0326978689">0326 978 689</a></p>
           <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
@@ -174,7 +174,7 @@
   <div class="absolute-footer">
     <div class="container">
       <div class="footer-primary">
-        <div class="copyright-footer">Copyright 2026 © Khánh An Tourism</div>
+        <div class="copyright-footer">Copyright 2026 © Khanh An Tourism</div>
       </div>
     </div>
   </div>
@@ -215,6 +215,27 @@
   </div>
   <button title="Close (Esc)" type="button" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
 </div>
+<dialog id="booking-dialog" class="bk" aria-labelledby="bk-title">
+  <form class="bk-form" onsubmit="return false">
+    <button type="button" class="bk-close" aria-label="닫기"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <h3 id="bk-title">예약하기</h3>
+    <p class="bk-tour"><span class="bk-tour-label">투어명</span>: <strong class="bk-tour-name"></strong></p>
+    <label class="bk-f"><span>성함</span><input type="text" name="name" autocomplete="name"></label>
+    <div class="bk-row">
+      <label class="bk-f"><span>이메일 주소</span><input type="email" name="email" autocomplete="email"></label>
+      <label class="bk-f"><span>전화번호</span><input type="tel" name="phone" autocomplete="tel"></label>
+    </div>
+    <label class="bk-f"><span class="bk-date-label">이용 희망일</span><input type="date" name="date"></label>
+    <fieldset class="bk-f bk-qty"><legend class="bk-qty-label">인원</legend>
+      <label><span class="bk-adult-label">성인</span><input type="number" name="adults" min="1" value="2" inputmode="numeric"></label>
+      <label><span class="bk-child-label">어린이</span><input type="number" name="children" min="0" value="0" inputmode="numeric"></label>
+    </fieldset>
+    <label class="bk-f"><span class="bk-req-label">요청 사항</span><textarea name="request" rows="3" placeholder="요청 사항을 적어 주세요"></textarea></label>
+    <button type="button" class="bk-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span>예약 정보 복사</span></button>
+    <span class="bk-done" hidden>복사되었습니다</span>
+    <p class="bk-note">이 양식은 내용을 정리할 뿐 전송되지 않습니다. 복사하여 LINE 또는 이메일(Khanhantourism@gmail.com)로 보내 주세요.</p>
+  </form>
+</dialog>
 <script src="/js/main.js"></script>
 </body>
 </html>

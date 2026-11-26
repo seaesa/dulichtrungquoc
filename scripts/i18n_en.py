@@ -460,3 +460,20 @@ EN.update({
     'Khu vực': 'Area', 'Đà Nẵng – Huế': 'Da Nang – Hue', 'Dịch vụ': 'Services', 'Đặt giờ tee, xe đưa đón': 'Tee times, transfers',
     'Bốn sân golf nổi bật của miền Trung: Bà Nà Hills Golf Club, BRG Đà Nẵng Golf Resort, Montgomerie Links và Laguna Lăng Cô. Khánh An Tourism hỗ trợ đặt giờ tee, xe đưa đón và gói golf + spa + khách sạn.': 'Four standout courses in central Vietnam: Ba Na Hills Golf Club, BRG Da Nang Golf Resort, Montgomerie Links and Laguna Lang Co. Khanh An Tourism can arrange tee times, transfers and golf + spa + hotel packages.',
 })
+
+EN.update({
+    'Tên tour': 'Tour',
+    'Họ và tên': 'Full name',
+    'Địa chỉ email': 'Email address',
+    'Số điện thoại': 'Phone number',
+    'Ngày đặt': 'Date',
+    'Số lượng': 'Number of guests',
+    'Người lớn': 'Adults',
+    'Trẻ em': 'Children',
+    'Yêu cầu': 'Requests',
+    'Ghi chú thêm nếu có': 'Anything else we should know',
+    'Sao chép thông tin đặt chỗ': 'Copy booking details',
+    'Đã sao chép!': 'Copied!',
+    'Đóng': 'Close',
+    'Biểu mẫu này chỉ soạn thông tin, không gửi đi đâu. Hãy sao chép rồi dán vào LINE hoặc email Khanhantourism@gmail.com.': 'This form only prepares your details and sends nothing. Copy them and paste into LINE or an email to Khanhantourism@gmail.com.',
+})

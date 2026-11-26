@@ -572,3 +572,40 @@
     sync(); auto();
   });
 })();
+
+(function () {
+  var dlg = document.getElementById('booking-dialog');
+  if (!dlg || !dlg.showModal) return;
+  var q = function (s) { return dlg.querySelector(s); };
+  var tourName = q('.bk-tour-name');
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest('.op-book');
+    if (!a) return;
+    ev.preventDefault();
+    var t = a.closest('.box-text').querySelector('.product-title');
+    tourName.textContent = t ? t.textContent.trim() : '';
+    q('.bk-done').hidden = true;
+    var d = q('input[name=date]');
+    d.min = new Date().toISOString().slice(0, 10);
+    dlg.showModal();
+  });
+  q('.bk-close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+  q('.bk-copy').addEventListener('click', function () {
+    var v = function (n) { return q('[name=' + n + ']').value.trim(); };
+    var l = function (s) { return q(s).textContent.trim(); };
+    var lines = [
+      l('.bk-tour-label') + ': ' + tourName.textContent,
+      l('.bk-f span') + ': ' + v('name'),
+      'Email: ' + v('email'),
+      l('.bk-row .bk-f:last-child span') + ': ' + v('phone'),
+      l('.bk-date-label') + ': ' + v('date'),
+      l('.bk-qty-label') + ': ' + l('.bk-adult-label') + ' ' + v('adults') + ' / ' + l('.bk-child-label') + ' ' + v('children'),
+      l('.bk-req-label') + ': ' + v('request')
+    ];
+    var text = lines.join('\n'), done = q('.bk-done');
+    var ok = function () { done.hidden = false; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok);
+    else { var ta = document.createElement('textarea'); ta.value = text; dlg.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); ok(); }
+  });
+})();

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us - Khánh An Tourism</title>
+<title>About Us - Khanh An Tourism</title>
 <meta name="description" content="From Da Nang to Hoi An and Hue — a local travel agency that stays close to guests from Japan and Korea.">
 <link rel="icon" href="/images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="/images/favicon-192.png" sizes="192x192">
@@ -46,7 +46,7 @@
     <div id="masthead" class="header-main">
       <div class="header-inner flex-row">
         <div id="logo" class="flex-col logo">
-          <a href="/en/" title="Khánh An Tourism" rel="home" class="brand"><img class="brand-logo" src="/images/logo-khanh-an-ngang.png" width="972" height="300" alt="Khánh An Tourism"></a>
+          <a href="/en/" title="Khanh An Tourism" rel="home" class="brand"><img class="brand-logo" src="/images/logo-khanh-an-ngang.png" width="972" height="300" alt="Khanh An Tourism"></a>
         </div>
         <div class="flex-col show-for-medium mobile-left">
           <ul class="nav nav-left mobile-nav">
@@ -104,8 +104,8 @@
     <div class="section-content">
       <div class="row row-small">
         <div class="col small-12 large-12"><div class="col-inner">
-<h2 class="page-h">About Khánh An Tourism</h2>
-<p>Khánh An Tourism is a local travel agency based in Da Nang, central Vietnam, arranging trips centered on Da Nang, Hoi An and Hue. We offer consultations in Japanese and Korean and plan trips to suit your wishes — night sightseeing, Hoi An, My Son Sanctuary, Hue, Ba Na Hills and more.</p>
+<h2 class="page-h">About Khanh An Tourism</h2>
+<p>Khanh An Tourism is a local travel agency based in Da Nang, central Vietnam, arranging trips centered on Da Nang, Hoi An and Hue. We offer consultations in Japanese and Korean and plan trips to suit your wishes — night sightseeing, Hoi An, My Son Sanctuary, Hue, Ba Na Hills and more.</p>
 <div class="info-cards"><div class="info-card"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><h3>Local, hands-on arrangements</h3><p>From our Da Nang office, we arrange hotels, transfers, guides and meals all in one place.</p></div><div class="info-card"><i class="fa-solid fa-language" aria-hidden="true"></i><h3>Japanese &amp; Korean support</h3><p>From pre-departure consultation to on-site support, you can rely on us in your own language.</p></div><div class="info-card"><i class="fa-solid fa-ticket" aria-hidden="true"></i><h3>Popular optional tours</h3><p>A curated selection of classic courses covering Da Nang city, Ba Na Hills, Hoi An, My Son Sanctuary and Hue.</p></div><div class="info-card"><i class="fa-solid fa-headset" aria-hidden="true"></i><h3>24-hour hotline</h3><p>If you run into any trouble during your trip, contact us any time by hotline or LINE.</p></div></div>
 <h2 class="page-h">Our services</h2>
 <ul class="page-list"><li>Optional tours in Da Nang, Hoi An and Hue</li><li>Hotel, transfer and charter car arrangements</li><li>Guidance on tourist visas, flight tickets and SIM cards</li></ul>
@@ -121,8 +121,8 @@
     <div class="section-content">
       <div class="row row-small">
         <div class="col medium-5 small-12 large-5"><div class="col-inner">
-          <img class="footer-logo" src="/images/logo-khanh-an.jpg" width="600" height="600" alt="Khánh An Tourism" loading="lazy">
-          <h3>KHÁNH AN TOURISM</h3>
+          <img class="footer-logo" src="/images/logo-khanh-an.jpg" width="600" height="600" alt="Khanh An Tourism" loading="lazy">
+          <h3>KHANH AN TOURISM</h3>
           <p><strong>📍 Address</strong>: 108, Phạm Xuân Ẩn, Cẩm Lệ, Đà Nẵng</p>
           <p><strong>☎️ Hotline</strong>: <a href="tel:0326978689">0326 978 689</a></p>
           <p><strong>💬 Zalo</strong>: <a href="https://zalo.me/0326978689" target="_blank" rel="noopener">0326 978 689</a></p>
@@ -174,7 +174,7 @@
   <div class="absolute-footer">
     <div class="container">
       <div class="footer-primary">
-        <div class="copyright-footer">Copyright 2026 © Khánh An Tourism</div>
+        <div class="copyright-footer">Copyright 2026 © Khanh An Tourism</div>
       </div>
     </div>
   </div>
@@ -215,6 +215,27 @@
   </div>
   <button title="Close (Esc)" type="button" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
 </div>
+<dialog id="booking-dialog" class="bk" aria-labelledby="bk-title">
+  <form class="bk-form" onsubmit="return false">
+    <button type="button" class="bk-close" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <h3 id="bk-title">Book Now</h3>
+    <p class="bk-tour"><span class="bk-tour-label">Tour</span>: <strong class="bk-tour-name"></strong></p>
+    <label class="bk-f"><span>Full name</span><input type="text" name="name" autocomplete="name"></label>
+    <div class="bk-row">
+      <label class="bk-f"><span>Email address</span><input type="email" name="email" autocomplete="email"></label>
+      <label class="bk-f"><span>Phone number</span><input type="tel" name="phone" autocomplete="tel"></label>
+    </div>
+    <label class="bk-f"><span class="bk-date-label">Date</span><input type="date" name="date"></label>
+    <fieldset class="bk-f bk-qty"><legend class="bk-qty-label">Number of guests</legend>
+      <label><span class="bk-adult-label">Adults</span><input type="number" name="adults" min="1" value="2" inputmode="numeric"></label>
+      <label><span class="bk-child-label">Children</span><input type="number" name="children" min="0" value="0" inputmode="numeric"></label>
+    </fieldset>
+    <label class="bk-f"><span class="bk-req-label">Requests</span><textarea name="request" rows="3" placeholder="Anything else we should know"></textarea></label>
+    <button type="button" class="bk-copy"><i class="fa-regular fa-copy" aria-hidden="true"></i> <span>Copy booking details</span></button>
+    <span class="bk-done" hidden>Copied!</span>
+    <p class="bk-note">This form only prepares your details and sends nothing. Copy them and paste into LINE or an email to Khanhantourism@gmail.com.</p>
+  </form>
+</dialog>
 <script src="/js/main.js"></script>
 </body>
 </html>
